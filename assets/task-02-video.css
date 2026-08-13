@@ -98,14 +98,22 @@
 }
 
 .video-cut .video-collision .playback-tracer__halo {
-  stroke: rgba(218, 132, 95, 0.28);
-  stroke-width: 2.5;
+  stroke: rgba(255, 198, 111, 0.62);
+  stroke-width: 3.2;
+  filter: drop-shadow(0 0 13px rgba(244, 137, 65, 0.48));
 }
 
 .video-cut .video-collision .playback-tracer__body {
-  stroke: rgba(255, 239, 222, 0.72);
-  stroke-width: 2.4;
-  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.24));
+  stroke: rgba(255, 242, 198, 0.96);
+  stroke-width: 3.4;
+  filter:
+    drop-shadow(0 0 8px rgba(255, 185, 96, 0.58))
+    drop-shadow(0 8px 14px rgba(0, 0, 0, 0.28));
+  fill: url(#playback-tracer-gradient);
+}
+
+.video-cut .video-collision .playback-svg--compact .playback-tracer__body {
+  fill: url(#playback-compact-tracer-gradient);
 }
 
 .video-cut .video-collision .playback-particle__halo {
