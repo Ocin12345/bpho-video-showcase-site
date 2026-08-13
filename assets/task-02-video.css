@@ -1,0 +1,44 @@
+/* Task 02 video cut: the visible surface is deliberately just the chamber and
+   the one-collision animation. The engine's reference inputs stay hidden so
+   the filmed view remains clean and reproducible. */
+
+.video-support {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.video-cut main {
+  padding-bottom: 0;
+}
+
+.video-cut .observatory {
+  scroll-margin-top: 58px;
+}
+
+.video-cut .method-section {
+  min-height: calc(100dvh - 48px);
+  padding-top: clamp(64px, 9vh, 112px);
+  padding-bottom: clamp(64px, 9vh, 112px);
+}
+
+.video-cut .video-collision .section-introduction > span {
+  display: block !important;
+}
+
+.video-cut .video-collision .collision-stage {
+  width: min(100%, 1280px);
+}
+
+.video-cut .video-collision .collision-visual {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .video-cut .video-collision .section-introduction > span {
+    display: block !important;
+  }
+}

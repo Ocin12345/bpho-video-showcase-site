@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="The video cut for BPhO Computational Challenge Task 02: Brownian motion and one molecular collision."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Task 02 — Brownian Motion | Video Cut</title>
+    <link rel="stylesheet" href="../assets/local-shell-fonts.css" />
+    <link rel="stylesheet" href="../assets/task-02.css" />
+    <link rel="stylesheet" href="../assets/task-02-minimal.css" />
+    <link rel="stylesheet" href="../assets/task-clean.css" />
+    <link rel="stylesheet" href="../assets/task-video.css" />
+    <link rel="stylesheet" href="../assets/task-02-video.css" />
+  </head>
+  <body class="video-cut" data-task="02">
+    <a class="skip-link" href="#brownian-canvas">Skip to simulation</a>
+
+    <header class="lab-header">
+      <a class="back-link" href="../tasks.html" aria-label="Return to all tasks">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M19 12H5M11 18l-6-6 6-6" />
+        </svg>
+        All tasks
+      </a>
+
+      <div class="lab-identity">
+        <span>Task 02</span>
+        <strong>Brownian Motion</strong>
+      </div>
+
+      <nav class="section-nav" aria-label="Task 2 video sections">
+        <a href="#simulation" aria-current="page">Simulation</a>
+        <a href="#collision">Collision</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="observatory" id="simulation" aria-labelledby="page-title">
+        <canvas
+          id="brownian-canvas"
+          tabindex="0"
+          role="img"
+          aria-label="A large tracer undergoing collision-driven Brownian motion among one thousand gas particles"
+        ></canvas>
+        <div class="observatory-vignette" aria-hidden="true"></div>
+        <div class="observatory-grain" aria-hidden="true"></div>
+
+        <header class="hero-copy">
+          <span>Collision-driven simulation</span>
+          <h1 id="page-title">Brownian motion</h1>
+          <span>Unequal molecular impacts move the tracer with no preferred direction.</span>
+        </header>
+
+        <div class="model-status" aria-live="polite">
+          <i class="status-dot"></i>
+          <span data-run-state>Ready</span>
+        </div>
+
+        <div class="chamber-key" aria-hidden="true">
+          <span><i class="key-gas"></i>Gas particles</span>
+          <span><i class="key-tracer"></i>Tracer</span>
+          <span><i class="key-path"></i>Tracer path</span>
+        </div>
+
+        <div class="tracer-readout" data-tracer-readout hidden>
+          <span>Tracer state</span>
+          <strong data-hover-displacement>0.000 nm</strong>
+          <small data-hover-speed>0.000 nm ps⁻¹</small>
+        </div>
+
+        <div class="instrument-dock">
+          <div
+            class="simulation-progress"
+            role="progressbar"
+            aria-label="Simulation progress"
+            aria-valuemin="0"
+            aria-valuemax="200"
+            aria-valuenow="0"
+            data-progress
+          >
+            <span></span>
+          </div>
+
+          <div class="dock-actions">
+            <button class="dock-button dock-button--play" type="button" data-play>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path data-play-icon d="M8 5l11 7-11 7z" />
+              </svg>
+              <span data-play-label>Run</span>
+            </button>
+            <button class="dock-button" type="button" data-step title="Advance the model by 1 ps">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6 5l9 7-9 7zM18 5v14" />
+              </svg>
+              Step
+            </button>
+            <button class="dock-button" type="button" data-reset>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20 11a8 8 0 10-2.34 5.66M20 4v7h-7" />
+              </svg>
+              Reset
+            </button>
+          </div>
+
+          <dl class="dock-metrics">
+            <div>
+              <dt>Simulation time</dt>
+              <dd data-time>0.00 ps</dd>
+            </div>
+            <div>
+              <dt>Tracer displacement</dt>
+              <dd data-displacement>0.000 nm</dd>
+            </div>
+            <div>
+              <dt>Collision impulses</dt>
+              <dd data-collisions>0</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- The simulation engine keeps its reproducible reference parameters
+             here while the video cut exposes only the three filming controls. -->
+        <div class="video-support" hidden aria-hidden="true">
+          <input id="particle-count" type="number" min="100" max="1000" value="1000" />
+          <input id="gas-temperature" type="number" min="200" max="1000" value="373" />
+          <input id="mass-ratio" type="number" min="2" max="100" value="10" />
+          <input id="restitution" type="number" min="0" max="1" value="1" />
+          <input id="knudsen-parameter" type="number" min="2" max="60" value="15" />
+          <input id="playback-rate" type="number" min="1" max="100" value="20" />
+          <input id="simulation-seed" type="number" min="0" max="4294967295" value="2026" />
+          <span data-thermal-speed></span>
+          <span data-model-particle-count></span>
+          <span data-model-large-mass></span>
+          <span data-model-mass-ratio></span>
+          <button type="button" data-new-seed></button>
+          <button type="button" data-export></button>
+          <button type="button" data-snapshot></button>
+          <button type="button" data-parameters-open></button>
+          <aside id="parameter-drawer" aria-hidden="true"></aside>
+        </div>
+      </section>
+
+      <section class="method-section video-collision" id="collision" aria-labelledby="collision-title">
+        <header class="section-introduction">
+          <h2 id="collision-title">One collision</h2>
+          <span>Approach, impulse, separation.</span>
+        </header>
+
+        <div class="collision-stage">
+          <div
+            class="collision-visual"
+            role="region"
+            aria-label="Animated overview of one gas-particle collision with the tracer"
+          >
+            <div class="collision-storyboard">
+              <div
+                class="collision-playback"
+                role="group"
+                aria-label="A gas particle approaches the tracer, transfers an impulse at contact, then rebounds as the tracer moves"
+              >
+                <header class="collision-playback__header">
+                  <div>
+                    <span>Collision mechanism</span>
+                    <strong>Approach, impulse, separation</strong>
+                  </div>
+                  <button
+                    class="collision-playback__toggle"
+                    type="button"
+                    data-collision-animation
+                    aria-pressed="false"
+                  >
+                    <i aria-hidden="true"></i>
+                    <span data-collision-animation-label>Pause animation</span>
+                  </button>
+                </header>
+
+                <div class="collision-playback__window" aria-hidden="true">
+                  <svg viewBox="0 0 800 250">
+                    <defs>
+                      <linearGradient id="playback-tracer-gradient" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0" stop-color="#b9745b" />
+                        <stop offset="1" stop-color="#7f4f40" />
+                      </linearGradient>
+                      <marker id="playback-arrow-approach" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+                        <path d="M1 1L9 5L1 9Z" fill="#a24f39" />
+                      </marker>
+                      <marker id="playback-arrow-rebound" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+                        <path d="M1 1L9 5L1 9Z" fill="#a24f39" />
+                      </marker>
+                      <marker id="playback-arrow-response" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+                        <path d="M1 1L9 5L1 9Z" fill="#a24f39" />
+                      </marker>
+                      <marker id="playback-arrow-impulse" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+                        <path d="M1 1L9 5L1 9Z" fill="#a24f39" />
+                      </marker>
+                    </defs>
+
+                    <g class="playback-grid">
+                      <path d="M22 60H778M22 125H778M22 190H778" />
+                      <path d="M108 24V226M280 24V226M452 24V226M624 24V226" />
+                    </g>
+                    <path class="playback-axis" d="M54 125H746" />
+
+                    <g class="playback-tracer">
+                      <circle class="playback-tracer__halo" cx="550" cy="125" r="82" />
+                      <circle class="playback-tracer__body" cx="550" cy="125" r="62" fill="url(#playback-tracer-gradient)" />
+                      <text class="playback-mass playback-mass--tracer" x="550" y="134" text-anchor="middle">M</text>
+                    </g>
+
+                    <g class="playback-particle">
+                      <circle class="playback-particle__halo" cx="92" cy="125" r="30" />
+                      <circle class="playback-particle__body" cx="92" cy="125" r="18" />
+                      <text class="playback-mass" x="92" y="131" text-anchor="middle">m</text>
+                    </g>
+
+                    <g class="playback-impact">
+                      <circle cx="488" cy="125" r="16" />
+                      <circle cx="488" cy="125" r="33" />
+                      <circle cx="488" cy="125" r="52" />
+                    </g>
+
+                    <g class="playback-vector playback-vector--incoming">
+                      <path d="M132 125H390" marker-end="url(#playback-arrow-approach)" />
+                      <text x="260" y="99" text-anchor="middle">gas velocity v</text>
+                    </g>
+                    <g class="playback-vector playback-vector--outgoing">
+                      <path d="M476 147L350 211" marker-end="url(#playback-arrow-rebound)" />
+                      <text x="395" y="190" text-anchor="middle">gas rebounds, v′</text>
+                    </g>
+                    <g class="playback-vector playback-vector--response">
+                      <path d="M566 125H690" marker-end="url(#playback-arrow-response)" />
+                      <text x="630" y="99" text-anchor="middle">tracer moves, V′</text>
+                    </g>
+                    <g class="playback-contact-label">
+                      <path d="M488 59V95" />
+                      <text x="488" y="43" text-anchor="middle">contact impulse</text>
+                      <path d="M480 165H426" marker-end="url(#playback-arrow-impulse)" />
+                      <path d="M496 165H550" marker-end="url(#playback-arrow-impulse)" />
+                      <text x="452" y="191" text-anchor="middle">−J n̂</text>
+                      <text x="524" y="191" text-anchor="middle">+J n̂</text>
+                    </g>
+                  </svg>
+                </div>
+
+                <div class="collision-playback__timeline" aria-hidden="true">
+                  <div class="collision-playback__track"><i></i></div>
+                  <span><b>Approach</b><small>g<sub>n</sub> &lt; 0</small></span>
+                  <span><b>Impulse</b><small>−J n̂ and +J n̂</small></span>
+                  <span><b>Separate</b><small>g′<sub>n</sub> = −Cg<sub>n</sub></small></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../assets/task-02-simulation.js"></script>
+    <script src="../assets/task-02-navigation.js"></script>
+  </body>
+</html>
