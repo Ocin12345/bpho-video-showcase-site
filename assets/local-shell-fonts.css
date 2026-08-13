@@ -1,0 +1,86 @@
+/* Offline aliases for the public site shell. The scientific task pages use the
+   same pinned Cormorant, Bodoni and Geist files under their native names. */
+@font-face {
+  font-family: "Fredoka";
+  src: url("../vendor/packages/geist/dist/fonts/geist-sans/Geist-Variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../vendor/packages/geist/dist/fonts/geist-sans/Geist-Variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("../vendor/packages/geist/dist/fonts/geist-sans/Geist-Variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DM Mono";
+  src: url("../vendor/packages/geist/dist/fonts/geist-mono/GeistMono-Variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../vendor/packages/cormorant/files/cormorant-latin-wght-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../vendor/packages/cormorant/files/cormorant-latin-wght-italic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 300 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Bodoni Moda";
+  src: url("../vendor/packages/bodoni-moda/files/bodoni-moda-latin-wght-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Bodoni Moda";
+  src: url("../vendor/packages/bodoni-moda/files/bodoni-moda-latin-wght-italic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 400 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gorditas";
+  src: url("../vendor/packages/bodoni-moda/files/bodoni-moda-latin-wght-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lilita One";
+  src: url("../vendor/packages/bodoni-moda/files/bodoni-moda-latin-wght-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Grandstander";
+  src: url("../vendor/packages/cormorant/files/cormorant-latin-wght-italic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 300 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Ballet";
+  src: url("../vendor/packages/cormorant/files/cormorant-latin-wght-italic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 300 700;
+  font-display: swap;
+}
