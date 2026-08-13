@@ -37,6 +37,583 @@
   width: 100%;
 }
 
+/* The collision is the explanatory beat of the video cut. Keep a little more
+   room around it and use a deliberate dark-field treatment so the impulse
+   moment survives both a screen recording and a narrow phone viewport. */
+.video-cut .video-collision .collision-playback {
+  padding: clamp(16px, 2.4vw, 30px);
+  border: 1px solid rgba(196, 183, 166, 0.18);
+  border-radius: 6px 24px 6px 24px;
+  background:
+    radial-gradient(circle at 60% 50%, rgba(180, 111, 85, 0.1), transparent 26%),
+    linear-gradient(145deg, #171818 0%, #101111 58%, #0d0e0e 100%);
+  box-shadow: 0 24px 70px rgba(15, 14, 12, 0.14);
+}
+
+.video-cut .video-collision .collision-playback__header strong {
+  color: #f7f1e8;
+  font-size: clamp(28px, 3.1vw, 46px);
+  letter-spacing: -0.035em;
+}
+
+.video-cut .video-collision .collision-playback__header p {
+  color: rgba(235, 225, 211, 0.78);
+}
+
+.video-cut .video-collision .collision-playback__toggle {
+  color: rgba(247, 241, 232, 0.82);
+  border-color: rgba(235, 225, 211, 0.24);
+}
+
+.video-cut .video-collision .collision-playback__window {
+  min-height: clamp(280px, 30vw, 380px);
+  border-color: rgba(235, 225, 211, 0.18);
+  background:
+    radial-gradient(circle at 61% 50%, rgba(180, 111, 85, 0.14), transparent 17%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent 44%),
+    #101111;
+}
+
+.video-cut .video-collision .collision-playback__window svg {
+  height: clamp(280px, 30vw, 380px);
+}
+
+.video-cut .video-collision .playback-svg--compact {
+  display: none;
+}
+
+.video-cut .video-collision .playback-svg--compact .playback-impact,
+.video-cut .video-collision .playback-svg--compact .playback-impact-flash,
+.video-cut .video-collision .playback-svg--compact .playback-impact-core {
+  transform-origin: 210px 130px;
+}
+
+.video-cut .video-collision .playback-grid {
+  stroke: rgba(235, 225, 211, 0.11);
+}
+
+.video-cut .video-collision .playback-axis {
+  stroke: rgba(235, 225, 211, 0.2);
+  stroke-dasharray: 4 9;
+}
+
+.video-cut .video-collision .playback-tracer__halo {
+  stroke: rgba(218, 132, 95, 0.28);
+  stroke-width: 2.5;
+}
+
+.video-cut .video-collision .playback-tracer__body {
+  stroke: rgba(255, 239, 222, 0.72);
+  stroke-width: 2.4;
+  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.24));
+}
+
+.video-cut .video-collision .playback-particle__halo {
+  fill: rgba(234, 220, 201, 0.12);
+  stroke: rgba(239, 226, 207, 0.62);
+  stroke-width: 1.6;
+}
+
+.video-cut .video-collision .playback-particle__body {
+  fill: #e0d4c3;
+  stroke: rgba(255, 248, 237, 0.94);
+  stroke-width: 1.8;
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+}
+
+.video-cut .video-collision .playback-vector path,
+.video-cut .video-collision .playback-contact-label path {
+  stroke-width: 3.4;
+  stroke-dasharray: 11 8;
+}
+
+.video-cut .video-collision .playback-vector text,
+.video-cut .video-collision .playback-contact-label text {
+  fill: #f0c8b5;
+  font-size: 15px;
+  font-weight: 700;
+  paint-order: stroke;
+  stroke: #101111;
+  stroke-width: 4px;
+  stroke-opacity: 0.82;
+}
+
+.video-cut .video-collision .playback-mass {
+  fill: #292522;
+  font-size: 17px;
+}
+
+.video-cut .video-collision .playback-mass--tracer {
+  fill: #fff5e9;
+  font-size: 28px;
+}
+
+.video-cut .video-collision .playback-impact {
+  stroke: rgba(255, 180, 143, 0.98);
+  stroke-width: 2.6;
+  filter: drop-shadow(0 0 11px rgba(236, 126, 86, 0.72));
+}
+
+.video-cut .video-collision .playback-impact-flash,
+.video-cut .video-collision .playback-impact-core {
+  transform-box: view-box;
+  transform-origin: 488px 125px;
+  pointer-events: none;
+}
+
+.video-cut .video-collision .playback-impact-flash {
+  fill: none;
+  stroke: rgba(255, 214, 184, 0.88);
+  stroke-width: 7;
+  opacity: 0;
+  filter: drop-shadow(0 0 16px rgba(239, 132, 88, 0.9));
+  animation: video-playback-impact-flash 9s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.video-cut .video-collision .playback-impact-core {
+  fill: #fff2db;
+  stroke: #f1a17c;
+  stroke-width: 3;
+  opacity: 0;
+  filter: drop-shadow(0 0 12px rgba(255, 186, 137, 0.98));
+  animation: video-playback-impact-core 9s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.video-cut .video-collision .playback-contact-label {
+  fill: #ffd1bb;
+  stroke: rgba(255, 172, 133, 0.96);
+  stroke-width: 1.9;
+}
+
+.video-cut .video-collision .playback-contact-stem {
+  stroke-dasharray: none !important;
+}
+
+.video-cut .video-collision .playback-contact-caption {
+  fill: rgba(255, 214, 190, 0.82) !important;
+  font-size: 12px !important;
+  font-style: normal !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.video-cut .video-collision .collision-playback__timeline {
+  padding-top: 20px;
+}
+
+.video-cut .video-collision .collision-playback__track {
+  height: 3px;
+  background: rgba(235, 225, 211, 0.18);
+}
+
+.video-cut .video-collision .collision-playback__timeline span {
+  color: rgba(235, 225, 211, 0.78);
+  font-size: 10px;
+}
+
+.video-cut .video-collision .collision-playback__timeline b {
+  color: #fff5e9;
+  font-size: 11px;
+}
+
+.video-cut .video-collision .collision-playback__timeline small {
+  color: rgba(235, 225, 211, 0.62);
+  font-size: 12px;
+}
+
+/* A longer loop gives the viewer time to identify the incoming molecule,
+   register contact, and then follow the momentum transfer. */
+@keyframes video-playback-particle {
+  0%,
+  9% {
+    transform: translate(0, 0);
+  }
+  31% {
+    transform: translate(176px, 0);
+  }
+  43%,
+  49% {
+    transform: translate(378px, 0);
+  }
+  52% {
+    transform: translate(374px, 2px);
+  }
+  70% {
+    transform: translate(296px, 38px);
+  }
+  81%,
+  100% {
+    transform: translate(258px, 64px);
+  }
+}
+
+@keyframes video-playback-particle-compact {
+  0%,
+  9% {
+    transform: translate(0, 0);
+  }
+  31% {
+    transform: translate(82px, 0);
+  }
+  43%,
+  49% {
+    transform: translate(140px, 0);
+  }
+  52% {
+    transform: translate(136px, 2px);
+  }
+  70% {
+    transform: translate(102px, 38px);
+  }
+  81%,
+  100% {
+    transform: translate(90px, 64px);
+  }
+}
+
+@keyframes video-playback-tracer {
+  0%,
+  47% {
+    transform: translateX(0);
+  }
+  52% {
+    transform: translateX(3px);
+  }
+  66% {
+    transform: translateX(18px);
+  }
+  79%,
+  100% {
+    transform: translateX(25px);
+  }
+}
+
+@keyframes video-playback-tracer-compact {
+  0%,
+  47% {
+    transform: translateX(0);
+  }
+  52% {
+    transform: translateX(2px);
+  }
+  66% {
+    transform: translateX(13px);
+  }
+  79%,
+  100% {
+    transform: translateX(18px);
+  }
+}
+
+@keyframes video-playback-incoming {
+  0%,
+  9% {
+    opacity: 0.28;
+  }
+  18%,
+  40% {
+    opacity: 1;
+  }
+  47%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes video-playback-outgoing {
+  0%,
+  48% {
+    opacity: 0;
+  }
+  56% {
+    opacity: 0.36;
+  }
+  64%,
+  91% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.38;
+  }
+}
+
+@keyframes video-playback-impact {
+  0%,
+  42% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  48% {
+    opacity: 1;
+    transform: scale(0.66);
+  }
+  58% {
+    opacity: 0.65;
+    transform: scale(1.24);
+  }
+  68%,
+  100% {
+    opacity: 0;
+    transform: scale(1.8);
+  }
+}
+
+@keyframes video-playback-impact-flash {
+  0%,
+  43% {
+    opacity: 0;
+    transform: scale(0.38);
+  }
+  47% {
+    opacity: 0.98;
+    transform: scale(0.82);
+  }
+  53% {
+    opacity: 0.42;
+    transform: scale(1.16);
+  }
+  64%,
+  100% {
+    opacity: 0;
+    transform: scale(1.42);
+  }
+}
+
+@keyframes video-playback-impact-core {
+  0%,
+  44% {
+    opacity: 0;
+    transform: scale(0.45);
+  }
+  47% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  51% {
+    opacity: 0.9;
+    transform: scale(1.35);
+  }
+  59%,
+  100% {
+    opacity: 0;
+    transform: scale(0.72);
+  }
+}
+
+@keyframes video-playback-contact-label {
+  0%,
+  42% {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  47%,
+  60% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  70%,
+  100% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+}
+
+@keyframes video-playback-particle-squash {
+  0%,
+  43% {
+    transform: scale(1);
+  }
+  48% {
+    transform: scale(1.25, 0.78);
+  }
+  53% {
+    transform: scale(0.86, 1.12);
+  }
+  64%,
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes video-playback-tracer-pulse {
+  0%,
+  46% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.98, 1.02);
+  }
+  55% {
+    transform: scale(1.025, 0.98);
+  }
+  65%,
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes video-playback-progress {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.video-cut .video-collision .playback-particle {
+  animation: video-playback-particle 9s cubic-bezier(0.42, 0, 0.2, 1) infinite;
+}
+
+.video-cut .video-collision .playback-tracer {
+  animation: video-playback-tracer 9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.video-cut .video-collision .playback-vector--incoming {
+  animation: video-playback-incoming 9s ease-in-out infinite;
+}
+
+.video-cut .video-collision .playback-vector--outgoing,
+.video-cut .video-collision .playback-vector--response {
+  animation: video-playback-outgoing 9s ease-in-out infinite;
+}
+
+.video-cut .video-collision .playback-impact {
+  animation: video-playback-impact 9s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.video-cut .video-collision .playback-contact-label {
+  animation: video-playback-contact-label 9s ease-in-out infinite;
+}
+
+.video-cut .video-collision .playback-particle__body {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: video-playback-particle-squash 9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.video-cut .video-collision .playback-tracer__body {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: video-playback-tracer-pulse 9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.video-cut .video-collision .collision-playback__track i {
+  animation: video-playback-progress 9s linear infinite;
+}
+
+.video-cut .video-collision .playback-svg--compact .playback-particle {
+  animation-name: video-playback-particle-compact;
+}
+
+.video-cut .video-collision .playback-svg--compact .playback-tracer {
+  animation-name: video-playback-tracer-compact;
+}
+
+/* Preserve the existing scroll-to-play and pause control for every newly
+   added animated layer. */
+.video-cut .video-collision .collision-visual .playback-tracer,
+.video-cut .video-collision .collision-visual .playback-particle,
+.video-cut .video-collision .collision-visual .playback-vector,
+.video-cut .video-collision .collision-visual .playback-impact,
+.video-cut .video-collision .collision-visual .playback-impact-flash,
+.video-cut .video-collision .collision-visual .playback-impact-core,
+.video-cut .video-collision .collision-visual .playback-tracer__body,
+.video-cut .video-collision .collision-visual .playback-particle__body,
+.video-cut .video-collision .collision-visual .playback-contact-label,
+.video-cut .video-collision .collision-visual .collision-playback__track i {
+  animation-play-state: paused;
+}
+
+.video-cut .video-collision .collision-visual.is-motion-active:not(.is-paused) .playback-tracer,
+.video-cut .video-collision .collision-visual.is-motion-active:not(.is-paused) .playback-particle,
+.video-cut .video-collision .collision-visual.is-motion-active:not(.is-paused) .playback-vector,
+.video-cut .video-collision .collision-visual.is-motion-active:not(.is-paused) .playback-impact,
+.video-cut .video-collision .collision-visual.is-motion-active:not(.is-paused) .playback-impact-flash,
+.video-cut .video-collision .collision-visual.is-motion-active:not(.is-paused) .playback-impact-core,
+.video-cut .video-collision .collision-visual.is-motion-active:not(.is-paused) .playback-tracer__body,
+.video-cut .video-collision .collision-visual.is-motion-active:not(.is-paused) .playback-particle__body,
+.video-cut .video-collision .collision-visual.is-motion-active:not(.is-paused) .playback-contact-label,
+.video-cut .video-collision .collision-visual.is-motion-active:not(.is-paused) .collision-playback__track i {
+  animation-play-state: running;
+}
+
+@media (max-width: 900px) {
+  .video-cut .video-collision .collision-playback {
+    padding: 14px;
+  }
+
+  .video-cut .video-collision .collision-playback__window,
+  .video-cut .video-collision .collision-playback__window svg {
+    min-height: 240px;
+    height: 240px;
+  }
+
+  .video-cut .video-collision .playback-svg--wide {
+    display: none;
+  }
+
+  .video-cut .video-collision .playback-svg--compact {
+    display: block;
+  }
+
+  .video-cut .video-collision .collision-playback__header strong {
+    font-size: 30px;
+  }
+
+  .video-cut .video-collision .playback-vector text,
+  .video-cut .video-collision .playback-contact-label text {
+    font-size: 14px;
+  }
+
+  .video-cut .video-collision .playback-contact-caption {
+    font-size: 11px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .video-cut .video-collision .playback-tracer,
+  .video-cut .video-collision .playback-particle,
+  .video-cut .video-collision .playback-vector,
+  .video-cut .video-collision .playback-impact,
+  .video-cut .video-collision .playback-impact-flash,
+  .video-cut .video-collision .playback-impact-core,
+  .video-cut .video-collision .playback-tracer__body,
+  .video-cut .video-collision .playback-particle__body,
+  .video-cut .video-collision .playback-contact-label,
+  .video-cut .video-collision .collision-playback__track i {
+    animation: none !important;
+  }
+
+  .video-cut .video-collision .playback-tracer {
+    transform: translateX(25px);
+  }
+
+  .video-cut .video-collision .playback-particle {
+    transform: translate(258px, 64px);
+  }
+
+  .video-cut .video-collision .playback-svg--compact .playback-particle {
+    transform: translate(90px, 64px);
+  }
+
+  .video-cut .video-collision .playback-vector--incoming,
+  .video-cut .video-collision .playback-impact,
+  .video-cut .video-collision .playback-impact-flash,
+  .video-cut .video-collision .playback-impact-core,
+  .video-cut .video-collision .playback-contact-label {
+    opacity: 0;
+  }
+
+  .video-cut .video-collision .playback-vector--outgoing,
+  .video-cut .video-collision .playback-vector--response,
+  .video-cut .video-collision .collision-playback__track i {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+
+  .video-cut .video-collision .playback-svg--compact .playback-tracer {
+    transform: translateX(18px);
+  }
+}
+
 @media (max-width: 900px) {
   .video-cut .video-collision .section-introduction > span {
     display: block !important;

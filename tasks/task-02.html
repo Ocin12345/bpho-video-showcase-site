@@ -179,7 +179,7 @@
                 </header>
 
                 <div class="collision-playback__window" aria-hidden="true">
-                  <svg viewBox="0 0 800 250">
+                  <svg class="playback-svg playback-svg--wide" viewBox="0 0 800 250">
                     <defs>
                       <linearGradient id="playback-tracer-gradient" x1="0" y1="0" x2="1" y2="1">
                         <stop offset="0" stop-color="#b9745b" />
@@ -222,6 +222,8 @@
                       <circle cx="488" cy="125" r="33" />
                       <circle cx="488" cy="125" r="52" />
                     </g>
+                    <circle class="playback-impact-flash" cx="488" cy="125" r="58" />
+                    <circle class="playback-impact-core" cx="488" cy="125" r="8" />
 
                     <g class="playback-vector playback-vector--incoming">
                       <path d="M132 125H390" marker-end="url(#playback-arrow-approach)" />
@@ -236,12 +238,81 @@
                       <text x="630" y="99" text-anchor="middle">tracer moves, V′</text>
                     </g>
                     <g class="playback-contact-label">
-                      <path d="M488 59V95" />
-                      <text x="488" y="43" text-anchor="middle">contact impulse</text>
+                      <path class="playback-contact-stem" d="M488 59V101" marker-end="url(#playback-arrow-impulse)" />
+                      <text x="488" y="43" text-anchor="middle">contact impulse · n̂</text>
                       <path d="M480 165H426" marker-end="url(#playback-arrow-impulse)" />
                       <path d="M496 165H550" marker-end="url(#playback-arrow-impulse)" />
                       <text x="452" y="191" text-anchor="middle">−J n̂</text>
                       <text x="524" y="191" text-anchor="middle">+J n̂</text>
+                      <text class="playback-contact-caption" x="488" y="220" text-anchor="middle">equal and opposite impulses</text>
+                    </g>
+                  </svg>
+                  <svg class="playback-svg playback-svg--compact" viewBox="0 0 390 260">
+                    <defs>
+                      <linearGradient id="playback-compact-tracer-gradient" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0" stop-color="#b9745b" />
+                        <stop offset="1" stop-color="#7f4f40" />
+                      </linearGradient>
+                      <marker id="playback-compact-arrow-approach" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+                        <path d="M1 1L9 5L1 9Z" fill="#a24f39" />
+                      </marker>
+                      <marker id="playback-compact-arrow-rebound" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+                        <path d="M1 1L9 5L1 9Z" fill="#a24f39" />
+                      </marker>
+                      <marker id="playback-compact-arrow-response" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+                        <path d="M1 1L9 5L1 9Z" fill="#a24f39" />
+                      </marker>
+                      <marker id="playback-compact-arrow-impulse" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+                        <path d="M1 1L9 5L1 9Z" fill="#a24f39" />
+                      </marker>
+                    </defs>
+
+                    <g class="playback-grid">
+                      <path d="M18 70H372M18 130H372M18 190H372" />
+                      <path d="M70 26V234M160 26V234M250 26V234M340 26V234" />
+                    </g>
+                    <path class="playback-axis" d="M32 130H360" />
+
+                    <g class="playback-tracer">
+                      <circle class="playback-tracer__halo" cx="286" cy="130" r="76" />
+                      <circle class="playback-tracer__body" cx="286" cy="130" r="58" fill="url(#playback-compact-tracer-gradient)" />
+                      <text class="playback-mass playback-mass--tracer" x="286" y="139" text-anchor="middle">M</text>
+                    </g>
+
+                    <g class="playback-particle">
+                      <circle class="playback-particle__halo" cx="70" cy="130" r="29" />
+                      <circle class="playback-particle__body" cx="70" cy="130" r="18" />
+                      <text class="playback-mass" x="70" y="136" text-anchor="middle">m</text>
+                    </g>
+
+                    <g class="playback-impact">
+                      <circle cx="210" cy="130" r="15" />
+                      <circle cx="210" cy="130" r="31" />
+                      <circle cx="210" cy="130" r="49" />
+                    </g>
+                    <circle class="playback-impact-flash" cx="210" cy="130" r="55" />
+                    <circle class="playback-impact-core" cx="210" cy="130" r="8" />
+
+                    <g class="playback-vector playback-vector--incoming">
+                      <path d="M90 130H178" marker-end="url(#playback-compact-arrow-approach)" />
+                      <text x="134" y="104" text-anchor="middle">gas velocity v</text>
+                    </g>
+                    <g class="playback-vector playback-vector--outgoing">
+                      <path d="M198 152L134 215" marker-end="url(#playback-compact-arrow-rebound)" />
+                      <text x="159" y="203" text-anchor="middle">rebound, v′</text>
+                    </g>
+                    <g class="playback-vector playback-vector--response">
+                      <path d="M300 130H360" marker-end="url(#playback-compact-arrow-response)" />
+                      <text x="330" y="104" text-anchor="middle">tracer, V′</text>
+                    </g>
+                    <g class="playback-contact-label">
+                      <path class="playback-contact-stem" d="M210 62V106" marker-end="url(#playback-compact-arrow-impulse)" />
+                      <text x="210" y="45" text-anchor="middle">contact · n̂</text>
+                      <path d="M202 170H154" marker-end="url(#playback-compact-arrow-impulse)" />
+                      <path d="M218 170H266" marker-end="url(#playback-compact-arrow-impulse)" />
+                      <text x="177" y="195" text-anchor="middle">−J n̂</text>
+                      <text x="243" y="195" text-anchor="middle">+J n̂</text>
+                      <text class="playback-contact-caption" x="210" y="229" text-anchor="middle">equal and opposite</text>
                     </g>
                   </svg>
                 </div>
