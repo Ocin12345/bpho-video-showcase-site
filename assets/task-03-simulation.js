@@ -407,13 +407,19 @@
     integralReadout.textContent = formatIntegral(integratedValue);
     relativeReadout.textContent = `${relative.toFixed(2)}×`;
     regionLabel.textContent = `Peak · ${region}`;
-    anatomyTemperature.textContent = `At ${formattedTemperature}`;
-    anatomyPeak.textContent = `λmax = ${peakNm.toFixed(1)} nm`;
-    peakMarker.style.left = `${clamp(
-      ((peakNm - 100) / (3000 - 100)) * 100,
-      0,
-      100,
-    )}%`;
+    if (anatomyTemperature) {
+      anatomyTemperature.textContent = `At ${formattedTemperature}`;
+    }
+    if (anatomyPeak) {
+      anatomyPeak.textContent = `λmax = ${peakNm.toFixed(1)} nm`;
+    }
+    if (peakMarker) {
+      peakMarker.style.left = `${clamp(
+        ((peakNm - 100) / (3000 - 100)) * 100,
+        0,
+        100,
+      )}%`;
+    }
     orb.style.setProperty("--orb-rgb", `${red}, ${green}, ${blue}`);
     hero?.style.setProperty("--thermal-energy", energy.toFixed(3));
     orbStage?.style.setProperty(

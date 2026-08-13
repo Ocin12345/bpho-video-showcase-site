@@ -33,7 +33,6 @@
       <nav class="section-nav" aria-label="Task 3 sections">
         <a href="#spectrum" aria-current="page">Spectrum</a>
         <a href="#einstein">Heat capacity</a>
-        <a href="#method">Method</a>
       </nav>
       <div class="task-identity">
         <span>Task 03</span>
@@ -219,150 +218,6 @@
 
       </section>
 
-      <section class="model-section" id="method" aria-labelledby="method-title">
-        <header class="section-introduction">
-          <p>Method</p>
-          <h2 id="method-title">The equations behind the curves</h2>
-          <span>
-            Planck’s law gives the spectral radiance B<sub>λ</sub> required by
-            the brief. For a Lambertian blackbody, integrating over the outward
-            hemisphere gives M<sub>λ</sub> = πB<sub>λ</sub>.
-          </span>
-        </header>
-
-        <div class="equation-story">
-          <article class="equation-card equation-card--primary">
-            <span>Required Planck radiance</span>
-            <p data-proof-latex="B_{\lambda}(\lambda,T)=\dfrac{2hc^2}{\lambda^5}\,\dfrac{1}{\exp\!\left(\dfrac{hc}{\lambda k_{\mathrm B}T}\right)-1}">
-              B<sub>λ</sub>(λ,T) =
-              <span class="fraction">
-                <span>2hc²</span>
-                <span>λ⁵</span>
-              </span>
-              <span class="fraction">
-                <span>1</span>
-                <span>e<sup>hc/λkT</sup> − 1</span>
-              </span>
-            </p>
-            <small>
-              Spectral radiance in W m<sup>−2</sup> sr<sup>−1</sup>
-              nm<sup>−1</sup>.
-            </small>
-          </article>
-
-          <article class="equation-card">
-            <span>Wien displacement</span>
-            <p data-proof-latex="\lambda_{\max}T=b">λ<sub>max</sub>T = b</p>
-            <small>b = 2.897 771 955 × 10<sup>−3</sup> m K</small>
-          </article>
-
-          <article class="equation-card">
-            <span>Stefan–Boltzmann</span>
-            <p data-proof-latex="M=\sigma T^4">M = σT<sup>4</sup></p>
-            <small>
-              ∫M<sub>λ</sub>dλ = σT⁴; ∫B<sub>λ</sub>dλ = σT⁴/π.
-            </small>
-          </article>
-        </div>
-
-        <div class="quantity-identity">
-          <span>Convention resolved</span>
-          <p data-proof-latex="M_{\lambda}=\pi B_{\lambda}">M<sub>λ</sub> = πB<sub>λ</sub></p>
-          <small>
-            The written brief names B(λ,T), while its example axis omits
-            steradians and therefore behaves like irradiance. The laboratory
-            plots both, with the quantity and units always stated.
-          </small>
-        </div>
-
-        <div class="spectral-anatomy">
-          <div class="spectrum-band" aria-hidden="true">
-            <span class="band-label band-label--uv">Ultraviolet</span>
-            <span class="band-label band-label--visible">Visible</span>
-            <span class="band-label band-label--ir">Infrared</span>
-            <i class="peak-marker" data-peak-marker></i>
-          </div>
-          <div class="anatomy-copy">
-            <span data-anatomy-temperature>At 5,000 K</span>
-            <strong data-anatomy-peak>λmax = 579.6 nm</strong>
-            <p>
-              Raising T moves the peak left to shorter wavelength while the
-              area under the curve rises as T<sup>4</sup>.
-            </p>
-          </div>
-        </div>
-
-        <div class="model-ledger">
-          <div>
-            <span>Emitter</span>
-            <strong>Ideal blackbody</strong>
-          </div>
-          <div>
-            <span>Emissivity</span>
-            <strong>ε = 1</strong>
-          </div>
-          <div>
-            <span>Quantity</span>
-            <strong>Radiance + exitance</strong>
-          </div>
-          <div>
-            <span>Wavelength grid</span>
-            <strong>100–3,000 nm</strong>
-          </div>
-          <div>
-            <span>Constants</span>
-            <strong>SI definitions</strong>
-          </div>
-        </div>
-
-        <div
-          class="constants-marquee"
-          role="region"
-          aria-label="Physical constants and identities"
-          tabindex="0"
-        >
-          <div class="constants-marquee__track">
-            <div class="constants-marquee__group">
-              <span><strong>h</strong> = 6.626 070 15 × 10<sup>−34</sup> J s</span>
-              <span><strong>c</strong> = 299 792 458 m s<sup>−1</sup></span>
-              <span><strong>k<sub>B</sub></strong> = 1.380 649 × 10<sup>−23</sup> J K<sup>−1</sup></span>
-              <span><strong>M<sub>λ</sub></strong> = πB<sub>λ</sub></span>
-              <span><strong>λ<sub>max</sub>T</strong> = b</span>
-              <span><strong>C<sub>V</sub></strong> → 3R</span>
-            </div>
-            <div class="constants-marquee__group" aria-hidden="true">
-              <span><strong>h</strong> = 6.626 070 15 × 10<sup>−34</sup> J s</span>
-              <span><strong>c</strong> = 299 792 458 m s<sup>−1</sup></span>
-              <span><strong>k<sub>B</sub></strong> = 1.380 649 × 10<sup>−23</sup> J K<sup>−1</sup></span>
-              <span><strong>M<sub>λ</sub></strong> = πB<sub>λ</sub></span>
-              <span><strong>λ<sub>max</sub>T</strong> = b</span>
-              <span><strong>C<sub>V</sub></strong> → 3R</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="method-notes">
-          <article>
-            <span>Einstein model</span>
-            <p>
-              Each solid uses its material-dependent Einstein temperature
-              T<sub>E</sub> from the official project dataset. At high
-              temperature the model approaches the classical Dulong–Petit
-              limit, C<sub>V</sub> → 3R.
-            </p>
-          </article>
-          <article>
-            <span>Numerical stability</span>
-            <p>
-              The browser Planck calculation uses <code>expm1</code> for the
-              occupation factor. The reference implementation also uses
-              stable negative-exponential and high-temperature branches for
-              the Einstein expression.
-            </p>
-          </article>
-        </div>
-      </section>
-
       <section class="einstein-section" id="einstein" aria-labelledby="einstein-title">
         <div class="einstein-scroll-layout">
           <header class="einstein-heading">
@@ -461,27 +316,6 @@
               </article>
             </div>
 
-            <div class="einstein-equation">
-              <span>Einstein heat capacity</span>
-              <p data-proof-latex="C_V=3R\left(\dfrac{T_E}{T}\right)^2\dfrac{e^{T_E/T}}{\left(e^{T_E/T}-1\right)^2}">
-                C<sub>V</sub> = 3R
-                <span class="math-group">
-                  <span class="fraction">
-                    <span>T<sub>E</sub></span>
-                    <span>T</span>
-                  </span>
-                </span>
-                <sup>2</sup>
-                <span class="fraction">
-                  <span>e<sup>T<sub>E</sub>/T</sup></span>
-                  <span>(e<sup>T<sub>E</sub>/T</sup> − 1)²</span>
-                </span>
-              </p>
-              <small>
-                C<sub>V</sub> → 0 as T → 0, and C<sub>V</sub> → 3R at high
-                temperature.
-              </small>
-            </div>
           </div>
         </div>
       </section>
@@ -808,7 +642,7 @@
     <script src="../assets/proof-math.js?v=20260808"></script>
     <script src="../data/task-03-evidence.js"></script>
     <script src="../assets/task-03-evidence.js?v=20260813"></script>
-    <script src="../assets/task-03-simulation.js?v=20260808"></script>
+    <script src="../assets/task-03-simulation.js?v=20260813b"></script>
     <script src="../assets/task-03-navigation.js?v=20260808"></script>
   </body>
 </html>
