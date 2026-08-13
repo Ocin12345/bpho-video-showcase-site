@@ -1,0 +1,20137 @@
+window.TASK03_EVIDENCE = {
+  "schema_version": 1,
+  "task": "03",
+  "generated_from": [
+    "data/task03/planck_spectra.csv",
+    "data/task03/planck_validation.csv",
+    "data/task03/einstein_materials.csv",
+    "data/task03/einstein_heat_capacity.csv",
+    "data/task03/einstein_normalized.csv",
+    "data/task03/validation_report.json"
+  ],
+  "constants": {
+    "planck_j_s": 6.62607015e-34,
+    "speed_of_light_m_s": 299792458.0,
+    "boltzmann_j_k": 1.380649e-23,
+    "gas_constant_j_mol_k": 8.31446261815324,
+    "stefan_boltzmann_w_m2_k4": 5.6703744191844314e-08,
+    "wien_displacement_m_k": 0.0028977719551851727
+  },
+  "validation": {
+    "passed": true,
+    "passed_checks": 27,
+    "total_checks": 27,
+    "largest_planck_integral_relative_error": 1.0817635508980848e-09,
+    "largest_wien_peak_relative_error": 7.576574524083605e-06,
+    "normalized_collapse_max_absolute_difference": 8.881784197001252e-16
+  },
+  "planck": {
+    "validation": [
+      {
+        "temperature_k": 4000,
+        "numerical_peak_nm": 724.44,
+        "wien_peak_nm": 724.442988796,
+        "peak_relative_error": 4.125647344439368e-06,
+        "numerical_exitance_w_m2": 14516158.528791,
+        "stefan_boltzmann_w_m2": 14516158.513112,
+        "numerical_radiance_w_m2_sr": 4620636.769125,
+        "stefan_boltzmann_radiance_w_m2_sr": 4620636.764135,
+        "integral_relative_error": 1.0800824399531015e-09
+      },
+      {
+        "temperature_k": 5000,
+        "numerical_peak_nm": 579.55,
+        "wien_peak_nm": 579.554391037,
+        "peak_relative_error": 7.576574524083605e-06,
+        "numerical_exitance_w_m2": 35439840.158222,
+        "stefan_boltzmann_w_m2": 35439840.119903,
+        "numerical_radiance_w_m2_sr": 11280851.487135,
+        "stefan_boltzmann_radiance_w_m2_sr": 11280851.474938,
+        "integral_relative_error": 1.0812481024837783e-09
+      },
+      {
+        "temperature_k": 6000,
+        "numerical_peak_nm": 482.96,
+        "wien_peak_nm": 482.961992531,
+        "peak_relative_error": 4.1256473445962965e-06,
+        "numerical_exitance_w_m2": 73488052.552127,
+        "stefan_boltzmann_w_m2": 73488052.47263,
+        "numerical_radiance_w_m2_sr": 23391973.643736,
+        "stefan_boltzmann_radiance_w_m2_sr": 23391973.618431,
+        "integral_relative_error": 1.0817635508980848e-09
+      }
+    ],
+    "series": {
+      "4000": [
+        {
+          "wavelength_nm": 100.0,
+          "exitance_w_m2_nm": 8.948615314163265e-06,
+          "radiance_w_m2_sr_nm": 2.848432722153835e-06
+        },
+        {
+          "wavelength_nm": 105.0,
+          "exitance_w_m2_nm": 3.887601976471167e-05,
+          "radiance_w_m2_sr_nm": 1.2374621426584169e-05
+        },
+        {
+          "wavelength_nm": 110.0,
+          "exitance_w_m2_nm": 0.0001461882765972287,
+          "radiance_w_m2_sr_nm": 4.6533173685068386e-05
+        },
+        {
+          "wavelength_nm": 115.0,
+          "exitance_w_m2_nm": 0.00048509891855818687,
+          "radiance_w_m2_sr_nm": 0.0001544117815541364
+        },
+        {
+          "wavelength_nm": 120.0,
+          "exitance_w_m2_nm": 0.0014434547903021493,
+          "radiance_w_m2_sr_nm": 0.0004594659300125246
+        },
+        {
+          "wavelength_nm": 125.0,
+          "exitance_w_m2_nm": 0.0039036427622114933,
+          "radiance_w_m2_sr_nm": 0.0012425680833417186
+        },
+        {
+          "wavelength_nm": 130.0,
+          "exitance_w_m2_nm": 0.009704192777786069,
+          "radiance_w_m2_sr_nm": 0.003088940498602647
+        },
+        {
+          "wavelength_nm": 135.0,
+          "exitance_w_m2_nm": 0.02239026470733457,
+          "radiance_w_m2_sr_nm": 0.007127042610616612
+        },
+        {
+          "wavelength_nm": 140.0,
+          "exitance_w_m2_nm": 0.048344866435325186,
+          "radiance_w_m2_sr_nm": 0.015388648932598923
+        },
+        {
+          "wavelength_nm": 145.0,
+          "exitance_w_m2_nm": 0.09838120653191379,
+          "radiance_w_m2_sr_nm": 0.031315710653797485
+        },
+        {
+          "wavelength_nm": 150.0,
+          "exitance_w_m2_nm": 0.18984829386114593,
+          "radiance_w_m2_sr_nm": 0.06043058881112821
+        },
+        {
+          "wavelength_nm": 155.0,
+          "exitance_w_m2_nm": 0.3492584321509393,
+          "radiance_w_m2_sr_nm": 0.11117241178669468
+        },
+        {
+          "wavelength_nm": 160.0,
+          "exitance_w_m2_nm": 0.6153914739930845,
+          "radiance_w_m2_sr_nm": 0.1958851900452139
+        },
+        {
+          "wavelength_nm": 165.0,
+          "exitance_w_m2_nm": 1.0427736018529805,
+          "radiance_w_m2_sr_nm": 0.3319251465212837
+        },
+        {
+          "wavelength_nm": 170.0,
+          "exitance_w_m2_nm": 1.7053757012172768,
+          "radiance_w_m2_sr_nm": 0.5428379453550736
+        },
+        {
+          "wavelength_nm": 175.0,
+          "exitance_w_m2_nm": 2.7003350422774934,
+          "radiance_w_m2_sr_nm": 0.8595433399654505
+        },
+        {
+          "wavelength_nm": 180.0,
+          "exitance_w_m2_nm": 4.1514790838053,
+          "radiance_w_m2_sr_nm": 1.3214568346604525
+        },
+        {
+          "wavelength_nm": 185.0,
+          "exitance_w_m2_nm": 6.212424370068667,
+          "radiance_w_m2_sr_nm": 1.977476094161965
+        },
+        {
+          "wavelength_nm": 190.0,
+          "exitance_w_m2_nm": 9.069036757865156,
+          "radiance_w_m2_sr_nm": 2.886764058192672
+        },
+        {
+          "wavelength_nm": 195.0,
+          "exitance_w_m2_nm": 12.941069410367014,
+          "radiance_w_m2_sr_nm": 4.119270331110459
+        },
+        {
+          "wavelength_nm": 200.0,
+          "exitance_w_m2_nm": 18.08283833712985,
+          "radiance_w_m2_sr_nm": 5.755946212971689
+        },
+        {
+          "wavelength_nm": 205.0,
+          "exitance_w_m2_nm": 24.782847056511194,
+          "radiance_w_m2_sr_nm": 7.8886252258683704
+        },
+        {
+          "wavelength_nm": 210.0,
+          "exitance_w_m2_nm": 33.362327307008826,
+          "radiance_w_m2_sr_nm": 10.619558607920352
+        },
+        {
+          "wavelength_nm": 215.0,
+          "exitance_w_m2_nm": 44.1727170894255,
+          "radiance_w_m2_sr_nm": 14.060612549163816
+        },
+        {
+          "wavelength_nm": 220.0,
+          "exitance_w_m2_nm": 57.59214688408854,
+          "radiance_w_m2_sr_nm": 18.33214971975438
+        },
+        {
+          "wavelength_nm": 225.0,
+          "exitance_w_m2_nm": 74.02104683094376,
+          "radiance_w_m2_sr_nm": 23.561630991962748
+        },
+        {
+          "wavelength_nm": 230.0,
+          "exitance_w_m2_nm": 93.87702019930698,
+          "radiance_w_m2_sr_nm": 29.881983614914827
+        },
+        {
+          "wavelength_nm": 235.0,
+          "exitance_w_m2_nm": 117.58915080845867,
+          "radiance_w_m2_sr_nm": 37.42978921028908
+        },
+        {
+          "wavelength_nm": 240.0,
+          "exitance_w_m2_nm": 145.59192423995955,
+          "radiance_w_m2_sr_nm": 46.3433488341006
+        },
+        {
+          "wavelength_nm": 245.0,
+          "exitance_w_m2_nm": 178.31894542652515,
+          "radiance_w_m2_sr_nm": 56.760683223130805
+        },
+        {
+          "wavelength_nm": 250.0,
+          "exitance_w_m2_nm": 216.19662970282258,
+          "radiance_w_m2_sr_nm": 68.81752459402459
+        },
+        {
+          "wavelength_nm": 255.0,
+          "exitance_w_m2_nm": 259.638032140129,
+          "radiance_w_m2_sr_nm": 82.64535245950785
+        },
+        {
+          "wavelength_nm": 260.0,
+          "exitance_w_m2_nm": 309.03696256202176,
+          "radiance_w_m2_sr_nm": 98.36952037970153
+        },
+        {
+          "wavelength_nm": 265.0,
+          "exitance_w_m2_nm": 364.76251264593407,
+          "radiance_w_m2_sr_nm": 116.10751388444078
+        },
+        {
+          "wavelength_nm": 270.0,
+          "exitance_w_m2_nm": 427.1540984424685,
+          "radiance_w_m2_sr_nm": 135.9673724581619
+        },
+        {
+          "wavelength_nm": 275.0,
+          "exitance_w_m2_nm": 496.5170978031777,
+          "radiance_w_m2_sr_nm": 158.04630089003555
+        },
+        {
+          "wavelength_nm": 280.0,
+          "exitance_w_m2_nm": 573.1191387002672,
+          "radiance_w_m2_sr_nm": 182.4294878094342
+        },
+        {
+          "wavelength_nm": 285.0,
+          "exitance_w_m2_nm": 657.1870721230628,
+          "radiance_w_m2_sr_nm": 209.18914212895075
+        },
+        {
+          "wavelength_nm": 290.0,
+          "exitance_w_m2_nm": 748.9046427982503,
+          "radiance_w_m2_sr_nm": 238.38375161162347
+        },
+        {
+          "wavelength_nm": 295.0,
+          "exitance_w_m2_nm": 848.4108528497748,
+          "radiance_w_m2_sr_nm": 270.0575620077046
+        },
+        {
+          "wavelength_nm": 300.0,
+          "exitance_w_m2_nm": 955.7989979499874,
+          "radiance_w_m2_sr_nm": 304.2402702520417
+        },
+        {
+          "wavelength_nm": 305.0,
+          "exitance_w_m2_nm": 1071.1163426242365,
+          "radiance_w_m2_sr_nm": 340.94692111031884
+        },
+        {
+          "wavelength_nm": 310.0,
+          "exitance_w_m2_nm": 1194.3643911353188,
+          "radiance_w_m2_sr_nm": 380.1779934042558
+        },
+        {
+          "wavelength_nm": 315.0,
+          "exitance_w_m2_nm": 1325.4997026786734,
+          "radiance_w_m2_sr_nm": 421.91965949629696
+        },
+        {
+          "wavelength_nm": 320.0,
+          "exitance_w_m2_nm": 1464.4351942733038,
+          "radiance_w_m2_sr_nm": 466.14420001267274
+        },
+        {
+          "wavelength_nm": 325.0,
+          "exitance_w_m2_nm": 1611.0418715071908,
+          "radiance_w_m2_sr_nm": 512.810554756775
+        },
+        {
+          "wavelength_nm": 330.0,
+          "exitance_w_m2_nm": 1765.1509259251116,
+          "radiance_w_m2_sr_nm": 561.8649903284349
+        },
+        {
+          "wavelength_nm": 335.0,
+          "exitance_w_m2_nm": 1926.5561380610718,
+          "radiance_w_m2_sr_nm": 613.2418650329031
+        },
+        {
+          "wavelength_nm": 340.0,
+          "exitance_w_m2_nm": 2095.0165266457025,
+          "radiance_w_m2_sr_nm": 666.8644721497541
+        },
+        {
+          "wavelength_nm": 345.0,
+          "exitance_w_m2_nm": 2270.259187100856,
+          "radiance_w_m2_sr_nm": 722.6459434537786
+        },
+        {
+          "wavelength_nm": 350.0,
+          "exitance_w_m2_nm": 2451.9822658302355,
+          "radiance_w_m2_sr_nm": 780.4901959610954
+        },
+        {
+          "wavelength_nm": 355.0,
+          "exitance_w_m2_nm": 2639.858020804313,
+          "radiance_w_m2_sr_nm": 840.2929061435879
+        },
+        {
+          "wavelength_nm": 360.0,
+          "exitance_w_m2_nm": 2833.535923329285,
+          "radiance_w_m2_sr_nm": 901.942497252627
+        },
+        {
+          "wavelength_nm": 365.0,
+          "exitance_w_m2_nm": 3032.6457605133096,
+          "radiance_w_m2_sr_nm": 965.3211268647469
+        },
+        {
+          "wavelength_nm": 370.0,
+          "exitance_w_m2_nm": 3236.8007026569308,
+          "radiance_w_m2_sr_nm": 1030.3056632623413
+        },
+        {
+          "wavelength_nm": 375.0,
+          "exitance_w_m2_nm": 3445.600304482122,
+          "radiance_w_m2_sr_nm": 1096.7686407545386
+        },
+        {
+          "wavelength_nm": 380.0,
+          "exitance_w_m2_nm": 3658.6334136790965,
+          "radiance_w_m2_sr_nm": 1164.5791854964068
+        },
+        {
+          "wavelength_nm": 385.0,
+          "exitance_w_m2_nm": 3875.480964618421,
+          "radiance_w_m2_sr_nm": 1233.603904755137
+        },
+        {
+          "wavelength_nm": 390.0,
+          "exitance_w_m2_nm": 4095.718639194314,
+          "radiance_w_m2_sr_nm": 1303.7077338827721
+        },
+        {
+          "wavelength_nm": 395.0,
+          "exitance_w_m2_nm": 4318.919380592493,
+          "radiance_w_m2_sr_nm": 1374.7547364733643
+        },
+        {
+          "wavelength_nm": 400.0,
+          "exitance_w_m2_nm": 4544.655749285432,
+          "radiance_w_m2_sr_nm": 1446.6088542995558
+        },
+        {
+          "wavelength_nm": 405.0,
+          "exitance_w_m2_nm": 4772.502113741773,
+          "radiance_w_m2_sr_nm": 1519.1346046370443
+        },
+        {
+          "wavelength_nm": 410.0,
+          "exitance_w_m2_nm": 5002.036671183549,
+          "radiance_w_m2_sr_nm": 1592.1977234915826
+        },
+        {
+          "wavelength_nm": 415.0,
+          "exitance_w_m2_nm": 5232.843296242625,
+          "radiance_w_m2_sr_nm": 1665.665754044602
+        },
+        {
+          "wavelength_nm": 420.0,
+          "exitance_w_m2_nm": 5464.513217567984,
+          "radiance_w_m2_sr_nm": 1739.4085803338846
+        },
+        {
+          "wavelength_nm": 425.0,
+          "exitance_w_m2_nm": 5696.64652432606,
+          "radiance_w_m2_sr_nm": 1813.2989067875149
+        },
+        {
+          "wavelength_nm": 430.0,
+          "exitance_w_m2_nm": 5928.853506142712,
+          "radiance_w_m2_sr_nm": 1887.212684740655
+        },
+        {
+          "wavelength_nm": 435.0,
+          "exitance_w_m2_nm": 6160.755831372041,
+          "radiance_w_m2_sr_nm": 1961.0294874901592
+        },
+        {
+          "wavelength_nm": 440.0,
+          "exitance_w_m2_nm": 6391.987569668324,
+          "radiance_w_m2_sr_nm": 2034.632835789329
+        },
+        {
+          "wavelength_nm": 445.0,
+          "exitance_w_m2_nm": 6622.196065705767,
+          "radiance_w_m2_sr_nm": 2107.9104759615493
+        },
+        {
+          "wavelength_nm": 450.0,
+          "exitance_w_m2_nm": 6851.042671552815,
+          "radiance_w_m2_sr_nm": 2180.7546130222695
+        },
+        {
+          "wavelength_nm": 455.0,
+          "exitance_w_m2_nm": 7078.2033456974295,
+          "radiance_w_m2_sr_nm": 2253.062101354675
+        },
+        {
+          "wavelength_nm": 460.0,
+          "exitance_w_m2_nm": 7303.369127042052,
+          "radiance_w_m2_sr_nm": 2324.7345955869664
+        },
+        {
+          "wavelength_nm": 465.0,
+          "exitance_w_m2_nm": 7526.246492377748,
+          "radiance_w_m2_sr_nm": 2395.6786643799146
+        },
+        {
+          "wavelength_nm": 470.0,
+          "exitance_w_m2_nm": 7746.557605911071,
+          "radiance_w_m2_sr_nm": 2465.805869853731
+        },
+        {
+          "wavelength_nm": 475.0,
+          "exitance_w_m2_nm": 7964.0404693851415,
+          "radiance_w_m2_sr_nm": 2535.0328153730875
+        },
+        {
+          "wavelength_nm": 480.0,
+          "exitance_w_m2_nm": 8178.448981212642,
+          "radiance_w_m2_sr_nm": 2603.281164369735
+        },
+        {
+          "wavelength_nm": 485.0,
+          "exitance_w_m2_nm": 8389.552912845142,
+          "radiance_w_m2_sr_nm": 2670.4776328206267
+        },
+        {
+          "wavelength_nm": 490.0,
+          "exitance_w_m2_nm": 8597.137810352035,
+          "radiance_w_m2_sr_nm": 2736.5539579195197
+        },
+        {
+          "wavelength_nm": 495.0,
+          "exitance_w_m2_nm": 8801.004828881758,
+          "radiance_w_m2_sr_nm": 2801.4468453843447
+        },
+        {
+          "wavelength_nm": 500.0,
+          "exitance_w_m2_nm": 9000.970507344146,
+          "radiance_w_m2_sr_nm": 2865.0978977363716
+        },
+        {
+          "wavelength_nm": 505.0,
+          "exitance_w_m2_nm": 9196.866490289984,
+          "radiance_w_m2_sr_nm": 2927.453525771723
+        },
+        {
+          "wavelength_nm": 510.0,
+          "exitance_w_m2_nm": 9388.539203584513,
+          "radiance_w_m2_sr_nm": 2988.464845325043
+        },
+        {
+          "wavelength_nm": 515.0,
+          "exitance_w_m2_nm": 9575.849490076884,
+          "radiance_w_m2_sr_nm": 3048.087561299483
+        },
+        {
+          "wavelength_nm": 520.0,
+          "exitance_w_m2_nm": 9758.67221107207,
+          "radiance_w_m2_sr_nm": 3106.281840811271
+        },
+        {
+          "wavelength_nm": 525.0,
+          "exitance_w_m2_nm": 9936.895819009731,
+          "radiance_w_m2_sr_nm": 3163.012177169173
+        },
+        {
+          "wavelength_nm": 530.0,
+          "exitance_w_m2_nm": 10110.4219063659,
+          "radiance_w_m2_sr_nm": 3218.247246285434
+        },
+        {
+          "wavelength_nm": 535.0,
+          "exitance_w_m2_nm": 10279.164735395832,
+          "radiance_w_m2_sr_nm": 3271.959756988282
+        },
+        {
+          "wavelength_nm": 540.0,
+          "exitance_w_m2_nm": 10443.050752970723,
+          "radiance_w_m2_sr_nm": 3324.1262965896603
+        },
+        {
+          "wavelength_nm": 545.0,
+          "exitance_w_m2_nm": 10602.018094387493,
+          "radiance_w_m2_sr_nm": 3374.727172942972
+        },
+        {
+          "wavelength_nm": 550.0,
+          "exitance_w_m2_nm": 10756.016079683612,
+          "radiance_w_m2_sr_nm": 3423.746254115113
+        },
+        {
+          "wavelength_nm": 555.0,
+          "exitance_w_m2_nm": 10905.004705655398,
+          "radiance_w_m2_sr_nm": 3471.1708066908714
+        },
+        {
+          "wavelength_nm": 560.0,
+          "exitance_w_m2_nm": 11048.954136458222,
+          "radiance_w_m2_sr_nm": 3516.99133362594
+        },
+        {
+          "wavelength_nm": 565.0,
+          "exitance_w_m2_nm": 11187.844195368187,
+          "radiance_w_m2_sr_nm": 3561.2014124696307
+        },
+        {
+          "wavelength_nm": 570.0,
+          "exitance_w_m2_nm": 11321.66385999932,
+          "radiance_w_m2_sr_nm": 3603.79753468752
+        },
+        {
+          "wavelength_nm": 575.0,
+          "exitance_w_m2_nm": 11450.410763008971,
+          "radiance_w_m2_sr_nm": 3644.7789467310376
+        },
+        {
+          "wavelength_nm": 580.0,
+          "exitance_w_m2_nm": 11574.090700071138,
+          "radiance_w_m2_sr_nm": 3684.147493420514
+        },
+        {
+          "wavelength_nm": 585.0,
+          "exitance_w_m2_nm": 11692.717146674267,
+          "radiance_w_m2_sr_nm": 3721.907464137144
+        },
+        {
+          "wavelength_nm": 590.0,
+          "exitance_w_m2_nm": 11806.310785076997,
+          "radiance_w_m2_sr_nm": 3758.0654422483194
+        },
+        {
+          "wavelength_nm": 595.0,
+          "exitance_w_m2_nm": 11914.89904257096,
+          "radiance_w_m2_sr_nm": 3792.630158132119
+        },
+        {
+          "wavelength_nm": 600.0,
+          "exitance_w_m2_nm": 12018.515642005159,
+          "radiance_w_m2_sr_nm": 3825.61234610477
+        },
+        {
+          "wavelength_nm": 605.0,
+          "exitance_w_m2_nm": 12117.200165373455,
+          "radiance_w_m2_sr_nm": 3857.0246055062344
+        },
+        {
+          "wavelength_nm": 610.0,
+          "exitance_w_m2_nm": 12210.997631103657,
+          "radiance_w_m2_sr_nm": 3886.881266147143
+        },
+        {
+          "wavelength_nm": 615.0,
+          "exitance_w_m2_nm": 12299.95808555924,
+          "radiance_w_m2_sr_nm": 3915.1982582797573
+        },
+        {
+          "wavelength_nm": 620.0,
+          "exitance_w_m2_nm": 12384.136209132572,
+          "radiance_w_m2_sr_nm": 3941.99298721355
+        },
+        {
+          "wavelength_nm": 625.0,
+          "exitance_w_m2_nm": 12463.590937200588,
+          "radiance_w_m2_sr_nm": 3967.2842126616442
+        },
+        {
+          "wavelength_nm": 630.0,
+          "exitance_w_m2_nm": 12538.385096111695,
+          "radiance_w_m2_sr_nm": 3991.091932871851
+        },
+        {
+          "wavelength_nm": 635.0,
+          "exitance_w_m2_nm": 12608.585054279412,
+          "radiance_w_m2_sr_nm": 4013.437273566324
+        },
+        {
+          "wavelength_nm": 640.0,
+          "exitance_w_m2_nm": 12674.26038838365,
+          "radiance_w_m2_sr_nm": 4034.342381690126
+        },
+        {
+          "wavelength_nm": 645.0,
+          "exitance_w_m2_nm": 12735.4835646056,
+          "radiance_w_m2_sr_nm": 4053.830323945145
+        },
+        {
+          "wavelength_nm": 650.0,
+          "exitance_w_m2_nm": 12792.329634760072,
+          "radiance_w_m2_sr_nm": 4071.924990066011
+        },
+        {
+          "wavelength_nm": 655.0,
+          "exitance_w_m2_nm": 12844.87594713381,
+          "radiance_w_m2_sr_nm": 4088.651000777074
+        },
+        {
+          "wavelength_nm": 660.0,
+          "exitance_w_m2_nm": 12893.201871795123,
+          "radiance_w_m2_sr_nm": 4104.033620355743
+        },
+        {
+          "wavelength_nm": 665.0,
+          "exitance_w_m2_nm": 12937.388540095122,
+          "radiance_w_m2_sr_nm": 4118.098673713156
+        },
+        {
+          "wavelength_nm": 670.0,
+          "exitance_w_m2_nm": 12977.518598046117,
+          "radiance_w_m2_sr_nm": 4130.872467892086
+        },
+        {
+          "wavelength_nm": 675.0,
+          "exitance_w_m2_nm": 13013.67597323777,
+          "radiance_w_m2_sr_nm": 4142.381717874046
+        },
+        {
+          "wavelength_nm": 680.0,
+          "exitance_w_m2_nm": 13045.945654922485,
+          "radiance_w_m2_sr_nm": 4152.653476578294
+        },
+        {
+          "wavelength_nm": 685.0,
+          "exitance_w_m2_nm": 13074.413486889307,
+          "radiance_w_m2_sr_nm": 4161.715068931553
+        },
+        {
+          "wavelength_nm": 690.0,
+          "exitance_w_m2_nm": 13099.165972717981,
+          "radiance_w_m2_sr_nm": 4169.594029878444
+        },
+        {
+          "wavelength_nm": 695.0,
+          "exitance_w_m2_nm": 13120.290093009702,
+          "radiance_w_m2_sr_nm": 4176.318046204235
+        },
+        {
+          "wavelength_nm": 700.0,
+          "exitance_w_m2_nm": 13137.873134166619,
+          "radiance_w_m2_sr_nm": 4181.914902033658
+        },
+        {
+          "wavelength_nm": 705.0,
+          "exitance_w_m2_nm": 13152.002528298945,
+          "radiance_w_m2_sr_nm": 4186.4124278717645
+        },
+        {
+          "wavelength_nm": 710.0,
+          "exitance_w_m2_nm": 13162.765703828685,
+          "radiance_w_m2_sr_nm": 4189.838453049612
+        },
+        {
+          "wavelength_nm": 715.0,
+          "exitance_w_m2_nm": 13170.249946362195,
+          "radiance_w_m2_sr_nm": 4192.220761438626
+        },
+        {
+          "wavelength_nm": 720.0,
+          "exitance_w_m2_nm": 13174.542269403682,
+          "radiance_w_m2_sr_nm": 4193.587050297426
+        },
+        {
+          "wavelength_nm": 725.0,
+          "exitance_w_m2_nm": 13175.729294487333,
+          "radiance_w_m2_sr_nm": 4193.9648921167
+        },
+        {
+          "wavelength_nm": 730.0,
+          "exitance_w_m2_nm": 13173.89714030653,
+          "radiance_w_m2_sr_nm": 4193.381699327937
+        },
+        {
+          "wavelength_nm": 735.0,
+          "exitance_w_m2_nm": 13169.131320433098,
+          "radiance_w_m2_sr_nm": 4191.864691746453
+        },
+        {
+          "wavelength_nm": 740.0,
+          "exitance_w_m2_nm": 13161.516649215484,
+          "radiance_w_m2_sr_nm": 4189.440866617847
+        },
+        {
+          "wavelength_nm": 745.0,
+          "exitance_w_m2_nm": 13151.137155466113,
+          "radiance_w_m2_sr_nm": 4186.136971143839
+        },
+        {
+          "wavelength_nm": 750.0,
+          "exitance_w_m2_nm": 13138.076003547281,
+          "radiance_w_m2_sr_nm": 4181.9794773631265
+        },
+        {
+          "wavelength_nm": 755.0,
+          "exitance_w_m2_nm": 13122.415421480368,
+          "radiance_w_m2_sr_nm": 4176.994559267835
+        },
+        {
+          "wavelength_nm": 760.0,
+          "exitance_w_m2_nm": 13104.236635713434,
+          "radiance_w_m2_sr_nm": 4171.208072039403
+        },
+        {
+          "wavelength_nm": 765.0,
+          "exitance_w_m2_nm": 13083.61981219045,
+          "radiance_w_m2_sr_nm": 4164.6455332903315
+        },
+        {
+          "wavelength_nm": 770.0,
+          "exitance_w_m2_nm": 13060.644003379675,
+          "radiance_w_m2_sr_nm": 4157.332106202793
+        },
+        {
+          "wavelength_nm": 775.0,
+          "exitance_w_m2_nm": 13035.387100931084,
+          "radiance_w_m2_sr_nm": 4149.292584459026
+        },
+        {
+          "wavelength_nm": 780.0,
+          "exitance_w_m2_nm": 13007.92579363841,
+          "radiance_w_m2_sr_nm": 4140.5513788602375
+        },
+        {
+          "wavelength_nm": 785.0,
+          "exitance_w_m2_nm": 12978.33553040188,
+          "radiance_w_m2_sr_nm": 4131.132505537269
+        },
+        {
+          "wavelength_nm": 790.0,
+          "exitance_w_m2_nm": 12946.690487892545,
+          "radiance_w_m2_sr_nm": 4121.059575657841
+        },
+        {
+          "wavelength_nm": 795.0,
+          "exitance_w_m2_nm": 12913.06354263573,
+          "radiance_w_m2_sr_nm": 4110.355786540436
+        },
+        {
+          "wavelength_nm": 800.0,
+          "exitance_w_m2_nm": 12877.526247236998,
+          "radiance_w_m2_sr_nm": 4099.043914086786
+        },
+        {
+          "wavelength_nm": 805.0,
+          "exitance_w_m2_nm": 12840.148810493647,
+          "radiance_w_m2_sr_nm": 4087.146306451168
+        },
+        {
+          "wavelength_nm": 810.0,
+          "exitance_w_m2_nm": 12801.000081138956,
+          "radiance_w_m2_sr_nm": 4074.6848788660363
+        },
+        {
+          "wavelength_nm": 815.0,
+          "exitance_w_m2_nm": 12760.147534980098,
+          "radiance_w_m2_sr_nm": 4061.6811095478924
+        },
+        {
+          "wavelength_nm": 820.0,
+          "exitance_w_m2_nm": 12717.65726520415,
+          "radiance_w_m2_sr_nm": 4048.156036611592
+        },
+        {
+          "wavelength_nm": 825.0,
+          "exitance_w_m2_nm": 12673.593975631582,
+          "radiance_w_m2_sr_nm": 4034.1302559228643
+        },
+        {
+          "wavelength_nm": 830.0,
+          "exitance_w_m2_nm": 12628.020976714886,
+          "radiance_w_m2_sr_nm": 4019.6239198246367
+        },
+        {
+          "wavelength_nm": 835.0,
+          "exitance_w_m2_nm": 12581.000184079629,
+          "radiance_w_m2_sr_nm": 4004.6567366726363
+        },
+        {
+          "wavelength_nm": 840.0,
+          "exitance_w_m2_nm": 12532.592119426976,
+          "radiance_w_m2_sr_nm": 3989.247971122673
+        },
+        {
+          "wavelength_nm": 845.0,
+          "exitance_w_m2_nm": 12482.85591361671,
+          "radiance_w_m2_sr_nm": 3973.416445111993
+        },
+        {
+          "wavelength_nm": 850.0,
+          "exitance_w_m2_nm": 12431.849311763854,
+          "radiance_w_m2_sr_nm": 3957.1805394815888
+        },
+        {
+          "wavelength_nm": 855.0,
+          "exitance_w_m2_nm": 12379.628680188303,
+          "radiance_w_m2_sr_nm": 3940.55819618833
+        },
+        {
+          "wavelength_nm": 860.0,
+          "exitance_w_m2_nm": 12326.249015068559,
+          "radiance_w_m2_sr_nm": 3923.566921059535
+        },
+        {
+          "wavelength_nm": 865.0,
+          "exitance_w_m2_nm": 12271.763952655785,
+          "radiance_w_m2_sr_nm": 3906.223787044208
+        },
+        {
+          "wavelength_nm": 870.0,
+          "exitance_w_m2_nm": 12216.225780913664,
+          "radiance_w_m2_sr_nm": 3888.545437918118
+        },
+        {
+          "wavelength_nm": 875.0,
+          "exitance_w_m2_nm": 12159.685452457185,
+          "radiance_w_m2_sr_nm": 3870.548092402342
+        },
+        {
+          "wavelength_nm": 880.0,
+          "exitance_w_m2_nm": 12102.192598670646,
+          "radiance_w_m2_sr_nm": 3852.2475486571675
+        },
+        {
+          "wavelength_nm": 885.0,
+          "exitance_w_m2_nm": 12043.795544892073,
+          "radiance_w_m2_sr_nm": 3833.659189115441
+        },
+        {
+          "wavelength_nm": 890.0,
+          "exitance_w_m2_nm": 11984.541326557819,
+          "radiance_w_m2_sr_nm": 3814.797985621555
+        },
+        {
+          "wavelength_nm": 895.0,
+          "exitance_w_m2_nm": 11924.475706208295,
+          "radiance_w_m2_sr_nm": 3795.6785048445395
+        },
+        {
+          "wavelength_nm": 900.0,
+          "exitance_w_m2_nm": 11863.643191259398,
+          "radiance_w_m2_sr_nm": 3776.3149139348825
+        },
+        {
+          "wavelength_nm": 905.0,
+          "exitance_w_m2_nm": 11802.087052454575,
+          "radiance_w_m2_sr_nm": 3756.7209863980056
+        },
+        {
+          "wavelength_nm": 910.0,
+          "exitance_w_m2_nm": 11739.849342912825,
+          "radiance_w_m2_sr_nm": 3736.9101081574313
+        },
+        {
+          "wavelength_nm": 915.0,
+          "exitance_w_m2_nm": 11676.970917696068,
+          "radiance_w_m2_sr_nm": 3716.8952837832694
+        },
+        {
+          "wavelength_nm": 920.0,
+          "exitance_w_m2_nm": 11613.491453826553,
+          "radiance_w_m2_sr_nm": 3696.689142863956
+        },
+        {
+          "wavelength_nm": 925.0,
+          "exitance_w_m2_nm": 11549.449470681398,
+          "radiance_w_m2_sr_nm": 3676.3039464980375
+        },
+        {
+          "wavelength_nm": 930.0,
+          "exitance_w_m2_nm": 11484.882350709078,
+          "radiance_w_m2_sr_nm": 3655.751593888433
+        },
+        {
+          "wavelength_nm": 935.0,
+          "exitance_w_m2_nm": 11419.826360401443,
+          "radiance_w_m2_sr_nm": 3635.043629018036
+        },
+        {
+          "wavelength_nm": 940.0,
+          "exitance_w_m2_nm": 11354.31667147376,
+          "radiance_w_m2_sr_nm": 3614.1912473915295
+        },
+        {
+          "wavelength_nm": 945.0,
+          "exitance_w_m2_nm": 11288.387382198764,
+          "radiance_w_m2_sr_nm": 3593.205302826227
+        },
+        {
+          "wavelength_nm": 950.0,
+          "exitance_w_m2_nm": 11222.071538847431,
+          "radiance_w_m2_sr_nm": 3572.0963142768824
+        },
+        {
+          "wavelength_nm": 955.0,
+          "exitance_w_m2_nm": 11155.40115719546,
+          "radiance_w_m2_sr_nm": 3550.874472681414
+        },
+        {
+          "wavelength_nm": 960.0,
+          "exitance_w_m2_nm": 11088.4072440536,
+          "radiance_w_m2_sr_nm": 3529.5496478142218
+        },
+        {
+          "wavelength_nm": 965.0,
+          "exitance_w_m2_nm": 11021.11981878551,
+          "radiance_w_m2_sr_nm": 3508.1313951355355
+        },
+        {
+          "wavelength_nm": 970.0,
+          "exitance_w_m2_nm": 10953.567934777857,
+          "radiance_w_m2_sr_nm": 3486.628962625559
+        },
+        {
+          "wavelength_nm": 975.0,
+          "exitance_w_m2_nm": 10885.779700834419,
+          "radiance_w_m2_sr_nm": 3465.051297594423
+        },
+        {
+          "wavelength_nm": 980.0,
+          "exitance_w_m2_nm": 10817.782302460138,
+          "radiance_w_m2_sr_nm": 3443.407053457112
+        },
+        {
+          "wavelength_nm": 985.0,
+          "exitance_w_m2_nm": 10749.602023014519,
+          "radiance_w_m2_sr_nm": 3421.7045964667977
+        },
+        {
+          "wavelength_nm": 990.0,
+          "exitance_w_m2_nm": 10681.264264705966,
+          "radiance_w_m2_sr_nm": 3399.9520123975467
+        },
+        {
+          "wavelength_nm": 995.0,
+          "exitance_w_m2_nm": 10612.79356940761,
+          "radiance_w_m2_sr_nm": 3378.1571131702017
+        },
+        {
+          "wavelength_nm": 1000.0,
+          "exitance_w_m2_nm": 10544.213639273064,
+          "radiance_w_m2_sr_nm": 3356.3274434145824
+        },
+        {
+          "wavelength_nm": 1005.0,
+          "exitance_w_m2_nm": 10475.547357135443,
+          "radiance_w_m2_sr_nm": 3334.470286962692
+        },
+        {
+          "wavelength_nm": 1010.0,
+          "exitance_w_m2_nm": 10406.81680667311,
+          "radiance_w_m2_sr_nm": 3312.592673267678
+        },
+        {
+          "wavelength_nm": 1015.0,
+          "exitance_w_m2_nm": 10338.043292326249,
+          "radiance_w_m2_sr_nm": 3290.701383743469
+        },
+        {
+          "wavelength_nm": 1020.0,
+          "exitance_w_m2_nm": 10269.24735895437,
+          "radiance_w_m2_sr_nm": 3268.8029580219586
+        },
+        {
+          "wavelength_nm": 1025.0,
+          "exitance_w_m2_nm": 10200.448811218208,
+          "radiance_w_m2_sr_nm": 3246.9037001224506
+        },
+        {
+          "wavelength_nm": 1030.0,
+          "exitance_w_m2_nm": 10131.666732682263,
+          "radiance_w_m2_sr_nm": 3225.0096845321896
+        },
+        {
+          "wavelength_nm": 1035.0,
+          "exitance_w_m2_nm": 10062.919504622936,
+          "radiance_w_m2_sr_nm": 3203.1267621931743
+        },
+        {
+          "wavelength_nm": 1040.0,
+          "exitance_w_m2_nm": 9994.224824538633,
+          "radiance_w_m2_sr_nm": 3181.2605663941076
+        },
+        {
+          "wavelength_nm": 1045.0,
+          "exitance_w_m2_nm": 9925.599724353799,
+          "radiance_w_m2_sr_nm": 3159.4165185649217
+        },
+        {
+          "wavelength_nm": 1050.0,
+          "exitance_w_m2_nm": 9857.060588310305,
+          "radiance_w_m2_sr_nm": 3137.599833971782
+        },
+        {
+          "wavelength_nm": 1055.0,
+          "exitance_w_m2_nm": 9788.623170544934,
+          "radiance_w_m2_sr_nm": 3115.8155273121743
+        },
+        {
+          "wavelength_nm": 1060.0,
+          "exitance_w_m2_nm": 9720.30261234386,
+          "radiance_w_m2_sr_nm": 3094.0684182071773
+        },
+        {
+          "wavelength_nm": 1065.0,
+          "exitance_w_m2_nm": 9652.113459077102,
+          "radiance_w_m2_sr_nm": 3072.3631365918664
+        },
+        {
+          "wavelength_nm": 1070.0,
+          "exitance_w_m2_nm": 9584.06967680658,
+          "radiance_w_m2_sr_nm": 3050.7041280018225
+        },
+        {
+          "wavelength_nm": 1075.0,
+          "exitance_w_m2_nm": 9516.184668567777,
+          "radiance_w_m2_sr_nm": 3029.095658755743
+        },
+        {
+          "wavelength_nm": 1080.0,
+          "exitance_w_m2_nm": 9448.471290325055,
+          "radiance_w_m2_sr_nm": 3007.5418210341822
+        },
+        {
+          "wavelength_nm": 1085.0,
+          "exitance_w_m2_nm": 9380.941866598487,
+          "radiance_w_m2_sr_nm": 2986.046537853721
+        },
+        {
+          "wavelength_nm": 1090.0,
+          "exitance_w_m2_nm": 9313.608205764967,
+          "radiance_w_m2_sr_nm": 2964.6135679374656
+        },
+        {
+          "wavelength_nm": 1095.0,
+          "exitance_w_m2_nm": 9246.481615032528,
+          "radiance_w_m2_sr_nm": 2943.246510481517
+        },
+        {
+          "wavelength_nm": 1100.0,
+          "exitance_w_m2_nm": 9179.572915090102,
+          "radiance_w_m2_sr_nm": 2921.948809818138
+        },
+        {
+          "wavelength_nm": 1105.0,
+          "exitance_w_m2_nm": 9112.89245443355,
+          "radiance_w_m2_sr_nm": 2900.7237599758682
+        },
+        {
+          "wavelength_nm": 1110.0,
+          "exitance_w_m2_nm": 9046.45012337313,
+          "radiance_w_m2_sr_nm": 2879.57450913824
+        },
+        {
+          "wavelength_nm": 1115.0,
+          "exitance_w_m2_nm": 8980.255367719941,
+          "radiance_w_m2_sr_nm": 2858.50406400031
+        },
+        {
+          "wavelength_nm": 1120.0,
+          "exitance_w_m2_nm": 8914.317202158893,
+          "radiance_w_m2_sr_nm": 2837.5152940254043
+        },
+        {
+          "wavelength_nm": 1125.0,
+          "exitance_w_m2_nm": 8848.644223308926,
+          "radiance_w_m2_sr_nm": 2816.610935602321
+        },
+        {
+          "wavelength_nm": 1130.0,
+          "exitance_w_m2_nm": 8783.244622473905,
+          "radiance_w_m2_sr_nm": 2795.7935961040603
+        },
+        {
+          "wavelength_nm": 1135.0,
+          "exitance_w_m2_nm": 8718.1261980888,
+          "radiance_w_m2_sr_nm": 2775.0657578495693
+        },
+        {
+          "wavelength_nm": 1140.0,
+          "exitance_w_m2_nm": 8653.296367864375,
+          "radiance_w_m2_sr_nm": 2754.429781969519
+        },
+        {
+          "wavelength_nm": 1145.0,
+          "exitance_w_m2_nm": 8588.762180634481,
+          "radiance_w_m2_sr_nm": 2733.8879121774075
+        },
+        {
+          "wavelength_nm": 1150.0,
+          "exitance_w_m2_nm": 8524.530327910054,
+          "radiance_w_m2_sr_nm": 2713.442278447321
+        },
+        {
+          "wavelength_nm": 1155.0,
+          "exitance_w_m2_nm": 8460.607155144522,
+          "radiance_w_m2_sr_nm": 2693.0949005998177
+        },
+        {
+          "wavelength_nm": 1160.0,
+          "exitance_w_m2_nm": 8396.9986727148,
+          "radiance_w_m2_sr_nm": 2672.84769179729
+        },
+        {
+          "wavelength_nm": 1165.0,
+          "exitance_w_m2_nm": 8333.710566622683,
+          "radiance_w_m2_sr_nm": 2652.70246195032
+        },
+        {
+          "wavelength_nm": 1170.0,
+          "exitance_w_m2_nm": 8270.748208920468,
+          "radiance_w_m2_sr_nm": 2632.660921036265
+        },
+        {
+          "wavelength_nm": 1175.0,
+          "exitance_w_m2_nm": 8208.116667867256,
+          "radiance_w_m2_sr_nm": 2612.7246823321016
+        },
+        {
+          "wavelength_nm": 1180.0,
+          "exitance_w_m2_nm": 8145.820717818563,
+          "radiance_w_m2_sr_nm": 2592.8952655623907
+        },
+        {
+          "wavelength_nm": 1185.0,
+          "exitance_w_m2_nm": 8083.864848856494,
+          "radiance_w_m2_sr_nm": 2573.1740999646568
+        },
+        {
+          "wavelength_nm": 1190.0,
+          "exitance_w_m2_nm": 8022.253276163275,
+          "radiance_w_m2_sr_nm": 2553.562527273074
+        },
+        {
+          "wavelength_nm": 1195.0,
+          "exitance_w_m2_nm": 7960.989949143647,
+          "radiance_w_m2_sr_nm": 2534.0618046222157
+        },
+        {
+          "wavelength_nm": 1200.0,
+          "exitance_w_m2_nm": 7900.078560302421,
+          "radiance_w_m2_sr_nm": 2514.6731073728683
+        },
+        {
+          "wavelength_nm": 1205.0,
+          "exitance_w_m2_nm": 7839.522553879919,
+          "radiance_w_m2_sr_nm": 2495.397531860777
+        },
+        {
+          "wavelength_nm": 1210.0,
+          "exitance_w_m2_nm": 7779.325134252059,
+          "radiance_w_m2_sr_nm": 2476.2360980704752
+        },
+        {
+          "wavelength_nm": 1215.0,
+          "exitance_w_m2_nm": 7719.489274099104,
+          "radiance_w_m2_sr_nm": 2457.1897522354784
+        },
+        {
+          "wavelength_nm": 1220.0,
+          "exitance_w_m2_nm": 7660.017722347946,
+          "radiance_w_m2_sr_nm": 2438.2593693663944
+        },
+        {
+          "wavelength_nm": 1225.0,
+          "exitance_w_m2_nm": 7600.913011893348,
+          "radiance_w_m2_sr_nm": 2419.4457557086653
+        },
+        {
+          "wavelength_nm": 1230.0,
+          "exitance_w_m2_nm": 7542.177467102715,
+          "radiance_w_m2_sr_nm": 2400.749651131416
+        },
+        {
+          "wavelength_nm": 1235.0,
+          "exitance_w_m2_nm": 7483.813211109206,
+          "radiance_w_m2_sr_nm": 2382.1717314489206
+        },
+        {
+          "wavelength_nm": 1240.0,
+          "exitance_w_m2_nm": 7425.822172897501,
+          "radiance_w_m2_sr_nm": 2363.712610676073
+        },
+        {
+          "wavelength_nm": 1245.0,
+          "exitance_w_m2_nm": 7368.206094188303,
+          "radiance_w_m2_sr_nm": 2345.372843219792
+        },
+        {
+          "wavelength_nm": 1250.0,
+          "exitance_w_m2_nm": 7310.966536124439,
+          "radiance_w_m2_sr_nm": 2327.1529260072725
+        },
+        {
+          "wavelength_nm": 1255.0,
+          "exitance_w_m2_nm": 7254.104885764801,
+          "radiance_w_m2_sr_nm": 2309.0533005530738
+        },
+        {
+          "wavelength_nm": 1260.0,
+          "exitance_w_m2_nm": 7197.622362389609,
+          "radiance_w_m2_sr_nm": 2291.0743549661433
+        },
+        {
+          "wavelength_nm": 1265.0,
+          "exitance_w_m2_nm": 7141.520023622468,
+          "radiance_w_m2_sr_nm": 2273.21642589853
+        },
+        {
+          "wavelength_nm": 1270.0,
+          "exitance_w_m2_nm": 7085.798771372164,
+          "radiance_w_m2_sr_nm": 2255.4798004367176
+        },
+        {
+          "wavelength_nm": 1275.0,
+          "exitance_w_m2_nm": 7030.459357600698,
+          "radiance_w_m2_sr_nm": 2237.8647179376444
+        },
+        {
+          "wavelength_nm": 1280.0,
+          "exitance_w_m2_nm": 6975.502389919731,
+          "radiance_w_m2_sr_nm": 2220.3713718101094
+        },
+        {
+          "wavelength_nm": 1285.0,
+          "exitance_w_m2_nm": 6920.928337021391,
+          "radiance_w_m2_sr_nm": 2202.9999112434507
+        },
+        {
+          "wavelength_nm": 1290.0,
+          "exitance_w_m2_nm": 6866.737533946223,
+          "radiance_w_m2_sr_nm": 2185.750442884386
+        },
+        {
+          "wavelength_nm": 1295.0,
+          "exitance_w_m2_nm": 6812.930187194077,
+          "radiance_w_m2_sr_nm": 2168.6230324638586
+        },
+        {
+          "wavelength_nm": 1300.0,
+          "exitance_w_m2_nm": 6759.506379679675,
+          "radiance_w_m2_sr_nm": 2151.6177063744444
+        },
+        {
+          "wavelength_nm": 1305.0,
+          "exitance_w_m2_nm": 6706.466075539269,
+          "radiance_w_m2_sr_nm": 2134.734453200358
+        },
+        {
+          "wavelength_nm": 1310.0,
+          "exitance_w_m2_nm": 6653.809124790407,
+          "radiance_w_m2_sr_nm": 2117.9732252007025
+        },
+        {
+          "wavelength_nm": 1315.0,
+          "exitance_w_m2_nm": 6601.535267849822,
+          "radiance_w_m2_sr_nm": 2101.333939747557
+        },
+        {
+          "wavelength_nm": 1320.0,
+          "exitance_w_m2_nm": 6549.644139912163,
+          "radiance_w_m2_sr_nm": 2084.8164807197722
+        },
+        {
+          "wavelength_nm": 1325.0,
+          "exitance_w_m2_nm": 6498.135275194198,
+          "radiance_w_m2_sr_nm": 2068.4206998539403
+        },
+        {
+          "wavelength_nm": 1330.0,
+          "exitance_w_m2_nm": 6447.008111047589,
+          "radiance_w_m2_sr_nm": 2052.1464180535336
+        },
+        {
+          "wavelength_nm": 1335.0,
+          "exitance_w_m2_nm": 6396.261991943802,
+          "radiance_w_m2_sr_nm": 2035.993426657338
+        },
+        {
+          "wavelength_nm": 1340.0,
+          "exitance_w_m2_nm": 6345.896173334517,
+          "radiance_w_m2_sr_nm": 2019.961488668263
+        },
+        {
+          "wavelength_nm": 1345.0,
+          "exitance_w_m2_nm": 6295.909825390998,
+          "radiance_w_m2_sr_nm": 2004.050339943618
+        },
+        {
+          "wavelength_nm": 1350.0,
+          "exitance_w_m2_nm": 6246.302036625991,
+          "radiance_w_m2_sr_nm": 1988.2596903479991
+        },
+        {
+          "wavelength_nm": 1355.0,
+          "exitance_w_m2_nm": 6197.071817400679,
+          "radiance_w_m2_sr_nm": 1972.589224869587
+        },
+        {
+          "wavelength_nm": 1360.0,
+          "exitance_w_m2_nm": 6148.2181033212,
+          "radiance_w_m2_sr_nm": 1957.0386047012926
+        },
+        {
+          "wavelength_nm": 1365.0,
+          "exitance_w_m2_nm": 6099.739758525339,
+          "radiance_w_m2_sr_nm": 1941.6074682869437
+        },
+        {
+          "wavelength_nm": 1370.0,
+          "exitance_w_m2_nm": 6051.635578865633,
+          "radiance_w_m2_sr_nm": 1926.295432334498
+        },
+        {
+          "wavelength_nm": 1375.0,
+          "exitance_w_m2_nm": 6003.904294988999,
+          "radiance_w_m2_sr_nm": 1911.1020927963202
+        },
+        {
+          "wavelength_nm": 1380.0,
+          "exitance_w_m2_nm": 5956.544575317571,
+          "radiance_w_m2_sr_nm": 1896.027025818012
+        },
+        {
+          "wavelength_nm": 1385.0,
+          "exitance_w_m2_nm": 5909.55502893232,
+          "radiance_w_m2_sr_nm": 1881.0697886562946
+        },
+        {
+          "wavelength_nm": 1390.0,
+          "exitance_w_m2_nm": 5862.934208363571,
+          "radiance_w_m2_sr_nm": 1866.2299205672612
+        },
+        {
+          "wavelength_nm": 1395.0,
+          "exitance_w_m2_nm": 5816.6806122892785,
+          "radiance_w_m2_sr_nm": 1851.5069436652623
+        },
+        {
+          "wavelength_nm": 1400.0,
+          "exitance_w_m2_nm": 5770.792688145483,
+          "radiance_w_m2_sr_nm": 1836.9003637538403
+        },
+        {
+          "wavelength_nm": 1405.0,
+          "exitance_w_m2_nm": 5725.268834650444,
+          "radiance_w_m2_sr_nm": 1822.4096711291866
+        },
+        {
+          "wavelength_nm": 1410.0,
+          "exitance_w_m2_nm": 5680.107404245159,
+          "radiance_w_m2_sr_nm": 1808.0343413569833
+        },
+        {
+          "wavelength_nm": 1415.0,
+          "exitance_w_m2_nm": 5635.306705452279,
+          "radiance_w_m2_sr_nm": 1793.7738360232674
+        },
+        {
+          "wavelength_nm": 1420.0,
+          "exitance_w_m2_nm": 5590.86500515709,
+          "radiance_w_m2_sr_nm": 1779.6276034604916
+        },
+        {
+          "wavelength_nm": 1425.0,
+          "exitance_w_m2_nm": 5546.780530810866,
+          "radiance_w_m2_sr_nm": 1765.5950794488729
+        },
+        {
+          "wavelength_nm": 1430.0,
+          "exitance_w_m2_nm": 5503.0514725610365,
+          "radiance_w_m2_sr_nm": 1751.6756878944452
+        },
+        {
+          "wavelength_nm": 1435.0,
+          "exitance_w_m2_nm": 5459.675985308259,
+          "radiance_w_m2_sr_nm": 1737.8688414838473
+        },
+        {
+          "wavelength_nm": 1440.0,
+          "exitance_w_m2_nm": 5416.652190693705,
+          "radiance_w_m2_sr_nm": 1724.1739423168938
+        },
+        {
+          "wavelength_nm": 1445.0,
+          "exitance_w_m2_nm": 5373.9781790192765,
+          "radiance_w_m2_sr_nm": 1710.5903825178007
+        },
+        {
+          "wavelength_nm": 1450.0,
+          "exitance_w_m2_nm": 5331.65201110065,
+          "radiance_w_m2_sr_nm": 1697.1175448250267
+        },
+        {
+          "wavelength_nm": 1455.0,
+          "exitance_w_m2_nm": 5289.67172005697,
+          "radiance_w_m2_sr_nm": 1683.7548031609504
+        },
+        {
+          "wavelength_nm": 1460.0,
+          "exitance_w_m2_nm": 5248.0353130386175,
+          "radiance_w_m2_sr_nm": 1670.5015231818365
+        },
+        {
+          "wavelength_nm": 1465.0,
+          "exitance_w_m2_nm": 5206.740772894379,
+          "radiance_w_m2_sr_nm": 1657.3570628085122
+        },
+        {
+          "wavelength_nm": 1470.0,
+          "exitance_w_m2_nm": 5165.786059780569,
+          "radiance_w_m2_sr_nm": 1644.3207727385657
+        },
+        {
+          "wavelength_nm": 1475.0,
+          "exitance_w_m2_nm": 5125.169112713369,
+          "radiance_w_m2_sr_nm": 1631.391996940472
+        },
+        {
+          "wavelength_nm": 1480.0,
+          "exitance_w_m2_nm": 5084.887851066185,
+          "radiance_w_m2_sr_nm": 1618.5700731302175
+        },
+        {
+          "wavelength_nm": 1485.0,
+          "exitance_w_m2_nm": 5044.940176013598,
+          "radiance_w_m2_sr_nm": 1605.8543332309214
+        },
+        {
+          "wavelength_nm": 1490.0,
+          "exitance_w_m2_nm": 5005.323971924312,
+          "radiance_w_m2_sr_nm": 1593.244103816227
+        },
+        {
+          "wavelength_nm": 1495.0,
+          "exitance_w_m2_nm": 4966.0371077032,
+          "radiance_w_m2_sr_nm": 1580.7387065374865
+        },
+        {
+          "wavelength_nm": 1500.0,
+          "exitance_w_m2_nm": 4927.077438085426,
+          "radiance_w_m2_sr_nm": 1568.337458535695
+        },
+        {
+          "wavelength_nm": 1505.0,
+          "exitance_w_m2_nm": 4888.442804883087,
+          "radiance_w_m2_sr_nm": 1556.039672838306
+        },
+        {
+          "wavelength_nm": 1510.0,
+          "exitance_w_m2_nm": 4850.131038186586,
+          "radiance_w_m2_sr_nm": 1543.8446587416427
+        },
+        {
+          "wavelength_nm": 1515.0,
+          "exitance_w_m2_nm": 4812.139957521639,
+          "radiance_w_m2_sr_nm": 1531.7517221791843
+        },
+        {
+          "wavelength_nm": 1520.0,
+          "exitance_w_m2_nm": 4774.467372963438,
+          "radiance_w_m2_sr_nm": 1519.760166076214
+        },
+        {
+          "wavelength_nm": 1525.0,
+          "exitance_w_m2_nm": 4737.111086209304,
+          "radiance_w_m2_sr_nm": 1507.8692906912565
+        },
+        {
+          "wavelength_nm": 1530.0,
+          "exitance_w_m2_nm": 4700.068891611261,
+          "radiance_w_m2_sr_nm": 1496.0783939447558
+        },
+        {
+          "wavelength_nm": 1535.0,
+          "exitance_w_m2_nm": 4663.338577169448,
+          "radiance_w_m2_sr_nm": 1484.3867717352875
+        },
+        {
+          "wavelength_nm": 1540.0,
+          "exitance_w_m2_nm": 4626.917925488001,
+          "radiance_w_m2_sr_nm": 1472.7937182438266
+        },
+        {
+          "wavelength_nm": 1545.0,
+          "exitance_w_m2_nm": 4590.804714694051,
+          "radiance_w_m2_sr_nm": 1461.298526226273
+        },
+        {
+          "wavelength_nm": 1550.0,
+          "exitance_w_m2_nm": 4554.996719321779,
+          "radiance_w_m2_sr_nm": 1449.9004872948553
+        },
+        {
+          "wavelength_nm": 1555.0,
+          "exitance_w_m2_nm": 4519.491711161783,
+          "radiance_w_m2_sr_nm": 1438.5988921884928
+        },
+        {
+          "wavelength_nm": 1560.0,
+          "exitance_w_m2_nm": 4484.28746007748,
+          "radiance_w_m2_sr_nm": 1427.3930310326625
+        },
+        {
+          "wavelength_nm": 1565.0,
+          "exitance_w_m2_nm": 4449.381734788978,
+          "radiance_w_m2_sr_nm": 1416.2821935889167
+        },
+        {
+          "wavelength_nm": 1570.0,
+          "exitance_w_m2_nm": 4414.7723036266225,
+          "radiance_w_m2_sr_nm": 1405.2656694947416
+        },
+        {
+          "wavelength_nm": 1575.0,
+          "exitance_w_m2_nm": 4380.456935253236,
+          "radiance_w_m2_sr_nm": 1394.342748493454
+        },
+        {
+          "wavelength_nm": 1580.0,
+          "exitance_w_m2_nm": 4346.433399358284,
+          "radiance_w_m2_sr_nm": 1383.512720655162
+        },
+        {
+          "wavelength_nm": 1585.0,
+          "exitance_w_m2_nm": 4312.699467323193,
+          "radiance_w_m2_sr_nm": 1372.7748765885403
+        },
+        {
+          "wavelength_nm": 1590.0,
+          "exitance_w_m2_nm": 4279.252912859427,
+          "radiance_w_m2_sr_nm": 1362.128507643939
+        },
+        {
+          "wavelength_nm": 1595.0,
+          "exitance_w_m2_nm": 4246.091512620407,
+          "radiance_w_m2_sr_nm": 1351.5729061081615
+        },
+        {
+          "wavelength_nm": 1600.0,
+          "exitance_w_m2_nm": 4213.213046787327,
+          "radiance_w_m2_sr_nm": 1341.107365390936
+        },
+        {
+          "wavelength_nm": 1605.0,
+          "exitance_w_m2_nm": 4180.615299630608,
+          "radiance_w_m2_sr_nm": 1330.731180203633
+        },
+        {
+          "wavelength_nm": 1610.0,
+          "exitance_w_m2_nm": 4148.296060047296,
+          "radiance_w_m2_sr_nm": 1320.4436467303221
+        },
+        {
+          "wavelength_nm": 1615.0,
+          "exitance_w_m2_nm": 4116.253122075426,
+          "radiance_w_m2_sr_nm": 1310.244062791502
+        },
+        {
+          "wavelength_nm": 1620.0,
+          "exitance_w_m2_nm": 4084.4842853855284,
+          "radiance_w_m2_sr_nm": 1300.1317280005492
+        },
+        {
+          "wavelength_nm": 1625.0,
+          "exitance_w_m2_nm": 4052.9873557510405,
+          "radiance_w_m2_sr_nm": 1290.1059439134565
+        },
+        {
+          "wavelength_nm": 1630.0,
+          "exitance_w_m2_nm": 4021.7601454971496,
+          "radiance_w_m2_sr_nm": 1280.1660141717032
+        },
+        {
+          "wavelength_nm": 1635.0,
+          "exitance_w_m2_nm": 3990.8004739302783,
+          "radiance_w_m2_sr_nm": 1270.3112446389648
+        },
+        {
+          "wavelength_nm": 1640.0,
+          "exitance_w_m2_nm": 3960.1061677465796,
+          "radiance_w_m2_sr_nm": 1260.5409435311412
+        },
+        {
+          "wavelength_nm": 1645.0,
+          "exitance_w_m2_nm": 3929.6750614230928,
+          "radiance_w_m2_sr_nm": 1250.8544215408654
+        },
+        {
+          "wavelength_nm": 1650.0,
+          "exitance_w_m2_nm": 3899.504997589244,
+          "radiance_w_m2_sr_nm": 1241.2509919557551
+        },
+        {
+          "wavelength_nm": 1655.0,
+          "exitance_w_m2_nm": 3869.5938273815254,
+          "radiance_w_m2_sr_nm": 1231.7299707713123
+        },
+        {
+          "wavelength_nm": 1660.0,
+          "exitance_w_m2_nm": 3839.939410780615,
+          "radiance_w_m2_sr_nm": 1222.29067679823
+        },
+        {
+          "wavelength_nm": 1665.0,
+          "exitance_w_m2_nm": 3810.539616932079,
+          "radiance_w_m2_sr_nm": 1212.9324317644753
+        },
+        {
+          "wavelength_nm": 1670.0,
+          "exitance_w_m2_nm": 3781.3923244512835,
+          "radiance_w_m2_sr_nm": 1203.6545604123478
+        },
+        {
+          "wavelength_nm": 1675.0,
+          "exitance_w_m2_nm": 3752.4954217125337,
+          "radiance_w_m2_sr_nm": 1194.4563905905122
+        },
+        {
+          "wavelength_nm": 1680.0,
+          "exitance_w_m2_nm": 3723.8468071238112,
+          "radiance_w_m2_sr_nm": 1185.3372533414527
+        },
+        {
+          "wavelength_nm": 1685.0,
+          "exitance_w_m2_nm": 3695.4443893865737,
+          "radiance_w_m2_sr_nm": 1176.296482984168
+        },
+        {
+          "wavelength_nm": 1690.0,
+          "exitance_w_m2_nm": 3667.2860877420344,
+          "radiance_w_m2_sr_nm": 1167.333417192566
+        },
+        {
+          "wavelength_nm": 1695.0,
+          "exitance_w_m2_nm": 3639.3698322040163,
+          "radiance_w_m2_sr_nm": 1158.447397069582
+        },
+        {
+          "wavelength_nm": 1700.0,
+          "exitance_w_m2_nm": 3611.6935637784154,
+          "radiance_w_m2_sr_nm": 1149.6377672170368
+        },
+        {
+          "wavelength_nm": 1705.0,
+          "exitance_w_m2_nm": 3584.2552346710445,
+          "radiance_w_m2_sr_nm": 1140.9038758017962
+        },
+        {
+          "wavelength_nm": 1710.0,
+          "exitance_w_m2_nm": 3557.052808482417,
+          "radiance_w_m2_sr_nm": 1132.245074617771
+        },
+        {
+          "wavelength_nm": 1715.0,
+          "exitance_w_m2_nm": 3530.0842603916067,
+          "radiance_w_m2_sr_nm": 1123.6607191444432
+        },
+        {
+          "wavelength_nm": 1720.0,
+          "exitance_w_m2_nm": 3503.3475773284817,
+          "radiance_w_m2_sr_nm": 1115.150168601688
+        },
+        {
+          "wavelength_nm": 1725.0,
+          "exitance_w_m2_nm": 3476.840758135361,
+          "radiance_w_m2_sr_nm": 1106.7127860012313
+        },
+        {
+          "wavelength_nm": 1730.0,
+          "exitance_w_m2_nm": 3450.561813718105,
+          "radiance_w_m2_sr_nm": 1098.3479381947443
+        },
+        {
+          "wavelength_nm": 1735.0,
+          "exitance_w_m2_nm": 3424.5087671870315,
+          "radiance_w_m2_sr_nm": 1090.0549959186974
+        },
+        {
+          "wavelength_nm": 1740.0,
+          "exitance_w_m2_nm": 3398.6796539884385,
+          "radiance_w_m2_sr_nm": 1081.833333836225
+        },
+        {
+          "wavelength_nm": 1745.0,
+          "exitance_w_m2_nm": 3373.072522026185,
+          "radiance_w_m2_sr_nm": 1073.6823305758269
+        },
+        {
+          "wavelength_nm": 1750.0,
+          "exitance_w_m2_nm": 3347.685431775003,
+          "radiance_w_m2_sr_nm": 1065.6013687674354
+        },
+        {
+          "wavelength_nm": 1755.0,
+          "exitance_w_m2_nm": 3322.5164563844414,
+          "radiance_w_m2_sr_nm": 1057.589835075503
+        },
+        {
+          "wavelength_nm": 1760.0,
+          "exitance_w_m2_nm": 3297.5636817748723,
+          "radiance_w_m2_sr_nm": 1049.6471202295613
+        },
+        {
+          "wavelength_nm": 1765.0,
+          "exitance_w_m2_nm": 3272.825206725038,
+          "radiance_w_m2_sr_nm": 1041.772619052088
+        },
+        {
+          "wavelength_nm": 1770.0,
+          "exitance_w_m2_nm": 3248.2991429523904,
+          "radiance_w_m2_sr_nm": 1033.9657304840803
+        },
+        {
+          "wavelength_nm": 1775.0,
+          "exitance_w_m2_nm": 3223.9836151852437,
+          "radiance_w_m2_sr_nm": 1026.225857608021
+        },
+        {
+          "wavelength_nm": 1780.0,
+          "exitance_w_m2_nm": 3199.8767612282986,
+          "radiance_w_m2_sr_nm": 1018.5524076687365
+        },
+        {
+          "wavelength_nm": 1785.0,
+          "exitance_w_m2_nm": 3175.9767320207775,
+          "radiance_w_m2_sr_nm": 1010.9447920919011
+        },
+        {
+          "wavelength_nm": 1790.0,
+          "exitance_w_m2_nm": 3152.281691688494,
+          "radiance_w_m2_sr_nm": 1003.4024265006117
+        },
+        {
+          "wavelength_nm": 1795.0,
+          "exitance_w_m2_nm": 3128.7898175887376,
+          "radiance_w_m2_sr_nm": 995.9247307296743
+        },
+        {
+          "wavelength_nm": 1800.0,
+          "exitance_w_m2_nm": 3105.499300349539,
+          "radiance_w_m2_sr_nm": 988.5111288381034
+        },
+        {
+          "wavelength_nm": 1805.0,
+          "exitance_w_m2_nm": 3082.4083439028987,
+          "radiance_w_m2_sr_nm": 981.1610491196984
+        },
+        {
+          "wavelength_nm": 1810.0,
+          "exitance_w_m2_nm": 3059.515165512099,
+          "radiance_w_m2_sr_nm": 973.8739241117378
+        },
+        {
+          "wavelength_nm": 1815.0,
+          "exitance_w_m2_nm": 3036.8179957936827,
+          "radiance_w_m2_sr_nm": 966.6491906019745
+        },
+        {
+          "wavelength_nm": 1820.0,
+          "exitance_w_m2_nm": 3014.315078734304,
+          "radiance_w_m2_sr_nm": 959.4862896340003
+        },
+        {
+          "wavelength_nm": 1825.0,
+          "exitance_w_m2_nm": 2992.004671702247,
+          "radiance_w_m2_sr_nm": 952.3846665109122
+        },
+        {
+          "wavelength_nm": 1830.0,
+          "exitance_w_m2_nm": 2969.8850454542376,
+          "radiance_w_m2_sr_nm": 945.3437707974804
+        },
+        {
+          "wavelength_nm": 1835.0,
+          "exitance_w_m2_nm": 2947.954484137569,
+          "radiance_w_m2_sr_nm": 938.363056320825
+        },
+        {
+          "wavelength_nm": 1840.0,
+          "exitance_w_m2_nm": 2926.2112852876476,
+          "radiance_w_m2_sr_nm": 931.4419811696349
+        },
+        {
+          "wavelength_nm": 1845.0,
+          "exitance_w_m2_nm": 2904.653759821648,
+          "radiance_w_m2_sr_nm": 924.5800076921483
+        },
+        {
+          "wavelength_nm": 1850.0,
+          "exitance_w_m2_nm": 2883.2802320274354,
+          "radiance_w_m2_sr_nm": 917.7766024926266
+        },
+        {
+          "wavelength_nm": 1855.0,
+          "exitance_w_m2_nm": 2862.089039548955,
+          "radiance_w_m2_sr_nm": 911.0312364267027
+        },
+        {
+          "wavelength_nm": 1860.0,
+          "exitance_w_m2_nm": 2841.0785333679187,
+          "radiance_w_m2_sr_nm": 904.3433845955532
+        },
+        {
+          "wavelength_nm": 1865.0,
+          "exitance_w_m2_nm": 2820.2470777815165,
+          "radiance_w_m2_sr_nm": 897.7125263388028
+        },
+        {
+          "wavelength_nm": 1870.0,
+          "exitance_w_m2_nm": 2799.5930503768195,
+          "radiance_w_m2_sr_nm": 891.1381452263768
+        },
+        {
+          "wavelength_nm": 1875.0,
+          "exitance_w_m2_nm": 2779.1148420021837,
+          "radiance_w_m2_sr_nm": 884.6197290493985
+        },
+        {
+          "wavelength_nm": 1880.0,
+          "exitance_w_m2_nm": 2758.810856734974,
+          "radiance_w_m2_sr_nm": 878.1567698099157
+        },
+        {
+          "wavelength_nm": 1885.0,
+          "exitance_w_m2_nm": 2738.679511846607,
+          "radiance_w_m2_sr_nm": 871.7487637097729
+        },
+        {
+          "wavelength_nm": 1890.0,
+          "exitance_w_m2_nm": 2718.7192377644265,
+          "radiance_w_m2_sr_nm": 865.3952111384767
+        },
+        {
+          "wavelength_nm": 1895.0,
+          "exitance_w_m2_nm": 2698.928478031144,
+          "radiance_w_m2_sr_nm": 859.0956166602849
+        },
+        {
+          "wavelength_nm": 1900.0,
+          "exitance_w_m2_nm": 2679.3056892615364,
+          "radiance_w_m2_sr_nm": 852.8494890004225
+        },
+        {
+          "wavelength_nm": 1905.0,
+          "exitance_w_m2_nm": 2659.8493410962683,
+          "radiance_w_m2_sr_nm": 846.6563410303838
+        },
+        {
+          "wavelength_nm": 1910.0,
+          "exitance_w_m2_nm": 2640.5579161539195,
+          "radiance_w_m2_sr_nm": 840.5156897526616
+        },
+        {
+          "wavelength_nm": 1915.0,
+          "exitance_w_m2_nm": 2621.4299099802456,
+          "radiance_w_m2_sr_nm": 834.4270562845967
+        },
+        {
+          "wavelength_nm": 1920.0,
+          "exitance_w_m2_nm": 2602.46383099559,
+          "radiance_w_m2_sr_nm": 828.3899658416381
+        },
+        {
+          "wavelength_nm": 1925.0,
+          "exitance_w_m2_nm": 2583.658200439879,
+          "radiance_w_m2_sr_nm": 822.4039477198353
+        },
+        {
+          "wavelength_nm": 1930.0,
+          "exitance_w_m2_nm": 2565.0115523159793,
+          "radiance_w_m2_sr_nm": 816.4685352778076
+        },
+        {
+          "wavelength_nm": 1935.0,
+          "exitance_w_m2_nm": 2546.5224333311753,
+          "radiance_w_m2_sr_nm": 810.5832659181161
+        },
+        {
+          "wavelength_nm": 1940.0,
+          "exitance_w_m2_nm": 2528.1894028365105,
+          "radiance_w_m2_sr_nm": 804.7476810679553
+        },
+        {
+          "wavelength_nm": 1945.0,
+          "exitance_w_m2_nm": 2510.0110327649268,
+          "radiance_w_m2_sr_nm": 798.9613261594627
+        },
+        {
+          "wavelength_nm": 1950.0,
+          "exitance_w_m2_nm": 2491.9859075674635,
+          "radiance_w_m2_sr_nm": 793.2237506094096
+        },
+        {
+          "wavelength_nm": 1955.0,
+          "exitance_w_m2_nm": 2474.11262414821,
+          "radiance_w_m2_sr_nm": 787.5345077984965
+        },
+        {
+          "wavelength_nm": 1960.0,
+          "exitance_w_m2_nm": 2456.3897917975146,
+          "radiance_w_m2_sr_nm": 781.8931550500922
+        },
+        {
+          "wavelength_nm": 1965.0,
+          "exitance_w_m2_nm": 2438.816032124344,
+          "radiance_w_m2_sr_nm": 776.2992536087039
+        },
+        {
+          "wavelength_nm": 1970.0,
+          "exitance_w_m2_nm": 2421.389978986858,
+          "radiance_w_m2_sr_nm": 770.752368617878
+        },
+        {
+          "wavelength_nm": 1975.0,
+          "exitance_w_m2_nm": 2404.1102784221125,
+          "radiance_w_m2_sr_nm": 765.252069097824
+        },
+        {
+          "wavelength_nm": 1980.0,
+          "exitance_w_m2_nm": 2386.975588574565,
+          "radiance_w_m2_sr_nm": 759.7979279226565
+        },
+        {
+          "wavelength_nm": 1985.0,
+          "exitance_w_m2_nm": 2369.984579623565,
+          "radiance_w_m2_sr_nm": 754.389521797316
+        },
+        {
+          "wavelength_nm": 1990.0,
+          "exitance_w_m2_nm": 2353.1359337097774,
+          "radiance_w_m2_sr_nm": 749.0264312341473
+        },
+        {
+          "wavelength_nm": 1995.0,
+          "exitance_w_m2_nm": 2336.4283448608644,
+          "radiance_w_m2_sr_nm": 743.7082405292442
+        },
+        {
+          "wavelength_nm": 2000.0,
+          "exitance_w_m2_nm": 2319.86051891607,
+          "radiance_w_m2_sr_nm": 738.4345377384437
+        },
+        {
+          "wavelength_nm": 2005.0,
+          "exitance_w_m2_nm": 2303.431173450248,
+          "radiance_w_m2_sr_nm": 733.2049146531439
+        },
+        {
+          "wavelength_nm": 2010.0,
+          "exitance_w_m2_nm": 2287.139037696997,
+          "radiance_w_m2_sr_nm": 728.0189667758357
+        },
+        {
+          "wavelength_nm": 2015.0,
+          "exitance_w_m2_nm": 2270.982852471229,
+          "radiance_w_m2_sr_nm": 722.8762932954571
+        },
+        {
+          "wavelength_nm": 2020.0,
+          "exitance_w_m2_nm": 2254.9613700910563,
+          "radiance_w_m2_sr_nm": 717.7764970625288
+        },
+        {
+          "wavelength_nm": 2025.0,
+          "exitance_w_m2_nm": 2239.0733542990642,
+          "radiance_w_m2_sr_nm": 712.7191845640936
+        },
+        {
+          "wavelength_nm": 2030.0,
+          "exitance_w_m2_nm": 2223.3175801830926,
+          "radiance_w_m2_sr_nm": 707.7039658985011
+        },
+        {
+          "wavelength_nm": 2035.0,
+          "exitance_w_m2_nm": 2207.6928340967106,
+          "radiance_w_m2_sr_nm": 702.7304547500943
+        },
+        {
+          "wavelength_nm": 2040.0,
+          "exitance_w_m2_nm": 2192.197913578895,
+          "radiance_w_m2_sr_nm": 697.7982683636416
+        },
+        {
+          "wavelength_nm": 2045.0,
+          "exitance_w_m2_nm": 2176.8316272737375,
+          "radiance_w_m2_sr_nm": 692.9070275187793
+        },
+        {
+          "wavelength_nm": 2050.0,
+          "exitance_w_m2_nm": 2161.592794849467,
+          "radiance_w_m2_sr_nm": 688.0563565042357
+        },
+        {
+          "wavelength_nm": 2055.0,
+          "exitance_w_m2_nm": 2146.480246917351,
+          "radiance_w_m2_sr_nm": 683.2458830920169
+        },
+        {
+          "wavelength_nm": 2060.0,
+          "exitance_w_m2_nm": 2131.49282495044,
+          "radiance_w_m2_sr_nm": 678.4752385115411
+        },
+        {
+          "wavelength_nm": 2065.0,
+          "exitance_w_m2_nm": 2116.6293812016993,
+          "radiance_w_m2_sr_nm": 673.7440574235802
+        },
+        {
+          "wavelength_nm": 2070.0,
+          "exitance_w_m2_nm": 2101.8887786223995,
+          "radiance_w_m2_sr_nm": 669.0519778942828
+        },
+        {
+          "wavelength_nm": 2075.0,
+          "exitance_w_m2_nm": 2087.269890780101,
+          "radiance_w_m2_sr_nm": 664.3986413690671
+        },
+        {
+          "wavelength_nm": 2080.0,
+          "exitance_w_m2_nm": 2072.771601776583,
+          "radiance_w_m2_sr_nm": 659.7836926464976
+        },
+        {
+          "wavelength_nm": 2085.0,
+          "exitance_w_m2_nm": 2058.392806165677,
+          "radiance_w_m2_sr_nm": 655.2067798521301
+        },
+        {
+          "wavelength_nm": 2090.0,
+          "exitance_w_m2_nm": 2044.1324088710387,
+          "radiance_w_m2_sr_nm": 650.6675544123382
+        },
+        {
+          "wavelength_nm": 2095.0,
+          "exitance_w_m2_nm": 2029.9893251040014,
+          "radiance_w_m2_sr_nm": 646.1656710281648
+        },
+        {
+          "wavelength_nm": 2100.0,
+          "exitance_w_m2_nm": 2015.9624802811593,
+          "radiance_w_m2_sr_nm": 641.7007876490882
+        },
+        {
+          "wavelength_nm": 2105.0,
+          "exitance_w_m2_nm": 2002.0508099423644,
+          "radiance_w_m2_sr_nm": 637.27256544692
+        },
+        {
+          "wavelength_nm": 2110.0,
+          "exitance_w_m2_nm": 1988.2532596685076,
+          "radiance_w_m2_sr_nm": 632.8806687896334
+        },
+        {
+          "wavelength_nm": 2115.0,
+          "exitance_w_m2_nm": 1974.5687849993276,
+          "radiance_w_m2_sr_nm": 628.5247652152018
+        },
+        {
+          "wavelength_nm": 2120.0,
+          "exitance_w_m2_nm": 1960.9963513516855,
+          "radiance_w_m2_sr_nm": 624.2045254055838
+        },
+        {
+          "wavelength_nm": 2125.0,
+          "exitance_w_m2_nm": 1947.5349339376044,
+          "radiance_w_m2_sr_nm": 619.9196231606352
+        },
+        {
+          "wavelength_nm": 2130.0,
+          "exitance_w_m2_nm": 1934.1835176825725,
+          "radiance_w_m2_sr_nm": 615.6697353721036
+        },
+        {
+          "wavelength_nm": 2135.0,
+          "exitance_w_m2_nm": 1920.9410971441496,
+          "radiance_w_m2_sr_nm": 611.4545419977203
+        },
+        {
+          "wavelength_nm": 2140.0,
+          "exitance_w_m2_nm": 1907.8066764304997,
+          "radiance_w_m2_sr_nm": 607.2737260352683
+        },
+        {
+          "wavelength_nm": 2145.0,
+          "exitance_w_m2_nm": 1894.7792691195186,
+          "radiance_w_m2_sr_nm": 603.12697349684
+        },
+        {
+          "wavelength_nm": 2150.0,
+          "exitance_w_m2_nm": 1881.8578981777898,
+          "radiance_w_m2_sr_nm": 599.0139733830398
+        },
+        {
+          "wavelength_nm": 2155.0,
+          "exitance_w_m2_nm": 1869.041595880048,
+          "radiance_w_m2_sr_nm": 594.9344176573486
+        },
+        {
+          "wavelength_nm": 2160.0,
+          "exitance_w_m2_nm": 1856.3294037288247,
+          "radiance_w_m2_sr_nm": 590.8880012205462
+        },
+        {
+          "wavelength_nm": 2165.0,
+          "exitance_w_m2_nm": 1843.7203723743714,
+          "radiance_w_m2_sr_nm": 586.8744218852223
+        },
+        {
+          "wavelength_nm": 2170.0,
+          "exitance_w_m2_nm": 1831.2135615349168,
+          "radiance_w_m2_sr_nm": 582.8933803503934
+        },
+        {
+          "wavelength_nm": 2175.0,
+          "exitance_w_m2_nm": 1818.8080399171895,
+          "radiance_w_m2_sr_nm": 578.944580176204
+        },
+        {
+          "wavelength_nm": 2180.0,
+          "exitance_w_m2_nm": 1806.5028851372854,
+          "radiance_w_m2_sr_nm": 575.0277277587388
+        },
+        {
+          "wavelength_nm": 2185.0,
+          "exitance_w_m2_nm": 1794.297183641898,
+          "radiance_w_m2_sr_nm": 571.1425323049488
+        },
+        {
+          "wavelength_nm": 2190.0,
+          "exitance_w_m2_nm": 1782.1900306298978,
+          "radiance_w_m2_sr_nm": 567.2887058076892
+        },
+        {
+          "wavelength_nm": 2195.0,
+          "exitance_w_m2_nm": 1770.1805299742264,
+          "radiance_w_m2_sr_nm": 563.4659630208582
+        },
+        {
+          "wavelength_nm": 2200.0,
+          "exitance_w_m2_nm": 1758.2677941441568,
+          "radiance_w_m2_sr_nm": 559.6740214346513
+        },
+        {
+          "wavelength_nm": 2205.0,
+          "exitance_w_m2_nm": 1746.4509441281161,
+          "radiance_w_m2_sr_nm": 555.9126012509944
+        },
+        {
+          "wavelength_nm": 2210.0,
+          "exitance_w_m2_nm": 1734.7291093565882,
+          "radiance_w_m2_sr_nm": 552.1814253590042
+        },
+        {
+          "wavelength_nm": 2215.0,
+          "exitance_w_m2_nm": 1723.1014276257486,
+          "radiance_w_m2_sr_nm": 548.4802193106792
+        },
+        {
+          "wavelength_nm": 2220.0,
+          "exitance_w_m2_nm": 1711.5670450212906,
+          "radiance_w_m2_sr_nm": 544.808711296654
+        },
+        {
+          "wavelength_nm": 2225.0,
+          "exitance_w_m2_nm": 1700.1251158427556,
+          "radiance_w_m2_sr_nm": 541.1666321221114
+        },
+        {
+          "wavelength_nm": 2230.0,
+          "exitance_w_m2_nm": 1688.7748025283327,
+          "radiance_w_m2_sr_nm": 537.5537151828471
+        },
+        {
+          "wavelength_nm": 2235.0,
+          "exitance_w_m2_nm": 1677.5152755799759,
+          "radiance_w_m2_sr_nm": 533.9696964414323
+        },
+        {
+          "wavelength_nm": 2240.0,
+          "exitance_w_m2_nm": 1666.3457134891357,
+          "radiance_w_m2_sr_nm": 530.4143144035743
+        },
+        {
+          "wavelength_nm": 2245.0,
+          "exitance_w_m2_nm": 1655.2653026627943,
+          "radiance_w_m2_sr_nm": 526.8873100945718
+        },
+        {
+          "wavelength_nm": 2250.0,
+          "exitance_w_m2_nm": 1644.2732373499807,
+          "radiance_w_m2_sr_nm": 523.3884270359254
+        },
+        {
+          "wavelength_nm": 2255.0,
+          "exitance_w_m2_nm": 1633.3687195688503,
+          "radiance_w_m2_sr_nm": 519.9174112221247
+        },
+        {
+          "wavelength_nm": 2260.0,
+          "exitance_w_m2_nm": 1622.5509590342288,
+          "radiance_w_m2_sr_nm": 516.4740110975857
+        },
+        {
+          "wavelength_nm": 2265.0,
+          "exitance_w_m2_nm": 1611.819173085375,
+          "radiance_w_m2_sr_nm": 513.0579775336573
+        },
+        {
+          "wavelength_nm": 2270.0,
+          "exitance_w_m2_nm": 1601.1725866146442,
+          "radiance_w_m2_sr_nm": 509.66906380591314
+        },
+        {
+          "wavelength_nm": 2275.0,
+          "exitance_w_m2_nm": 1590.610431996184,
+          "radiance_w_m2_sr_nm": 506.3070255714554
+        },
+        {
+          "wavelength_nm": 2280.0,
+          "exitance_w_m2_nm": 1580.1319490156493,
+          "radiance_w_m2_sr_nm": 502.9716208465427
+        },
+        {
+          "wavelength_nm": 2285.0,
+          "exitance_w_m2_nm": 1569.7363847997005,
+          "radiance_w_m2_sr_nm": 499.66260998414776
+        },
+        {
+          "wavelength_nm": 2290.0,
+          "exitance_w_m2_nm": 1559.4229937468283,
+          "radiance_w_m2_sr_nm": 496.37975565193904
+        },
+        {
+          "wavelength_nm": 2295.0,
+          "exitance_w_m2_nm": 1549.191037457932,
+          "radiance_w_m2_sr_nm": 493.1228228101829
+        },
+        {
+          "wavelength_nm": 2300.0,
+          "exitance_w_m2_nm": 1539.039784667851,
+          "radiance_w_m2_sr_nm": 489.8915786899494
+        },
+        {
+          "wavelength_nm": 2305.0,
+          "exitance_w_m2_nm": 1528.9685111772874,
+          "radiance_w_m2_sr_nm": 486.68579277144227
+        },
+        {
+          "wavelength_nm": 2310.0,
+          "exitance_w_m2_nm": 1518.9764997851012,
+          "radiance_w_m2_sr_nm": 483.5052367624483
+        },
+        {
+          "wavelength_nm": 2315.0,
+          "exitance_w_m2_nm": 1509.063040221339,
+          "radiance_w_m2_sr_nm": 480.34968457701956
+        },
+        {
+          "wavelength_nm": 2320.0,
+          "exitance_w_m2_nm": 1499.2274290806058,
+          "radiance_w_m2_sr_nm": 477.21891231426474
+        },
+        {
+          "wavelength_nm": 2325.0,
+          "exitance_w_m2_nm": 1489.4689697559988,
+          "radiance_w_m2_sr_nm": 474.11269823731993
+        },
+        {
+          "wavelength_nm": 2330.0,
+          "exitance_w_m2_nm": 1479.7869723735014,
+          "radiance_w_m2_sr_nm": 471.03082275246544
+        },
+        {
+          "wavelength_nm": 2335.0,
+          "exitance_w_m2_nm": 1470.1807537270734,
+          "radiance_w_m2_sr_nm": 467.9730683884643
+        },
+        {
+          "wavelength_nm": 2340.0,
+          "exitance_w_m2_nm": 1460.6496372139504,
+          "radiance_w_m2_sr_nm": 464.93921977596773
+        },
+        {
+          "wavelength_nm": 2345.0,
+          "exitance_w_m2_nm": 1451.192952770786,
+          "radiance_w_m2_sr_nm": 461.929063627188
+        },
+        {
+          "wavelength_nm": 2350.0,
+          "exitance_w_m2_nm": 1441.8100368100304,
+          "radiance_w_m2_sr_nm": 458.94238871564784
+        },
+        {
+          "wavelength_nm": 2355.0,
+          "exitance_w_m2_nm": 1432.5002321569996,
+          "radiance_w_m2_sr_nm": 455.97898585614826
+        },
+        {
+          "wavelength_nm": 2360.0,
+          "exitance_w_m2_nm": 1423.262887987415,
+          "radiance_w_m2_sr_nm": 453.0386478848873
+        },
+        {
+          "wavelength_nm": 2365.0,
+          "exitance_w_m2_nm": 1414.0973597653503,
+          "radiance_w_m2_sr_nm": 450.1211696397076
+        },
+        {
+          "wavelength_nm": 2370.0,
+          "exitance_w_m2_nm": 1405.003009181921,
+          "radiance_w_m2_sr_nm": 447.2263479405807
+        },
+        {
+          "wavelength_nm": 2375.0,
+          "exitance_w_m2_nm": 1395.9792040942725,
+          "radiance_w_m2_sr_nm": 444.3539815701866
+        },
+        {
+          "wavelength_nm": 2380.0,
+          "exitance_w_m2_nm": 1387.0253184651822,
+          "radiance_w_m2_sr_nm": 441.5038712546882
+        },
+        {
+          "wavelength_nm": 2385.0,
+          "exitance_w_m2_nm": 1378.1407323030928,
+          "radiance_w_m2_sr_nm": 438.6758196446434
+        },
+        {
+          "wavelength_nm": 2390.0,
+          "exitance_w_m2_nm": 1369.3248316028228,
+          "radiance_w_m2_sr_nm": 435.86963129613287
+        },
+        {
+          "wavelength_nm": 2395.0,
+          "exitance_w_m2_nm": 1360.5770082865874,
+          "radiance_w_m2_sr_nm": 433.0851126519861
+        },
+        {
+          "wavelength_nm": 2400.0,
+          "exitance_w_m2_nm": 1351.8966601456852,
+          "radiance_w_m2_sr_nm": 430.32207202321985
+        },
+        {
+          "wavelength_nm": 2405.0,
+          "exitance_w_m2_nm": 1343.283190782586,
+          "radiance_w_m2_sr_nm": 427.5803195706041
+        },
+        {
+          "wavelength_nm": 2410.0,
+          "exitance_w_m2_nm": 1334.736009553553,
+          "radiance_w_m2_sr_nm": 424.8596672863984
+        },
+        {
+          "wavelength_nm": 2415.0,
+          "exitance_w_m2_nm": 1326.2545315117968,
+          "radiance_w_m2_sr_nm": 422.15992897625665
+        },
+        {
+          "wavelength_nm": 2420.0,
+          "exitance_w_m2_nm": 1317.8381773511846,
+          "radiance_w_m2_sr_nm": 419.4809202413097
+        },
+        {
+          "wavelength_nm": 2425.0,
+          "exitance_w_m2_nm": 1309.4863733502557,
+          "radiance_w_m2_sr_nm": 416.8224584603447
+        },
+        {
+          "wavelength_nm": 2430.0,
+          "exitance_w_m2_nm": 1301.1985513169318,
+          "radiance_w_m2_sr_nm": 414.1843627722059
+        },
+        {
+          "wavelength_nm": 2435.0,
+          "exitance_w_m2_nm": 1292.9741485337108,
+          "radiance_w_m2_sr_nm": 411.56645405834917
+        },
+        {
+          "wavelength_nm": 2440.0,
+          "exitance_w_m2_nm": 1284.81260770315,
+          "radiance_w_m2_sr_nm": 408.968554925489
+        },
+        {
+          "wavelength_nm": 2445.0,
+          "exitance_w_m2_nm": 1276.713376894123,
+          "radiance_w_m2_sr_nm": 406.39048968849136
+        },
+        {
+          "wavelength_nm": 2450.0,
+          "exitance_w_m2_nm": 1268.6759094883619,
+          "radiance_w_m2_sr_nm": 403.8320843533576
+        },
+        {
+          "wavelength_nm": 2455.0,
+          "exitance_w_m2_nm": 1260.6996641276053,
+          "radiance_w_m2_sr_nm": 401.29316660040115
+        },
+        {
+          "wavelength_nm": 2460.0,
+          "exitance_w_m2_nm": 1252.7841046611468,
+          "radiance_w_m2_sr_nm": 398.77356576755176
+        },
+        {
+          "wavelength_nm": 2465.0,
+          "exitance_w_m2_nm": 1244.9287000939446,
+          "radiance_w_m2_sr_nm": 396.273112833838
+        },
+        {
+          "wavelength_nm": 2470.0,
+          "exitance_w_m2_nm": 1237.1329245351426,
+          "radiance_w_m2_sr_nm": 393.79164040300134
+        },
+        {
+          "wavelength_nm": 2475.0,
+          "exitance_w_m2_nm": 1229.396257147062,
+          "radiance_w_m2_sr_nm": 391.32898268725955
+        },
+        {
+          "wavelength_nm": 2480.0,
+          "exitance_w_m2_nm": 1221.718182094826,
+          "radiance_w_m2_sr_nm": 388.88497549127175
+        },
+        {
+          "wavelength_nm": 2485.0,
+          "exitance_w_m2_nm": 1214.0981884962266,
+          "radiance_w_m2_sr_nm": 386.4594561961803
+        },
+        {
+          "wavelength_nm": 2490.0,
+          "exitance_w_m2_nm": 1206.5357703722545,
+          "radiance_w_m2_sr_nm": 384.05226374386456
+        },
+        {
+          "wavelength_nm": 2495.0,
+          "exitance_w_m2_nm": 1199.0304265978832,
+          "radiance_w_m2_sr_nm": 381.6632386212742
+        },
+        {
+          "wavelength_nm": 2500.0,
+          "exitance_w_m2_nm": 1191.581660853651,
+          "radiance_w_m2_sr_nm": 379.29222284501793
+        },
+        {
+          "wavelength_nm": 2505.0,
+          "exitance_w_m2_nm": 1184.18898157728,
+          "radiance_w_m2_sr_nm": 376.939059945963
+        },
+        {
+          "wavelength_nm": 2510.0,
+          "exitance_w_m2_nm": 1176.8519019161538,
+          "radiance_w_m2_sr_nm": 374.60359495410853
+        },
+        {
+          "wavelength_nm": 2515.0,
+          "exitance_w_m2_nm": 1169.5699396799766,
+          "radiance_w_m2_sr_nm": 372.2856743835163
+        },
+        {
+          "wavelength_nm": 2520.0,
+          "exitance_w_m2_nm": 1162.3426172940394,
+          "radiance_w_m2_sr_nm": 369.98514621743504
+        },
+        {
+          "wavelength_nm": 2525.0,
+          "exitance_w_m2_nm": 1155.1694617527767,
+          "radiance_w_m2_sr_nm": 367.7018598935171
+        },
+        {
+          "wavelength_nm": 2530.0,
+          "exitance_w_m2_nm": 1148.0500045740166,
+          "radiance_w_m2_sr_nm": 365.4356662892556
+        },
+        {
+          "wavelength_nm": 2535.0,
+          "exitance_w_m2_nm": 1140.983781753384,
+          "radiance_w_m2_sr_nm": 363.1864177074707
+        },
+        {
+          "wavelength_nm": 2540.0,
+          "exitance_w_m2_nm": 1133.9703337194198,
+          "radiance_w_m2_sr_nm": 360.95396786202366
+        },
+        {
+          "wavelength_nm": 2545.0,
+          "exitance_w_m2_nm": 1127.009205288903,
+          "radiance_w_m2_sr_nm": 358.73817186359514
+        },
+        {
+          "wavelength_nm": 2550.0,
+          "exitance_w_m2_nm": 1120.0999456227412,
+          "radiance_w_m2_sr_nm": 356.53888620564487
+        },
+        {
+          "wavelength_nm": 2555.0,
+          "exitance_w_m2_nm": 1113.24210818232,
+          "radiance_w_m2_sr_nm": 354.35596875051743
+        },
+        {
+          "wavelength_nm": 2560.0,
+          "exitance_w_m2_nm": 1106.4352506861064,
+          "radiance_w_m2_sr_nm": 352.18927871562846
+        },
+        {
+          "wavelength_nm": 2565.0,
+          "exitance_w_m2_nm": 1099.67893506692,
+          "radiance_w_m2_sr_nm": 350.0386766598635
+        },
+        {
+          "wavelength_nm": 2570.0,
+          "exitance_w_m2_nm": 1092.9727274293919,
+          "radiance_w_m2_sr_nm": 347.904024470037
+        },
+        {
+          "wavelength_nm": 2575.0,
+          "exitance_w_m2_nm": 1086.316198008003,
+          "radiance_w_m2_sr_nm": 345.7851853475357
+        },
+        {
+          "wavelength_nm": 2580.0,
+          "exitance_w_m2_nm": 1079.7089211254563,
+          "radiance_w_m2_sr_nm": 343.68202379506744
+        },
+        {
+          "wavelength_nm": 2585.0,
+          "exitance_w_m2_nm": 1073.1504751515347,
+          "radiance_w_m2_sr_nm": 341.5944056035659
+        },
+        {
+          "wavelength_nm": 2590.0,
+          "exitance_w_m2_nm": 1066.6404424622483,
+          "radiance_w_m2_sr_nm": 339.5221978391864
+        },
+        {
+          "wavelength_nm": 2595.0,
+          "exitance_w_m2_nm": 1060.1784093994806,
+          "radiance_w_m2_sr_nm": 337.4652688304609
+        },
+        {
+          "wavelength_nm": 2600.0,
+          "exitance_w_m2_nm": 1053.76396623107,
+          "radiance_w_m2_sr_nm": 335.42348815559177
+        },
+        {
+          "wavelength_nm": 2605.0,
+          "exitance_w_m2_nm": 1047.396707111153,
+          "radiance_w_m2_sr_nm": 333.39672662982827
+        },
+        {
+          "wavelength_nm": 2610.0,
+          "exitance_w_m2_nm": 1041.0762300410406,
+          "radiance_w_m2_sr_nm": 331.3848562930135
+        },
+        {
+          "wavelength_nm": 2615.0,
+          "exitance_w_m2_nm": 1034.8021368303462,
+          "radiance_w_m2_sr_nm": 329.3877503972109
+        },
+        {
+          "wavelength_nm": 2620.0,
+          "exitance_w_m2_nm": 1028.5740330587307,
+          "radiance_w_m2_sr_nm": 327.40528339452715
+        },
+        {
+          "wavelength_nm": 2625.0,
+          "exitance_w_m2_nm": 1022.3915280377495,
+          "radiance_w_m2_sr_nm": 325.43733092496785
+        },
+        {
+          "wavelength_nm": 2630.0,
+          "exitance_w_m2_nm": 1016.254234773283,
+          "radiance_w_m2_sr_nm": 323.483769804479
+        },
+        {
+          "wavelength_nm": 2635.0,
+          "exitance_w_m2_nm": 1010.1617699282677,
+          "radiance_w_m2_sr_nm": 321.54447801308345
+        },
+        {
+          "wavelength_nm": 2640.0,
+          "exitance_w_m2_nm": 1004.1137537858585,
+          "radiance_w_m2_sr_nm": 319.61933468315544
+        },
+        {
+          "wavelength_nm": 2645.0,
+          "exitance_w_m2_nm": 998.1098102128577,
+          "radiance_w_m2_sr_nm": 317.70822008777964
+        },
+        {
+          "wavelength_nm": 2650.0,
+          "exitance_w_m2_nm": 992.1495666236239,
+          "radiance_w_m2_sr_nm": 315.81101562926295
+        },
+        {
+          "wavelength_nm": 2655.0,
+          "exitance_w_m2_nm": 986.2326539443005,
+          "radiance_w_m2_sr_nm": 313.9276038277481
+        },
+        {
+          "wavelength_nm": 2660.0,
+          "exitance_w_m2_nm": 980.3587065773814,
+          "radiance_w_m2_sr_nm": 312.0578683099345
+        },
+        {
+          "wavelength_nm": 2665.0,
+          "exitance_w_m2_nm": 974.5273623666932,
+          "radiance_w_m2_sr_nm": 310.20169379793185
+        },
+        {
+          "wavelength_nm": 2670.0,
+          "exitance_w_m2_nm": 968.7382625627254,
+          "radiance_w_m2_sr_nm": 308.35896609822424
+        },
+        {
+          "wavelength_nm": 2675.0,
+          "exitance_w_m2_nm": 962.9910517882267,
+          "radiance_w_m2_sr_nm": 306.52957209071934
+        },
+        {
+          "wavelength_nm": 2680.0,
+          "exitance_w_m2_nm": 957.2853780042609,
+          "radiance_w_m2_sr_nm": 304.71339971794333
+        },
+        {
+          "wavelength_nm": 2685.0,
+          "exitance_w_m2_nm": 951.6208924765895,
+          "radiance_w_m2_sr_nm": 302.9103379743405
+        },
+        {
+          "wavelength_nm": 2690.0,
+          "exitance_w_m2_nm": 945.9972497423104,
+          "radiance_w_m2_sr_nm": 301.12027689565383
+        },
+        {
+          "wavelength_nm": 2695.0,
+          "exitance_w_m2_nm": 940.4141075770023,
+          "radiance_w_m2_sr_nm": 299.34310754846666
+        },
+        {
+          "wavelength_nm": 2700.0,
+          "exitance_w_m2_nm": 934.8711269619711,
+          "radiance_w_m2_sr_nm": 297.57872201977716
+        },
+        {
+          "wavelength_nm": 2705.0,
+          "exitance_w_m2_nm": 929.3679720520825,
+          "radiance_w_m2_sr_nm": 295.82701340675874
+        },
+        {
+          "wavelength_nm": 2710.0,
+          "exitance_w_m2_nm": 923.9043101437862,
+          "radiance_w_m2_sr_nm": 294.08787580658225
+        },
+        {
+          "wavelength_nm": 2715.0,
+          "exitance_w_m2_nm": 918.4798116434253,
+          "radiance_w_m2_sr_nm": 292.3612043063282
+        },
+        {
+          "wavelength_nm": 2720.0,
+          "exitance_w_m2_nm": 913.0941500360273,
+          "radiance_w_m2_sr_nm": 290.64689497305295
+        },
+        {
+          "wavelength_nm": 2725.0,
+          "exitance_w_m2_nm": 907.7470018542471,
+          "radiance_w_m2_sr_nm": 288.9448448439026
+        },
+        {
+          "wavelength_nm": 2730.0,
+          "exitance_w_m2_nm": 902.4380466478042,
+          "radiance_w_m2_sr_nm": 287.2549519163849
+        },
+        {
+          "wavelength_nm": 2735.0,
+          "exitance_w_m2_nm": 897.1669669530091,
+          "radiance_w_m2_sr_nm": 285.57711513866906
+        },
+        {
+          "wavelength_nm": 2740.0,
+          "exitance_w_m2_nm": 891.933448262891,
+          "radiance_w_m2_sr_nm": 283.9112344000768
+        },
+        {
+          "wavelength_nm": 2745.0,
+          "exitance_w_m2_nm": 886.7371789973222,
+          "radiance_w_m2_sr_nm": 282.25721052157326
+        },
+        {
+          "wavelength_nm": 2750.0,
+          "exitance_w_m2_nm": 881.577850473714,
+          "radiance_w_m2_sr_nm": 280.6149452464387
+        },
+        {
+          "wavelength_nm": 2755.0,
+          "exitance_w_m2_nm": 876.455156877878,
+          "radiance_w_m2_sr_nm": 278.9843412309938
+        },
+        {
+          "wavelength_nm": 2760.0,
+          "exitance_w_m2_nm": 871.3687952352193,
+          "radiance_w_m2_sr_nm": 277.36530203542947
+        },
+        {
+          "wavelength_nm": 2765.0,
+          "exitance_w_m2_nm": 866.3184653821951,
+          "radiance_w_m2_sr_nm": 275.7577321147227
+        },
+        {
+          "wavelength_nm": 2770.0,
+          "exitance_w_m2_nm": 861.3038699381449,
+          "radiance_w_m2_sr_nm": 274.16153680966937
+        },
+        {
+          "wavelength_nm": 2775.0,
+          "exitance_w_m2_nm": 856.3247142773514,
+          "radiance_w_m2_sr_nm": 272.5766223379908
+        },
+        {
+          "wavelength_nm": 2780.0,
+          "exitance_w_m2_nm": 851.3807065014153,
+          "radiance_w_m2_sr_nm": 271.0028957855408
+        },
+        {
+          "wavelength_nm": 2785.0,
+          "exitance_w_m2_nm": 846.4715574118935,
+          "radiance_w_m2_sr_nm": 269.44026509759584
+        },
+        {
+          "wavelength_nm": 2790.0,
+          "exitance_w_m2_nm": 841.5969804832529,
+          "radiance_w_m2_sr_nm": 267.88863907024614
+        },
+        {
+          "wavelength_nm": 2795.0,
+          "exitance_w_m2_nm": 836.7566918360849,
+          "radiance_w_m2_sr_nm": 266.3479273418694
+        },
+        {
+          "wavelength_nm": 2800.0,
+          "exitance_w_m2_nm": 831.9504102106116,
+          "radiance_w_m2_sr_nm": 264.8180403846977
+        },
+        {
+          "wavelength_nm": 2805.0,
+          "exitance_w_m2_nm": 827.1778569404271,
+          "radiance_w_m2_sr_nm": 263.29888949645925
+        },
+        {
+          "wavelength_nm": 2810.0,
+          "exitance_w_m2_nm": 822.4387559265897,
+          "radiance_w_m2_sr_nm": 261.7903867921312
+        },
+        {
+          "wavelength_nm": 2815.0,
+          "exitance_w_m2_nm": 817.7328336118863,
+          "radiance_w_m2_sr_nm": 260.2924451957482
+        },
+        {
+          "wavelength_nm": 2820.0,
+          "exitance_w_m2_nm": 813.0598189554752,
+          "radiance_w_m2_sr_nm": 258.80497843233076
+        },
+        {
+          "wavelength_nm": 2825.0,
+          "exitance_w_m2_nm": 808.4194434076961,
+          "radiance_w_m2_sr_nm": 257.32790101986717
+        },
+        {
+          "wavelength_nm": 2830.0,
+          "exitance_w_m2_nm": 803.8114408851488,
+          "radiance_w_m2_sr_nm": 255.86112826138051
+        },
+        {
+          "wavelength_nm": 2835.0,
+          "exitance_w_m2_nm": 799.2355477461465,
+          "radiance_w_m2_sr_nm": 254.4045762371155
+        },
+        {
+          "wavelength_nm": 2840.0,
+          "exitance_w_m2_nm": 794.6915027662693,
+          "radiance_w_m2_sr_nm": 252.95816179675677
+        },
+        {
+          "wavelength_nm": 2845.0,
+          "exitance_w_m2_nm": 790.179047114268,
+          "radiance_w_m2_sr_nm": 251.5218025517588
+        },
+        {
+          "wavelength_nm": 2850.0,
+          "exitance_w_m2_nm": 785.6979243282001,
+          "radiance_w_m2_sr_nm": 250.09541686774995
+        },
+        {
+          "wavelength_nm": 2855.0,
+          "exitance_w_m2_nm": 781.2478802918065,
+          "radiance_w_m2_sr_nm": 248.67892385701265
+        },
+        {
+          "wavelength_nm": 2860.0,
+          "exitance_w_m2_nm": 776.8286632111262,
+          "radiance_w_m2_sr_nm": 247.27224337103985
+        },
+        {
+          "wavelength_nm": 2865.0,
+          "exitance_w_m2_nm": 772.4400235913904,
+          "radiance_w_m2_sr_nm": 245.87529599318006
+        },
+        {
+          "wavelength_nm": 2870.0,
+          "exitance_w_m2_nm": 768.0817142141037,
+          "radiance_w_m2_sr_nm": 244.4880030313422
+        },
+        {
+          "wavelength_nm": 2875.0,
+          "exitance_w_m2_nm": 763.7534901144265,
+          "radiance_w_m2_sr_nm": 243.11028651079602
+        },
+        {
+          "wavelength_nm": 2880.0,
+          "exitance_w_m2_nm": 759.4551085587552,
+          "radiance_w_m2_sr_nm": 241.74206916703577
+        },
+        {
+          "wavelength_nm": 2885.0,
+          "exitance_w_m2_nm": 755.1863290224973,
+          "radiance_w_m2_sr_nm": 240.3832744387058
+        },
+        {
+          "wavelength_nm": 2890.0,
+          "exitance_w_m2_nm": 750.946913168197,
+          "radiance_w_m2_sr_nm": 239.03382646063775
+        },
+        {
+          "wavelength_nm": 2895.0,
+          "exitance_w_m2_nm": 746.7366248237742,
+          "radiance_w_m2_sr_nm": 237.69365005692356
+        },
+        {
+          "wavelength_nm": 2900.0,
+          "exitance_w_m2_nm": 742.5552299610364,
+          "radiance_w_m2_sr_nm": 236.362670734076
+        },
+        {
+          "wavelength_nm": 2905.0,
+          "exitance_w_m2_nm": 738.4024966744158,
+          "radiance_w_m2_sr_nm": 235.0408146742602
+        },
+        {
+          "wavelength_nm": 2910.0,
+          "exitance_w_m2_nm": 734.2781951599404,
+          "radiance_w_m2_sr_nm": 233.7280087285999
+        },
+        {
+          "wavelength_nm": 2915.0,
+          "exitance_w_m2_nm": 730.1820976943613,
+          "radiance_w_m2_sr_nm": 232.4241804105337
+        },
+        {
+          "wavelength_nm": 2920.0,
+          "exitance_w_m2_nm": 726.1139786146209,
+          "radiance_w_m2_sr_nm": 231.12925788927942
+        },
+        {
+          "wavelength_nm": 2925.0,
+          "exitance_w_m2_nm": 722.073614297396,
+          "radiance_w_m2_sr_nm": 229.8431699833225
+        },
+        {
+          "wavelength_nm": 2930.0,
+          "exitance_w_m2_nm": 718.0607831389389,
+          "radiance_w_m2_sr_nm": 228.56584615399925
+        },
+        {
+          "wavelength_nm": 2935.0,
+          "exitance_w_m2_nm": 714.0752655351209,
+          "radiance_w_m2_sr_nm": 227.29721649914447
+        },
+        {
+          "wavelength_nm": 2940.0,
+          "exitance_w_m2_nm": 710.116843861664,
+          "radiance_w_m2_sr_nm": 226.03721174679893
+        },
+        {
+          "wavelength_nm": 2945.0,
+          "exitance_w_m2_nm": 706.1853024545873,
+          "radiance_w_m2_sr_nm": 224.78576324898546
+        },
+        {
+          "wavelength_nm": 2950.0,
+          "exitance_w_m2_nm": 702.2804275908676,
+          "radiance_w_m2_sr_nm": 223.54280297555292
+        },
+        {
+          "wavelength_nm": 2955.0,
+          "exitance_w_m2_nm": 698.4020074692742,
+          "radiance_w_m2_sr_nm": 222.30826350807558
+        },
+        {
+          "wavelength_nm": 2960.0,
+          "exitance_w_m2_nm": 694.5498321914455,
+          "radiance_w_m2_sr_nm": 221.08207803382993
+        },
+        {
+          "wavelength_nm": 2965.0,
+          "exitance_w_m2_nm": 690.7236937431124,
+          "radiance_w_m2_sr_nm": 219.8641803398176
+        },
+        {
+          "wavelength_nm": 2970.0,
+          "exitance_w_m2_nm": 686.92338597559,
+          "radiance_w_m2_sr_nm": 218.65450480687417
+        },
+        {
+          "wavelength_nm": 2975.0,
+          "exitance_w_m2_nm": 683.1487045873631,
+          "radiance_w_m2_sr_nm": 217.45298640380759
+        },
+        {
+          "wavelength_nm": 2980.0,
+          "exitance_w_m2_nm": 679.3994471059749,
+          "radiance_w_m2_sr_nm": 216.2595606816332
+        },
+        {
+          "wavelength_nm": 2985.0,
+          "exitance_w_m2_nm": 675.6754128699874,
+          "radiance_w_m2_sr_nm": 215.0741637678315
+        },
+        {
+          "wavelength_nm": 2990.0,
+          "exitance_w_m2_nm": 671.9764030112545,
+          "radiance_w_m2_sr_nm": 213.8967323607055
+        },
+        {
+          "wavelength_nm": 2995.0,
+          "exitance_w_m2_nm": 668.3022204372807,
+          "radiance_w_m2_sr_nm": 212.7272037237654
+        },
+        {
+          "wavelength_nm": 3000.0,
+          "exitance_w_m2_nm": 664.6526698138224,
+          "radiance_w_m2_sr_nm": 211.56551568019043
+        }
+      ],
+      "5000": [
+        {
+          "wavelength_nm": 100.0,
+          "exitance_w_m2_nm": 0.011912972296788034,
+          "radiance_w_m2_sr_nm": 0.0037920168559012505
+        },
+        {
+          "wavelength_nm": 105.0,
+          "exitance_w_m2_nm": 0.036742744859078184,
+          "radiance_w_m2_sr_nm": 0.011695578934173237
+        },
+        {
+          "wavelength_nm": 110.0,
+          "exitance_w_m2_nm": 0.10119354552624056,
+          "radiance_w_m2_sr_nm": 0.03221090595899188
+        },
+        {
+          "wavelength_nm": 115.0,
+          "exitance_w_m2_nm": 0.2526863985080958,
+          "radiance_w_m2_sr_nm": 0.08043257874930396
+        },
+        {
+          "wavelength_nm": 120.0,
+          "exitance_w_m2_nm": 0.5793710139805535,
+          "radiance_w_m2_sr_nm": 0.18441952151833738
+        },
+        {
+          "wavelength_nm": 125.0,
+          "exitance_w_m2_nm": 1.232768422100444,
+          "radiance_w_m2_sr_nm": 0.3924023761297636
+        },
+        {
+          "wavelength_nm": 130.0,
+          "exitance_w_m2_nm": 2.4560637816637714,
+          "radiance_w_m2_sr_nm": 0.7817893828015255
+        },
+        {
+          "wavelength_nm": 135.0,
+          "exitance_w_m2_nm": 4.616672579365617,
+          "radiance_w_m2_sr_nm": 1.469532523285697
+        },
+        {
+          "wavelength_nm": 140.0,
+          "exitance_w_m2_nm": 8.24076856163782,
+          "radiance_w_m2_sr_nm": 2.623118102921895
+        },
+        {
+          "wavelength_nm": 145.0,
+          "exitance_w_m2_nm": 14.046792758357316,
+          "radiance_w_m2_sr_nm": 4.471233004160013
+        },
+        {
+          "wavelength_nm": 150.0,
+          "exitance_w_m2_nm": 22.97468483749246,
+          "radiance_w_m2_sr_nm": 7.3130693157306865
+        },
+        {
+          "wavelength_nm": 155.0,
+          "exitance_w_m2_nm": 36.207729021278176,
+          "radiance_w_m2_sr_nm": 11.525278103736591
+        },
+        {
+          "wavelength_nm": 160.0,
+          "exitance_w_m2_nm": 55.184443167510274,
+          "radiance_w_m2_sr_nm": 17.565753823766062
+        },
+        {
+          "wavelength_nm": 165.0,
+          "exitance_w_m2_nm": 81.59875840566711,
+          "radiance_w_m2_sr_nm": 25.97369150084653
+        },
+        {
+          "wavelength_nm": 170.0,
+          "exitance_w_m2_nm": 117.38770582609745,
+          "radiance_w_m2_sr_nm": 37.36566728088138
+        },
+        {
+          "wavelength_nm": 175.0,
+          "exitance_w_m2_nm": 164.70681336925406,
+          "radiance_w_m2_sr_nm": 52.42780701726212
+        },
+        {
+          "wavelength_nm": 180.0,
+          "exitance_w_m2_nm": 225.89430795575996,
+          "radiance_w_m2_sr_nm": 71.90439145496411
+        },
+        {
+          "wavelength_nm": 185.0,
+          "exitance_w_m2_nm": 303.42593517779983,
+          "radiance_w_m2_sr_nm": 96.58347489165571
+        },
+        {
+          "wavelength_nm": 190.0,
+          "exitance_w_m2_nm": 399.8627075221312,
+          "radiance_w_m2_sr_nm": 127.28025292051196
+        },
+        {
+          "wavelength_nm": 195.0,
+          "exitance_w_m2_nm": 517.7941609608737,
+          "radiance_w_m2_sr_nm": 164.8190004420871
+        },
+        {
+          "wavelength_nm": 200.0,
+          "exitance_w_m2_nm": 659.779753731753,
+          "radiance_w_m2_sr_nm": 210.01441831672375
+        },
+        {
+          "wavelength_nm": 205.0,
+          "exitance_w_m2_nm": 828.2909128839885,
+          "radiance_w_m2_sr_nm": 263.65318620717045
+        },
+        {
+          "wavelength_nm": 210.0,
+          "exitance_w_m2_nm": 1025.6559659744692,
+          "radiance_w_m2_sr_nm": 326.4764337930592
+        },
+        {
+          "wavelength_nm": 215.0,
+          "exitance_w_m2_nm": 1254.0098322283934,
+          "radiance_w_m2_sr_nm": 399.16372696997433
+        },
+        {
+          "wavelength_nm": 220.0,
+          "exitance_w_m2_nm": 1515.249932260667,
+          "radiance_w_m2_sr_nm": 482.3190334778895
+        },
+        {
+          "wavelength_nm": 225.0,
+          "exitance_w_m2_nm": 1810.9993451534358,
+          "radiance_w_m2_sr_nm": 576.4589954347097
+        },
+        {
+          "wavelength_nm": 230.0,
+          "exitance_w_m2_nm": 2142.577825948839,
+          "radiance_w_m2_sr_nm": 682.0037039176885
+        },
+        {
+          "wavelength_nm": 235.0,
+          "exitance_w_m2_nm": 2510.980917183904,
+          "radiance_w_m2_sr_nm": 799.2700499584788
+        },
+        {
+          "wavelength_nm": 240.0,
+          "exitance_w_m2_nm": 2916.867059173574,
+          "radiance_w_m2_sr_nm": 928.4676216187886
+        },
+        {
+          "wavelength_nm": 245.0,
+          "exitance_w_m2_nm": 3360.552332966587,
+          "radiance_w_m2_sr_nm": 1069.6970306212665
+        },
+        {
+          "wavelength_nm": 250.0,
+          "exitance_w_m2_nm": 3842.012259499193,
+          "radiance_w_m2_sr_nm": 1222.9504850379167
+        },
+        {
+          "wavelength_nm": 255.0,
+          "exitance_w_m2_nm": 4360.889926619668,
+          "radiance_w_m2_sr_nm": 1388.1143762023457
+        },
+        {
+          "wavelength_nm": 260.0,
+          "exitance_w_m2_nm": 4916.509617636738,
+          "radiance_w_m2_sr_nm": 1564.9736168114623
+        },
+        {
+          "wavelength_nm": 265.0,
+          "exitance_w_m2_nm": 5507.89506433871,
+          "radiance_w_m2_sr_nm": 1753.2174510419172
+        },
+        {
+          "wavelength_nm": 270.0,
+          "exitance_w_m2_nm": 6133.791436609326,
+          "radiance_w_m2_sr_nm": 1952.4464540622246
+        },
+        {
+          "wavelength_nm": 275.0,
+          "exitance_w_m2_nm": 6792.6902021355245,
+          "radiance_w_m2_sr_nm": 2162.180445123509
+        },
+        {
+          "wavelength_nm": 280.0,
+          "exitance_w_m2_nm": 7482.8560358588375,
+          "radiance_w_m2_sr_nm": 2381.867053103918
+        },
+        {
+          "wavelength_nm": 285.0,
+          "exitance_w_m2_nm": 8202.35502292325,
+          "radiance_w_m2_sr_nm": 2610.890693785743
+        },
+        {
+          "wavelength_nm": 290.0,
+          "exitance_w_m2_nm": 8949.08347489004,
+          "radiance_w_m2_sr_nm": 2848.5817423414906
+        },
+        {
+          "wavelength_nm": 295.0,
+          "exitance_w_m2_nm": 9720.796761793534,
+          "radiance_w_m2_sr_nm": 3094.2257108622607
+        },
+        {
+          "wavelength_nm": 300.0,
+          "exitance_w_m2_nm": 10515.137647955531,
+          "radiance_w_m2_sr_nm": 3347.0722679276178
+        },
+        {
+          "wavelength_nm": 305.0,
+          "exitance_w_m2_nm": 11329.663704019225,
+          "radiance_w_m2_sr_nm": 3606.3439641269842
+        },
+        {
+          "wavelength_nm": 310.0,
+          "exitance_w_m2_nm": 12161.873448838693,
+          "radiance_w_m2_sr_nm": 3871.24455328151
+        },
+        {
+          "wavelength_nm": 315.0,
+          "exitance_w_m2_nm": 13009.230950841955,
+          "radiance_w_m2_sr_nm": 4140.96682330115
+        },
+        {
+          "wavelength_nm": 320.0,
+          "exitance_w_m2_nm": 13869.188688004795,
+          "radiance_w_m2_sr_nm": 4414.699872740323
+        },
+        {
+          "wavelength_nm": 325.0,
+          "exitance_w_m2_nm": 14739.208527928075,
+          "radiance_w_m2_sr_nm": 4691.635788963942
+        },
+        {
+          "wavelength_nm": 330.0,
+          "exitance_w_m2_nm": 15616.780744347778,
+          "radiance_w_m2_sr_nm": 4970.975701290555
+        },
+        {
+          "wavelength_nm": 335.0,
+          "exitance_w_m2_nm": 16499.441033733146,
+          "radiance_w_m2_sr_nm": 5251.935197543764
+        },
+        {
+          "wavelength_nm": 340.0,
+          "exitance_w_m2_nm": 17384.78553566319,
+          "radiance_w_m2_sr_nm": 5533.749105186561
+        },
+        {
+          "wavelength_nm": 345.0,
+          "exitance_w_m2_nm": 18270.483893822224,
+          "radiance_w_m2_sr_nm": 5815.675648765333
+        },
+        {
+          "wavelength_nm": 350.0,
+          "exitance_w_m2_nm": 19154.290421238784,
+          "radiance_w_m2_sr_nm": 6097.000003915789
+        },
+        {
+          "wavelength_nm": 355.0,
+          "exitance_w_m2_nm": 20034.05345439484,
+          "radiance_w_m2_sr_nm": 6377.0372748684
+        },
+        {
+          "wavelength_nm": 360.0,
+          "exitance_w_m2_nm": 20907.722996682074,
+          "radiance_w_m2_sr_nm": 6655.134927436094
+        },
+        {
+          "wavelength_nm": 365.0,
+          "exitance_w_m2_nm": 21773.356763001662,
+          "radiance_w_m2_sr_nm": 6930.674713070128
+        },
+        {
+          "wavelength_nm": 370.0,
+          "exitance_w_m2_nm": 22629.124744707904,
+          "radiance_w_m2_sr_nm": 7203.074121926775
+        },
+        {
+          "wavelength_nm": 375.0,
+          "exitance_w_m2_nm": 23473.312418169684,
+          "radiance_w_m2_sr_nm": 7471.787404184152
+        },
+        {
+          "wavelength_nm": 380.0,
+          "exitance_w_m2_nm": 24304.3227215125,
+          "radiance_w_m2_sr_nm": 7736.306199258762
+        },
+        {
+          "wavelength_nm": 385.0,
+          "exitance_w_m2_nm": 25120.676923088653,
+          "radiance_w_m2_sr_nm": 7996.159812248126
+        },
+        {
+          "wavelength_nm": 390.0,
+          "exitance_w_m2_nm": 25921.014502378028,
+          "radiance_w_m2_sr_nm": 8250.915176020339
+        },
+        {
+          "wavelength_nm": 395.0,
+          "exitance_w_m2_nm": 26704.092159720214,
+          "radiance_w_m2_sr_nm": 8500.176536001998
+        },
+        {
+          "wavelength_nm": 400.0,
+          "exitance_w_m2_nm": 27468.782065869753,
+          "radiance_w_m2_sr_nm": 8743.584892994351
+        },
+        {
+          "wavelength_nm": 405.0,
+          "exitance_w_m2_nm": 28214.069456177345,
+          "radiance_w_m2_sr_nm": 8980.817237377376
+        },
+        {
+          "wavelength_nm": 410.0,
+          "exitance_w_m2_nm": 28939.049667441646,
+          "radiance_w_m2_sr_nm": 9211.585605910415
+        },
+        {
+          "wavelength_nm": 415.0,
+          "exitance_w_m2_nm": 29642.924708407456,
+          "radiance_w_m2_sr_nm": 9435.635990087854
+        },
+        {
+          "wavelength_nm": 420.0,
+          "exitance_w_m2_nm": 30324.999447661823,
+          "radiance_w_m2_sr_nm": 9652.74712270875
+        },
+        {
+          "wavelength_nm": 425.0,
+          "exitance_w_m2_nm": 30984.677495454867,
+          "radiance_w_m2_sr_nm": 9862.7291670197
+        },
+        {
+          "wavelength_nm": 430.0,
+          "exitance_w_m2_nm": 31621.4568488537,
+          "radiance_w_m2_sr_nm": 10065.42233052427
+        },
+        {
+          "wavelength_nm": 435.0,
+          "exitance_w_m2_nm": 32234.92536274371,
+          "radiance_w_m2_sr_nm": 10260.695423357938
+        },
+        {
+          "wavelength_nm": 440.0,
+          "exitance_w_m2_nm": 32824.75610254993,
+          "radiance_w_m2_sr_nm": 10448.444379013357
+        },
+        {
+          "wavelength_nm": 445.0,
+          "exitance_w_m2_nm": 33390.70262827004,
+          "radiance_w_m2_sr_nm": 10628.590753201437
+        },
+        {
+          "wavelength_nm": 450.0,
+          "exitance_w_m2_nm": 33932.59425345201,
+          "radiance_w_m2_sr_nm": 10801.080214737058
+        },
+        {
+          "wavelength_nm": 455.0,
+          "exitance_w_m2_nm": 34450.331317227625,
+          "radiance_w_m2_sr_nm": 10965.881040580605
+        },
+        {
+          "wavelength_nm": 460.0,
+          "exitance_w_m2_nm": 34943.88050234668,
+          "radiance_w_m2_sr_nm": 11122.982625521954
+        },
+        {
+          "wavelength_nm": 465.0,
+          "exitance_w_m2_nm": 35413.27022742269,
+          "radiance_w_m2_sr_nm": 11272.39401548674
+        },
+        {
+          "wavelength_nm": 470.0,
+          "exitance_w_m2_nm": 35858.5861372446,
+          "radiance_w_m2_sr_nm": 11414.142472057983
+        },
+        {
+          "wavelength_nm": 475.0,
+          "exitance_w_m2_nm": 36279.966711059344,
+          "radiance_w_m2_sr_nm": 11548.272074549015
+        },
+        {
+          "wavelength_nm": 480.0,
+          "exitance_w_m2_nm": 36677.59900514305,
+          "radiance_w_m2_sr_nm": 11674.842364821798
+        },
+        {
+          "wavelength_nm": 485.0,
+          "exitance_w_m2_nm": 37051.71454275219,
+          "radiance_w_m2_sr_nm": 11793.927039017752
+        },
+        {
+          "wavelength_nm": 490.0,
+          "exitance_w_m2_nm": 37402.58536166798,
+          "radiance_w_m2_sr_nm": 11905.612689452051
+        },
+        {
+          "wavelength_nm": 495.0,
+          "exitance_w_m2_nm": 37730.520226968765,
+          "radiance_w_m2_sr_nm": 12009.99759910164
+        },
+        {
+          "wavelength_nm": 500.0,
+          "exitance_w_m2_nm": 38035.86101440591,
+          "radiance_w_m2_sr_nm": 12107.190590398028
+        },
+        {
+          "wavelength_nm": 505.0,
+          "exitance_w_m2_nm": 38318.97926775764,
+          "radiance_w_m2_sr_nm": 12197.309929398969
+        },
+        {
+          "wavelength_nm": 510.0,
+          "exitance_w_m2_nm": 38580.27293180077,
+          "radiance_w_m2_sr_nm": 12280.482285861084
+        },
+        {
+          "wavelength_nm": 515.0,
+          "exitance_w_m2_nm": 38820.16326102961,
+          "radiance_w_m2_sr_nm": 12356.841749254507
+        },
+        {
+          "wavelength_nm": 520.0,
+          "exitance_w_m2_nm": 39039.09190295469,
+          "radiance_w_m2_sr_nm": 12426.528900348052
+        },
+        {
+          "wavelength_nm": 525.0,
+          "exitance_w_m2_nm": 39237.51815371283,
+          "radiance_w_m2_sr_nm": 12489.689937642752
+        },
+        {
+          "wavelength_nm": 530.0,
+          "exitance_w_m2_nm": 39415.916382805495,
+          "radiance_w_m2_sr_nm": 12546.475857640628
+        },
+        {
+          "wavelength_nm": 535.0,
+          "exitance_w_m2_nm": 39574.773622979556,
+          "radiance_w_m2_sr_nm": 12597.041687679904
+        },
+        {
+          "wavelength_nm": 540.0,
+          "exitance_w_m2_nm": 39714.58732067172,
+          "radiance_w_m2_sr_nm": 12641.545769879232
+        },
+        {
+          "wavelength_nm": 545.0,
+          "exitance_w_m2_nm": 39835.86324190596,
+          "radiance_w_m2_sr_nm": 12680.149094564136
+        },
+        {
+          "wavelength_nm": 550.0,
+          "exitance_w_m2_nm": 39939.11352814186,
+          "radiance_w_m2_sr_nm": 12713.01468142433
+        },
+        {
+          "wavelength_nm": 555.0,
+          "exitance_w_m2_nm": 40024.85489628171,
+          "radiance_w_m2_sr_nm": 12740.307006558167
+        },
+        {
+          "wavelength_nm": 560.0,
+          "exitance_w_m2_nm": 40093.60697682665,
+          "radiance_w_m2_sr_nm": 12762.191473491328
+        },
+        {
+          "wavelength_nm": 565.0,
+          "exitance_w_m2_nm": 40145.890784034746,
+          "radiance_w_m2_sr_nm": 12778.833926212992
+        },
+        {
+          "wavelength_nm": 570.0,
+          "exitance_w_m2_nm": 40182.227311855626,
+          "radiance_w_m2_sr_nm": 12790.400202247969
+        },
+        {
+          "wavelength_nm": 575.0,
+          "exitance_w_m2_nm": 40203.13624941673,
+          "radiance_w_m2_sr_nm": 12797.055723783269
+        },
+        {
+          "wavelength_nm": 580.0,
+          "exitance_w_m2_nm": 40209.134809836076,
+          "radiance_w_m2_sr_nm": 12798.965124867618
+        },
+        {
+          "wavelength_nm": 585.0,
+          "exitance_w_m2_nm": 40200.73666624818,
+          "radiance_w_m2_sr_nm": 12796.291912738
+        },
+        {
+          "wavelength_nm": 590.0,
+          "exitance_w_m2_nm": 40178.450988984645,
+          "radiance_w_m2_sr_nm": 12789.198161344715
+        },
+        {
+          "wavelength_nm": 595.0,
+          "exitance_w_m2_nm": 40142.78157803887,
+          "radiance_w_m2_sr_nm": 12777.844235206323
+        },
+        {
+          "wavelength_nm": 600.0,
+          "exitance_w_m2_nm": 40094.226085044,
+          "radiance_w_m2_sr_nm": 12762.388541757527
+        },
+        {
+          "wavelength_nm": 605.0,
+          "exitance_w_m2_nm": 40033.275319218876,
+          "radiance_w_m2_sr_nm": 12742.987310424916
+        },
+        {
+          "wavelength_nm": 610.0,
+          "exitance_w_m2_nm": 39960.41263187693,
+          "radiance_w_m2_sr_nm": 12719.794396710056
+        },
+        {
+          "wavelength_nm": 615.0,
+          "exitance_w_m2_nm": 39876.113374334665,
+          "radiance_w_m2_sr_nm": 12692.9611096364
+        },
+        {
+          "wavelength_nm": 620.0,
+          "exitance_w_m2_nm": 39780.84442422854,
+          "radiance_w_m2_sr_nm": 12662.63606097127
+        },
+        {
+          "wavelength_nm": 625.0,
+          "exitance_w_m2_nm": 39675.063775484436,
+          "radiance_w_m2_sr_nm": 12628.965034709088
+        },
+        {
+          "wavelength_nm": 630.0,
+          "exitance_w_m2_nm": 39559.220187387175,
+          "radiance_w_m2_sr_nm": 12592.090875366726
+        },
+        {
+          "wavelength_nm": 635.0,
+          "exitance_w_m2_nm": 39433.752888408584,
+          "radiance_w_m2_sr_nm": 12552.153393709064
+        },
+        {
+          "wavelength_nm": 640.0,
+          "exitance_w_m2_nm": 39299.091330679126,
+          "radiance_w_m2_sr_nm": 12509.289288594868
+        },
+        {
+          "wavelength_nm": 645.0,
+          "exitance_w_m2_nm": 39155.65499119551,
+          "radiance_w_m2_sr_nm": 12463.632083699218
+        },
+        {
+          "wavelength_nm": 650.0,
+          "exitance_w_m2_nm": 39003.85321605741,
+          "radiance_w_m2_sr_nm": 12415.312077932513
+        },
+        {
+          "wavelength_nm": 655.0,
+          "exitance_w_m2_nm": 38844.08510423619,
+          "radiance_w_m2_sr_nm": 12364.456308442901
+        },
+        {
+          "wavelength_nm": 660.0,
+          "exitance_w_m2_nm": 38676.73942758699,
+          "radiance_w_m2_sr_nm": 12311.188525155343
+        },
+        {
+          "wavelength_nm": 665.0,
+          "exitance_w_m2_nm": 38502.19458399208,
+          "radiance_w_m2_sr_nm": 12255.629175856682
+        },
+        {
+          "wavelength_nm": 670.0,
+          "exitance_w_m2_nm": 38320.81858071583,
+          "radiance_w_m2_sr_nm": 12197.895400897347
+        },
+        {
+          "wavelength_nm": 675.0,
+          "exitance_w_m2_nm": 38132.96904523857,
+          "radiance_w_m2_sr_nm": 12138.101036639902
+        },
+        {
+          "wavelength_nm": 680.0,
+          "exitance_w_m2_nm": 37938.99326099791,
+          "radiance_w_m2_sr_nm": 12076.356626835846
+        },
+        {
+          "wavelength_nm": 685.0,
+          "exitance_w_m2_nm": 37739.22822564972,
+          "radiance_w_m2_sr_nm": 12012.769441170663
+        },
+        {
+          "wavelength_nm": 690.0,
+          "exitance_w_m2_nm": 37534.00072958753,
+          "radiance_w_m2_sr_nm": 11947.443500257325
+        },
+        {
+          "wavelength_nm": 695.0,
+          "exitance_w_m2_nm": 37323.627452654015,
+          "radiance_w_m2_sr_nm": 11880.479606420506
+        },
+        {
+          "wavelength_nm": 700.0,
+          "exitance_w_m2_nm": 37108.41507707917,
+          "radiance_w_m2_sr_nm": 11811.975379645932
+        },
+        {
+          "wavelength_nm": 705.0,
+          "exitance_w_m2_nm": 36888.660414847494,
+          "radiance_w_m2_sr_nm": 11742.025298122611
+        },
+        {
+          "wavelength_nm": 710.0,
+          "exitance_w_m2_nm": 36664.65054781136,
+          "radiance_w_m2_sr_nm": 11670.720742842293
+        },
+        {
+          "wavelength_nm": 715.0,
+          "exitance_w_m2_nm": 36436.66297899359,
+          "radiance_w_m2_sr_nm": 11598.150045760589
+        },
+        {
+          "wavelength_nm": 720.0,
+          "exitance_w_m2_nm": 36204.965793638126,
+          "radiance_w_m2_sr_nm": 11524.398541060988
+        },
+        {
+          "wavelength_nm": 725.0,
+          "exitance_w_m2_nm": 35969.817828682855,
+          "radiance_w_m2_sr_nm": 11449.548619099725
+        },
+        {
+          "wavelength_nm": 730.0,
+          "exitance_w_m2_nm": 35731.468849416735,
+          "radiance_w_m2_sr_nm": 11373.679782637502
+        },
+        {
+          "wavelength_nm": 735.0,
+          "exitance_w_m2_nm": 35490.159732205066,
+          "radiance_w_m2_sr_nm": 11296.868705002746
+        },
+        {
+          "wavelength_nm": 740.0,
+          "exitance_w_m2_nm": 35246.12265222629,
+          "radiance_w_m2_sr_nm": 11219.189289850076
+        },
+        {
+          "wavelength_nm": 745.0,
+          "exitance_w_m2_nm": 34999.58127528371,
+          "radiance_w_m2_sr_nm": 11140.712732215889
+        },
+        {
+          "wavelength_nm": 750.0,
+          "exitance_w_m2_nm": 34750.75095280463,
+          "radiance_w_m2_sr_nm": 11061.507580588497
+        },
+        {
+          "wavelength_nm": 755.0,
+          "exitance_w_m2_nm": 34499.83891923693,
+          "radiance_w_m2_sr_nm": 10981.639799741419
+        },
+        {
+          "wavelength_nm": 760.0,
+          "exitance_w_m2_nm": 34247.04449111138,
+          "radiance_w_m2_sr_nm": 10901.17283409688
+        },
+        {
+          "wavelength_nm": 765.0,
+          "exitance_w_m2_nm": 33992.55926710779,
+          "radiance_w_m2_sr_nm": 10820.16767140884
+        },
+        {
+          "wavelength_nm": 770.0,
+          "exitance_w_m2_nm": 33736.5673285208,
+          "radiance_w_m2_sr_nm": 10738.682906573249
+        },
+        {
+          "wavelength_nm": 775.0,
+          "exitance_w_m2_nm": 33479.24543958775,
+          "radiance_w_m2_sr_nm": 10656.77480539437
+        },
+        {
+          "wavelength_nm": 780.0,
+          "exitance_w_m2_nm": 33220.7632471752,
+          "radiance_w_m2_sr_nm": 10574.497368146995
+        },
+        {
+          "wavelength_nm": 785.0,
+          "exitance_w_m2_nm": 32961.283479392965,
+          "radiance_w_m2_sr_nm": 10491.902392797236
+        },
+        {
+          "wavelength_nm": 790.0,
+          "exitance_w_m2_nm": 32700.96214272941,
+          "radiance_w_m2_sr_nm": 10409.039537752647
+        },
+        {
+          "wavelength_nm": 795.0,
+          "exitance_w_m2_nm": 32439.948717362768,
+          "radiance_w_m2_sr_nm": 10325.95638403175
+        },
+        {
+          "wavelength_nm": 800.0,
+          "exitance_w_m2_nm": 32178.38635032083,
+          "radiance_w_m2_sr_nm": 10242.698496748668
+        },
+        {
+          "wavelength_nm": 805.0,
+          "exitance_w_m2_nm": 31916.41204622099,
+          "radiance_w_m2_sr_nm": 10159.309485827569
+        },
+        {
+          "wavelength_nm": 810.0,
+          "exitance_w_m2_nm": 31654.156855338817,
+          "radiance_w_m2_sr_nm": 10075.831065866756
+        },
+        {
+          "wavelength_nm": 815.0,
+          "exitance_w_m2_nm": 31391.746058789864,
+          "radiance_w_m2_sr_nm": 9992.303115083861
+        },
+        {
+          "wavelength_nm": 820.0,
+          "exitance_w_m2_nm": 31129.2993506418,
+          "radiance_w_m2_sr_nm": 9908.76373328394
+        },
+        {
+          "wavelength_nm": 825.0,
+          "exitance_w_m2_nm": 30866.931016791,
+          "radiance_w_m2_sr_nm": 9825.249298797662
+        },
+        {
+          "wavelength_nm": 830.0,
+          "exitance_w_m2_nm": 30604.750110474874,
+          "radiance_w_m2_sr_nm": 9741.794524348612
+        },
+        {
+          "wavelength_nm": 835.0,
+          "exitance_w_m2_nm": 30342.86062429419,
+          "radiance_w_m2_sr_nm": 9658.432511809708
+        },
+        {
+          "wavelength_nm": 840.0,
+          "exitance_w_m2_nm": 30081.361658662114,
+          "radiance_w_m2_sr_nm": 9575.194805822182
+        },
+        {
+          "wavelength_nm": 845.0,
+          "exitance_w_m2_nm": 29820.34758659891,
+          "radiance_w_m2_sr_nm": 9492.111446251376
+        },
+        {
+          "wavelength_nm": 850.0,
+          "exitance_w_m2_nm": 29559.908214812494,
+          "radiance_w_m2_sr_nm": 9409.211019460265
+        },
+        {
+          "wavelength_nm": 855.0,
+          "exitance_w_m2_nm": 29300.128941021798,
+          "radiance_w_m2_sr_nm": 9326.52070838704
+        },
+        {
+          "wavelength_nm": 860.0,
+          "exitance_w_m2_nm": 29041.090907494716,
+          "radiance_w_m2_sr_nm": 9244.066341417762
+        },
+        {
+          "wavelength_nm": 865.0,
+          "exitance_w_m2_nm": 28782.87115078188,
+          "radiance_w_m2_sr_nm": 9161.872440048093
+        },
+        {
+          "wavelength_nm": 870.0,
+          "exitance_w_m2_nm": 28525.542747639884,
+          "radiance_w_m2_sr_nm": 9079.962265332108
+        },
+        {
+          "wavelength_nm": 875.0,
+          "exitance_w_m2_nm": 28269.174957148804,
+          "radiance_w_m2_sr_nm": 8998.357863119702
+        },
+        {
+          "wavelength_nm": 880.0,
+          "exitance_w_m2_nm": 28013.833359039494,
+          "radiance_w_m2_sr_nm": 8917.08010808754
+        },
+        {
+          "wavelength_nm": 885.0,
+          "exitance_w_m2_nm": 27759.57998824918,
+          "radiance_w_m2_sr_nm": 8836.14874656943
+        },
+        {
+          "wavelength_nm": 890.0,
+          "exitance_w_m2_nm": 27506.47346573766,
+          "radiance_w_m2_sr_nm": 8755.582438196414
+        },
+        {
+          "wavelength_nm": 895.0,
+          "exitance_w_m2_nm": 27254.569125600614,
+          "radiance_w_m2_sr_nm": 8675.398796358188
+        },
+        {
+          "wavelength_nm": 900.0,
+          "exitance_w_m2_nm": 27003.919138516263,
+          "radiance_w_m2_sr_nm": 8595.6144274974
+        },
+        {
+          "wavelength_nm": 905.0,
+          "exitance_w_m2_nm": 26754.572631581945,
+          "radiance_w_m2_sr_nm": 8516.24496925481
+        },
+        {
+          "wavelength_nm": 910.0,
+          "exitance_w_m2_nm": 26506.57580458288,
+          "radiance_w_m2_sr_nm": 8437.305127478796
+        },
+        {
+          "wavelength_nm": 915.0,
+          "exitance_w_m2_nm": 26259.972042753332,
+          "radiance_w_m2_sr_nm": 8358.808712118338
+        },
+        {
+          "wavelength_nm": 920.0,
+          "exitance_w_m2_nm": 26014.802026092573,
+          "radiance_w_m2_sr_nm": 8280.768672019374
+        },
+        {
+          "wavelength_nm": 925.0,
+          "exitance_w_m2_nm": 25771.10383528498,
+          "radiance_w_m2_sr_nm": 8203.197128640213
+        },
+        {
+          "wavelength_nm": 930.0,
+          "exitance_w_m2_nm": 25528.913054307486,
+          "radiance_w_m2_sr_nm": 8126.105408712504
+        },
+        {
+          "wavelength_nm": 935.0,
+          "exitance_w_m2_nm": 25288.26286977021,
+          "radiance_w_m2_sr_nm": 8049.504075862335
+        },
+        {
+          "wavelength_nm": 940.0,
+          "exitance_w_m2_nm": 25049.184167075247,
+          "radiance_w_m2_sr_nm": 7973.402961218534
+        },
+        {
+          "wavelength_nm": 945.0,
+          "exitance_w_m2_nm": 24811.705623454756,
+          "radiance_w_m2_sr_nm": 7897.811193027603
+        },
+        {
+          "wavelength_nm": 950.0,
+          "exitance_w_m2_nm": 24575.853797957057,
+          "radiance_w_m2_sr_nm": 7822.737225297191
+        },
+        {
+          "wavelength_nm": 955.0,
+          "exitance_w_m2_nm": 24341.653218458287,
+          "radiance_w_m2_sr_nm": 7748.18886549276
+        },
+        {
+          "wavelength_nm": 960.0,
+          "exitance_w_m2_nm": 24109.12646576655,
+          "radiance_w_m2_sr_nm": 7674.173301308766
+        },
+        {
+          "wavelength_nm": 965.0,
+          "exitance_w_m2_nm": 23878.294254891644,
+          "radiance_w_m2_sr_nm": 7600.697126537622
+        },
+        {
+          "wavelength_nm": 970.0,
+          "exitance_w_m2_nm": 23649.175513551603,
+          "radiance_w_m2_sr_nm": 7527.766366059101
+        },
+        {
+          "wavelength_nm": 975.0,
+          "exitance_w_m2_nm": 23421.787457991657,
+          "radiance_w_m2_sr_nm": 7455.386499974261
+        },
+        {
+          "wavelength_nm": 980.0,
+          "exitance_w_m2_nm": 23196.145666178323,
+          "radiance_w_m2_sr_nm": 7383.562486903852
+        },
+        {
+          "wavelength_nm": 985.0,
+          "exitance_w_m2_nm": 22972.264148450686,
+          "radiance_w_m2_sr_nm": 7312.298786477313
+        },
+        {
+          "wavelength_nm": 990.0,
+          "exitance_w_m2_nm": 22750.155415690067,
+          "radiance_w_m2_sr_nm": 7241.599381031855
+        },
+        {
+          "wavelength_nm": 995.0,
+          "exitance_w_m2_nm": 22529.830545083252,
+          "radiance_w_m2_sr_nm": 7171.467796545541
+        },
+        {
+          "wavelength_nm": 1000.0,
+          "exitance_w_m2_nm": 22311.299243543715,
+          "radiance_w_m2_sr_nm": 7101.907122824895
+        },
+        {
+          "wavelength_nm": 1005.0,
+          "exitance_w_m2_nm": 22094.569908863446,
+          "radiance_w_m2_sr_nm": 7032.92003297013
+        },
+        {
+          "wavelength_nm": 1010.0,
+          "exitance_w_m2_nm": 21879.649688658625,
+          "radiance_w_m2_sr_nm": 6964.508802138138
+        },
+        {
+          "wavelength_nm": 1015.0,
+          "exitance_w_m2_nm": 21666.544537174897,
+          "radiance_w_m2_sr_nm": 6896.675325624174
+        },
+        {
+          "wavelength_nm": 1020.0,
+          "exitance_w_m2_nm": 21455.259270021863,
+          "radiance_w_m2_sr_nm": 6829.421136284379
+        },
+        {
+          "wavelength_nm": 1025.0,
+          "exitance_w_m2_nm": 21245.797616890137,
+          "radiance_w_m2_sr_nm": 6762.74742131615
+        },
+        {
+          "wavelength_nm": 1030.0,
+          "exitance_w_m2_nm": 21038.162272326095,
+          "radiance_w_m2_sr_nm": 6696.655038420238
+        },
+        {
+          "wavelength_nm": 1035.0,
+          "exitance_w_m2_nm": 20832.35494461389,
+          "radiance_w_m2_sr_nm": 6631.144531360376
+        },
+        {
+          "wavelength_nm": 1040.0,
+          "exitance_w_m2_nm": 20628.37640283094,
+          "radiance_w_m2_sr_nm": 6566.216144941511
+        },
+        {
+          "wavelength_nm": 1045.0,
+          "exitance_w_m2_nm": 20426.226522133482,
+          "radiance_w_m2_sr_nm": 6501.869839424635
+        },
+        {
+          "wavelength_nm": 1050.0,
+          "exitance_w_m2_nm": 20225.904327327444,
+          "radiance_w_m2_sr_nm": 6438.105304395838
+        },
+        {
+          "wavelength_nm": 1055.0,
+          "exitance_w_m2_nm": 20027.40803478541,
+          "radiance_w_m2_sr_nm": 6374.921972108879
+        },
+        {
+          "wavelength_nm": 1060.0,
+          "exitance_w_m2_nm": 19830.735092755636,
+          "radiance_w_m2_sr_nm": 6312.31903031595
+        },
+        {
+          "wavelength_nm": 1065.0,
+          "exitance_w_m2_nm": 19635.882220125117,
+          "radiance_w_m2_sr_nm": 6250.295434606345
+        },
+        {
+          "wavelength_nm": 1070.0,
+          "exitance_w_m2_nm": 19442.84544368259,
+          "radiance_w_m2_sr_nm": 6188.8499202676385
+        },
+        {
+          "wavelength_nm": 1075.0,
+          "exitance_w_m2_nm": 19251.62013393163,
+          "radiance_w_m2_sr_nm": 6127.98101368535
+        },
+        {
+          "wavelength_nm": 1080.0,
+          "exitance_w_m2_nm": 19062.201039507938,
+          "radiance_w_m2_sr_nm": 6067.687043298308
+        },
+        {
+          "wavelength_nm": 1085.0,
+          "exitance_w_m2_nm": 18874.58232024097,
+          "radiance_w_m2_sr_nm": 6007.966150122491
+        },
+        {
+          "wavelength_nm": 1090.0,
+          "exitance_w_m2_nm": 18688.757578912893,
+          "radiance_w_m2_sr_nm": 5948.816297860219
+        },
+        {
+          "wavelength_nm": 1095.0,
+          "exitance_w_m2_nm": 18504.719891756467,
+          "radiance_w_m2_sr_nm": 5890.235282607929
+        },
+        {
+          "wavelength_nm": 1100.0,
+          "exitance_w_m2_nm": 18322.461837735158,
+          "radiance_w_m2_sr_nm": 5832.220742176327
+        },
+        {
+          "wavelength_nm": 1105.0,
+          "exitance_w_m2_nm": 18141.97552664816,
+          "radiance_w_m2_sr_nm": 5774.770165036492
+        },
+        {
+          "wavelength_nm": 1110.0,
+          "exitance_w_m2_nm": 17963.25262610588,
+          "radiance_w_m2_sr_nm": 5717.880898906442
+        },
+        {
+          "wavelength_nm": 1115.0,
+          "exitance_w_m2_nm": 17786.28438740717,
+          "radiance_w_m2_sr_nm": 5661.55015898811
+        },
+        {
+          "wavelength_nm": 1120.0,
+          "exitance_w_m2_nm": 17611.06167036552,
+          "radiance_w_m2_sr_nm": 5605.775035869768
+        },
+        {
+          "wavelength_nm": 1125.0,
+          "exitance_w_m2_nm": 17437.574967117263,
+          "radiance_w_m2_sr_nm": 5550.5525031044135
+        },
+        {
+          "wavelength_nm": 1130.0,
+          "exitance_w_m2_nm": 17265.814424948472,
+          "radiance_w_m2_sr_nm": 5495.879424475799
+        },
+        {
+          "wavelength_nm": 1135.0,
+          "exitance_w_m2_nm": 17095.76986817724,
+          "radiance_w_m2_sr_nm": 5441.752560963776
+        },
+        {
+          "wavelength_nm": 1140.0,
+          "exitance_w_m2_nm": 16927.43081912512,
+          "radiance_w_m2_sr_nm": 5388.168577419707
+        },
+        {
+          "wavelength_nm": 1145.0,
+          "exitance_w_m2_nm": 16760.78651820958,
+          "radiance_w_m2_sr_nm": 5335.124048962105
+        },
+        {
+          "wavelength_nm": 1150.0,
+          "exitance_w_m2_nm": 16595.8259431911,
+          "radiance_w_m2_sr_nm": 5282.615467103159
+        },
+        {
+          "wavelength_nm": 1155.0,
+          "exitance_w_m2_nm": 16432.53782760486,
+          "radiance_w_m2_sr_nm": 5230.639245615738
+        },
+        {
+          "wavelength_nm": 1160.0,
+          "exitance_w_m2_nm": 16270.910678407668,
+          "radiance_w_m2_sr_nm": 5179.19172615057
+        },
+        {
+          "wavelength_nm": 1165.0,
+          "exitance_w_m2_nm": 16110.932792868658,
+          "radiance_w_m2_sr_nm": 5128.269183612723
+        },
+        {
+          "wavelength_nm": 1170.0,
+          "exitance_w_m2_nm": 15952.59227473148,
+          "radiance_w_m2_sr_nm": 5077.8678313061955
+        },
+        {
+          "wavelength_nm": 1175.0,
+          "exitance_w_m2_nm": 15795.877049676448,
+          "radiance_w_m2_sr_nm": 5027.983825855662
+        },
+        {
+          "wavelength_nm": 1180.0,
+          "exitance_w_m2_nm": 15640.774880106866,
+          "radiance_w_m2_sr_nm": 4978.613271913109
+        },
+        {
+          "wavelength_nm": 1185.0,
+          "exitance_w_m2_nm": 15487.273379287348,
+          "radiance_w_m2_sr_nm": 4929.752226658207
+        },
+        {
+          "wavelength_nm": 1190.0,
+          "exitance_w_m2_nm": 15335.360024856409,
+          "radiance_w_m2_sr_nm": 4881.396704099497
+        },
+        {
+          "wavelength_nm": 1195.0,
+          "exitance_w_m2_nm": 15185.022171736791,
+          "radiance_w_m2_sr_nm": 4833.542679183876
+        },
+        {
+          "wavelength_nm": 1200.0,
+          "exitance_w_m2_nm": 15036.247064469668,
+          "radiance_w_m2_sr_nm": 4786.186091722697
+        },
+        {
+          "wavelength_nm": 1205.0,
+          "exitance_w_m2_nm": 14889.021848989829,
+          "radiance_w_m2_sr_nm": 4739.322850139925
+        },
+        {
+          "wavelength_nm": 1210.0,
+          "exitance_w_m2_nm": 14743.33358386761,
+          "radiance_w_m2_sr_nm": 4692.948835050558
+        },
+        {
+          "wavelength_nm": 1215.0,
+          "exitance_w_m2_nm": 14599.169251035544,
+          "radiance_w_m2_sr_nm": 4647.059902675021
+        },
+        {
+          "wavelength_nm": 1220.0,
+          "exitance_w_m2_nm": 14456.515766019744,
+          "radiance_w_m2_sr_nm": 4601.65188809592
+        },
+        {
+          "wavelength_nm": 1225.0,
+          "exitance_w_m2_nm": 14315.359987695963,
+          "radiance_w_m2_sr_nm": 4556.720608363494
+        },
+        {
+          "wavelength_nm": 1230.0,
+          "exitance_w_m2_nm": 14175.688727588931,
+          "radiance_w_m2_sr_nm": 4512.261865455677
+        },
+        {
+          "wavelength_nm": 1235.0,
+          "exitance_w_m2_nm": 14037.488758731719,
+          "radiance_w_m2_sr_nm": 4468.271449098134
+        },
+        {
+          "wavelength_nm": 1240.0,
+          "exitance_w_m2_nm": 13900.746824102043,
+          "radiance_w_m2_sr_nm": 4424.745139449611
+        },
+        {
+          "wavelength_nm": 1245.0,
+          "exitance_w_m2_nm": 13765.4496446552,
+          "radiance_w_m2_sr_nm": 4381.678709658899
+        },
+        {
+          "wavelength_nm": 1250.0,
+          "exitance_w_m2_nm": 13631.583926964151,
+          "radiance_w_m2_sr_nm": 4339.067928296749
+        },
+        {
+          "wavelength_nm": 1255.0,
+          "exitance_w_m2_nm": 13499.136370487922,
+          "radiance_w_m2_sr_nm": 4296.90856166948
+        },
+        {
+          "wavelength_nm": 1260.0,
+          "exitance_w_m2_nm": 13368.093674478807,
+          "radiance_w_m2_sr_nm": 4255.196376017601
+        },
+        {
+          "wavelength_nm": 1265.0,
+          "exitance_w_m2_nm": 13238.442544545414,
+          "radiance_w_m2_sr_nm": 4213.9271396049035
+        },
+        {
+          "wavelength_nm": 1270.0,
+          "exitance_w_m2_nm": 13110.169698883,
+          "radiance_w_m2_sr_nm": 4173.0966247016295
+        },
+        {
+          "wavelength_nm": 1275.0,
+          "exitance_w_m2_nm": 12983.261874186992,
+          "radiance_w_m2_sr_nm": 4132.70060946681
+        },
+        {
+          "wavelength_nm": 1280.0,
+          "exitance_w_m2_nm": 12857.705831260091,
+          "radiance_w_m2_sr_nm": 4092.7348797330615
+        },
+        {
+          "wavelength_nm": 1285.0,
+          "exitance_w_m2_nm": 12733.488360326792,
+          "radiance_w_m2_sr_nm": 4053.1952306982444
+        },
+        {
+          "wavelength_nm": 1290.0,
+          "exitance_w_m2_nm": 12610.596286066157,
+          "radiance_w_m2_sr_nm": 4014.077468527452
+        },
+        {
+          "wavelength_nm": 1295.0,
+          "exitance_w_m2_nm": 12489.016472376115,
+          "radiance_w_m2_sr_nm": 3975.3774118695283
+        },
+        {
+          "wavelength_nm": 1300.0,
+          "exitance_w_m2_nm": 12368.735826876895,
+          "radiance_w_m2_sr_nm": 3937.0908932905586
+        },
+        {
+          "wavelength_nm": 1305.0,
+          "exitance_w_m2_nm": 12249.74130516848,
+          "radiance_w_m2_sr_nm": 3899.2137606290585
+        },
+        {
+          "wavelength_nm": 1310.0,
+          "exitance_w_m2_nm": 12132.019914848326,
+          "radiance_w_m2_sr_nm": 3861.7418782748528
+        },
+        {
+          "wavelength_nm": 1315.0,
+          "exitance_w_m2_nm": 12015.558719302304,
+          "radiance_w_m2_sr_nm": 3824.67112837577
+        },
+        {
+          "wavelength_nm": 1320.0,
+          "exitance_w_m2_nm": 11900.344841275884,
+          "radiance_w_m2_sr_nm": 3787.9974119743874
+        },
+        {
+          "wavelength_nm": 1325.0,
+          "exitance_w_m2_nm": 11786.365466236033,
+          "radiance_w_m2_sr_nm": 3751.7166500781527
+        },
+        {
+          "wavelength_nm": 1330.0,
+          "exitance_w_m2_nm": 11673.607845532955,
+          "radiance_w_m2_sr_nm": 3715.824784665801
+        },
+        {
+          "wavelength_nm": 1335.0,
+          "exitance_w_m2_nm": 11562.059299368739,
+          "radiance_w_m2_sr_nm": 3680.317779632302
+        },
+        {
+          "wavelength_nm": 1340.0,
+          "exitance_w_m2_nm": 11451.707219581653,
+          "radiance_w_m2_sr_nm": 3645.19162167513
+        },
+        {
+          "wavelength_nm": 1345.0,
+          "exitance_w_m2_nm": 11342.539072254292,
+          "radiance_w_m2_sr_nm": 3610.4423211244625
+        },
+        {
+          "wavelength_nm": 1350.0,
+          "exitance_w_m2_nm": 11234.542400152703,
+          "radiance_w_m2_sr_nm": 3576.065912719577
+        },
+        {
+          "wavelength_nm": 1355.0,
+          "exitance_w_m2_nm": 11127.70482500334,
+          "radiance_w_m2_sr_nm": 3542.0584563336315
+        },
+        {
+          "wavelength_nm": 1360.0,
+          "exitance_w_m2_nm": 11022.01404961685,
+          "radiance_w_m2_sr_nm": 3508.416037649681
+        },
+        {
+          "wavelength_nm": 1365.0,
+          "exitance_w_m2_nm": 10917.457859860477,
+          "radiance_w_m2_sr_nm": 3475.1347687885195
+        },
+        {
+          "wavelength_nm": 1370.0,
+          "exitance_w_m2_nm": 10814.024126492395,
+          "radiance_w_m2_sr_nm": 3442.2107888925607
+        },
+        {
+          "wavelength_nm": 1375.0,
+          "exitance_w_m2_nm": 10711.70080685797,
+          "radiance_w_m2_sr_nm": 3409.6402646657793
+        },
+        {
+          "wavelength_nm": 1380.0,
+          "exitance_w_m2_nm": 10610.475946457962,
+          "radiance_w_m2_sr_nm": 3377.4193908728826
+        },
+        {
+          "wavelength_nm": 1385.0,
+          "exitance_w_m2_nm": 10510.337680391336,
+          "radiance_w_m2_sr_nm": 3345.5443907985727
+        },
+        {
+          "wavelength_nm": 1390.0,
+          "exitance_w_m2_nm": 10411.274234681814,
+          "radiance_w_m2_sr_nm": 3314.0115166698006
+        },
+        {
+          "wavelength_nm": 1395.0,
+          "exitance_w_m2_nm": 10313.273927488706,
+          "radiance_w_m2_sr_nm": 3282.817050041186
+        },
+        {
+          "wavelength_nm": 1400.0,
+          "exitance_w_m2_nm": 10216.3251702119,
+          "radiance_w_m2_sr_nm": 3251.957302146746
+        },
+        {
+          "wavelength_nm": 1405.0,
+          "exitance_w_m2_nm": 10120.416468492678,
+          "radiance_w_m2_sr_nm": 3221.428614218465
+        },
+        {
+          "wavelength_nm": 1410.0,
+          "exitance_w_m2_nm": 10025.536423116459,
+          "radiance_w_m2_sr_nm": 3191.227357773648
+        },
+        {
+          "wavelength_nm": 1415.0,
+          "exitance_w_m2_nm": 9931.67373082049,
+          "radiance_w_m2_sr_nm": 3161.349934872014
+        },
+        {
+          "wavelength_nm": 1420.0,
+          "exitance_w_m2_nm": 9838.817185013657,
+          "radiance_w_m2_sr_nm": 3131.792778344821
+        },
+        {
+          "wavelength_nm": 1425.0,
+          "exitance_w_m2_nm": 9746.955676408952,
+          "radiance_w_m2_sr_nm": 3102.552351996186
+        },
+        {
+          "wavelength_nm": 1430.0,
+          "exitance_w_m2_nm": 9656.078193576079,
+          "radiance_w_m2_sr_nm": 3073.625150778985
+        },
+        {
+          "wavelength_nm": 1435.0,
+          "exitance_w_m2_nm": 9566.173823414832,
+          "radiance_w_m2_sr_nm": 3045.007700945533
+        },
+        {
+          "wavelength_nm": 1440.0,
+          "exitance_w_m2_nm": 9477.23175155508,
+          "radiance_w_m2_sr_nm": 3016.696560174905
+        },
+        {
+          "wavelength_nm": 1445.0,
+          "exitance_w_m2_nm": 9389.241262687243,
+          "radiance_w_m2_sr_nm": 2988.6883176781275
+        },
+        {
+          "wavelength_nm": 1450.0,
+          "exitance_w_m2_nm": 9302.191740823897,
+          "radiance_w_m2_sr_nm": 2960.979594281452
+        },
+        {
+          "wavelength_nm": 1455.0,
+          "exitance_w_m2_nm": 9216.072669498635,
+          "radiance_w_m2_sr_nm": 2933.5670424896543
+        },
+        {
+          "wavelength_nm": 1460.0,
+          "exitance_w_m2_nm": 9130.873631903916,
+          "radiance_w_m2_sr_nm": 2906.447346529911
+        },
+        {
+          "wavelength_nm": 1465.0,
+          "exitance_w_m2_nm": 9046.584310971235,
+          "radiance_w_m2_sr_nm": 2879.61722237732
+        },
+        {
+          "wavelength_nm": 1470.0,
+          "exitance_w_m2_nm": 8963.19448939648,
+          "radiance_w_m2_sr_nm": 2853.0734177629733
+        },
+        {
+          "wavelength_nm": 1475.0,
+          "exitance_w_m2_nm": 8880.694049613336,
+          "radiance_w_m2_sr_nm": 2826.812712165488
+        },
+        {
+          "wavelength_nm": 1480.0,
+          "exitance_w_m2_nm": 8799.072973716622,
+          "radiance_w_m2_sr_nm": 2800.8319167866066
+        },
+        {
+          "wavelength_nm": 1485.0,
+          "exitance_w_m2_nm": 8718.321343339121,
+          "radiance_w_m2_sr_nm": 2775.127874511989
+        },
+        {
+          "wavelength_nm": 1490.0,
+          "exitance_w_m2_nm": 8638.429339484768,
+          "radiance_w_m2_sr_nm": 2749.6974598581146
+        },
+        {
+          "wavelength_nm": 1495.0,
+          "exitance_w_m2_nm": 8559.387242318027,
+          "radiance_w_m2_sr_nm": 2724.5375789052414
+        },
+        {
+          "wavelength_nm": 1500.0,
+          "exitance_w_m2_nm": 8481.18543091495,
+          "radiance_w_m2_sr_nm": 2699.6451692181613
+        },
+        {
+          "wavelength_nm": 1505.0,
+          "exitance_w_m2_nm": 8403.814382975355,
+          "radiance_w_m2_sr_nm": 2675.0171997545885
+        },
+        {
+          "wavelength_nm": 1510.0,
+          "exitance_w_m2_nm": 8327.264674500138,
+          "radiance_w_m2_sr_nm": 2650.65067076244
+        },
+        {
+          "wavelength_nm": 1515.0,
+          "exitance_w_m2_nm": 8251.52697943453,
+          "radiance_w_m2_sr_nm": 2626.542613666283
+        },
+        {
+          "wavelength_nm": 1520.0,
+          "exitance_w_m2_nm": 8176.592069279554,
+          "radiance_w_m2_sr_nm": 2602.6900909436604
+        },
+        {
+          "wavelength_nm": 1525.0,
+          "exitance_w_m2_nm": 8102.450812673298,
+          "radiance_w_m2_sr_nm": 2579.0901959917996
+        },
+        {
+          "wavelength_nm": 1530.0,
+          "exitance_w_m2_nm": 8029.094174944571,
+          "radiance_w_m2_sr_nm": 2555.740052985543
+        },
+        {
+          "wavelength_nm": 1535.0,
+          "exitance_w_m2_nm": 7956.513217639236,
+          "radiance_w_m2_sr_nm": 2532.6368167265714
+        },
+        {
+          "wavelength_nm": 1540.0,
+          "exitance_w_m2_nm": 7884.699098022053,
+          "radiance_w_m2_sr_nm": 2509.777672484837
+        },
+        {
+          "wavelength_nm": 1545.0,
+          "exitance_w_m2_nm": 7813.643068554606,
+          "radiance_w_m2_sr_nm": 2487.1598358323813
+        },
+        {
+          "wavelength_nm": 1550.0,
+          "exitance_w_m2_nm": 7743.336476351687,
+          "radiance_w_m2_sr_nm": 2464.7805524703003
+        },
+        {
+          "wavelength_nm": 1555.0,
+          "exitance_w_m2_nm": 7673.770762616902,
+          "radiance_w_m2_sr_nm": 2442.637098049087
+        },
+        {
+          "wavelength_nm": 1560.0,
+          "exitance_w_m2_nm": 7604.9374620589815,
+          "radiance_w_m2_sr_nm": 2420.7267779828403
+        },
+        {
+          "wavelength_nm": 1565.0,
+          "exitance_w_m2_nm": 7536.828202289499,
+          "radiance_w_m2_sr_nm": 2399.046927257554
+        },
+        {
+          "wavelength_nm": 1570.0,
+          "exitance_w_m2_nm": 7469.434703205569,
+          "radiance_w_m2_sr_nm": 2377.5949102346212
+        },
+        {
+          "wavelength_nm": 1575.0,
+          "exitance_w_m2_nm": 7402.748776354532,
+          "radiance_w_m2_sr_nm": 2356.368120448607
+        },
+        {
+          "wavelength_nm": 1580.0,
+          "exitance_w_m2_nm": 7336.762324286302,
+          "radiance_w_m2_sr_nm": 2335.3639804010963
+        },
+        {
+          "wavelength_nm": 1585.0,
+          "exitance_w_m2_nm": 7271.467339891091,
+          "radiance_w_m2_sr_nm": 2314.5799413498844
+        },
+        {
+          "wavelength_nm": 1590.0,
+          "exitance_w_m2_nm": 7206.855905725077,
+          "radiance_w_m2_sr_nm": 2294.013483094329
+        },
+        {
+          "wavelength_nm": 1595.0,
+          "exitance_w_m2_nm": 7142.920193325199,
+          "radiance_w_m2_sr_nm": 2273.6621137572442
+        },
+        {
+          "wavelength_nm": 1600.0,
+          "exitance_w_m2_nm": 7079.6524625123875,
+          "radiance_w_m2_sr_nm": 2253.5233695631114
+        },
+        {
+          "wavelength_nm": 1605.0,
+          "exitance_w_m2_nm": 7017.045060686095,
+          "radiance_w_m2_sr_nm": 2233.5948146135215
+        },
+        {
+          "wavelength_nm": 1610.0,
+          "exitance_w_m2_nm": 6955.090422109886,
+          "radiance_w_m2_sr_nm": 2213.874040659771
+        },
+        {
+          "wavelength_nm": 1615.0,
+          "exitance_w_m2_nm": 6893.781067189505,
+          "radiance_w_m2_sr_nm": 2194.3586668730622
+        },
+        {
+          "wavelength_nm": 1620.0,
+          "exitance_w_m2_nm": 6833.109601742718,
+          "radiance_w_m2_sr_nm": 2175.0463396120917
+        },
+        {
+          "wavelength_nm": 1625.0,
+          "exitance_w_m2_nm": 6773.068716264109,
+          "radiance_w_m2_sr_nm": 2155.934732189022
+        },
+        {
+          "wavelength_nm": 1630.0,
+          "exitance_w_m2_nm": 6713.651185183099,
+          "radiance_w_m2_sr_nm": 2137.0215446333036
+        },
+        {
+          "wavelength_nm": 1635.0,
+          "exitance_w_m2_nm": 6654.849866118311,
+          "radiance_w_m2_sr_nm": 2118.3045034543343
+        },
+        {
+          "wavelength_nm": 1640.0,
+          "exitance_w_m2_nm": 6596.65769912554,
+          "radiance_w_m2_sr_nm": 2099.781361402077
+        },
+        {
+          "wavelength_nm": 1645.0,
+          "exitance_w_m2_nm": 6539.067705944424,
+          "radiance_w_m2_sr_nm": 2081.449897227271
+        },
+        {
+          "wavelength_nm": 1650.0,
+          "exitance_w_m2_nm": 6482.072989239844,
+          "radiance_w_m2_sr_nm": 2063.3079154399584
+        },
+        {
+          "wavelength_nm": 1655.0,
+          "exitance_w_m2_nm": 6425.66673184206,
+          "radiance_w_m2_sr_nm": 2045.3532460676163
+        },
+        {
+          "wavelength_nm": 1660.0,
+          "exitance_w_m2_nm": 6369.842195984165,
+          "radiance_w_m2_sr_nm": 2027.583744412427
+        },
+        {
+          "wavelength_nm": 1665.0,
+          "exitance_w_m2_nm": 6314.592722538128,
+          "radiance_w_m2_sr_nm": 2009.9972908081045
+        },
+        {
+          "wavelength_nm": 1670.0,
+          "exitance_w_m2_nm": 6259.911730249891,
+          "radiance_w_m2_sr_nm": 1992.5917903764189
+        },
+        {
+          "wavelength_nm": 1675.0,
+          "exitance_w_m2_nm": 6205.792714973312,
+          "radiance_w_m2_sr_nm": 1975.3651727833524
+        },
+        {
+          "wavelength_nm": 1680.0,
+          "exitance_w_m2_nm": 6152.229248904876,
+          "radiance_w_m2_sr_nm": 1958.315391995499
+        },
+        {
+          "wavelength_nm": 1685.0,
+          "exitance_w_m2_nm": 6099.214979817526,
+          "radiance_w_m2_sr_nm": 1941.440426036188
+        },
+        {
+          "wavelength_nm": 1690.0,
+          "exitance_w_m2_nm": 6046.743630295671,
+          "radiance_w_m2_sr_nm": 1924.7382767419765
+        },
+        {
+          "wavelength_nm": 1695.0,
+          "exitance_w_m2_nm": 5994.808996971323,
+          "radiance_w_m2_sr_nm": 1908.2069695195062
+        },
+        {
+          "wavelength_nm": 1700.0,
+          "exitance_w_m2_nm": 5943.4049497607275,
+          "radiance_w_m2_sr_nm": 1891.8445531025154
+        },
+        {
+          "wavelength_nm": 1705.0,
+          "exitance_w_m2_nm": 5892.525431103952,
+          "radiance_w_m2_sr_nm": 1875.649099309791
+        },
+        {
+          "wavelength_nm": 1710.0,
+          "exitance_w_m2_nm": 5842.164455205021,
+          "radiance_w_m2_sr_nm": 1859.6187028032978
+        },
+        {
+          "wavelength_nm": 1715.0,
+          "exitance_w_m2_nm": 5792.316107275321,
+          "radiance_w_m2_sr_nm": 1843.751480847345
+        },
+        {
+          "wavelength_nm": 1720.0,
+          "exitance_w_m2_nm": 5742.974542778955,
+          "radiance_w_m2_sr_nm": 1828.0455730683764
+        },
+        {
+          "wavelength_nm": 1725.0,
+          "exitance_w_m2_nm": 5694.133986681251,
+          "radiance_w_m2_sr_nm": 1812.4991412157635
+        },
+        {
+          "wavelength_nm": 1730.0,
+          "exitance_w_m2_nm": 5645.788732700267,
+          "radiance_w_m2_sr_nm": 1797.11036892355
+        },
+        {
+          "wavelength_nm": 1735.0,
+          "exitance_w_m2_nm": 5597.933142561193,
+          "radiance_w_m2_sr_nm": 1781.877461473123
+        },
+        {
+          "wavelength_nm": 1740.0,
+          "exitance_w_m2_nm": 5550.5616452550685,
+          "radiance_w_m2_sr_nm": 1766.7986455572548
+        },
+        {
+          "wavelength_nm": 1745.0,
+          "exitance_w_m2_nm": 5503.6687362999355,
+          "radiance_w_m2_sr_nm": 1751.8721690449195
+        },
+        {
+          "wavelength_nm": 1750.0,
+          "exitance_w_m2_nm": 5457.248977007453,
+          "radiance_w_m2_sr_nm": 1737.0963007478504
+        },
+        {
+          "wavelength_nm": 1755.0,
+          "exitance_w_m2_nm": 5411.296993752288,
+          "radiance_w_m2_sr_nm": 1722.4693301879793
+        },
+        {
+          "wavelength_nm": 1760.0,
+          "exitance_w_m2_nm": 5365.807477246624,
+          "radiance_w_m2_sr_nm": 1707.989567366506
+        },
+        {
+          "wavelength_nm": 1765.0,
+          "exitance_w_m2_nm": 5320.775181818461,
+          "radiance_w_m2_sr_nm": 1693.6553425341724
+        },
+        {
+          "wavelength_nm": 1770.0,
+          "exitance_w_m2_nm": 5276.194924695197,
+          "radiance_w_m2_sr_nm": 1679.4650059632222
+        },
+        {
+          "wavelength_nm": 1775.0,
+          "exitance_w_m2_nm": 5232.0615852911715,
+          "radiance_w_m2_sr_nm": 1665.4169277206163
+        },
+        {
+          "wavelength_nm": 1780.0,
+          "exitance_w_m2_nm": 5188.3701045006455,
+          "radiance_w_m2_sr_nm": 1651.5094974429826
+        },
+        {
+          "wavelength_nm": 1785.0,
+          "exitance_w_m2_nm": 5145.115483995241,
+          "radiance_w_m2_sr_nm": 1637.7411241129844
+        },
+        {
+          "wavelength_nm": 1790.0,
+          "exitance_w_m2_nm": 5102.292785527301,
+          "radiance_w_m2_sr_nm": 1624.1102358375715
+        },
+        {
+          "wavelength_nm": 1795.0,
+          "exitance_w_m2_nm": 5059.897130237308,
+          "radiance_w_m2_sr_nm": 1610.6152796275267
+        },
+        {
+          "wavelength_nm": 1800.0,
+          "exitance_w_m2_nm": 5017.923697967376,
+          "radiance_w_m2_sr_nm": 1597.2547211789415
+        },
+        {
+          "wavelength_nm": 1805.0,
+          "exitance_w_m2_nm": 4976.367726580095,
+          "radiance_w_m2_sr_nm": 1584.0270446563993
+        },
+        {
+          "wavelength_nm": 1810.0,
+          "exitance_w_m2_nm": 4935.224511282378,
+          "radiance_w_m2_sr_nm": 1570.9307524777478
+        },
+        {
+          "wavelength_nm": 1815.0,
+          "exitance_w_m2_nm": 4894.489403955052,
+          "radiance_w_m2_sr_nm": 1557.964365100702
+        },
+        {
+          "wavelength_nm": 1820.0,
+          "exitance_w_m2_nm": 4854.157812488401,
+          "radiance_w_m2_sr_nm": 1545.1264208113412
+        },
+        {
+          "wavelength_nm": 1825.0,
+          "exitance_w_m2_nm": 4814.2252001228635,
+          "radiance_w_m2_sr_nm": 1532.4154755142456
+        },
+        {
+          "wavelength_nm": 1830.0,
+          "exitance_w_m2_nm": 4774.687084795622,
+          "radiance_w_m2_sr_nm": 1519.8301025245096
+        },
+        {
+          "wavelength_nm": 1835.0,
+          "exitance_w_m2_nm": 4735.539038492982,
+          "radiance_w_m2_sr_nm": 1507.368892361599
+        },
+        {
+          "wavelength_nm": 1840.0,
+          "exitance_w_m2_nm": 4696.77668660841,
+          "radiance_w_m2_sr_nm": 1495.0304525450047
+        },
+        {
+          "wavelength_nm": 1845.0,
+          "exitance_w_m2_nm": 4658.395707306981,
+          "radiance_w_m2_sr_nm": 1482.8134073919443
+        },
+        {
+          "wavelength_nm": 1850.0,
+          "exitance_w_m2_nm": 4620.391830894781,
+          "radiance_w_m2_sr_nm": 1470.716397816634
+        },
+        {
+          "wavelength_nm": 1855.0,
+          "exitance_w_m2_nm": 4582.7608391948515,
+          "radiance_w_m2_sr_nm": 1458.7380811316464
+        },
+        {
+          "wavelength_nm": 1860.0,
+          "exitance_w_m2_nm": 4545.49856492911,
+          "radiance_w_m2_sr_nm": 1446.8771308511689
+        },
+        {
+          "wavelength_nm": 1865.0,
+          "exitance_w_m2_nm": 4508.600891105797,
+          "radiance_w_m2_sr_nm": 1435.1322364960236
+        },
+        {
+          "wavelength_nm": 1870.0,
+          "exitance_w_m2_nm": 4472.063750412983,
+          "radiance_w_m2_sr_nm": 1423.5021034006127
+        },
+        {
+          "wavelength_nm": 1875.0,
+          "exitance_w_m2_nm": 4435.883124618654,
+          "radiance_w_m2_sr_nm": 1411.9854525219614
+        },
+        {
+          "wavelength_nm": 1880.0,
+          "exitance_w_m2_nm": 4400.055043975902,
+          "radiance_w_m2_sr_nm": 1400.5810202503833
+        },
+        {
+          "wavelength_nm": 1885.0,
+          "exitance_w_m2_nm": 4364.575586634721,
+          "radiance_w_m2_sr_nm": 1389.2875582222493
+        },
+        {
+          "wavelength_nm": 1890.0,
+          "exitance_w_m2_nm": 4329.440878059309,
+          "radiance_w_m2_sr_nm": 1378.1038331345096
+        },
+        {
+          "wavelength_nm": 1895.0,
+          "exitance_w_m2_nm": 4294.64709045188,
+          "radiance_w_m2_sr_nm": 1367.0286265612858
+        },
+        {
+          "wavelength_nm": 1900.0,
+          "exitance_w_m2_nm": 4260.190442182269,
+          "radiance_w_m2_sr_nm": 1356.060734772311
+        },
+        {
+          "wavelength_nm": 1905.0,
+          "exitance_w_m2_nm": 4226.067197223063,
+          "radiance_w_m2_sr_nm": 1345.1989685531244
+        },
+        {
+          "wavelength_nm": 1910.0,
+          "exitance_w_m2_nm": 4192.273664591469,
+          "radiance_w_m2_sr_nm": 1334.4421530274137
+        },
+        {
+          "wavelength_nm": 1915.0,
+          "exitance_w_m2_nm": 4158.806197796431,
+          "radiance_w_m2_sr_nm": 1323.7891274810252
+        },
+        {
+          "wavelength_nm": 1920.0,
+          "exitance_w_m2_nm": 4125.661194292292,
+          "radiance_w_m2_sr_nm": 1313.2387451880613
+        },
+        {
+          "wavelength_nm": 1925.0,
+          "exitance_w_m2_nm": 4092.8350949376622,
+          "radiance_w_m2_sr_nm": 1302.7898732386313
+        },
+        {
+          "wavelength_nm": 1930.0,
+          "exitance_w_m2_nm": 4060.3243834607924,
+          "radiance_w_m2_sr_nm": 1292.441392368675
+        },
+        {
+          "wavelength_nm": 1935.0,
+          "exitance_w_m2_nm": 4028.125585930764,
+          "radiance_w_m2_sr_nm": 1282.1921967916367
+        },
+        {
+          "wavelength_nm": 1940.0,
+          "exitance_w_m2_nm": 3996.235270233916,
+          "radiance_w_m2_sr_nm": 1272.0411940318077
+        },
+        {
+          "wavelength_nm": 1945.0,
+          "exitance_w_m2_nm": 3964.6500455569053,
+          "radiance_w_m2_sr_nm": 1261.9873047597791
+        },
+        {
+          "wavelength_nm": 1950.0,
+          "exitance_w_m2_nm": 3933.366561874954,
+          "radiance_w_m2_sr_nm": 1252.0294626295447
+        },
+        {
+          "wavelength_nm": 1955.0,
+          "exitance_w_m2_nm": 3902.3815094462643,
+          "radiance_w_m2_sr_nm": 1242.1666141175697
+        },
+        {
+          "wavelength_nm": 1960.0,
+          "exitance_w_m2_nm": 3871.691618311633,
+          "radiance_w_m2_sr_nm": 1232.3977183635122
+        },
+        {
+          "wavelength_nm": 1965.0,
+          "exitance_w_m2_nm": 3841.293657800606,
+          "radiance_w_m2_sr_nm": 1222.7217470130279
+        },
+        {
+          "wavelength_nm": 1970.0,
+          "exitance_w_m2_nm": 3811.184436042317,
+          "radiance_w_m2_sr_nm": 1213.1376840620644
+        },
+        {
+          "wavelength_nm": 1975.0,
+          "exitance_w_m2_nm": 3781.3607994826853,
+          "radiance_w_m2_sr_nm": 1203.6445257031812
+        },
+        {
+          "wavelength_nm": 1980.0,
+          "exitance_w_m2_nm": 3751.8196324067885,
+          "radiance_w_m2_sr_nm": 1194.2412801735163
+        },
+        {
+          "wavelength_nm": 1985.0,
+          "exitance_w_m2_nm": 3722.5578564670495,
+          "radiance_w_m2_sr_nm": 1184.9269676046024
+        },
+        {
+          "wavelength_nm": 1990.0,
+          "exitance_w_m2_nm": 3693.572430216752,
+          "radiance_w_m2_sr_nm": 1175.7006198738814
+        },
+        {
+          "wavelength_nm": 1995.0,
+          "exitance_w_m2_nm": 3664.860348649143,
+          "radiance_w_m2_sr_nm": 1166.5612804579962
+        },
+        {
+          "wavelength_nm": 2000.0,
+          "exitance_w_m2_nm": 3636.418642741838,
+          "radiance_w_m2_sr_nm": 1157.5080042877692
+        },
+        {
+          "wavelength_nm": 2005.0,
+          "exitance_w_m2_nm": 3608.244379006804,
+          "radiance_w_m2_sr_nm": 1148.5398576049583
+        },
+        {
+          "wavelength_nm": 2010.0,
+          "exitance_w_m2_nm": 3580.334659045432,
+          "radiance_w_m2_sr_nm": 1139.6559178206326
+        },
+        {
+          "wavelength_nm": 2015.0,
+          "exitance_w_m2_nm": 3552.686619109196,
+          "radiance_w_m2_sr_nm": 1130.8552733753243
+        },
+        {
+          "wavelength_nm": 2020.0,
+          "exitance_w_m2_nm": 3525.2974296654397,
+          "radiance_w_m2_sr_nm": 1122.137023600816
+        },
+        {
+          "wavelength_nm": 2025.0,
+          "exitance_w_m2_nm": 3498.164294968268,
+          "radiance_w_m2_sr_nm": 1113.5002785835497
+        },
+        {
+          "wavelength_nm": 2030.0,
+          "exitance_w_m2_nm": 3471.284452634724,
+          "radiance_w_m2_sr_nm": 1104.944159029721
+        },
+        {
+          "wavelength_nm": 2035.0,
+          "exitance_w_m2_nm": 3444.655173226301,
+          "radiance_w_m2_sr_nm": 1096.4677961320697
+        },
+        {
+          "wavelength_nm": 2040.0,
+          "exitance_w_m2_nm": 3418.2737598350095,
+          "radiance_w_m2_sr_nm": 1088.07033143812
+        },
+        {
+          "wavelength_nm": 2045.0,
+          "exitance_w_m2_nm": 3392.1375476751186,
+          "radiance_w_m2_sr_nm": 1079.75091672023
+        },
+        {
+          "wavelength_nm": 2050.0,
+          "exitance_w_m2_nm": 3366.2439036792966,
+          "radiance_w_m2_sr_nm": 1071.5087138470362
+        },
+        {
+          "wavelength_nm": 2055.0,
+          "exitance_w_m2_nm": 3340.590226100059,
+          "radiance_w_m2_sr_nm": 1063.3428946565934
+        },
+        {
+          "wavelength_nm": 2060.0,
+          "exitance_w_m2_nm": 3315.1739441162044,
+          "radiance_w_m2_sr_nm": 1055.2526408310976
+        },
+        {
+          "wavelength_nm": 2065.0,
+          "exitance_w_m2_nm": 3289.992517443505,
+          "radiance_w_m2_sr_nm": 1047.237143772965
+        },
+        {
+          "wavelength_nm": 2070.0,
+          "exitance_w_m2_nm": 3265.0434359509973,
+          "radiance_w_m2_sr_nm": 1039.295604482695
+        },
+        {
+          "wavelength_nm": 2075.0,
+          "exitance_w_m2_nm": 3240.324219281432,
+          "radiance_w_m2_sr_nm": 1031.427233438053
+        },
+        {
+          "wavelength_nm": 2080.0,
+          "exitance_w_m2_nm": 3215.8324164766855,
+          "radiance_w_m2_sr_nm": 1023.6312504748383
+        },
+        {
+          "wavelength_nm": 2085.0,
+          "exitance_w_m2_nm": 3191.565605607799,
+          "radiance_w_m2_sr_nm": 1015.9068846691196
+        },
+        {
+          "wavelength_nm": 2090.0,
+          "exitance_w_m2_nm": 3167.5213934095473,
+          "radiance_w_m2_sr_nm": 1008.253374220915
+        },
+        {
+          "wavelength_nm": 2095.0,
+          "exitance_w_m2_nm": 3143.697414919807,
+          "radiance_w_m2_sr_nm": 1000.6699663394008
+        },
+        {
+          "wavelength_nm": 2100.0,
+          "exitance_w_m2_nm": 3120.0913331230004,
+          "radiance_w_m2_sr_nm": 993.155917129414
+        },
+        {
+          "wavelength_nm": 2105.0,
+          "exitance_w_m2_nm": 3096.7008385985528,
+          "radiance_w_m2_sr_nm": 985.7104914795545
+        },
+        {
+          "wavelength_nm": 2110.0,
+          "exitance_w_m2_nm": 3073.5236491734036,
+          "radiance_w_m2_sr_nm": 978.332962951575
+        },
+        {
+          "wavelength_nm": 2115.0,
+          "exitance_w_m2_nm": 3050.557509578839,
+          "radiance_w_m2_sr_nm": 971.0226136711482
+        },
+        {
+          "wavelength_nm": 2120.0,
+          "exitance_w_m2_nm": 3027.800191112119,
+          "radiance_w_m2_sr_nm": 963.7787342201583
+        },
+        {
+          "wavelength_nm": 2125.0,
+          "exitance_w_m2_nm": 3005.249491301871,
+          "radiance_w_m2_sr_nm": 956.6006235301934
+        },
+        {
+          "wavelength_nm": 2130.0,
+          "exitance_w_m2_nm": 2982.903233577854,
+          "radiance_w_m2_sr_nm": 949.4875887774278
+        },
+        {
+          "wavelength_nm": 2135.0,
+          "exitance_w_m2_nm": 2960.7592669452047,
+          "radiance_w_m2_sr_nm": 942.4389452789317
+        },
+        {
+          "wavelength_nm": 2140.0,
+          "exitance_w_m2_nm": 2938.815465662299,
+          "radiance_w_m2_sr_nm": 935.4540163901303
+        },
+        {
+          "wavelength_nm": 2145.0,
+          "exitance_w_m2_nm": 2917.069728923376,
+          "radiance_w_m2_sr_nm": 928.5321334037809
+        },
+        {
+          "wavelength_nm": 2150.0,
+          "exitance_w_m2_nm": 2895.519980544499,
+          "radiance_w_m2_sr_nm": 921.6726354500113
+        },
+        {
+          "wavelength_nm": 2155.0,
+          "exitance_w_m2_nm": 2874.164168654026,
+          "radiance_w_m2_sr_nm": 914.8748693977924
+        },
+        {
+          "wavelength_nm": 2160.0,
+          "exitance_w_m2_nm": 2853.0002653868614,
+          "radiance_w_m2_sr_nm": 908.1381897576165
+        },
+        {
+          "wavelength_nm": 2165.0,
+          "exitance_w_m2_nm": 2832.026266582552,
+          "radiance_w_m2_sr_nm": 901.4619585853978
+        },
+        {
+          "wavelength_nm": 2170.0,
+          "exitance_w_m2_nm": 2811.240191487392,
+          "radiance_w_m2_sr_nm": 894.8455453876497
+        },
+        {
+          "wavelength_nm": 2175.0,
+          "exitance_w_m2_nm": 2790.6400824602592,
+          "radiance_w_m2_sr_nm": 888.2883270278494
+        },
+        {
+          "wavelength_nm": 2180.0,
+          "exitance_w_m2_nm": 2770.224004682177,
+          "radiance_w_m2_sr_nm": 881.7896876339886
+        },
+        {
+          "wavelength_nm": 2185.0,
+          "exitance_w_m2_nm": 2749.990045869797,
+          "radiance_w_m2_sr_nm": 875.3490185073724
+        },
+        {
+          "wavelength_nm": 2190.0,
+          "exitance_w_m2_nm": 2729.9363159923623,
+          "radiance_w_m2_sr_nm": 868.9657180325257
+        },
+        {
+          "wavelength_nm": 2195.0,
+          "exitance_w_m2_nm": 2710.060946992441,
+          "radiance_w_m2_sr_nm": 862.6391915882999
+        },
+        {
+          "wavelength_nm": 2200.0,
+          "exitance_w_m2_nm": 2690.3620925101013,
+          "radiance_w_m2_sr_nm": 856.3688514600753
+        },
+        {
+          "wavelength_nm": 2205.0,
+          "exitance_w_m2_nm": 2670.83792761099,
+          "radiance_w_m2_sr_nm": 850.1541167532056
+        },
+        {
+          "wavelength_nm": 2210.0,
+          "exitance_w_m2_nm": 2651.486648517401,
+          "radiance_w_m2_sr_nm": 843.9944133074146
+        },
+        {
+          "wavelength_nm": 2215.0,
+          "exitance_w_m2_nm": 2632.3064723433586,
+          "radiance_w_m2_sr_nm": 837.88917361247
+        },
+        {
+          "wavelength_nm": 2220.0,
+          "exitance_w_m2_nm": 2613.2956368327254,
+          "radiance_w_m2_sr_nm": 831.8378367248216
+        },
+        {
+          "wavelength_nm": 2225.0,
+          "exitance_w_m2_nm": 2594.452400100869,
+          "radiance_w_m2_sr_nm": 825.8398481853702
+        },
+        {
+          "wavelength_nm": 2230.0,
+          "exitance_w_m2_nm": 2575.7750403797354,
+          "radiance_w_m2_sr_nm": 819.8946599383224
+        },
+        {
+          "wavelength_nm": 2235.0,
+          "exitance_w_m2_nm": 2557.2618557660094,
+          "radiance_w_m2_sr_nm": 814.0017302510278
+        },
+        {
+          "wavelength_nm": 2240.0,
+          "exitance_w_m2_nm": 2538.911163972802,
+          "radiance_w_m2_sr_nm": 808.1605236349382
+        },
+        {
+          "wavelength_nm": 2245.0,
+          "exitance_w_m2_nm": 2520.721302084381,
+          "radiance_w_m2_sr_nm": 802.370510767536
+        },
+        {
+          "wavelength_nm": 2250.0,
+          "exitance_w_m2_nm": 2502.690626314039,
+          "radiance_w_m2_sr_nm": 796.6311684152616
+        },
+        {
+          "wavelength_nm": 2255.0,
+          "exitance_w_m2_nm": 2484.817511765324,
+          "radiance_w_m2_sr_nm": 790.9419793575103
+        },
+        {
+          "wavelength_nm": 2260.0,
+          "exitance_w_m2_nm": 2467.100352196326,
+          "radiance_w_m2_sr_nm": 785.3024323116025
+        },
+        {
+          "wavelength_nm": 2265.0,
+          "exitance_w_m2_nm": 2449.5375597866537,
+          "radiance_w_m2_sr_nm": 779.7120218586101
+        },
+        {
+          "wavelength_nm": 2270.0,
+          "exitance_w_m2_nm": 2432.127564908096,
+          "radiance_w_m2_sr_nm": 774.1702483703559
+        },
+        {
+          "wavelength_nm": 2275.0,
+          "exitance_w_m2_nm": 2414.8688158975283,
+          "radiance_w_m2_sr_nm": 768.6766179371276
+        },
+        {
+          "wavelength_nm": 2280.0,
+          "exitance_w_m2_nm": 2397.7597788336416,
+          "radiance_w_m2_sr_nm": 763.2306422966076
+        },
+        {
+          "wavelength_nm": 2285.0,
+          "exitance_w_m2_nm": 2380.798937315486,
+          "radiance_w_m2_sr_nm": 757.8318387633822
+        },
+        {
+          "wavelength_nm": 2290.0,
+          "exitance_w_m2_nm": 2363.984792245108,
+          "radiance_w_m2_sr_nm": 752.4797301597524
+        },
+        {
+          "wavelength_nm": 2295.0,
+          "exitance_w_m2_nm": 2347.3158616119836,
+          "radiance_w_m2_sr_nm": 747.1738447471171
+        },
+        {
+          "wavelength_nm": 2300.0,
+          "exitance_w_m2_nm": 2330.7906802808484,
+          "radiance_w_m2_sr_nm": 741.913716158437
+        },
+        {
+          "wavelength_nm": 2305.0,
+          "exitance_w_m2_nm": 2314.4077997822214,
+          "radiance_w_m2_sr_nm": 736.6988833315563
+        },
+        {
+          "wavelength_nm": 2310.0,
+          "exitance_w_m2_nm": 2298.165788105344,
+          "radiance_w_m2_sr_nm": 731.5288904432936
+        },
+        {
+          "wavelength_nm": 2315.0,
+          "exitance_w_m2_nm": 2282.063229494272,
+          "radiance_w_m2_sr_nm": 726.4032868445355
+        },
+        {
+          "wavelength_nm": 2320.0,
+          "exitance_w_m2_nm": 2266.098724246316,
+          "radiance_w_m2_sr_nm": 721.3216269960782
+        },
+        {
+          "wavelength_nm": 2325.0,
+          "exitance_w_m2_nm": 2250.2708885131933,
+          "radiance_w_m2_sr_nm": 716.2834704053321
+        },
+        {
+          "wavelength_nm": 2330.0,
+          "exitance_w_m2_nm": 2234.5783541046803,
+          "radiance_w_m2_sr_nm": 711.2883815638231
+        },
+        {
+          "wavelength_nm": 2335.0,
+          "exitance_w_m2_nm": 2219.019768295164,
+          "radiance_w_m2_sr_nm": 706.3359298856152
+        },
+        {
+          "wavelength_nm": 2340.0,
+          "exitance_w_m2_nm": 2203.5937936321798,
+          "radiance_w_m2_sr_nm": 701.4256896463667
+        },
+        {
+          "wavelength_nm": 2345.0,
+          "exitance_w_m2_nm": 2188.299107748002,
+          "radiance_w_m2_sr_nm": 696.5572399233572
+        },
+        {
+          "wavelength_nm": 2350.0,
+          "exitance_w_m2_nm": 2173.1344031732388,
+          "radiance_w_m2_sr_nm": 691.7301645361536
+        },
+        {
+          "wavelength_nm": 2355.0,
+          "exitance_w_m2_nm": 2158.098387153156,
+          "radiance_w_m2_sr_nm": 686.9440519881434
+        },
+        {
+          "wavelength_nm": 2360.0,
+          "exitance_w_m2_nm": 2143.189781466291,
+          "radiance_w_m2_sr_nm": 682.1984954087984
+        },
+        {
+          "wavelength_nm": 2365.0,
+          "exitance_w_m2_nm": 2128.4073222452676,
+          "radiance_w_m2_sr_nm": 677.4930924966378
+        },
+        {
+          "wavelength_nm": 2370.0,
+          "exitance_w_m2_nm": 2113.749759800392,
+          "radiance_w_m2_sr_nm": 672.8274454630777
+        },
+        {
+          "wavelength_nm": 2375.0,
+          "exitance_w_m2_nm": 2099.215858445067,
+          "radiance_w_m2_sr_nm": 668.2011609768578
+        },
+        {
+          "wavelength_nm": 2380.0,
+          "exitance_w_m2_nm": 2084.80439632376,
+          "radiance_w_m2_sr_nm": 663.6138501092826
+        },
+        {
+          "wavelength_nm": 2385.0,
+          "exitance_w_m2_nm": 2070.51416524205,
+          "radiance_w_m2_sr_nm": 659.0651282801232
+        },
+        {
+          "wavelength_nm": 2390.0,
+          "exitance_w_m2_nm": 2056.343970499133,
+          "radiance_w_m2_sr_nm": 654.5546152043032
+        },
+        {
+          "wavelength_nm": 2395.0,
+          "exitance_w_m2_nm": 2042.2926307222092,
+          "radiance_w_m2_sr_nm": 650.0819348391809
+        },
+        {
+          "wavelength_nm": 2400.0,
+          "exitance_w_m2_nm": 2028.3589777032917,
+          "radiance_w_m2_sr_nm": 645.6467153326048
+        },
+        {
+          "wavelength_nm": 2405.0,
+          "exitance_w_m2_nm": 2014.5418562379646,
+          "radiance_w_m2_sr_nm": 641.2485889715889
+        },
+        {
+          "wavelength_nm": 2410.0,
+          "exitance_w_m2_nm": 2000.8401239662633,
+          "radiance_w_m2_sr_nm": 636.8871921316629
+        },
+        {
+          "wavelength_nm": 2415.0,
+          "exitance_w_m2_nm": 1987.2526512156999,
+          "radiance_w_m2_sr_nm": 632.5621652269057
+        },
+        {
+          "wavelength_nm": 2420.0,
+          "exitance_w_m2_nm": 1973.778320846413,
+          "radiance_w_m2_sr_nm": 628.2731526606552
+        },
+        {
+          "wavelength_nm": 2425.0,
+          "exitance_w_m2_nm": 1960.4160280980236,
+          "radiance_w_m2_sr_nm": 624.0198027767609
+        },
+        {
+          "wavelength_nm": 2430.0,
+          "exitance_w_m2_nm": 1947.164680438767,
+          "radiance_w_m2_sr_nm": 619.801767811561
+        },
+        {
+          "wavelength_nm": 2435.0,
+          "exitance_w_m2_nm": 1934.0231974166138,
+          "radiance_w_m2_sr_nm": 615.6187038464933
+        },
+        {
+          "wavelength_nm": 2440.0,
+          "exitance_w_m2_nm": 1920.9905105119685,
+          "radiance_w_m2_sr_nm": 611.4702707612066
+        },
+        {
+          "wavelength_nm": 2445.0,
+          "exitance_w_m2_nm": 1908.0655629927348,
+          "radiance_w_m2_sr_nm": 607.3561321874279
+        },
+        {
+          "wavelength_nm": 2450.0,
+          "exitance_w_m2_nm": 1895.2473097709353,
+          "radiance_w_m2_sr_nm": 603.2759554633219
+        },
+        {
+          "wavelength_nm": 2455.0,
+          "exitance_w_m2_nm": 1882.5347172614122,
+          "radiance_w_m2_sr_nm": 599.2294115885147
+        },
+        {
+          "wavelength_nm": 2460.0,
+          "exitance_w_m2_nm": 1869.926763242191,
+          "radiance_w_m2_sr_nm": 595.2161751796459
+        },
+        {
+          "wavelength_nm": 2465.0,
+          "exitance_w_m2_nm": 1857.4224367167753,
+          "radiance_w_m2_sr_nm": 591.2359244265359
+        },
+        {
+          "wavelength_nm": 2470.0,
+          "exitance_w_m2_nm": 1845.0207377781621,
+          "radiance_w_m2_sr_nm": 587.2883410489003
+        },
+        {
+          "wavelength_nm": 2475.0,
+          "exitance_w_m2_nm": 1832.7206774745966,
+          "radiance_w_m2_sr_nm": 583.3731102536186
+        },
+        {
+          "wavelength_nm": 2480.0,
+          "exitance_w_m2_nm": 1820.521277677265,
+          "radiance_w_m2_sr_nm": 579.4899206926194
+        },
+        {
+          "wavelength_nm": 2485.0,
+          "exitance_w_m2_nm": 1808.4215709493828,
+          "radiance_w_m2_sr_nm": 575.63846442121
+        },
+        {
+          "wavelength_nm": 2490.0,
+          "exitance_w_m2_nm": 1796.4206004173475,
+          "radiance_w_m2_sr_nm": 571.8184368570628
+        },
+        {
+          "wavelength_nm": 2495.0,
+          "exitance_w_m2_nm": 1784.5174196430464,
+          "radiance_w_m2_sr_nm": 568.02953673957
+        },
+        {
+          "wavelength_nm": 2500.0,
+          "exitance_w_m2_nm": 1772.7110924985416,
+          "radiance_w_m2_sr_nm": 564.2714660899541
+        },
+        {
+          "wavelength_nm": 2505.0,
+          "exitance_w_m2_nm": 1761.000693041583,
+          "radiance_w_m2_sr_nm": 560.5439301716428
+        },
+        {
+          "wavelength_nm": 2510.0,
+          "exitance_w_m2_nm": 1749.385305393398,
+          "radiance_w_m2_sr_nm": 556.8466374513685
+        },
+        {
+          "wavelength_nm": 2515.0,
+          "exitance_w_m2_nm": 1737.8640236176343,
+          "radiance_w_m2_sr_nm": 553.1792995606337
+        },
+        {
+          "wavelength_nm": 2520.0,
+          "exitance_w_m2_nm": 1726.435951601074,
+          "radiance_w_m2_sr_nm": 549.5416312577422
+        },
+        {
+          "wavelength_nm": 2525.0,
+          "exitance_w_m2_nm": 1715.1002029357355,
+          "radiance_w_m2_sr_nm": 545.9333503902703
+        },
+        {
+          "wavelength_nm": 2530.0,
+          "exitance_w_m2_nm": 1703.855900802721,
+          "radiance_w_m2_sr_nm": 542.3541778580942
+        },
+        {
+          "wavelength_nm": 2535.0,
+          "exitance_w_m2_nm": 1692.7021778573035,
+          "radiance_w_m2_sr_nm": 538.8038375768128
+        },
+        {
+          "wavelength_nm": 2540.0,
+          "exitance_w_m2_nm": 1681.6381761157406,
+          "radiance_w_m2_sr_nm": 535.2820564417187
+        },
+        {
+          "wavelength_nm": 2545.0,
+          "exitance_w_m2_nm": 1670.6630468433054,
+          "radiance_w_m2_sr_nm": 531.7885642921575
+        },
+        {
+          "wavelength_nm": 2550.0,
+          "exitance_w_m2_nm": 1659.7759504439339,
+          "radiance_w_m2_sr_nm": 528.3230938764016
+        },
+        {
+          "wavelength_nm": 2555.0,
+          "exitance_w_m2_nm": 1648.9760563513048,
+          "radiance_w_m2_sr_nm": 524.8853808169798
+        },
+        {
+          "wavelength_nm": 2560.0,
+          "exitance_w_m2_nm": 1638.2625429211087,
+          "radiance_w_m2_sr_nm": 521.4751635763856
+        },
+        {
+          "wavelength_nm": 2565.0,
+          "exitance_w_m2_nm": 1627.6345973250052,
+          "radiance_w_m2_sr_nm": 518.0921834233224
+        },
+        {
+          "wavelength_nm": 2570.0,
+          "exitance_w_m2_nm": 1617.0914154456575,
+          "radiance_w_m2_sr_nm": 514.7361843992923
+        },
+        {
+          "wavelength_nm": 2575.0,
+          "exitance_w_m2_nm": 1606.6322017733241,
+          "radiance_w_m2_sr_nm": 511.4069132856798
+        },
+        {
+          "wavelength_nm": 2580.0,
+          "exitance_w_m2_nm": 1596.2561693036378,
+          "radiance_w_m2_sr_nm": 508.10411957121465
+        },
+        {
+          "wavelength_nm": 2585.0,
+          "exitance_w_m2_nm": 1585.9625394368445,
+          "radiance_w_m2_sr_nm": 504.82755541989764
+        },
+        {
+          "wavelength_nm": 2590.0,
+          "exitance_w_m2_nm": 1575.7505418781225,
+          "radiance_w_m2_sr_nm": 501.57697563927167
+        },
+        {
+          "wavelength_nm": 2595.0,
+          "exitance_w_m2_nm": 1565.6194145393615,
+          "radiance_w_m2_sr_nm": 498.35213764915716
+        },
+        {
+          "wavelength_nm": 2600.0,
+          "exitance_w_m2_nm": 1555.5684034421906,
+          "radiance_w_m2_sr_nm": 495.1528014507847
+        },
+        {
+          "wavelength_nm": 2605.0,
+          "exitance_w_m2_nm": 1545.596762622083,
+          "radiance_w_m2_sr_nm": 491.97872959627057
+        },
+        {
+          "wavelength_nm": 2610.0,
+          "exitance_w_m2_nm": 1535.7037540338893,
+          "radiance_w_m2_sr_nm": 488.82968715854736
+        },
+        {
+          "wavelength_nm": 2615.0,
+          "exitance_w_m2_nm": 1525.8886474583474,
+          "radiance_w_m2_sr_nm": 485.70544170160485
+        },
+        {
+          "wavelength_nm": 2620.0,
+          "exitance_w_m2_nm": 1516.1507204101545,
+          "radiance_w_m2_sr_nm": 482.6057632512285
+        },
+        {
+          "wavelength_nm": 2625.0,
+          "exitance_w_m2_nm": 1506.4892580467476,
+          "radiance_w_m2_sr_nm": 479.5304242659635
+        },
+        {
+          "wavelength_nm": 2630.0,
+          "exitance_w_m2_nm": 1496.9035530785989,
+          "radiance_w_m2_sr_nm": 476.4791996085607
+        },
+        {
+          "wavelength_nm": 2635.0,
+          "exitance_w_m2_nm": 1487.3929056805193,
+          "radiance_w_m2_sr_nm": 473.45186651774384
+        },
+        {
+          "wavelength_nm": 2640.0,
+          "exitance_w_m2_nm": 1477.9566234041022,
+          "radiance_w_m2_sr_nm": 470.44820458033934
+        },
+        {
+          "wavelength_nm": 2645.0,
+          "exitance_w_m2_nm": 1468.5940210912697,
+          "radiance_w_m2_sr_nm": 467.46799570375754
+        },
+        {
+          "wavelength_nm": 2650.0,
+          "exitance_w_m2_nm": 1459.304420788937,
+          "radiance_w_m2_sr_nm": 464.5110240888291
+        },
+        {
+          "wavelength_nm": 2655.0,
+          "exitance_w_m2_nm": 1450.0871516647883,
+          "radiance_w_m2_sr_nm": 461.57707620299595
+        },
+        {
+          "wavelength_nm": 2660.0,
+          "exitance_w_m2_nm": 1440.9415499240251,
+          "radiance_w_m2_sr_nm": 458.66594075381136
+        },
+        {
+          "wavelength_nm": 2665.0,
+          "exitance_w_m2_nm": 1431.8669587272996,
+          "radiance_w_m2_sr_nm": 455.7774086628172
+        },
+        {
+          "wavelength_nm": 2670.0,
+          "exitance_w_m2_nm": 1422.8627281096365,
+          "radiance_w_m2_sr_nm": 452.9112730397363
+        },
+        {
+          "wavelength_nm": 2675.0,
+          "exitance_w_m2_nm": 1413.9282149002843,
+          "radiance_w_m2_sr_nm": 450.06732915695983
+        },
+        {
+          "wavelength_nm": 2680.0,
+          "exitance_w_m2_nm": 1405.062782643718,
+          "radiance_w_m2_sr_nm": 447.24537442440214
+        },
+        {
+          "wavelength_nm": 2685.0,
+          "exitance_w_m2_nm": 1396.265801521635,
+          "radiance_w_m2_sr_nm": 444.4452083646709
+        },
+        {
+          "wavelength_nm": 2690.0,
+          "exitance_w_m2_nm": 1387.536648275787,
+          "radiance_w_m2_sr_nm": 441.66663258850417
+        },
+        {
+          "wavelength_nm": 2695.0,
+          "exitance_w_m2_nm": 1378.8747061320385,
+          "radiance_w_m2_sr_nm": 438.909450770597
+        },
+        {
+          "wavelength_nm": 2700.0,
+          "exitance_w_m2_nm": 1370.2793647250248,
+          "radiance_w_m2_sr_nm": 436.17346862561965
+        },
+        {
+          "wavelength_nm": 2705.0,
+          "exitance_w_m2_nm": 1361.7500200241811,
+          "radiance_w_m2_sr_nm": 433.4584938846718
+        },
+        {
+          "wavelength_nm": 2710.0,
+          "exitance_w_m2_nm": 1353.2860742604032,
+          "radiance_w_m2_sr_nm": 430.76433627193785
+        },
+        {
+          "wavelength_nm": 2715.0,
+          "exitance_w_m2_nm": 1344.8869358536754,
+          "radiance_w_m2_sr_nm": 428.0908074816504
+        },
+        {
+          "wavelength_nm": 2720.0,
+          "exitance_w_m2_nm": 1336.5520193417453,
+          "radiance_w_m2_sr_nm": 425.43772115538655
+        },
+        {
+          "wavelength_nm": 2725.0,
+          "exitance_w_m2_nm": 1328.2807453095027,
+          "radiance_w_m2_sr_nm": 422.80489285958845
+        },
+        {
+          "wavelength_nm": 2730.0,
+          "exitance_w_m2_nm": 1320.0725403195086,
+          "radiance_w_m2_sr_nm": 420.1921400634502
+        },
+        {
+          "wavelength_nm": 2735.0,
+          "exitance_w_m2_nm": 1311.9268368430107,
+          "radiance_w_m2_sr_nm": 417.5992821169593
+        },
+        {
+          "wavelength_nm": 2740.0,
+          "exitance_w_m2_nm": 1303.843073192289,
+          "radiance_w_m2_sr_nm": 415.0261402293614
+        },
+        {
+          "wavelength_nm": 2745.0,
+          "exitance_w_m2_nm": 1295.820693453372,
+          "radiance_w_m2_sr_nm": 412.4725374477436
+        },
+        {
+          "wavelength_nm": 2750.0,
+          "exitance_w_m2_nm": 1287.8591474200175,
+          "radiance_w_m2_sr_nm": 409.93829863601945
+        },
+        {
+          "wavelength_nm": 2755.0,
+          "exitance_w_m2_nm": 1279.957890528241,
+          "radiance_w_m2_sr_nm": 407.4232504540892
+        },
+        {
+          "wavelength_nm": 2760.0,
+          "exitance_w_m2_nm": 1272.1163837917939,
+          "radiance_w_m2_sr_nm": 404.92722133730126
+        },
+        {
+          "wavelength_nm": 2765.0,
+          "exitance_w_m2_nm": 1264.3340937383439,
+          "radiance_w_m2_sr_nm": 402.4500414761384
+        },
+        {
+          "wavelength_nm": 2770.0,
+          "exitance_w_m2_nm": 1256.6104923465732,
+          "radiance_w_m2_sr_nm": 399.9915427961949
+        },
+        {
+          "wavelength_nm": 2775.0,
+          "exitance_w_m2_nm": 1248.9450569839873,
+          "radiance_w_m2_sr_nm": 397.551558938381
+        },
+        {
+          "wavelength_nm": 2780.0,
+          "exitance_w_m2_nm": 1241.3372703455311,
+          "radiance_w_m2_sr_nm": 395.1299252393834
+        },
+        {
+          "wavelength_nm": 2785.0,
+          "exitance_w_m2_nm": 1233.7866203928886,
+          "radiance_w_m2_sr_nm": 392.72647871234415
+        },
+        {
+          "wavelength_nm": 2790.0,
+          "exitance_w_m2_nm": 1226.2926002946767,
+          "radiance_w_m2_sr_nm": 390.3410580278233
+        },
+        {
+          "wavelength_nm": 2795.0,
+          "exitance_w_m2_nm": 1218.8547083672581,
+          "radiance_w_m2_sr_nm": 387.97350349495935
+        },
+        {
+          "wavelength_nm": 2800.0,
+          "exitance_w_m2_nm": 1211.4724480163445,
+          "radiance_w_m2_sr_nm": 385.6236570428809
+        },
+        {
+          "wavelength_nm": 2805.0,
+          "exitance_w_m2_nm": 1204.1453276793134,
+          "radiance_w_m2_sr_nm": 383.29136220234557
+        },
+        {
+          "wavelength_nm": 2810.0,
+          "exitance_w_m2_nm": 1196.8728607682604,
+          "radiance_w_m2_sr_nm": 380.9764640876129
+        },
+        {
+          "wavelength_nm": 2815.0,
+          "exitance_w_m2_nm": 1189.6545656136877,
+          "radiance_w_m2_sr_nm": 378.6788093785199
+        },
+        {
+          "wavelength_nm": 2820.0,
+          "exitance_w_m2_nm": 1182.48996540902,
+          "radiance_w_m2_sr_nm": 376.39824630281976
+        },
+        {
+          "wavelength_nm": 2825.0,
+          "exitance_w_m2_nm": 1175.3785881556607,
+          "radiance_w_m2_sr_nm": 374.13462461869295
+        },
+        {
+          "wavelength_nm": 2830.0,
+          "exitance_w_m2_nm": 1168.3199666087764,
+          "radiance_w_m2_sr_nm": 371.88779559748974
+        },
+        {
+          "wavelength_nm": 2835.0,
+          "exitance_w_m2_nm": 1161.3136382238424,
+          "radiance_w_m2_sr_nm": 369.65761200671517
+        },
+        {
+          "wavelength_nm": 2840.0,
+          "exitance_w_m2_nm": 1154.3591451037014,
+          "radiance_w_m2_sr_nm": 367.4439280931771
+        },
+        {
+          "wavelength_nm": 2845.0,
+          "exitance_w_m2_nm": 1147.4560339463558,
+          "radiance_w_m2_sr_nm": 365.2465995663684
+        },
+        {
+          "wavelength_nm": 2850.0,
+          "exitance_w_m2_nm": 1140.6038559934088,
+          "radiance_w_m2_sr_nm": 363.06548358205475
+        },
+        {
+          "wavelength_nm": 2855.0,
+          "exitance_w_m2_nm": 1133.8021669790996,
+          "radiance_w_m2_sr_nm": 360.90043872605247
+        },
+        {
+          "wavelength_nm": 2860.0,
+          "exitance_w_m2_nm": 1127.0505270799847,
+          "radiance_w_m2_sr_nm": 358.7513249982112
+        },
+        {
+          "wavelength_nm": 2865.0,
+          "exitance_w_m2_nm": 1120.3485008652474,
+          "radiance_w_m2_sr_nm": 356.6180037965974
+        },
+        {
+          "wavelength_nm": 2870.0,
+          "exitance_w_m2_nm": 1113.6956572475863,
+          "radiance_w_m2_sr_nm": 354.50033790186114
+        },
+        {
+          "wavelength_nm": 2875.0,
+          "exitance_w_m2_nm": 1107.0915694347414,
+          "radiance_w_m2_sr_nm": 352.39819146180673
+        },
+        {
+          "wavelength_nm": 2880.0,
+          "exitance_w_m2_nm": 1100.5358148816056,
+          "radiance_w_m2_sr_nm": 350.3114299761492
+        },
+        {
+          "wavelength_nm": 2885.0,
+          "exitance_w_m2_nm": 1094.0279752428469,
+          "radiance_w_m2_sr_nm": 348.23992028143357
+        },
+        {
+          "wavelength_nm": 2890.0,
+          "exitance_w_m2_nm": 1087.5676363262628,
+          "radiance_w_m2_sr_nm": 346.183530536187
+        },
+        {
+          "wavelength_nm": 2895.0,
+          "exitance_w_m2_nm": 1081.1543880465595,
+          "radiance_w_m2_sr_nm": 344.1421302062062
+        },
+        {
+          "wavelength_nm": 2900.0,
+          "exitance_w_m2_nm": 1074.7878243797638,
+          "radiance_w_m2_sr_nm": 342.11559005004665
+        },
+        {
+          "wavelength_nm": 2905.0,
+          "exitance_w_m2_nm": 1068.4675433181692,
+          "radiance_w_m2_sr_nm": 340.1037821046809
+        },
+        {
+          "wavelength_nm": 2910.0,
+          "exitance_w_m2_nm": 1062.1931468258617,
+          "radiance_w_m2_sr_nm": 338.1065796713425
+        },
+        {
+          "wavelength_nm": 2915.0,
+          "exitance_w_m2_nm": 1055.9642407947135,
+          "radiance_w_m2_sr_nm": 336.1238573015182
+        },
+        {
+          "wavelength_nm": 2920.0,
+          "exitance_w_m2_nm": 1049.7804350010292,
+          "radiance_w_m2_sr_nm": 334.1554907831479
+        },
+        {
+          "wavelength_nm": 2925.0,
+          "exitance_w_m2_nm": 1043.641343062595,
+          "radiance_w_m2_sr_nm": 332.2013571269531
+        },
+        {
+          "wavelength_nm": 2930.0,
+          "exitance_w_m2_nm": 1037.5465823962948,
+          "radiance_w_m2_sr_nm": 330.2613345529456
+        },
+        {
+          "wavelength_nm": 2935.0,
+          "exitance_w_m2_nm": 1031.4957741763064,
+          "radiance_w_m2_sr_nm": 328.33530247712116
+        },
+        {
+          "wavelength_nm": 2940.0,
+          "exitance_w_m2_nm": 1025.4885432926856,
+          "radiance_w_m2_sr_nm": 326.42314149827604
+        },
+        {
+          "wavelength_nm": 2945.0,
+          "exitance_w_m2_nm": 1019.5245183105413,
+          "radiance_w_m2_sr_nm": 324.52473338501244
+        },
+        {
+          "wavelength_nm": 2950.0,
+          "exitance_w_m2_nm": 1013.6033314296573,
+          "radiance_w_m2_sr_nm": 322.6399610628853
+        },
+        {
+          "wavelength_nm": 2955.0,
+          "exitance_w_m2_nm": 1007.7246184446299,
+          "radiance_w_m2_sr_nm": 320.768708601714
+        },
+        {
+          "wavelength_nm": 2960.0,
+          "exitance_w_m2_nm": 1001.8880187054573,
+          "radiance_w_m2_sr_nm": 318.91086120303765
+        },
+        {
+          "wavelength_nm": 2965.0,
+          "exitance_w_m2_nm": 996.0931750786125,
+          "radiance_w_m2_sr_nm": 317.06630518772386
+        },
+        {
+          "wavelength_nm": 2970.0,
+          "exitance_w_m2_nm": 990.3397339086408,
+          "radiance_w_m2_sr_nm": 315.234927983745
+        },
+        {
+          "wavelength_nm": 2975.0,
+          "exitance_w_m2_nm": 984.6273449800877,
+          "radiance_w_m2_sr_nm": 313.41661811405976
+        },
+        {
+          "wavelength_nm": 2980.0,
+          "exitance_w_m2_nm": 978.9556614800521,
+          "radiance_w_m2_sr_nm": 311.6112651846929
+        },
+        {
+          "wavelength_nm": 2985.0,
+          "exitance_w_m2_nm": 973.324339961007,
+          "radiance_w_m2_sr_nm": 309.81875987290135
+        },
+        {
+          "wavelength_nm": 2990.0,
+          "exitance_w_m2_nm": 967.733040304245,
+          "radiance_w_m2_sr_nm": 308.03899391553796
+        },
+        {
+          "wavelength_nm": 2995.0,
+          "exitance_w_m2_nm": 962.1814256836394,
+          "radiance_w_m2_sr_nm": 306.2718600975167
+        },
+        {
+          "wavelength_nm": 3000.0,
+          "exitance_w_m2_nm": 956.6691625298917,
+          "radiance_w_m2_sr_nm": 304.5172522404322
+        }
+      ],
+      "6000": [
+        {
+          "wavelength_nm": 100.0,
+          "exitance_w_m2_nm": 1.4416604815080876,
+          "radiance_w_m2_sr_nm": 0.4588947837845082
+        },
+        {
+          "wavelength_nm": 105.0,
+          "exitance_w_m2_nm": 3.5385999387070997,
+          "radiance_w_m2_sr_nm": 1.1263713437398255
+        },
+        {
+          "wavelength_nm": 110.0,
+          "exitance_w_m2_nm": 7.918562039071018,
+          "radiance_w_m2_sr_nm": 2.520556581395981
+        },
+        {
+          "wavelength_nm": 115.0,
+          "exitance_w_m2_nm": 16.358729529676115,
+          "radiance_w_m2_sr_nm": 5.20714533470262
+        },
+        {
+          "wavelength_nm": 120.0,
+          "exitance_w_m2_nm": 31.525294292646727,
+          "radiance_w_m2_sr_nm": 10.034812838202885
+        },
+        {
+          "wavelength_nm": 125.0,
+          "exitance_w_m2_nm": 57.168367774829115,
+          "radiance_w_m2_sr_nm": 18.197256639718944
+        },
+        {
+          "wavelength_nm": 130.0,
+          "exitance_w_m2_nm": 98.27124583497489,
+          "radiance_w_m2_sr_nm": 31.28070907687017
+        },
+        {
+          "wavelength_nm": 135.0,
+          "exitance_w_m2_nm": 161.12971816353297,
+          "radiance_w_m2_sr_nm": 51.28918224946045
+        },
+        {
+          "wavelength_nm": 140.0,
+          "exitance_w_m2_nm": 253.34517298760017,
+          "radiance_w_m2_sr_nm": 80.64227317889578
+        },
+        {
+          "wavelength_nm": 145.0,
+          "exitance_w_m2_nm": 383.72540719204017,
+          "radiance_w_m2_sr_nm": 122.14359068912704
+        },
+        {
+          "wavelength_nm": 150.0,
+          "exitance_w_m2_nm": 562.0973243724753,
+          "radiance_w_m2_sr_nm": 178.9211353452159
+        },
+        {
+          "wavelength_nm": 155.0,
+          "exitance_w_m2_nm": 799.0444768815692,
+          "radiance_w_m2_sr_nm": 254.34375649195886
+        },
+        {
+          "wavelength_nm": 160.0,
+          "exitance_w_m2_nm": 1105.588674697185,
+          "radiance_w_m2_sr_nm": 351.91980520894896
+        },
+        {
+          "wavelength_nm": 165.0,
+          "exitance_w_m2_nm": 1492.8382638726027,
+          "radiance_w_m2_sr_nm": 475.18517786409586
+        },
+        {
+          "wavelength_nm": 170.0,
+          "exitance_w_m2_nm": 1971.6263065641192,
+          "radiance_w_m2_sr_nm": 627.5881452393924
+        },
+        {
+          "wavelength_nm": 175.0,
+          "exitance_w_m2_nm": 2552.1602532536303,
+          "radiance_w_m2_sr_nm": 812.3778397359575
+        },
+        {
+          "wavelength_nm": 180.0,
+          "exitance_w_m2_nm": 3243.701435047531,
+          "radiance_w_m2_sr_nm": 1032.502234604178
+        },
+        {
+          "wavelength_nm": 185.0,
+          "exitance_w_m2_nm": 4054.288495280719,
+          "radiance_w_m2_sr_nm": 1290.5201094890576
+        },
+        {
+          "wavelength_nm": 190.0,
+          "exitance_w_m2_nm": 4990.514328934527,
+          "radiance_w_m2_sr_nm": 1588.5300480417259
+        },
+        {
+          "wavelength_nm": 195.0,
+          "exitance_w_m2_nm": 6057.361684380221,
+          "radiance_w_m2_sr_nm": 1928.1181083291228
+        },
+        {
+          "wavelength_nm": 200.0,
+          "exitance_w_m2_nm": 7258.098640682771,
+          "radiance_w_m2_sr_nm": 2310.3245522264588
+        },
+        {
+          "wavelength_nm": 205.0,
+          "exitance_w_m2_nm": 8594.231905318786,
+          "radiance_w_m2_sr_nm": 2735.6289796191254
+        },
+        {
+          "wavelength_nm": 210.0,
+          "exitance_w_m2_nm": 10065.513367216106,
+          "radiance_w_m2_sr_nm": 3203.9524142999826
+        },
+        {
+          "wavelength_nm": 215.0,
+          "exitance_w_m2_nm": 11669.993586553854,
+          "radiance_w_m2_sr_nm": 3714.6743303015246
+        },
+        {
+          "wavelength_nm": 220.0,
+          "exitance_w_m2_nm": 13404.114843743915,
+          "radiance_w_m2_sr_nm": 4266.662270306585
+        },
+        {
+          "wavelength_nm": 225.0,
+          "exitance_w_m2_nm": 15262.835907543904,
+          "radiance_w_m2_sr_nm": 4858.311560572173
+        },
+        {
+          "wavelength_nm": 230.0,
+          "exitance_w_m2_nm": 17239.780702047003,
+          "radiance_w_m2_sr_nm": 5487.592633102093
+        },
+        {
+          "wavelength_nm": 235.0,
+          "exitance_w_m2_nm": 19327.40343809099,
+          "radiance_w_m2_sr_nm": 6152.103588606948
+        },
+        {
+          "wavelength_nm": 240.0,
+          "exitance_w_m2_nm": 21517.163417781918,
+          "radiance_w_m2_sr_nm": 6849.125838512186
+        },
+        {
+          "wavelength_nm": 245.0,
+          "exitance_w_m2_nm": 23799.703526139732,
+          "radiance_w_m2_sr_nm": 7575.6809206135
+        },
+        {
+          "wavelength_nm": 250.0,
+          "exitance_w_m2_nm": 26165.027312161023,
+          "radiance_w_m2_sr_nm": 8328.58686572975
+        },
+        {
+          "wavelength_nm": 255.0,
+          "exitance_w_m2_nm": 28602.670470375648,
+          "radiance_w_m2_sr_nm": 9104.512781977743
+        },
+        {
+          "wavelength_nm": 260.0,
+          "exitance_w_m2_nm": 31101.863416381948,
+          "radiance_w_m2_sr_nm": 9900.030604172342
+        },
+        {
+          "wavelength_nm": 265.0,
+          "exitance_w_m2_nm": 33651.68247296955,
+          "radiance_w_m2_sr_nm": 10711.663217864001
+        },
+        {
+          "wavelength_nm": 270.0,
+          "exitance_w_m2_nm": 36241.187926226354,
+          "radiance_w_m2_sr_nm": 11535.92840396248
+        },
+        {
+          "wavelength_nm": 275.0,
+          "exitance_w_m2_nm": 38859.54786177593,
+          "radiance_w_m2_sr_nm": 12369.378257035463
+        },
+        {
+          "wavelength_nm": 280.0,
+          "exitance_w_m2_nm": 41496.1472459066,
+          "radiance_w_m2_sr_nm": 13208.633906910349
+        },
+        {
+          "wavelength_nm": 285.0,
+          "exitance_w_m2_nm": 44140.682176004535,
+          "radiance_w_m2_sr_nm": 14050.415519518881
+        },
+        {
+          "wavelength_nm": 290.0,
+          "exitance_w_m2_nm": 46783.239594481114,
+          "radiance_w_m2_sr_nm": 14891.567670628294
+        },
+        {
+          "wavelength_nm": 295.0,
+          "exitance_w_m2_nm": 49414.36304789714,
+          "radiance_w_m2_sr_nm": 15729.080277620651
+        },
+        {
+          "wavelength_nm": 300.0,
+          "exitance_w_m2_nm": 52025.105287103834,
+          "radiance_w_m2_sr_nm": 16560.105342637748
+        },
+        {
+          "wavelength_nm": 305.0,
+          "exitance_w_m2_nm": 54607.06865461031,
+          "radiance_w_m2_sr_nm": 17381.969808279453
+        },
+        {
+          "wavelength_nm": 310.0,
+          "exitance_w_m2_nm": 57152.434301493944,
+          "radiance_w_m2_sr_nm": 18192.18485763511
+        },
+        {
+          "wavelength_nm": 315.0,
+          "exitance_w_m2_nm": 59653.98132732878,
+          "radiance_w_m2_sr_nm": 18988.452006712
+        },
+        {
+          "wavelength_nm": 320.0,
+          "exitance_w_m2_nm": 62105.09695108307,
+          "radiance_w_m2_sr_nm": 19768.666341932538
+        },
+        {
+          "wavelength_nm": 325.0,
+          "exitance_w_m2_nm": 64499.77880655716,
+          "radiance_w_m2_sr_nm": 20530.917250794882
+        },
+        {
+          "wavelength_nm": 330.0,
+          "exitance_w_m2_nm": 66832.63041932133,
+          "radiance_w_m2_sr_nm": 21273.486982137518
+        },
+        {
+          "wavelength_nm": 335.0,
+          "exitance_w_m2_nm": 69098.85086911461,
+          "radiance_w_m2_sr_nm": 21994.847355578597
+        },
+        {
+          "wavelength_nm": 340.0,
+          "exitance_w_m2_nm": 71294.21957722041,
+          "radiance_w_m2_sr_nm": 22693.65491918721
+        },
+        {
+          "wavelength_nm": 345.0,
+          "exitance_w_m2_nm": 73415.0770864595,
+          "radiance_w_m2_sr_nm": 23368.74483156514
+        },
+        {
+          "wavelength_nm": 350.0,
+          "exitance_w_m2_nm": 75458.3026256057,
+          "radiance_w_m2_sr_nm": 24019.123720378586
+        },
+        {
+          "wavelength_nm": 355.0,
+          "exitance_w_m2_nm": 77421.28917271727,
+          "radiance_w_m2_sr_nm": 24643.96174476998
+        },
+        {
+          "wavelength_nm": 360.0,
+          "exitance_w_m2_nm": 79301.91665537088,
+          "radiance_w_m2_sr_nm": 25242.584064727558
+        },
+        {
+          "wavelength_nm": 365.0,
+          "exitance_w_m2_nm": 81098.52385148151,
+          "radiance_w_m2_sr_nm": 25814.461896838515
+        },
+        {
+          "wavelength_nm": 370.0,
+          "exitance_w_m2_nm": 82809.87948357129,
+          "radiance_w_m2_sr_nm": 26359.203313309
+        },
+        {
+          "wavelength_nm": 375.0,
+          "exitance_w_m2_nm": 84435.15293275073,
+          "radiance_w_m2_sr_nm": 26876.543919934844
+        },
+        {
+          "wavelength_nm": 380.0,
+          "exitance_w_m2_nm": 85973.88493687047,
+          "radiance_w_m2_sr_nm": 27366.337529033553
+        },
+        {
+          "wavelength_nm": 385.0,
+          "exitance_w_m2_nm": 87425.95858046974,
+          "radiance_w_m2_sr_nm": 27828.54692525812
+        },
+        {
+          "wavelength_nm": 390.0,
+          "exitance_w_m2_nm": 88791.57083255712,
+          "radiance_w_m2_sr_nm": 28263.234805791246
+        },
+        {
+          "wavelength_nm": 395.0,
+          "exitance_w_m2_nm": 90071.20484171991,
+          "radiance_w_m2_sr_nm": 28670.55496160476
+        },
+        {
+          "wavelength_nm": 400.0,
+          "exitance_w_m2_nm": 91265.60315647734,
+          "radiance_w_m2_sr_nm": 29050.74375323331
+        },
+        {
+          "wavelength_nm": 405.0,
+          "exitance_w_m2_nm": 92375.7420020334,
+          "radiance_w_m2_sr_nm": 29404.11192281046
+        },
+        {
+          "wavelength_nm": 410.0,
+          "exitance_w_m2_nm": 93402.80671221614,
+          "radiance_w_m2_sr_nm": 29731.03677381212
+        },
+        {
+          "wavelength_nm": 415.0,
+          "exitance_w_m2_nm": 94348.16838723692,
+          "radiance_w_m2_sr_nm": 30031.954740990503
+        },
+        {
+          "wavelength_nm": 420.0,
+          "exitance_w_m2_nm": 95213.36182359888,
+          "radiance_w_m2_sr_nm": 30307.354365245843
+        },
+        {
+          "wavelength_nm": 425.0,
+          "exitance_w_m2_nm": 96000.06474165827,
+          "radiance_w_m2_sr_nm": 30557.76968155378
+        },
+        {
+          "wavelength_nm": 430.0,
+          "exitance_w_m2_nm": 96710.0783187245,
+          "radiance_w_m2_sr_nm": 30783.774022458678
+        },
+        {
+          "wavelength_nm": 435.0,
+          "exitance_w_m2_nm": 97345.30902081233,
+          "radiance_w_m2_sr_nm": 30985.974234940706
+        },
+        {
+          "wavelength_nm": 440.0,
+          "exitance_w_m2_nm": 97907.75171394355,
+          "radiance_w_m2_sr_nm": 31165.00530457621
+        },
+        {
+          "wavelength_nm": 445.0,
+          "exitance_w_m2_nm": 98399.47402595615,
+          "radiance_w_m2_sr_nm": 31321.52537774697
+        },
+        {
+          "wavelength_nm": 450.0,
+          "exitance_w_m2_nm": 98822.60192177365,
+          "radiance_w_m2_sr_nm": 31456.211170105824
+        },
+        {
+          "wavelength_nm": 455.0,
+          "exitance_w_m2_nm": 99179.3064489216,
+          "radiance_w_m2_sr_nm": 31569.753747543535
+        },
+        {
+          "wavelength_nm": 460.0,
+          "exitance_w_m2_nm": 99471.79160532649,
+          "radiance_w_m2_sr_nm": 31662.854664389222
+        },
+        {
+          "wavelength_nm": 465.0,
+          "exitance_w_m2_nm": 99702.28327804433,
+          "radiance_w_m2_sr_nm": 31736.222442498347
+        },
+        {
+          "wavelength_nm": 470.0,
+          "exitance_w_m2_nm": 99873.01919926942,
+          "radiance_w_m2_sr_nm": 31790.56937415099
+        },
+        {
+          "wavelength_nm": 475.0,
+          "exitance_w_m2_nm": 99986.23986463639,
+          "radiance_w_m2_sr_nm": 31826.608631257604
+        },
+        {
+          "wavelength_nm": 480.0,
+          "exitance_w_m2_nm": 100044.18035828495,
+          "radiance_w_m2_sr_nm": 31845.05166319631
+        },
+        {
+          "wavelength_nm": 485.0,
+          "exitance_w_m2_nm": 100049.06302926377,
+          "radiance_w_m2_sr_nm": 31846.60586563985
+        },
+        {
+          "wavelength_nm": 490.0,
+          "exitance_w_m2_nm": 100003.09096453815,
+          "radiance_w_m2_sr_nm": 31831.972502949404
+        },
+        {
+          "wavelength_nm": 495.0,
+          "exitance_w_m2_nm": 99908.44220494645,
+          "radiance_w_m2_sr_nm": 31801.844867056334
+        },
+        {
+          "wavelength_nm": 500.0,
+          "exitance_w_m2_nm": 99767.2646519365,
+          "radiance_w_m2_sr_nm": 31756.90665622603
+        },
+        {
+          "wavelength_nm": 505.0,
+          "exitance_w_m2_nm": 99581.67161464252,
+          "radiance_w_m2_sr_nm": 31697.830557648478
+        },
+        {
+          "wavelength_nm": 510.0,
+          "exitance_w_m2_nm": 99353.73794882053,
+          "radiance_w_m2_sr_nm": 31625.27701842323
+        },
+        {
+          "wavelength_nm": 515.0,
+          "exitance_w_m2_nm": 99085.49674125224,
+          "radiance_w_m2_sr_nm": 31539.893190172363
+        },
+        {
+          "wavelength_nm": 520.0,
+          "exitance_w_m2_nm": 98778.93649544203,
+          "radiance_w_m2_sr_nm": 31442.31203322004
+        },
+        {
+          "wavelength_nm": 525.0,
+          "exitance_w_m2_nm": 98435.99877667901,
+          "radiance_w_m2_sr_nm": 31333.151566992456
+        },
+        {
+          "wavelength_nm": 530.0,
+          "exitance_w_m2_nm": 98058.57627688939,
+          "radiance_w_m2_sr_nm": 31213.01425404122
+        },
+        {
+          "wavelength_nm": 535.0,
+          "exitance_w_m2_nm": 97648.5112619057,
+          "radiance_w_m2_sr_nm": 31082.486505793808
+        },
+        {
+          "wavelength_nm": 540.0,
+          "exitance_w_m2_nm": 97207.59436614829,
+          "radiance_w_m2_sr_nm": 30942.138298888753
+        },
+        {
+          "wavelength_nm": 545.0,
+          "exitance_w_m2_nm": 96737.56370189213,
+          "radiance_w_m2_sr_nm": 30792.522891646484
+        },
+        {
+          "wavelength_nm": 550.0,
+          "exitance_w_m2_nm": 96240.10425245303,
+          "radiance_w_m2_sr_nm": 30634.176630914477
+        },
+        {
+          "wavelength_nm": 555.0,
+          "exitance_w_m2_nm": 95716.847520777,
+          "radiance_w_m2_sr_nm": 30467.618840209772
+        },
+        {
+          "wavelength_nm": 560.0,
+          "exitance_w_m2_nm": 95169.37140689795,
+          "radiance_w_m2_sr_nm": 30293.35178071259
+        },
+        {
+          "wavelength_nm": 565.0,
+          "exitance_w_m2_nm": 94599.20028969069,
+          "radiance_w_m2_sr_nm": 30111.860677289063
+        },
+        {
+          "wavelength_nm": 570.0,
+          "exitance_w_m2_nm": 94007.80529017928,
+          "radiance_w_m2_sr_nm": 29923.613802304924
+        },
+        {
+          "wavelength_nm": 575.0,
+          "exitance_w_m2_nm": 93396.60469544705,
+          "radiance_w_m2_sr_nm": 29729.062610560242
+        },
+        {
+          "wavelength_nm": 580.0,
+          "exitance_w_m2_nm": 92766.96452381251,
+          "radiance_w_m2_sr_nm": 29528.641919190508
+        },
+        {
+          "wavelength_nm": 585.0,
+          "exitance_w_m2_nm": 92120.19921357567,
+          "radiance_w_m2_sr_nm": 29322.770126901396
+        },
+        {
+          "wavelength_nm": 590.0,
+          "exitance_w_m2_nm": 91457.57241902355,
+          "radiance_w_m2_sr_nm": 29111.84946734518
+        },
+        {
+          "wavelength_nm": 595.0,
+          "exitance_w_m2_nm": 90780.29789888735,
+          "radiance_w_m2_sr_nm": 28896.266291925444
+        },
+        {
+          "wavelength_nm": 600.0,
+          "exitance_w_m2_nm": 90089.54048362543,
+          "radiance_w_m2_sr_nm": 28676.391377692813
+        },
+        {
+          "wavelength_nm": 605.0,
+          "exitance_w_m2_nm": 89386.41710922458,
+          "radiance_w_m2_sr_nm": 28452.580256414116
+        },
+        {
+          "wavelength_nm": 610.0,
+          "exitance_w_m2_nm": 88671.99790625389,
+          "radiance_w_m2_sr_nm": 28225.173561229003
+        },
+        {
+          "wavelength_nm": 615.0,
+          "exitance_w_m2_nm": 87947.30733403307,
+          "radiance_w_m2_sr_nm": 27994.49738766693
+        },
+        {
+          "wavelength_nm": 620.0,
+          "exitance_w_m2_nm": 87213.3253506977,
+          "radiance_w_m2_sr_nm": 27760.863666090492
+        },
+        {
+          "wavelength_nm": 625.0,
+          "exitance_w_m2_nm": 86470.98861088262,
+          "radiance_w_m2_sr_nm": 27524.570542929905
+        },
+        {
+          "wavelength_nm": 630.0,
+          "exitance_w_m2_nm": 85721.19168357128,
+          "radiance_w_m2_sr_nm": 27285.902768336477
+        },
+        {
+          "wavelength_nm": 635.0,
+          "exitance_w_m2_nm": 84964.78828340957,
+          "radiance_w_m2_sr_nm": 27045.132088121973
+        },
+        {
+          "wavelength_nm": 640.0,
+          "exitance_w_m2_nm": 84202.59250953265,
+          "radiance_w_m2_sr_nm": 26802.517638089445
+        },
+        {
+          "wavelength_nm": 645.0,
+          "exitance_w_m2_nm": 83435.38008658536,
+          "radiance_w_m2_sr_nm": 26558.3063390623
+        },
+        {
+          "wavelength_nm": 650.0,
+          "exitance_w_m2_nm": 82663.8896032108,
+          "radiance_w_m2_sr_nm": 26312.73329110747
+        },
+        {
+          "wavelength_nm": 655.0,
+          "exitance_w_m2_nm": 81888.82374383605,
+          "radiance_w_m2_sr_nm": 26066.02216562495
+        },
+        {
+          "wavelength_nm": 660.0,
+          "exitance_w_m2_nm": 81110.85051011152,
+          "radiance_w_m2_sr_nm": 25818.385594144056
+        },
+        {
+          "wavelength_nm": 665.0,
+          "exitance_w_m2_nm": 80330.60442878868,
+          "radiance_w_m2_sr_nm": 25570.025552802836
+        },
+        {
+          "wavelength_nm": 670.0,
+          "exitance_w_m2_nm": 79548.68774324674,
+          "radiance_w_m2_sr_nm": 25321.133741622776
+        },
+        {
+          "wavelength_nm": 675.0,
+          "exitance_w_m2_nm": 78765.6715862765,
+          "radiance_w_m2_sr_nm": 25071.89195781751
+        },
+        {
+          "wavelength_nm": 680.0,
+          "exitance_w_m2_nm": 77982.09713205922,
+          "radiance_w_m2_sr_nm": 24822.47246247908
+        },
+        {
+          "wavelength_nm": 685.0,
+          "exitance_w_m2_nm": 77198.47672561482,
+          "radiance_w_m2_sr_nm": 24573.038340092466
+        },
+        {
+          "wavelength_nm": 690.0,
+          "exitance_w_m2_nm": 76415.29498823099,
+          "radiance_w_m2_sr_nm": 24323.743850404597
+        },
+        {
+          "wavelength_nm": 695.0,
+          "exitance_w_m2_nm": 75633.00989771853,
+          "radiance_w_m2_sr_nm": 24074.7347722803
+        },
+        {
+          "wavelength_nm": 700.0,
+          "exitance_w_m2_nm": 74852.05384248194,
+          "radiance_w_m2_sr_nm": 23826.148739223398
+        },
+        {
+          "wavelength_nm": 705.0,
+          "exitance_w_m2_nm": 74072.83464867697,
+          "radiance_w_m2_sr_nm": 23578.115566331115
+        },
+        {
+          "wavelength_nm": 710.0,
+          "exitance_w_m2_nm": 73295.73657986728,
+          "radiance_w_m2_sr_nm": 23330.757568494657
+        },
+        {
+          "wavelength_nm": 715.0,
+          "exitance_w_m2_nm": 72521.12130878071,
+          "radiance_w_m2_sr_nm": 23084.189869718866
+        },
+        {
+          "wavelength_nm": 720.0,
+          "exitance_w_m2_nm": 71749.3288609054,
+          "radiance_w_m2_sr_nm": 22838.520703478167
+        },
+        {
+          "wavelength_nm": 725.0,
+          "exitance_w_m2_nm": 70980.67852980812,
+          "radiance_w_m2_sr_nm": 22593.851704071458
+        },
+        {
+          "wavelength_nm": 730.0,
+          "exitance_w_m2_nm": 70215.46976415376,
+          "radiance_w_m2_sr_nm": 22350.27818896918
+        },
+        {
+          "wavelength_nm": 735.0,
+          "exitance_w_m2_nm": 69453.98302654951,
+          "radiance_w_m2_sr_nm": 22107.889432191903
+        },
+        {
+          "wavelength_nm": 740.0,
+          "exitance_w_m2_nm": 68696.4806243652,
+          "radiance_w_m2_sr_nm": 21866.76892876867
+        },
+        {
+          "wavelength_nm": 745.0,
+          "exitance_w_m2_nm": 67943.2075128359,
+          "radiance_w_m2_sr_nm": 21626.994650372468
+        },
+        {
+          "wavelength_nm": 750.0,
+          "exitance_w_m2_nm": 67194.39207075264,
+          "radiance_w_m2_sr_nm": 21388.63929223028
+        },
+        {
+          "wavelength_nm": 755.0,
+          "exitance_w_m2_nm": 66450.24684915494,
+          "radiance_w_m2_sr_nm": 21151.770511439303
+        },
+        {
+          "wavelength_nm": 760.0,
+          "exitance_w_m2_nm": 65710.96929346965,
+          "radiance_w_m2_sr_nm": 20916.451156830888
+        },
+        {
+          "wavelength_nm": 765.0,
+          "exitance_w_m2_nm": 64976.742439583744,
+          "radiance_w_m2_sr_nm": 20682.739490537384
+        },
+        {
+          "wavelength_nm": 770.0,
+          "exitance_w_m2_nm": 64247.73558437828,
+          "radiance_w_m2_sr_nm": 20450.68940142973
+        },
+        {
+          "wavelength_nm": 775.0,
+          "exitance_w_m2_nm": 63524.104931294256,
+          "radiance_w_m2_sr_nm": 20220.350610607453
+        },
+        {
+          "wavelength_nm": 780.0,
+          "exitance_w_m2_nm": 62805.99421149026,
+          "radiance_w_m2_sr_nm": 19991.76886911928
+        },
+        {
+          "wavelength_nm": 785.0,
+          "exitance_w_m2_nm": 62093.53528121638,
+          "radiance_w_m2_sr_nm": 19764.986148113177
+        },
+        {
+          "wavelength_nm": 790.0,
+          "exitance_w_m2_nm": 61386.84869600445,
+          "radiance_w_m2_sr_nm": 19540.040821606755
+        },
+        {
+          "wavelength_nm": 795.0,
+          "exitance_w_m2_nm": 60686.04426232181,
+          "radiance_w_m2_sr_nm": 19316.96784208414
+        },
+        {
+          "wavelength_nm": 800.0,
+          "exitance_w_m2_nm": 59991.22156729693,
+          "radiance_w_m2_sr_nm": 19095.798909112855
+        },
+        {
+          "wavelength_nm": 805.0,
+          "exitance_w_m2_nm": 59302.470487183615,
+          "radiance_w_m2_sr_nm": 18876.56263119302
+        },
+        {
+          "wavelength_nm": 810.0,
+          "exitance_w_m2_nm": 58619.871675190494,
+          "radiance_w_m2_sr_nm": 18659.2846810383
+        },
+        {
+          "wavelength_nm": 815.0,
+          "exitance_w_m2_nm": 57943.49702931189,
+          "radiance_w_m2_sr_nm": 18443.98794449108
+        },
+        {
+          "wavelength_nm": 820.0,
+          "exitance_w_m2_nm": 57273.41014081167,
+          "radiance_w_m2_sr_nm": 18230.692663279326
+        },
+        {
+          "wavelength_nm": 825.0,
+          "exitance_w_m2_nm": 56609.666723969785,
+          "radiance_w_m2_sr_nm": 18019.416571809146
+        },
+        {
+          "wavelength_nm": 830.0,
+          "exitance_w_m2_nm": 55952.31502774205,
+          "radiance_w_m2_sr_nm": 17810.175028200174
+        },
+        {
+          "wavelength_nm": 835.0,
+          "exitance_w_m2_nm": 55301.39622991588,
+          "radiance_w_m2_sr_nm": 17602.981139749234
+        },
+        {
+          "wavelength_nm": 840.0,
+          "exitance_w_m2_nm": 54656.9448143965,
+          "radiance_w_m2_sr_nm": 17397.845883024278
+        },
+        {
+          "wavelength_nm": 845.0,
+          "exitance_w_m2_nm": 54018.98893220695,
+          "radiance_w_m2_sr_nm": 17194.77821877424
+        },
+        {
+          "wavelength_nm": 850.0,
+          "exitance_w_m2_nm": 53387.5507467807,
+          "radiance_w_m2_sr_nm": 16993.785201839113
+        },
+        {
+          "wavelength_nm": 855.0,
+          "exitance_w_m2_nm": 52762.64676412375,
+          "radiance_w_m2_sr_nm": 16794.87208624378
+        },
+        {
+          "wavelength_nm": 860.0,
+          "exitance_w_m2_nm": 52144.28814840452,
+          "radiance_w_m2_sr_nm": 16598.042425653428
+        },
+        {
+          "wavelength_nm": 865.0,
+          "exitance_w_m2_nm": 51532.48102351405,
+          "radiance_w_m2_sr_nm": 16403.298169363108
+        },
+        {
+          "wavelength_nm": 870.0,
+          "exitance_w_m2_nm": 50927.226761125974,
+          "radiance_w_m2_sr_nm": 16210.639753990108
+        },
+        {
+          "wavelength_nm": 875.0,
+          "exitance_w_m2_nm": 50328.522255775315,
+          "radiance_w_m2_sr_nm": 16020.066191034217
+        },
+        {
+          "wavelength_nm": 880.0,
+          "exitance_w_m2_nm": 49736.36018745764,
+          "radiance_w_m2_sr_nm": 15831.57515046566
+        },
+        {
+          "wavelength_nm": 885.0,
+          "exitance_w_m2_nm": 49150.729272235105,
+          "radiance_w_m2_sr_nm": 15645.163040495465
+        },
+        {
+          "wavelength_nm": 890.0,
+          "exitance_w_m2_nm": 48571.6145013236,
+          "radiance_w_m2_sr_nm": 15460.825083679272
+        },
+        {
+          "wavelength_nm": 895.0,
+          "exitance_w_m2_nm": 47998.997369123404,
+          "radiance_w_m2_sr_nm": 15278.55538950174
+        },
+        {
+          "wavelength_nm": 900.0,
+          "exitance_w_m2_nm": 47432.856090628295,
+          "radiance_w_m2_sr_nm": 15098.347023580016
+        },
+        {
+          "wavelength_nm": 905.0,
+          "exitance_w_m2_nm": 46873.1658086552,
+          "radiance_w_m2_sr_nm": 14920.192073626986
+        },
+        {
+          "wavelength_nm": 910.0,
+          "exitance_w_m2_nm": 46319.89879130214,
+          "radiance_w_m2_sr_nm": 14744.081712304089
+        },
+        {
+          "wavelength_nm": 915.0,
+          "exitance_w_m2_nm": 45773.02462003739,
+          "radiance_w_m2_sr_nm": 14570.006257091949
+        },
+        {
+          "wavelength_nm": 920.0,
+          "exitance_w_m2_nm": 45232.51036881813,
+          "radiance_w_m2_sr_nm": 14397.955227305632
+        },
+        {
+          "wavelength_nm": 925.0,
+          "exitance_w_m2_nm": 44698.32077459168,
+          "radiance_w_m2_sr_nm": 14227.917398366844
+        },
+        {
+          "wavelength_nm": 930.0,
+          "exitance_w_m2_nm": 44170.41839957141,
+          "radiance_w_m2_sr_nm": 14059.88085345799
+        },
+        {
+          "wavelength_nm": 935.0,
+          "exitance_w_m2_nm": 43648.763785603296,
+          "radiance_w_m2_sr_nm": 13893.83303265855
+        },
+        {
+          "wavelength_nm": 940.0,
+          "exitance_w_m2_nm": 43133.31560098639,
+          "radiance_w_m2_sr_nm": 13729.7607796795
+        },
+        {
+          "wavelength_nm": 945.0,
+          "exitance_w_m2_nm": 42624.030780056666,
+          "radiance_w_m2_sr_nm": 13567.650386294228
+        },
+        {
+          "wavelength_nm": 950.0,
+          "exitance_w_m2_nm": 42120.864655845326,
+          "radiance_w_m2_sr_nm": 13407.487634564977
+        },
+        {
+          "wavelength_nm": 955.0,
+          "exitance_w_m2_nm": 41623.77108611799,
+          "radiance_w_m2_sr_nm": 13249.257836962373
+        },
+        {
+          "wavelength_nm": 960.0,
+          "exitance_w_m2_nm": 41132.702573080045,
+          "radiance_w_m2_sr_nm": 13092.945874468824
+        },
+        {
+          "wavelength_nm": 965.0,
+          "exitance_w_m2_nm": 40647.61037702346,
+          "radiance_w_m2_sr_nm": 12938.536232753408
+        },
+        {
+          "wavelength_nm": 970.0,
+          "exitance_w_m2_nm": 40168.444624182346,
+          "radiance_w_m2_sr_nm": 12786.013036503382
+        },
+        {
+          "wavelength_nm": 975.0,
+          "exitance_w_m2_nm": 39695.154409060306,
+          "radiance_w_m2_sr_nm": 12635.360081995983
+        },
+        {
+          "wavelength_nm": 980.0,
+          "exitance_w_m2_nm": 39227.68789145898,
+          "radiance_w_m2_sr_nm": 12486.560867983573
+        },
+        {
+          "wavelength_nm": 985.0,
+          "exitance_w_m2_nm": 38765.99238846485,
+          "radiance_w_m2_sr_nm": 12339.598624973944
+        },
+        {
+          "wavelength_nm": 990.0,
+          "exitance_w_m2_nm": 38310.014461602994,
+          "radiance_w_m2_sr_nm": 12194.456342972224
+        },
+        {
+          "wavelength_nm": 995.0,
+          "exitance_w_m2_nm": 37859.69999938609,
+          "radiance_w_m2_sr_nm": 12051.116797757046
+        },
+        {
+          "wavelength_nm": 1000.0,
+          "exitance_w_m2_nm": 37414.99429546108,
+          "radiance_w_m2_sr_nm": 11909.562575755395
+        },
+        {
+          "wavelength_nm": 1005.0,
+          "exitance_w_m2_nm": 36975.84212255781,
+          "radiance_w_m2_sr_nm": 11769.77609758119
+        },
+        {
+          "wavelength_nm": 1010.0,
+          "exitance_w_m2_nm": 36542.18780243021,
+          "radiance_w_m2_sr_nm": 11631.739640298265
+        },
+        {
+          "wavelength_nm": 1015.0,
+          "exitance_w_m2_nm": 36113.97527196873,
+          "radiance_w_m2_sr_nm": 11495.435358464598
+        },
+        {
+          "wavelength_nm": 1020.0,
+          "exitance_w_m2_nm": 35691.148145673265,
+          "radiance_w_m2_sr_nm": 11360.845304018068
+        },
+        {
+          "wavelength_nm": 1025.0,
+          "exitance_w_m2_nm": 35273.64977463401,
+          "radiance_w_m2_sr_nm": 11227.951445050645
+        },
+        {
+          "wavelength_nm": 1030.0,
+          "exitance_w_m2_nm": 34861.42330220783,
+          "radiance_w_m2_sr_nm": 11096.735683530724
+        },
+        {
+          "wavelength_nm": 1035.0,
+          "exitance_w_m2_nm": 34454.41171652107,
+          "radiance_w_m2_sr_nm": 10967.179872015286
+        },
+        {
+          "wavelength_nm": 1040.0,
+          "exitance_w_m2_nm": 34052.55789996313,
+          "radiance_w_m2_sr_nm": 10839.265829404207
+        },
+        {
+          "wavelength_nm": 1045.0,
+          "exitance_w_m2_nm": 33655.80467580514,
+          "radiance_w_m2_sr_nm": 10712.975355779425
+        },
+        {
+          "wavelength_nm": 1050.0,
+          "exitance_w_m2_nm": 33264.09485207903,
+          "radiance_w_m2_sr_nm": 10588.290246372095
+        },
+        {
+          "wavelength_nm": 1055.0,
+          "exitance_w_m2_nm": 32877.371262854715,
+          "radiance_w_m2_sr_nm": 10465.192304701515
+        },
+        {
+          "wavelength_nm": 1060.0,
+          "exitance_w_m2_nm": 32495.57680702651,
+          "radiance_w_m2_sr_nm": 10343.663354921237
+        },
+        {
+          "wavelength_nm": 1065.0,
+          "exitance_w_m2_nm": 32118.654484740517,
+          "radiance_w_m2_sr_nm": 10223.685253414253
+        },
+        {
+          "wavelength_nm": 1070.0,
+          "exitance_w_m2_nm": 31746.547431569714,
+          "radiance_w_m2_sr_nm": 10105.239899671267
+        },
+        {
+          "wavelength_nm": 1075.0,
+          "exitance_w_m2_nm": 31379.198950544072,
+          "radiance_w_m2_sr_nm": 9988.309246486207
+        },
+        {
+          "wavelength_nm": 1080.0,
+          "exitance_w_m2_nm": 31016.552542146583,
+          "radiance_w_m2_sr_nm": 9872.875309504243
+        },
+        {
+          "wavelength_nm": 1085.0,
+          "exitance_w_m2_nm": 30658.551932365903,
+          "radiance_w_m2_sr_nm": 9758.920176151227
+        },
+        {
+          "wavelength_nm": 1090.0,
+          "exitance_w_m2_nm": 30305.14109890784,
+          "radiance_w_m2_sr_nm": 9646.426013977072
+        },
+        {
+          "wavelength_nm": 1095.0,
+          "exitance_w_m2_nm": 29956.264295652538,
+          "radiance_w_m2_sr_nm": 9535.375078440711
+        },
+        {
+          "wavelength_nm": 1100.0,
+          "exitance_w_m2_nm": 29611.86607544354,
+          "radiance_w_m2_sr_nm": 9425.749720164085
+        },
+        {
+          "wavelength_nm": 1105.0,
+          "exitance_w_m2_nm": 29271.89131129133,
+          "radiance_w_m2_sr_nm": 9317.532391681434
+        },
+        {
+          "wavelength_nm": 1110.0,
+          "exitance_w_m2_nm": 28936.28521607778,
+          "radiance_w_m2_sr_nm": 9210.705653711424
+        },
+        {
+          "wavelength_nm": 1115.0,
+          "exitance_w_m2_nm": 28604.99336082214,
+          "radiance_w_m2_sr_nm": 9105.252180971383
+        },
+        {
+          "wavelength_nm": 1120.0,
+          "exitance_w_m2_nm": 28277.961691596247,
+          "radiance_w_m2_sr_nm": 9001.154767561595
+        },
+        {
+          "wavelength_nm": 1125.0,
+          "exitance_w_m2_nm": 27955.136545147514,
+          "radiance_w_m2_sr_nm": 8898.396331938233
+        },
+        {
+          "wavelength_nm": 1130.0,
+          "exitance_w_m2_nm": 27636.46466329906,
+          "radiance_w_m2_sr_nm": 8796.959921497077
+        },
+        {
+          "wavelength_nm": 1135.0,
+          "exitance_w_m2_nm": 27321.89320618989,
+          "radiance_w_m2_sr_nm": 8696.828716787988
+        },
+        {
+          "wavelength_nm": 1140.0,
+          "exitance_w_m2_nm": 27011.36976441355,
+          "radiance_w_m2_sr_nm": 8597.986035378763
+        },
+        {
+          "wavelength_nm": 1145.0,
+          "exitance_w_m2_nm": 26704.84237011397,
+          "radiance_w_m2_sr_nm": 8500.415335387048
+        },
+        {
+          "wavelength_nm": 1150.0,
+          "exitance_w_m2_nm": 26402.259507090497,
+          "radiance_w_m2_sr_nm": 8404.100218696882
+        },
+        {
+          "wavelength_nm": 1155.0,
+          "exitance_w_m2_nm": 26103.570119967582,
+          "radiance_w_m2_sr_nm": 8309.024433877481
+        },
+        {
+          "wavelength_nm": 1160.0,
+          "exitance_w_m2_nm": 25808.72362247453,
+          "radiance_w_m2_sr_nm": 8215.171878818777
+        },
+        {
+          "wavelength_nm": 1165.0,
+          "exitance_w_m2_nm": 25517.66990488683,
+          "radiance_w_m2_sr_nm": 8122.526603100067
+        },
+        {
+          "wavelength_nm": 1170.0,
+          "exitance_w_m2_nm": 25230.359340669176,
+          "radiance_w_m2_sr_nm": 8031.072810104546
+        },
+        {
+          "wavelength_nm": 1175.0,
+          "exitance_w_m2_nm": 24946.74279236909,
+          "radiance_w_m2_sr_nm": 7940.794858895305
+        },
+        {
+          "wavelength_nm": 1180.0,
+          "exitance_w_m2_nm": 24666.771616794897,
+          "radiance_w_m2_sr_nm": 7851.677265863542
+        },
+        {
+          "wavelength_nm": 1185.0,
+          "exitance_w_m2_nm": 24390.3976695258,
+          "radiance_w_m2_sr_nm": 7763.704706164151
+        },
+        {
+          "wavelength_nm": 1190.0,
+          "exitance_w_m2_nm": 24117.573308782954,
+          "radiance_w_m2_sr_nm": 7676.86201494793
+        },
+        {
+          "wavelength_nm": 1195.0,
+          "exitance_w_m2_nm": 23848.25139869968,
+          "radiance_w_m2_sr_nm": 7591.134188402521
+        },
+        {
+          "wavelength_nm": 1200.0,
+          "exitance_w_m2_nm": 23582.385312029484,
+          "radiance_w_m2_sr_nm": 7506.506384614402
+        },
+        {
+          "wavelength_nm": 1205.0,
+          "exitance_w_m2_nm": 23319.928932315393,
+          "radiance_w_m2_sr_nm": 7422.9639242594
+        },
+        {
+          "wavelength_nm": 1210.0,
+          "exitance_w_m2_nm": 23060.836655558123,
+          "radiance_w_m2_sr_nm": 7340.492291133694
+        },
+        {
+          "wavelength_nm": 1215.0,
+          "exitance_w_m2_nm": 22805.063391409596,
+          "radiance_w_m2_sr_nm": 7259.07713253372
+        },
+        {
+          "wavelength_nm": 1220.0,
+          "exitance_w_m2_nm": 22552.56456391828,
+          "radiance_w_m2_sr_nm": 7178.704259493419
+        },
+        {
+          "wavelength_nm": 1225.0,
+          "exitance_w_m2_nm": 22303.296111855314,
+          "radiance_w_m2_sr_nm": 7099.359646888046
+        },
+        {
+          "wavelength_nm": 1230.0,
+          "exitance_w_m2_nm": 22057.214488645797,
+          "radiance_w_m2_sr_nm": 7021.029433412303
+        },
+        {
+          "wavelength_nm": 1235.0,
+          "exitance_w_m2_nm": 21814.276661927932,
+          "radiance_w_m2_sr_nm": 6943.699921440001
+        },
+        {
+          "wavelength_nm": 1240.0,
+          "exitance_w_m2_nm": 21574.44011276279,
+          "radiance_w_m2_sr_nm": 6867.3575767725315
+        },
+        {
+          "wavelength_nm": 1245.0,
+          "exitance_w_m2_nm": 21337.6628345202,
+          "radiance_w_m2_sr_nm": 6791.989028284225
+        },
+        {
+          "wavelength_nm": 1250.0,
+          "exitance_w_m2_nm": 21103.90333145424,
+          "radiance_w_m2_sr_nm": 6717.58106746892
+        },
+        {
+          "wavelength_nm": 1255.0,
+          "exitance_w_m2_nm": 20873.12061699569,
+          "radiance_w_m2_sr_nm": 6644.120647896432
+        },
+        {
+          "wavelength_nm": 1260.0,
+          "exitance_w_m2_nm": 20645.27421177347,
+          "radiance_w_m2_sr_nm": 6571.5948845827625
+        },
+        {
+          "wavelength_nm": 1265.0,
+          "exitance_w_m2_nm": 20420.324141388337,
+          "radiance_w_m2_sr_nm": 6499.991053281435
+        },
+        {
+          "wavelength_nm": 1270.0,
+          "exitance_w_m2_nm": 20198.230933949646,
+          "radiance_w_m2_sr_nm": 6429.296589699432
+        },
+        {
+          "wavelength_nm": 1275.0,
+          "exitance_w_m2_nm": 19978.95561739803,
+          "radiance_w_m2_sr_nm": 6359.499088644972
+        },
+        {
+          "wavelength_nm": 1280.0,
+          "exitance_w_m2_nm": 19762.459716622627,
+          "radiance_w_m2_sr_nm": 6290.586303109897
+        },
+        {
+          "wavelength_nm": 1285.0,
+          "exitance_w_m2_nm": 19548.705250391824,
+          "radiance_w_m2_sr_nm": 6222.546143292693
+        },
+        {
+          "wavelength_nm": 1290.0,
+          "exitance_w_m2_nm": 19337.65472810848,
+          "radiance_w_m2_sr_nm": 6155.366675565651
+        },
+        {
+          "wavelength_nm": 1295.0,
+          "exitance_w_m2_nm": 19129.271146405812,
+          "radiance_w_m2_sr_nm": 6089.036121391305
+        },
+        {
+          "wavelength_nm": 1300.0,
+          "exitance_w_m2_nm": 18923.517985590563,
+          "radiance_w_m2_sr_nm": 6023.542856190248
+        },
+        {
+          "wavelength_nm": 1305.0,
+          "exitance_w_m2_nm": 18720.359205952376,
+          "radiance_w_m2_sr_nm": 5958.875408166379
+        },
+        {
+          "wavelength_nm": 1310.0,
+          "exitance_w_m2_nm": 18519.759243944372,
+          "radiance_w_m2_sr_nm": 5895.022457091139
+        },
+        {
+          "wavelength_nm": 1315.0,
+          "exitance_w_m2_nm": 18321.683008249307,
+          "radiance_w_m2_sr_nm": 5831.972833051329
+        },
+        {
+          "wavelength_nm": 1320.0,
+          "exitance_w_m2_nm": 18126.09587573824,
+          "radiance_w_m2_sr_nm": 5769.715515162717
+        },
+        {
+          "wavelength_nm": 1325.0,
+          "exitance_w_m2_nm": 17932.963687334035,
+          "radiance_w_m2_sr_nm": 5708.239630253348
+        },
+        {
+          "wavelength_nm": 1330.0,
+          "exitance_w_m2_nm": 17742.252743787067,
+          "radiance_w_m2_sr_nm": 5647.534451518909
+        },
+        {
+          "wavelength_nm": 1335.0,
+          "exitance_w_m2_nm": 17553.929801371818,
+          "radiance_w_m2_sr_nm": 5587.589397152915
+        },
+        {
+          "wavelength_nm": 1340.0,
+          "exitance_w_m2_nm": 17367.962067511453,
+          "radiance_w_m2_sr_nm": 5528.394028953964
+        },
+        {
+          "wavelength_nm": 1345.0,
+          "exitance_w_m2_nm": 17184.317196340206,
+          "radiance_w_m2_sr_nm": 5469.938050913208
+        },
+        {
+          "wavelength_nm": 1350.0,
+          "exitance_w_m2_nm": 17002.963284208643,
+          "radiance_w_m2_sr_nm": 5412.211307783625
+        },
+        {
+          "wavelength_nm": 1355.0,
+          "exitance_w_m2_nm": 16823.868865139,
+          "radiance_w_m2_sr_nm": 5355.203783633415
+        },
+        {
+          "wavelength_nm": 1360.0,
+          "exitance_w_m2_nm": 16647.002906239857,
+          "radiance_w_m2_sr_nm": 5298.905600386442
+        },
+        {
+          "wavelength_nm": 1365.0,
+          "exitance_w_m2_nm": 16472.33480307876,
+          "radiance_w_m2_sr_nm": 5243.307016349294
+        },
+        {
+          "wavelength_nm": 1370.0,
+          "exitance_w_m2_nm": 16299.834375028753,
+          "radiance_w_m2_sr_nm": 5188.398424730041
+        },
+        {
+          "wavelength_nm": 1375.0,
+          "exitance_w_m2_nm": 16129.471860585254,
+          "radiance_w_m2_sr_nm": 5134.1703521475465
+        },
+        {
+          "wavelength_nm": 1380.0,
+          "exitance_w_m2_nm": 15961.217912663737,
+          "radiance_w_m2_sr_nm": 5080.613457134675
+        },
+        {
+          "wavelength_nm": 1385.0,
+          "exitance_w_m2_nm": 15795.043593879991,
+          "radiance_w_m2_sr_nm": 5027.718528635952
+        },
+        {
+          "wavelength_nm": 1390.0,
+          "exitance_w_m2_nm": 15630.920371820503,
+          "radiance_w_m2_sr_nm": 4975.476484502079
+        },
+        {
+          "wavelength_nm": 1395.0,
+          "exitance_w_m2_nm": 15468.820114302913,
+          "radiance_w_m2_sr_nm": 4923.878369981292
+        },
+        {
+          "wavelength_nm": 1400.0,
+          "exitance_w_m2_nm": 15308.715084635165,
+          "radiance_w_m2_sr_nm": 4872.915356210299
+        },
+        {
+          "wavelength_nm": 1405.0,
+          "exitance_w_m2_nm": 15150.577936874226,
+          "radiance_w_m2_sr_nm": 4822.578738705085
+        },
+        {
+          "wavelength_nm": 1410.0,
+          "exitance_w_m2_nm": 14994.381711088754,
+          "radiance_w_m2_sr_nm": 4772.859935852974
+        },
+        {
+          "wavelength_nm": 1415.0,
+          "exitance_w_m2_nm": 14840.099828627835,
+          "radiance_w_m2_sr_nm": 4723.750487406618
+        },
+        {
+          "wavelength_nm": 1420.0,
+          "exitance_w_m2_nm": 14687.706087402143,
+          "radiance_w_m2_sr_nm": 4675.242052981946
+        },
+        {
+          "wavelength_nm": 1425.0,
+          "exitance_w_m2_nm": 14537.174657175725,
+          "radiance_w_m2_sr_nm": 4627.326410559492
+        },
+        {
+          "wavelength_nm": 1430.0,
+          "exitance_w_m2_nm": 14388.480074876246,
+          "radiance_w_m2_sr_nm": 4579.995454991598
+        },
+        {
+          "wavelength_nm": 1435.0,
+          "exitance_w_m2_nm": 14241.597239921239,
+          "radiance_w_m2_sr_nm": 4533.241196514717
+        },
+        {
+          "wavelength_nm": 1440.0,
+          "exitance_w_m2_nm": 14096.501409565866,
+          "radiance_w_m2_sr_nm": 4487.055759268555
+        },
+        {
+          "wavelength_nm": 1445.0,
+          "exitance_w_m2_nm": 13953.168194275604,
+          "radiance_w_m2_sr_nm": 4441.431379823156
+        },
+        {
+          "wavelength_nm": 1450.0,
+          "exitance_w_m2_nm": 13811.573553121061,
+          "radiance_w_m2_sr_nm": 4396.360405713019
+        },
+        {
+          "wavelength_nm": 1455.0,
+          "exitance_w_m2_nm": 13671.693789201341,
+          "radiance_w_m2_sr_nm": 4351.835293980317
+        },
+        {
+          "wavelength_nm": 1460.0,
+          "exitance_w_m2_nm": 13533.505545095888,
+          "radiance_w_m2_sr_nm": 4307.8486097271725
+        },
+        {
+          "wavelength_nm": 1465.0,
+          "exitance_w_m2_nm": 13396.985798346717,
+          "radiance_w_m2_sr_nm": 4264.3930246776035
+        },
+        {
+          "wavelength_nm": 1470.0,
+          "exitance_w_m2_nm": 13262.111856972839,
+          "radiance_w_m2_sr_nm": 4221.461315749725
+        },
+        {
+          "wavelength_nm": 1475.0,
+          "exitance_w_m2_nm": 13128.861355017525,
+          "radiance_w_m2_sr_nm": 4179.0463636383965
+        },
+        {
+          "wavelength_nm": 1480.0,
+          "exitance_w_m2_nm": 12997.212248130521,
+          "radiance_w_m2_sr_nm": 4137.141151408997
+        },
+        {
+          "wavelength_nm": 1485.0,
+          "exitance_w_m2_nm": 12867.142809185347,
+          "radiance_w_m2_sr_nm": 4095.7387631023685
+        },
+        {
+          "wavelength_nm": 1490.0,
+          "exitance_w_m2_nm": 12738.631623935536,
+          "radiance_w_m2_sr_nm": 4054.8323823521573
+        },
+        {
+          "wavelength_nm": 1495.0,
+          "exitance_w_m2_nm": 12611.657586706166,
+          "radiance_w_m2_sr_nm": 4014.41529101338
+        },
+        {
+          "wavelength_nm": 1500.0,
+          "exitance_w_m2_nm": 12486.19989612633,
+          "radiance_w_m2_sr_nm": 3974.4808678040313
+        },
+        {
+          "wavelength_nm": 1505.0,
+          "exitance_w_m2_nm": 12362.238050899809,
+          "radiance_w_m2_sr_nm": 3935.0225869588444
+        },
+        {
+          "wavelength_nm": 1510.0,
+          "exitance_w_m2_nm": 12239.751845617157,
+          "radiance_w_m2_sr_nm": 3896.034016896239
+        },
+        {
+          "wavelength_nm": 1515.0,
+          "exitance_w_m2_nm": 12118.721366608394,
+          "radiance_w_m2_sr_nm": 3857.50881889819
+        },
+        {
+          "wavelength_nm": 1520.0,
+          "exitance_w_m2_nm": 11999.126987837504,
+          "radiance_w_m2_sr_nm": 3819.440745803407
+        },
+        {
+          "wavelength_nm": 1525.0,
+          "exitance_w_m2_nm": 11880.949366838617,
+          "radiance_w_m2_sr_nm": 3781.82364071378
+        },
+        {
+          "wavelength_nm": 1530.0,
+          "exitance_w_m2_nm": 11764.16944069609,
+          "radiance_w_m2_sr_nm": 3744.651435714801
+        },
+        {
+          "wavelength_nm": 1535.0,
+          "exitance_w_m2_nm": 11648.768422066136,
+          "radiance_w_m2_sr_nm": 3707.918150609207
+        },
+        {
+          "wavelength_nm": 1540.0,
+          "exitance_w_m2_nm": 11534.727795243032,
+          "radiance_w_m2_sr_nm": 3671.6178916648164
+        },
+        {
+          "wavelength_nm": 1545.0,
+          "exitance_w_m2_nm": 11422.029312268352,
+          "radiance_w_m2_sr_nm": 3635.74485037606
+        },
+        {
+          "wavelength_nm": 1550.0,
+          "exitance_w_m2_nm": 11310.65498908454,
+          "radiance_w_m2_sr_nm": 3600.293302239624
+        },
+        {
+          "wavelength_nm": 1555.0,
+          "exitance_w_m2_nm": 11200.58710173249,
+          "radiance_w_m2_sr_nm": 3565.2576055441027
+        },
+        {
+          "wavelength_nm": 1560.0,
+          "exitance_w_m2_nm": 11091.808182593519,
+          "radiance_w_m2_sr_nm": 3530.6322001737813
+        },
+        {
+          "wavelength_nm": 1565.0,
+          "exitance_w_m2_nm": 10984.30101667496,
+          "radiance_w_m2_sr_nm": 3496.4116064263026
+        },
+        {
+          "wavelength_nm": 1570.0,
+          "exitance_w_m2_nm": 10878.048637942296,
+          "radiance_w_m2_sr_nm": 3462.5904238451517
+        },
+        {
+          "wavelength_nm": 1575.0,
+          "exitance_w_m2_nm": 10773.034325692517,
+          "radiance_w_m2_sr_nm": 3429.163330065255
+        },
+        {
+          "wavelength_nm": 1580.0,
+          "exitance_w_m2_nm": 10669.24160097529,
+          "radiance_w_m2_sr_nm": 3396.1250796738095
+        },
+        {
+          "wavelength_nm": 1585.0,
+          "exitance_w_m2_nm": 10566.654223056472,
+          "radiance_w_m2_sr_nm": 3363.4705030845766
+        },
+        {
+          "wavelength_nm": 1590.0,
+          "exitance_w_m2_nm": 10465.256185926539,
+          "radiance_w_m2_sr_nm": 3331.194505426488
+        },
+        {
+          "wavelength_nm": 1595.0,
+          "exitance_w_m2_nm": 10365.031714853963,
+          "radiance_w_m2_sr_nm": 3299.292065446546
+        },
+        {
+          "wavelength_nm": 1600.0,
+          "exitance_w_m2_nm": 10265.965262981372,
+          "radiance_w_m2_sr_nm": 3267.758234426349
+        },
+        {
+          "wavelength_nm": 1605.0,
+          "exitance_w_m2_nm": 10168.041507966618,
+          "radiance_w_m2_sr_nm": 3236.5881351129137
+        },
+        {
+          "wavelength_nm": 1610.0,
+          "exitance_w_m2_nm": 10071.245348667635,
+          "radiance_w_m2_sr_nm": 3205.776960663426
+        },
+        {
+          "wavelength_nm": 1615.0,
+          "exitance_w_m2_nm": 9975.561901871059,
+          "radiance_w_m2_sr_nm": 3175.319973603935
+        },
+        {
+          "wavelength_nm": 1620.0,
+          "exitance_w_m2_nm": 9880.976499063023,
+          "radiance_w_m2_sr_nm": 3145.2125048014614
+        },
+        {
+          "wavelength_nm": 1625.0,
+          "exitance_w_m2_nm": 9787.474683244804,
+          "radiance_w_m2_sr_nm": 3115.4499524503863
+        },
+        {
+          "wavelength_nm": 1630.0,
+          "exitance_w_m2_nm": 9695.042205789683,
+          "radiance_w_m2_sr_nm": 3086.027781071961
+        },
+        {
+          "wavelength_nm": 1635.0,
+          "exitance_w_m2_nm": 9603.665023344562,
+          "radiance_w_m2_sr_nm": 3056.941520528059
+        },
+        {
+          "wavelength_nm": 1640.0,
+          "exitance_w_m2_nm": 9513.329294770652,
+          "radiance_w_m2_sr_nm": 3028.186765047368
+        },
+        {
+          "wavelength_nm": 1645.0,
+          "exitance_w_m2_nm": 9424.021378130039,
+          "radiance_w_m2_sr_nm": 2999.7591722661828
+        },
+        {
+          "wavelength_nm": 1650.0,
+          "exitance_w_m2_nm": 9335.727827710438,
+          "radiance_w_m2_sr_nm": 2971.6544622813567
+        },
+        {
+          "wavelength_nm": 1655.0,
+          "exitance_w_m2_nm": 9248.435391093728,
+          "radiance_w_m2_sr_nm": 2943.8684167171864
+        },
+        {
+          "wavelength_nm": 1660.0,
+          "exitance_w_m2_nm": 9162.131006264242,
+          "radiance_w_m2_sr_nm": 2916.3968778049507
+        },
+        {
+          "wavelength_nm": 1665.0,
+          "exitance_w_m2_nm": 9076.801798757991,
+          "radiance_w_m2_sr_nm": 2889.2357474754826
+        },
+        {
+          "wavelength_nm": 1670.0,
+          "exitance_w_m2_nm": 8992.435078852535,
+          "radiance_w_m2_sr_nm": 2862.3809864646773
+        },
+        {
+          "wavelength_nm": 1675.0,
+          "exitance_w_m2_nm": 8909.01833879591,
+          "radiance_w_m2_sr_nm": 2835.82861343143
+        },
+        {
+          "wavelength_nm": 1680.0,
+          "exitance_w_m2_nm": 8826.539250076552,
+          "radiance_w_m2_sr_nm": 2809.5747040886286
+        },
+        {
+          "wavelength_nm": 1685.0,
+          "exitance_w_m2_nm": 8744.98566073072,
+          "radiance_w_m2_sr_nm": 2783.6153903460768
+        },
+        {
+          "wavelength_nm": 1690.0,
+          "exitance_w_m2_nm": 8664.345592689699,
+          "radiance_w_m2_sr_nm": 2757.9468594660866
+        },
+        {
+          "wavelength_nm": 1695.0,
+          "exitance_w_m2_nm": 8584.60723916533,
+          "radiance_w_m2_sr_nm": 2732.565353231262
+        },
+        {
+          "wavelength_nm": 1700.0,
+          "exitance_w_m2_nm": 8505.758962072632,
+          "radiance_w_m2_sr_nm": 2707.467167124097
+        },
+        {
+          "wavelength_nm": 1705.0,
+          "exitance_w_m2_nm": 8427.789289491628,
+          "radiance_w_m2_sr_nm": 2682.64864951905
+        },
+        {
+          "wavelength_nm": 1710.0,
+          "exitance_w_m2_nm": 8350.686913164365,
+          "radiance_w_m2_sr_nm": 2658.1062008858194
+        },
+        {
+          "wavelength_nm": 1715.0,
+          "exitance_w_m2_nm": 8274.440686030213,
+          "radiance_w_m2_sr_nm": 2633.8362730048043
+        },
+        {
+          "wavelength_nm": 1720.0,
+          "exitance_w_m2_nm": 8199.039619796495,
+          "radiance_w_m2_sr_nm": 2609.835368193813
+        },
+        {
+          "wavelength_nm": 1725.0,
+          "exitance_w_m2_nm": 8124.472882545569,
+          "radiance_w_m2_sr_nm": 2586.100038546374
+        },
+        {
+          "wavelength_nm": 1730.0,
+          "exitance_w_m2_nm": 8050.729796377364,
+          "radiance_w_m2_sr_nm": 2562.626885181331
+        },
+        {
+          "wavelength_nm": 1735.0,
+          "exitance_w_m2_nm": 7977.799835086308,
+          "radiance_w_m2_sr_nm": 2539.412557503387
+        },
+        {
+          "wavelength_nm": 1740.0,
+          "exitance_w_m2_nm": 7905.672621874097,
+          "radiance_w_m2_sr_nm": 2516.453752475054
+        },
+        {
+          "wavelength_nm": 1745.0,
+          "exitance_w_m2_nm": 7834.337927094949,
+          "radiance_w_m2_sr_nm": 2493.747213898948
+        },
+        {
+          "wavelength_nm": 1750.0,
+          "exitance_w_m2_nm": 7763.785666036606,
+          "radiance_w_m2_sr_nm": 2471.2897317114575
+        },
+        {
+          "wavelength_nm": 1755.0,
+          "exitance_w_m2_nm": 7694.005896733126,
+          "radiance_w_m2_sr_nm": 2449.078141286536
+        },
+        {
+          "wavelength_nm": 1760.0,
+          "exitance_w_m2_nm": 7624.98881781142,
+          "radiance_w_m2_sr_nm": 2427.1093227502297
+        },
+        {
+          "wavelength_nm": 1765.0,
+          "exitance_w_m2_nm": 7556.72476636981,
+          "radiance_w_m2_sr_nm": 2405.3802003054066
+        },
+        {
+          "wavelength_nm": 1770.0,
+          "exitance_w_m2_nm": 7489.204215889481,
+          "radiance_w_m2_sr_nm": 2383.8877415669463
+        },
+        {
+          "wavelength_nm": 1775.0,
+          "exitance_w_m2_nm": 7422.417774176429,
+          "radiance_w_m2_sr_nm": 2362.628956906644
+        },
+        {
+          "wavelength_nm": 1780.0,
+          "exitance_w_m2_nm": 7356.356181335749,
+          "radiance_w_m2_sr_nm": 2341.6008988084072
+        },
+        {
+          "wavelength_nm": 1785.0,
+          "exitance_w_m2_nm": 7291.0103077757785,
+          "radiance_w_m2_sr_nm": 2320.8006612329527
+        },
+        {
+          "wavelength_nm": 1790.0,
+          "exitance_w_m2_nm": 7226.371152244053,
+          "radiance_w_m2_sr_nm": 2300.2253789926326
+        },
+        {
+          "wavelength_nm": 1795.0,
+          "exitance_w_m2_nm": 7162.429839891483,
+          "radiance_w_m2_sr_nm": 2279.8722271352444
+        },
+        {
+          "wavelength_nm": 1800.0,
+          "exitance_w_m2_nm": 7099.177620367421,
+          "radiance_w_m2_sr_nm": 2259.738420337668
+        },
+        {
+          "wavelength_nm": 1805.0,
+          "exitance_w_m2_nm": 7036.605865943786,
+          "radiance_w_m2_sr_nm": 2239.8212123087606
+        },
+        {
+          "wavelength_nm": 1810.0,
+          "exitance_w_m2_nm": 6974.706069667313,
+          "radiance_w_m2_sr_nm": 2220.1178952011965
+        },
+        {
+          "wavelength_nm": 1815.0,
+          "exitance_w_m2_nm": 6913.469843540646,
+          "radiance_w_m2_sr_nm": 2200.6257990324925
+        },
+        {
+          "wavelength_nm": 1820.0,
+          "exitance_w_m2_nm": 6852.888916731717,
+          "radiance_w_m2_sr_nm": 2181.3422911150333
+        },
+        {
+          "wavelength_nm": 1825.0,
+          "exitance_w_m2_nm": 6792.955133810101,
+          "radiance_w_m2_sr_nm": 2162.2647754946897
+        },
+        {
+          "wavelength_nm": 1830.0,
+          "exitance_w_m2_nm": 6733.66045301087,
+          "radiance_w_m2_sr_nm": 2143.390692398182
+        },
+        {
+          "wavelength_nm": 1835.0,
+          "exitance_w_m2_nm": 6674.996944525225,
+          "radiance_w_m2_sr_nm": 2124.717517688975
+        },
+        {
+          "wavelength_nm": 1840.0,
+          "exitance_w_m2_nm": 6616.956788817401,
+          "radiance_w_m2_sr_nm": 2106.242762331528
+        },
+        {
+          "wavelength_nm": 1845.0,
+          "exitance_w_m2_nm": 6559.532274968285,
+          "radiance_w_m2_sr_nm": 2087.963971864056
+        },
+        {
+          "wavelength_nm": 1850.0,
+          "exitance_w_m2_nm": 6502.715799043593,
+          "radiance_w_m2_sr_nm": 2069.8787258791035
+        },
+        {
+          "wavelength_nm": 1855.0,
+          "exitance_w_m2_nm": 6446.499862488033,
+          "radiance_w_m2_sr_nm": 2051.984637512388
+        },
+        {
+          "wavelength_nm": 1860.0,
+          "exitance_w_m2_nm": 6390.877070544659,
+          "radiance_w_m2_sr_nm": 2034.279352939668
+        },
+        {
+          "wavelength_nm": 1865.0,
+          "exitance_w_m2_nm": 6335.840130697935,
+          "radiance_w_m2_sr_nm": 2016.7605508811532
+        },
+        {
+          "wavelength_nm": 1870.0,
+          "exitance_w_m2_nm": 6281.381851141369,
+          "radiance_w_m2_sr_nm": 1999.4259421137376
+        },
+        {
+          "wavelength_nm": 1875.0,
+          "exitance_w_m2_nm": 6227.495139269648,
+          "radiance_w_m2_sr_nm": 1982.2732689910313
+        },
+        {
+          "wavelength_nm": 1880.0,
+          "exitance_w_m2_nm": 6174.173000193097,
+          "radiance_w_m2_sr_nm": 1965.3003049704982
+        },
+        {
+          "wavelength_nm": 1885.0,
+          "exitance_w_m2_nm": 6121.408535276042,
+          "radiance_w_m2_sr_nm": 1948.5048541482017
+        },
+        {
+          "wavelength_nm": 1890.0,
+          "exitance_w_m2_nm": 6069.194940697345,
+          "radiance_w_m2_sr_nm": 1931.8847508006102
+        },
+        {
+          "wavelength_nm": 1895.0,
+          "exitance_w_m2_nm": 6017.525506034133,
+          "radiance_w_m2_sr_nm": 1915.4378589337823
+        },
+        {
+          "wavelength_nm": 1900.0,
+          "exitance_w_m2_nm": 5966.393612867314,
+          "radiance_w_m2_sr_nm": 1899.1620718394904
+        },
+        {
+          "wavelength_nm": 1905.0,
+          "exitance_w_m2_nm": 5915.7927334080605,
+          "radiance_w_m2_sr_nm": 1883.0553116580156
+        },
+        {
+          "wavelength_nm": 1910.0,
+          "exitance_w_m2_nm": 5865.716429147123,
+          "radiance_w_m2_sr_nm": 1867.1155289482117
+        },
+        {
+          "wavelength_nm": 1915.0,
+          "exitance_w_m2_nm": 5816.158349524021,
+          "radiance_w_m2_sr_nm": 1851.340702263895
+        },
+        {
+          "wavelength_nm": 1920.0,
+          "exitance_w_m2_nm": 5767.112230618007,
+          "radiance_w_m2_sr_nm": 1835.728837737165
+        },
+        {
+          "wavelength_nm": 1925.0,
+          "exitance_w_m2_nm": 5718.571893858277,
+          "radiance_w_m2_sr_nm": 1820.2779686678525
+        },
+        {
+          "wavelength_nm": 1930.0,
+          "exitance_w_m2_nm": 5670.531244755496,
+          "radiance_w_m2_sr_nm": 1804.986155119751
+        },
+        {
+          "wavelength_nm": 1935.0,
+          "exitance_w_m2_nm": 5622.98427165282,
+          "radiance_w_m2_sr_nm": 1789.8514835230544
+        },
+        {
+          "wavelength_nm": 1940.0,
+          "exitance_w_m2_nm": 5575.92504449576,
+          "radiance_w_m2_sr_nm": 1774.8720662827932
+        },
+        {
+          "wavelength_nm": 1945.0,
+          "exitance_w_m2_nm": 5529.347713622204,
+          "radiance_w_m2_sr_nm": 1760.046041393687
+        },
+        {
+          "wavelength_nm": 1950.0,
+          "exitance_w_m2_nm": 5483.246508570814,
+          "radiance_w_m2_sr_nm": 1745.3715720608434
+        },
+        {
+          "wavelength_nm": 1955.0,
+          "exitance_w_m2_nm": 5437.615736908294,
+          "radiance_w_m2_sr_nm": 1730.846846326468
+        },
+        {
+          "wavelength_nm": 1960.0,
+          "exitance_w_m2_nm": 5392.449783074475,
+          "radiance_w_m2_sr_nm": 1716.470076702243
+        },
+        {
+          "wavelength_nm": 1965.0,
+          "exitance_w_m2_nm": 5347.743107246533,
+          "radiance_w_m2_sr_nm": 1702.2394998077953
+        },
+        {
+          "wavelength_nm": 1970.0,
+          "exitance_w_m2_nm": 5303.490244219764,
+          "radiance_w_m2_sr_nm": 1688.1533760144373
+        },
+        {
+          "wavelength_nm": 1975.0,
+          "exitance_w_m2_nm": 5259.6858023065,
+          "radiance_w_m2_sr_nm": 1674.2099890946818
+        },
+        {
+          "wavelength_nm": 1980.0,
+          "exitance_w_m2_nm": 5216.324462252138,
+          "radiance_w_m2_sr_nm": 1660.407645877201
+        },
+        {
+          "wavelength_nm": 1985.0,
+          "exitance_w_m2_nm": 5173.400976168113,
+          "radiance_w_m2_sr_nm": 1646.7446759071836
+        },
+        {
+          "wavelength_nm": 1990.0,
+          "exitance_w_m2_nm": 5130.9101664814325,
+          "radiance_w_m2_sr_nm": 1633.2194311119592
+        },
+        {
+          "wavelength_nm": 1995.0,
+          "exitance_w_m2_nm": 5088.8469249008285,
+          "radiance_w_m2_sr_nm": 1619.8302854719159
+        },
+        {
+          "wavelength_nm": 2000.0,
+          "exitance_w_m2_nm": 5047.206211398715,
+          "radiance_w_m2_sr_nm": 1606.5756346964463
+        },
+        {
+          "wavelength_nm": 2005.0,
+          "exitance_w_m2_nm": 5005.98305320948,
+          "radiance_w_m2_sr_nm": 1593.4538959050947
+        },
+        {
+          "wavelength_nm": 2010.0,
+          "exitance_w_m2_nm": 4965.172543842958,
+          "radiance_w_m2_sr_nm": 1580.4635073135344
+        },
+        {
+          "wavelength_nm": 2015.0,
+          "exitance_w_m2_nm": 4924.769842113731,
+          "radiance_w_m2_sr_nm": 1567.6029279245865
+        },
+        {
+          "wavelength_nm": 2020.0,
+          "exitance_w_m2_nm": 4884.770171185403,
+          "radiance_w_m2_sr_nm": 1554.8706372240015
+        },
+        {
+          "wavelength_nm": 2025.0,
+          "exitance_w_m2_nm": 4845.16881762945,
+          "radiance_w_m2_sr_nm": 1542.265134880882
+        },
+        {
+          "wavelength_nm": 2030.0,
+          "exitance_w_m2_nm": 4805.9611304992795,
+          "radiance_w_m2_sr_nm": 1529.7849404529477
+        },
+        {
+          "wavelength_nm": 2035.0,
+          "exitance_w_m2_nm": 4767.142520418602,
+          "radiance_w_m2_sr_nm": 1517.4285930963542
+        },
+        {
+          "wavelength_nm": 2040.0,
+          "exitance_w_m2_nm": 4728.70845868352,
+          "radiance_w_m2_sr_nm": 1505.1946512798795
+        },
+        {
+          "wavelength_nm": 2045.0,
+          "exitance_w_m2_nm": 4690.654476379441,
+          "radiance_w_m2_sr_nm": 1493.0816925038282
+        },
+        {
+          "wavelength_nm": 2050.0,
+          "exitance_w_m2_nm": 4652.976163510864,
+          "radiance_w_m2_sr_nm": 1481.0883130230343
+        },
+        {
+          "wavelength_nm": 2055.0,
+          "exitance_w_m2_nm": 4615.669168145289,
+          "radiance_w_m2_sr_nm": 1469.2131275743589
+        },
+        {
+          "wavelength_nm": 2060.0,
+          "exitance_w_m2_nm": 4578.729195570489,
+          "radiance_w_m2_sr_nm": 1457.4547691084417
+        },
+        {
+          "wavelength_nm": 2065.0,
+          "exitance_w_m2_nm": 4542.152007464179,
+          "radiance_w_m2_sr_nm": 1445.8118885253994
+        },
+        {
+          "wavelength_nm": 2070.0,
+          "exitance_w_m2_nm": 4505.93342107746,
+          "radiance_w_m2_sr_nm": 1434.2831544149046
+        },
+        {
+          "wavelength_nm": 2075.0,
+          "exitance_w_m2_nm": 4470.069308430484,
+          "radiance_w_m2_sr_nm": 1422.8672528001632
+        },
+        {
+          "wavelength_nm": 2080.0,
+          "exitance_w_m2_nm": 4434.5555955205655,
+          "radiance_w_m2_sr_nm": 1411.5628868858432
+        },
+        {
+          "wavelength_nm": 2085.0,
+          "exitance_w_m2_nm": 4399.388261542889,
+          "radiance_w_m2_sr_nm": 1400.368776810022
+        },
+        {
+          "wavelength_nm": 2090.0,
+          "exitance_w_m2_nm": 4364.56333812282,
+          "radiance_w_m2_sr_nm": 1389.2836593998204
+        },
+        {
+          "wavelength_nm": 2095.0,
+          "exitance_w_m2_nm": 4330.076908560765,
+          "radiance_w_m2_sr_nm": 1378.3062879310373
+        },
+        {
+          "wavelength_nm": 2100.0,
+          "exitance_w_m2_nm": 4295.925107087975,
+          "radiance_w_m2_sr_nm": 1367.4354318912622
+        },
+        {
+          "wavelength_nm": 2105.0,
+          "exitance_w_m2_nm": 4262.104118134556,
+          "radiance_w_m2_sr_nm": 1356.669876746876
+        },
+        {
+          "wavelength_nm": 2110.0,
+          "exitance_w_m2_nm": 4228.610175608426,
+          "radiance_w_m2_sr_nm": 1346.0084237135372
+        },
+        {
+          "wavelength_nm": 2115.0,
+          "exitance_w_m2_nm": 4195.43956218525,
+          "radiance_w_m2_sr_nm": 1335.4498895301595
+        },
+        {
+          "wavelength_nm": 2120.0,
+          "exitance_w_m2_nm": 4162.588608609986,
+          "radiance_w_m2_sr_nm": 1324.9931062365883
+        },
+        {
+          "wavelength_nm": 2125.0,
+          "exitance_w_m2_nm": 4130.053693008641,
+          "radiance_w_m2_sr_nm": 1314.6369209545248
+        },
+        {
+          "wavelength_nm": 2130.0,
+          "exitance_w_m2_nm": 4097.831240210608,
+          "radiance_w_m2_sr_nm": 1304.3801956718203
+        },
+        {
+          "wavelength_nm": 2135.0,
+          "exitance_w_m2_nm": 4065.9177210820817,
+          "radiance_w_m2_sr_nm": 1294.221807030295
+        },
+        {
+          "wavelength_nm": 2140.0,
+          "exitance_w_m2_nm": 4034.309651868823,
+          "radiance_w_m2_sr_nm": 1284.1606461165334
+        },
+        {
+          "wavelength_nm": 2145.0,
+          "exitance_w_m2_nm": 4003.0035935501205,
+          "radiance_w_m2_sr_nm": 1274.195618256244
+        },
+        {
+          "wavelength_nm": 2150.0,
+          "exitance_w_m2_nm": 3971.99615120162,
+          "radiance_w_m2_sr_nm": 1264.3256428114423
+        },
+        {
+          "wavelength_nm": 2155.0,
+          "exitance_w_m2_nm": 3941.283973368742,
+          "radiance_w_m2_sr_nm": 1254.5496529810025
+        },
+        {
+          "wavelength_nm": 2160.0,
+          "exitance_w_m2_nm": 3910.8637514492657,
+          "radiance_w_m2_sr_nm": 1244.8665956041284
+        },
+        {
+          "wavelength_nm": 2165.0,
+          "exitance_w_m2_nm": 3880.7322190856785,
+          "radiance_w_m2_sr_nm": 1235.2754309669317
+        },
+        {
+          "wavelength_nm": 2170.0,
+          "exitance_w_m2_nm": 3850.8861515666126,
+          "radiance_w_m2_sr_nm": 1225.7751326119042
+        },
+        {
+          "wavelength_nm": 2175.0,
+          "exitance_w_m2_nm": 3821.3223652375996,
+          "radiance_w_m2_sr_nm": 1216.364687150354
+        },
+        {
+          "wavelength_nm": 2180.0,
+          "exitance_w_m2_nm": 3792.0377169208127,
+          "radiance_w_m2_sr_nm": 1207.0430940777053
+        },
+        {
+          "wavelength_nm": 2185.0,
+          "exitance_w_m2_nm": 3763.0291033437284,
+          "radiance_w_m2_sr_nm": 1197.809365591634
+        },
+        {
+          "wavelength_nm": 2190.0,
+          "exitance_w_m2_nm": 3734.2934605764294,
+          "radiance_w_m2_sr_nm": 1188.662526412957
+        },
+        {
+          "wavelength_nm": 2195.0,
+          "exitance_w_m2_nm": 3705.827763477633,
+          "radiance_w_m2_sr_nm": 1179.601613609297
+        },
+        {
+          "wavelength_nm": 2200.0,
+          "exitance_w_m2_nm": 3677.6290251488867,
+          "radiance_w_m2_sr_nm": 1170.6256764213472
+        },
+        {
+          "wavelength_nm": 2205.0,
+          "exitance_w_m2_nm": 3649.694296397639,
+          "radiance_w_m2_sr_nm": 1161.7337760919625
+        },
+        {
+          "wavelength_nm": 2210.0,
+          "exitance_w_m2_nm": 3622.0206652077945,
+          "radiance_w_m2_sr_nm": 1152.924985697631
+        },
+        {
+          "wavelength_nm": 2215.0,
+          "exitance_w_m2_nm": 3594.605256218958,
+          "radiance_w_m2_sr_nm": 1144.1983899827123
+        },
+        {
+          "wavelength_nm": 2220.0,
+          "exitance_w_m2_nm": 3567.4452302132095,
+          "radiance_w_m2_sr_nm": 1135.5530851960737
+        },
+        {
+          "wavelength_nm": 2225.0,
+          "exitance_w_m2_nm": 3540.5377836097628,
+          "radiance_w_m2_sr_nm": 1126.9881789302342
+        },
+        {
+          "wavelength_nm": 2230.0,
+          "exitance_w_m2_nm": 3513.8801479674776,
+          "radiance_w_m2_sr_nm": 1118.5027899630093
+        },
+        {
+          "wavelength_nm": 2235.0,
+          "exitance_w_m2_nm": 3487.469589494578,
+          "radiance_w_m2_sr_nm": 1110.0960481014504
+        },
+        {
+          "wavelength_nm": 2240.0,
+          "exitance_w_m2_nm": 3461.303408566202,
+          "radiance_w_m2_sr_nm": 1101.7670940282744
+        },
+        {
+          "wavelength_nm": 2245.0,
+          "exitance_w_m2_nm": 3435.378939248944,
+          "radiance_w_m2_sr_nm": 1093.515079150523
+        },
+        {
+          "wavelength_nm": 2250.0,
+          "exitance_w_m2_nm": 3409.693548832615,
+          "radiance_w_m2_sr_nm": 1085.3391654505149
+        },
+        {
+          "wavelength_nm": 2255.0,
+          "exitance_w_m2_nm": 3384.244637369282,
+          "radiance_w_m2_sr_nm": 1077.23852533912
+        },
+        {
+          "wavelength_nm": 2260.0,
+          "exitance_w_m2_nm": 3359.029637219305,
+          "radiance_w_m2_sr_nm": 1069.2123415112567
+        },
+        {
+          "wavelength_nm": 2265.0,
+          "exitance_w_m2_nm": 3334.04601260369,
+          "radiance_w_m2_sr_nm": 1061.2598068034017
+        },
+        {
+          "wavelength_nm": 2270.0,
+          "exitance_w_m2_nm": 3309.2912591639556,
+          "radiance_w_m2_sr_nm": 1053.380124053492
+        },
+        {
+          "wavelength_nm": 2275.0,
+          "exitance_w_m2_nm": 3284.762903527786,
+          "radiance_w_m2_sr_nm": 1045.5725059626673
+        },
+        {
+          "wavelength_nm": 2280.0,
+          "exitance_w_m2_nm": 3260.4585028823676,
+          "radiance_w_m2_sr_nm": 1037.836174959459
+        },
+        {
+          "wavelength_nm": 2285.0,
+          "exitance_w_m2_nm": 3236.3756445525455,
+          "radiance_w_m2_sr_nm": 1030.170363065513
+        },
+        {
+          "wavelength_nm": 2290.0,
+          "exitance_w_m2_nm": 3212.511945587087,
+          "radiance_w_m2_sr_nm": 1022.5743117638937
+        },
+        {
+          "wavelength_nm": 2295.0,
+          "exitance_w_m2_nm": 3188.865052349655,
+          "radiance_w_m2_sr_nm": 1015.0472718688864
+        },
+        {
+          "wavelength_nm": 2300.0,
+          "exitance_w_m2_nm": 3165.432640116789,
+          "radiance_w_m2_sr_nm": 1007.5885033980312
+        },
+        {
+          "wavelength_nm": 2305.0,
+          "exitance_w_m2_nm": 3142.2124126816984,
+          "radiance_w_m2_sr_nm": 1000.1972754460057
+        },
+        {
+          "wavelength_nm": 2310.0,
+          "exitance_w_m2_nm": 3119.202101963677,
+          "radiance_w_m2_sr_nm": 992.8728660602986
+        },
+        {
+          "wavelength_nm": 2315.0,
+          "exitance_w_m2_nm": 3096.399467623882,
+          "radiance_w_m2_sr_nm": 985.614562118908
+        },
+        {
+          "wavelength_nm": 2320.0,
+          "exitance_w_m2_nm": 3073.802296686419,
+          "radiance_w_m2_sr_nm": 978.4216592097284
+        },
+        {
+          "wavelength_nm": 2325.0,
+          "exitance_w_m2_nm": 3051.408403165287,
+          "radiance_w_m2_sr_nm": 971.2934615118049
+        },
+        {
+          "wavelength_nm": 2330.0,
+          "exitance_w_m2_nm": 3029.215627696668,
+          "radiance_w_m2_sr_nm": 964.2292816782864
+        },
+        {
+          "wavelength_nm": 2335.0,
+          "exitance_w_m2_nm": 3007.2218371771214,
+          "radiance_w_m2_sr_nm": 957.2284407212594
+        },
+        {
+          "wavelength_nm": 2340.0,
+          "exitance_w_m2_nm": 2985.4249244065404,
+          "radiance_w_m2_sr_nm": 950.2902678980978
+        },
+        {
+          "wavelength_nm": 2345.0,
+          "exitance_w_m2_nm": 2963.822807737044,
+          "radiance_w_m2_sr_nm": 943.4141005997014
+        },
+        {
+          "wavelength_nm": 2350.0,
+          "exitance_w_m2_nm": 2942.4134307265667,
+          "radiance_w_m2_sr_nm": 936.5992842402305
+        },
+        {
+          "wavelength_nm": 2355.0,
+          "exitance_w_m2_nm": 2921.194761797846,
+          "radiance_w_m2_sr_nm": 929.8451721485578
+        },
+        {
+          "wavelength_nm": 2360.0,
+          "exitance_w_m2_nm": 2900.1647939024992,
+          "radiance_w_m2_sr_nm": 923.1511254613413
+        },
+        {
+          "wavelength_nm": 2365.0,
+          "exitance_w_m2_nm": 2879.321544189697,
+          "radiance_w_m2_sr_nm": 916.5165130175589
+        },
+        {
+          "wavelength_nm": 2370.0,
+          "exitance_w_m2_nm": 2858.663053680348,
+          "radiance_w_m2_sr_nm": 909.9407112547991
+        },
+        {
+          "wavelength_nm": 2375.0,
+          "exitance_w_m2_nm": 2838.1873869455126,
+          "radiance_w_m2_sr_nm": 903.4231041068964
+        },
+        {
+          "wavelength_nm": 2380.0,
+          "exitance_w_m2_nm": 2817.8926317898877,
+          "radiance_w_m2_sr_nm": 896.9630829031815
+        },
+        {
+          "wavelength_nm": 2385.0,
+          "exitance_w_m2_nm": 2797.776898939684,
+          "radiance_w_m2_sr_nm": 890.5600462691297
+        },
+        {
+          "wavelength_nm": 2390.0,
+          "exitance_w_m2_nm": 2777.8383217355263,
+          "radiance_w_m2_sr_nm": 884.2134000286075
+        },
+        {
+          "wavelength_nm": 2395.0,
+          "exitance_w_m2_nm": 2758.0750558293507,
+          "radiance_w_m2_sr_nm": 877.9225571073928
+        },
+        {
+          "wavelength_nm": 2400.0,
+          "exitance_w_m2_nm": 2738.4852788861517,
+          "radiance_w_m2_sr_nm": 871.6869374382372
+        },
+        {
+          "wavelength_nm": 2405.0,
+          "exitance_w_m2_nm": 2719.0671902899153,
+          "radiance_w_m2_sr_nm": 865.5059678672625
+        },
+        {
+          "wavelength_nm": 2410.0,
+          "exitance_w_m2_nm": 2699.8190108537533,
+          "radiance_w_m2_sr_nm": 859.3790820616925
+        },
+        {
+          "wavelength_nm": 2415.0,
+          "exitance_w_m2_nm": 2680.7389825345613,
+          "radiance_w_m2_sr_nm": 853.305720419027
+        },
+        {
+          "wavelength_nm": 2420.0,
+          "exitance_w_m2_nm": 2661.8253681517135,
+          "radiance_w_m2_sr_nm": 847.2853299774987
+        },
+        {
+          "wavelength_nm": 2425.0,
+          "exitance_w_m2_nm": 2643.0764511097223,
+          "radiance_w_m2_sr_nm": 841.3173643277931
+        },
+        {
+          "wavelength_nm": 2430.0,
+          "exitance_w_m2_nm": 2624.4905351250845,
+          "radiance_w_m2_sr_nm": 835.4012835261016
+        },
+        {
+          "wavelength_nm": 2435.0,
+          "exitance_w_m2_nm": 2606.0659439572537,
+          "radiance_w_m2_sr_nm": 829.5365540084864
+        },
+        {
+          "wavelength_nm": 2440.0,
+          "exitance_w_m2_nm": 2587.8010211430483,
+          "radiance_w_m2_sr_nm": 823.722648506341
+        },
+        {
+          "wavelength_nm": 2445.0,
+          "exitance_w_m2_nm": 2569.694129735503,
+          "radiance_w_m2_sr_nm": 817.959045963263
+        },
+        {
+          "wavelength_nm": 2450.0,
+          "exitance_w_m2_nm": 2551.7436520460496,
+          "radiance_w_m2_sr_nm": 812.2452314529885
+        },
+        {
+          "wavelength_nm": 2455.0,
+          "exitance_w_m2_nm": 2533.94798939075,
+          "radiance_w_m2_sr_nm": 806.5806960986149
+        },
+        {
+          "wavelength_nm": 2460.0,
+          "exitance_w_m2_nm": 2516.3055618399626,
+          "radiance_w_m2_sr_nm": 800.964936992918
+        },
+        {
+          "wavelength_nm": 2465.0,
+          "exitance_w_m2_nm": 2498.814807971793,
+          "radiance_w_m2_sr_nm": 795.3974571198722
+        },
+        {
+          "wavelength_nm": 2470.0,
+          "exitance_w_m2_nm": 2481.4741846290462,
+          "radiance_w_m2_sr_nm": 789.8777652772865
+        },
+        {
+          "wavelength_nm": 2475.0,
+          "exitance_w_m2_nm": 2464.282166679561,
+          "radiance_w_m2_sr_nm": 784.4053760005162
+        },
+        {
+          "wavelength_nm": 2480.0,
+          "exitance_w_m2_nm": 2447.237246780397,
+          "radiance_w_m2_sr_nm": 778.9798094874014
+        },
+        {
+          "wavelength_nm": 2485.0,
+          "exitance_w_m2_nm": 2430.33793514487,
+          "radiance_w_m2_sr_nm": 773.6005915241124
+        },
+        {
+          "wavelength_nm": 2490.0,
+          "exitance_w_m2_nm": 2413.5827593134572,
+          "radiance_w_m2_sr_nm": 768.2672534122261
+        },
+        {
+          "wavelength_nm": 2495.0,
+          "exitance_w_m2_nm": 2396.970263927406,
+          "radiance_w_m2_sr_nm": 762.9793318966633
+        },
+        {
+          "wavelength_nm": 2500.0,
+          "exitance_w_m2_nm": 2380.499010506391,
+          "radiance_w_m2_sr_nm": 757.7363690949157
+        },
+        {
+          "wavelength_nm": 2505.0,
+          "exitance_w_m2_nm": 2364.1675772284307,
+          "radiance_w_m2_sr_nm": 752.5379124269899
+        },
+        {
+          "wavelength_nm": 2510.0,
+          "exitance_w_m2_nm": 2347.9745587137786,
+          "radiance_w_m2_sr_nm": 747.383514546619
+        },
+        {
+          "wavelength_nm": 2515.0,
+          "exitance_w_m2_nm": 2331.9185658113734,
+          "radiance_w_m2_sr_nm": 742.2727332732867
+        },
+        {
+          "wavelength_nm": 2520.0,
+          "exitance_w_m2_nm": 2315.9982253885905,
+          "radiance_w_m2_sr_nm": 737.2051315253035
+        },
+        {
+          "wavelength_nm": 2525.0,
+          "exitance_w_m2_nm": 2300.212180123758,
+          "radiance_w_m2_sr_nm": 732.1802772537625
+        },
+        {
+          "wavelength_nm": 2530.0,
+          "exitance_w_m2_nm": 2284.55908830204,
+          "radiance_w_m2_sr_nm": 727.197743377567
+        },
+        {
+          "wavelength_nm": 2535.0,
+          "exitance_w_m2_nm": 2269.037623613719,
+          "radiance_w_m2_sr_nm": 722.2571077192218
+        },
+        {
+          "wavelength_nm": 2540.0,
+          "exitance_w_m2_nm": 2253.6464749558063,
+          "radiance_w_m2_sr_nm": 717.3579529416838
+        },
+        {
+          "wavelength_nm": 2545.0,
+          "exitance_w_m2_nm": 2238.3843462360965,
+          "radiance_w_m2_sr_nm": 712.4998664859905
+        },
+        {
+          "wavelength_nm": 2550.0,
+          "exitance_w_m2_nm": 2223.249956180218,
+          "radiance_w_m2_sr_nm": 707.6824405098428
+        },
+        {
+          "wavelength_nm": 2555.0,
+          "exitance_w_m2_nm": 2208.2420381414304,
+          "radiance_w_m2_sr_nm": 702.9052718270607
+        },
+        {
+          "wavelength_nm": 2560.0,
+          "exitance_w_m2_nm": 2193.3593399128868,
+          "radiance_w_m2_sr_nm": 698.1679618478253
+        },
+        {
+          "wavelength_nm": 2565.0,
+          "exitance_w_m2_nm": 2178.600623542903,
+          "radiance_w_m2_sr_nm": 693.4701165198769
+        },
+        {
+          "wavelength_nm": 2570.0,
+          "exitance_w_m2_nm": 2163.964665152453,
+          "radiance_w_m2_sr_nm": 688.8113462704221
+        },
+        {
+          "wavelength_nm": 2575.0,
+          "exitance_w_m2_nm": 2149.4502547555294,
+          "radiance_w_m2_sr_nm": 684.1912659489525
+        },
+        {
+          "wavelength_nm": 2580.0,
+          "exitance_w_m2_nm": 2135.0561960818522,
+          "radiance_w_m2_sr_nm": 679.6094947708115
+        },
+        {
+          "wavelength_nm": 2585.0,
+          "exitance_w_m2_nm": 2120.781306402247,
+          "radiance_w_m2_sr_nm": 675.0656562616102
+        },
+        {
+          "wavelength_nm": 2590.0,
+          "exitance_w_m2_nm": 2106.624416356262,
+          "radiance_w_m2_sr_nm": 670.5593782023562
+        },
+        {
+          "wavelength_nm": 2595.0,
+          "exitance_w_m2_nm": 2092.584369782296,
+          "radiance_w_m2_sr_nm": 666.090292575382
+        },
+        {
+          "wavelength_nm": 2600.0,
+          "exitance_w_m2_nm": 2078.6600235503074,
+          "radiance_w_m2_sr_nm": 661.658035511094
+        },
+        {
+          "wavelength_nm": 2605.0,
+          "exitance_w_m2_nm": 2064.8502473964522,
+          "radiance_w_m2_sr_nm": 657.2622472353368
+        },
+        {
+          "wavelength_nm": 2610.0,
+          "exitance_w_m2_nm": 2051.153923760424,
+          "radiance_w_m2_sr_nm": 652.9025720176162
+        },
+        {
+          "wavelength_nm": 2615.0,
+          "exitance_w_m2_nm": 2037.569947624718,
+          "radiance_w_m2_sr_nm": 648.5786581199363
+        },
+        {
+          "wavelength_nm": 2620.0,
+          "exitance_w_m2_nm": 2024.0972263565993,
+          "radiance_w_m2_sr_nm": 644.2901577464955
+        },
+        {
+          "wavelength_nm": 2625.0,
+          "exitance_w_m2_nm": 2010.7346795517346,
+          "radiance_w_m2_sr_nm": 640.0367269939135
+        },
+        {
+          "wavelength_nm": 2630.0,
+          "exitance_w_m2_nm": 1997.4812388803734,
+          "radiance_w_m2_sr_nm": 635.8180258022688
+        },
+        {
+          "wavelength_nm": 2635.0,
+          "exitance_w_m2_nm": 1984.3358479355531,
+          "radiance_w_m2_sr_nm": 631.6337179067817
+        },
+        {
+          "wavelength_nm": 2640.0,
+          "exitance_w_m2_nm": 1971.2974620834038,
+          "radiance_w_m2_sr_nm": 627.4834707901637
+        },
+        {
+          "wavelength_nm": 2645.0,
+          "exitance_w_m2_nm": 1958.3650483155056,
+          "radiance_w_m2_sr_nm": 623.3669556356224
+        },
+        {
+          "wavelength_nm": 2650.0,
+          "exitance_w_m2_nm": 1945.5375851033236,
+          "radiance_w_m2_sr_nm": 619.283847280526
+        },
+        {
+          "wavelength_nm": 2655.0,
+          "exitance_w_m2_nm": 1932.8140622546885,
+          "radiance_w_m2_sr_nm": 615.23382417072
+        },
+        {
+          "wavelength_nm": 2660.0,
+          "exitance_w_m2_nm": 1920.1934807721661,
+          "radiance_w_m2_sr_nm": 611.2165683154451
+        },
+        {
+          "wavelength_nm": 2665.0,
+          "exitance_w_m2_nm": 1907.6748527134537,
+          "radiance_w_m2_sr_nm": 607.2317652428991
+        },
+        {
+          "wavelength_nm": 2670.0,
+          "exitance_w_m2_nm": 1895.2572010537706,
+          "radiance_w_m2_sr_nm": 603.2791039564354
+        },
+        {
+          "wavelength_nm": 2675.0,
+          "exitance_w_m2_nm": 1882.9395595498884,
+          "radiance_w_m2_sr_nm": 599.3582768912819
+        },
+        {
+          "wavelength_nm": 2680.0,
+          "exitance_w_m2_nm": 1870.7209726062918,
+          "radiance_w_m2_sr_nm": 595.4689798719389
+        },
+        {
+          "wavelength_nm": 2685.0,
+          "exitance_w_m2_nm": 1858.6004951431182,
+          "radiance_w_m2_sr_nm": 591.610912070143
+        },
+        {
+          "wavelength_nm": 2690.0,
+          "exitance_w_m2_nm": 1846.577192465757,
+          "radiance_w_m2_sr_nm": 587.7837759633588
+        },
+        {
+          "wavelength_nm": 2695.0,
+          "exitance_w_m2_nm": 1834.6501401365165,
+          "radiance_w_m2_sr_nm": 583.9872772939302
+        },
+        {
+          "wavelength_nm": 2700.0,
+          "exitance_w_m2_nm": 1822.8184238476263,
+          "radiance_w_m2_sr_nm": 580.2211250286547
+        },
+        {
+          "wavelength_nm": 2705.0,
+          "exitance_w_m2_nm": 1811.081139296478,
+          "radiance_w_m2_sr_nm": 576.4850313190719
+        },
+        {
+          "wavelength_nm": 2710.0,
+          "exitance_w_m2_nm": 1799.4373920622236,
+          "radiance_w_m2_sr_nm": 572.7787114621835
+        },
+        {
+          "wavelength_nm": 2715.0,
+          "exitance_w_m2_nm": 1787.8862974840501,
+          "radiance_w_m2_sr_nm": 569.1018838617069
+        },
+        {
+          "wavelength_nm": 2720.0,
+          "exitance_w_m2_nm": 1776.4269805413646,
+          "radiance_w_m2_sr_nm": 565.4542699899367
+        },
+        {
+          "wavelength_nm": 2725.0,
+          "exitance_w_m2_nm": 1765.058575735306,
+          "radiance_w_m2_sr_nm": 561.8355943500289
+        },
+        {
+          "wavelength_nm": 2730.0,
+          "exitance_w_m2_nm": 1753.7802269722263,
+          "radiance_w_m2_sr_nm": 558.2455844389119
+        },
+        {
+          "wavelength_nm": 2735.0,
+          "exitance_w_m2_nm": 1742.5910874482324,
+          "radiance_w_m2_sr_nm": 554.6839707105349
+        },
+        {
+          "wavelength_nm": 2740.0,
+          "exitance_w_m2_nm": 1731.4903195359311,
+          "radiance_w_m2_sr_nm": 551.1504865398176
+        },
+        {
+          "wavelength_nm": 2745.0,
+          "exitance_w_m2_nm": 1720.4770946720596,
+          "radiance_w_m2_sr_nm": 547.6448681868821
+        },
+        {
+          "wavelength_nm": 2750.0,
+          "exitance_w_m2_nm": 1709.5505932471697,
+          "radiance_w_m2_sr_nm": 544.1668547619385
+        },
+        {
+          "wavelength_nm": 2755.0,
+          "exitance_w_m2_nm": 1698.710004496516,
+          "radiance_w_m2_sr_nm": 540.7161881905525
+        },
+        {
+          "wavelength_nm": 2760.0,
+          "exitance_w_m2_nm": 1687.9545263924704,
+          "radiance_w_m2_sr_nm": 537.2926131794015
+        },
+        {
+          "wavelength_nm": 2765.0,
+          "exitance_w_m2_nm": 1677.2833655383265,
+          "radiance_w_m2_sr_nm": 533.8958771824701
+        },
+        {
+          "wavelength_nm": 2770.0,
+          "exitance_w_m2_nm": 1666.6957370636974,
+          "radiance_w_m2_sr_nm": 530.5257303677546
+        },
+        {
+          "wavelength_nm": 2775.0,
+          "exitance_w_m2_nm": 1656.1908645211763,
+          "radiance_w_m2_sr_nm": 527.1819255843695
+        },
+        {
+          "wavelength_nm": 2780.0,
+          "exitance_w_m2_nm": 1645.7679797844528,
+          "radiance_w_m2_sr_nm": 523.8642183301163
+        },
+        {
+          "wavelength_nm": 2785.0,
+          "exitance_w_m2_nm": 1635.4263229477128,
+          "radiance_w_m2_sr_nm": 520.5723667194618
+        },
+        {
+          "wavelength_nm": 2790.0,
+          "exitance_w_m2_nm": 1625.1651422264779,
+          "radiance_w_m2_sr_nm": 517.3061314519741
+        },
+        {
+          "wavelength_nm": 2795.0,
+          "exitance_w_m2_nm": 1614.9836938597273,
+          "radiance_w_m2_sr_nm": 514.0652757811677
+        },
+        {
+          "wavelength_nm": 2800.0,
+          "exitance_w_m2_nm": 1604.8812420133272,
+          "radiance_w_m2_sr_nm": 510.84956548376283
+        },
+        {
+          "wavelength_nm": 2805.0,
+          "exitance_w_m2_nm": 1594.8570586847195,
+          "radiance_w_m2_sr_nm": 507.6587688293482
+        },
+        {
+          "wavelength_nm": 2810.0,
+          "exitance_w_m2_nm": 1584.9104236089725,
+          "radiance_w_m2_sr_nm": 504.4926565504755
+        },
+        {
+          "wavelength_nm": 2815.0,
+          "exitance_w_m2_nm": 1575.0406241659475,
+          "radiance_w_m2_sr_nm": 501.3510018131094
+        },
+        {
+          "wavelength_nm": 2820.0,
+          "exitance_w_m2_nm": 1565.2469552888338,
+          "radiance_w_m2_sr_nm": 498.23358018751355
+        },
+        {
+          "wavelength_nm": 2825.0,
+          "exitance_w_m2_nm": 1555.5287193738202,
+          "radiance_w_m2_sr_nm": 495.1401696194984
+        },
+        {
+          "wavelength_nm": 2830.0,
+          "exitance_w_m2_nm": 1545.8852261908867,
+          "radiance_w_m2_sr_nm": 492.07055040202465
+        },
+        {
+          "wavelength_nm": 2835.0,
+          "exitance_w_m2_nm": 1536.3157927960278,
+          "radiance_w_m2_sr_nm": 489.02450514726377
+        },
+        {
+          "wavelength_nm": 2840.0,
+          "exitance_w_m2_nm": 1526.8197434443339,
+          "radiance_w_m2_sr_nm": 486.0018187589304
+        },
+        {
+          "wavelength_nm": 2845.0,
+          "exitance_w_m2_nm": 1517.396409504417,
+          "radiance_w_m2_sr_nm": 483.0022784050436
+        },
+        {
+          "wavelength_nm": 2850.0,
+          "exitance_w_m2_nm": 1508.0451293739247,
+          "radiance_w_m2_sr_nm": 480.0256734910339
+        },
+        {
+          "wavelength_nm": 2855.0,
+          "exitance_w_m2_nm": 1498.7652483961178,
+          "radiance_w_m2_sr_nm": 477.071795633189
+        },
+        {
+          "wavelength_nm": 2860.0,
+          "exitance_w_m2_nm": 1489.5561187775675,
+          "radiance_w_m2_sr_nm": 474.1404386324565
+        },
+        {
+          "wavelength_nm": 2865.0,
+          "exitance_w_m2_nm": 1480.4170995070106,
+          "radiance_w_m2_sr_nm": 471.2313984486141
+        },
+        {
+          "wavelength_nm": 2870.0,
+          "exitance_w_m2_nm": 1471.3475562751148,
+          "radiance_w_m2_sr_nm": 468.34447317473035
+        },
+        {
+          "wavelength_nm": 2875.0,
+          "exitance_w_m2_nm": 1462.3468613954458,
+          "radiance_w_m2_sr_nm": 465.4794630120079
+        },
+        {
+          "wavelength_nm": 2880.0,
+          "exitance_w_m2_nm": 1453.414393726416,
+          "radiance_w_m2_sr_nm": 462.6361702449386
+        },
+        {
+          "wavelength_nm": 2885.0,
+          "exitance_w_m2_nm": 1444.5495385941454,
+          "radiance_w_m2_sr_nm": 459.81439921674973
+        },
+        {
+          "wavelength_nm": 2890.0,
+          "exitance_w_m2_nm": 1435.7516877165588,
+          "radiance_w_m2_sr_nm": 457.0139563052432
+        },
+        {
+          "wavelength_nm": 2895.0,
+          "exitance_w_m2_nm": 1427.0202391282576,
+          "radiance_w_m2_sr_nm": 454.23464989888146
+        },
+        {
+          "wavelength_nm": 2900.0,
+          "exitance_w_m2_nm": 1418.3545971064864,
+          "radiance_w_m2_sr_nm": 451.47629037322196
+        },
+        {
+          "wavelength_nm": 2905.0,
+          "exitance_w_m2_nm": 1409.7541720980057,
+          "radiance_w_m2_sr_nm": 448.7386900676403
+        },
+        {
+          "wavelength_nm": 2910.0,
+          "exitance_w_m2_nm": 1401.2183806469889,
+          "radiance_w_m2_sr_nm": 446.0216632623785
+        },
+        {
+          "wavelength_nm": 2915.0,
+          "exitance_w_m2_nm": 1392.7466453237253,
+          "radiance_w_m2_sr_nm": 443.3250261558513
+        },
+        {
+          "wavelength_nm": 2920.0,
+          "exitance_w_m2_nm": 1384.3383946544345,
+          "radiance_w_m2_sr_nm": 440.6485968423046
+        },
+        {
+          "wavelength_nm": 2925.0,
+          "exitance_w_m2_nm": 1375.9930630517933,
+          "radiance_w_m2_sr_nm": 437.99219528970184
+        },
+        {
+          "wavelength_nm": 2930.0,
+          "exitance_w_m2_nm": 1367.7100907464733,
+          "radiance_w_m2_sr_nm": 435.35564331793194
+        },
+        {
+          "wavelength_nm": 2935.0,
+          "exitance_w_m2_nm": 1359.4889237195657,
+          "radiance_w_m2_sr_nm": 432.73876457729904
+        },
+        {
+          "wavelength_nm": 2940.0,
+          "exitance_w_m2_nm": 1351.3290136358305,
+          "radiance_w_m2_sr_nm": 430.14138452727536
+        },
+        {
+          "wavelength_nm": 2945.0,
+          "exitance_w_m2_nm": 1343.2298177778214,
+          "radiance_w_m2_sr_nm": 427.5633304155322
+        },
+        {
+          "wavelength_nm": 2950.0,
+          "exitance_w_m2_nm": 1335.1907989808858,
+          "radiance_w_m2_sr_nm": 425.0044312572503
+        },
+        {
+          "wavelength_nm": 2955.0,
+          "exitance_w_m2_nm": 1327.2114255689548,
+          "radiance_w_m2_sr_nm": 422.4645178146806
+        },
+        {
+          "wavelength_nm": 2960.0,
+          "exitance_w_m2_nm": 1319.2911712911941,
+          "radiance_w_m2_sr_nm": 419.9434225769799
+        },
+        {
+          "wavelength_nm": 2965.0,
+          "exitance_w_m2_nm": 1311.4295152594132,
+          "radiance_w_m2_sr_nm": 417.4409797402876
+        },
+        {
+          "wavelength_nm": 2970.0,
+          "exitance_w_m2_nm": 1303.6259418864186,
+          "radiance_w_m2_sr_nm": 414.9570251881028
+        },
+        {
+          "wavelength_nm": 2975.0,
+          "exitance_w_m2_nm": 1295.8799408249165,
+          "radiance_w_m2_sr_nm": 412.4913964718366
+        },
+        {
+          "wavelength_nm": 2980.0,
+          "exitance_w_m2_nm": 1288.191006907455,
+          "radiance_w_m2_sr_nm": 410.0439327916947
+        },
+        {
+          "wavelength_nm": 2985.0,
+          "exitance_w_m2_nm": 1280.5586400868904,
+          "radiance_w_m2_sr_nm": 407.61447497772787
+        },
+        {
+          "wavelength_nm": 2990.0,
+          "exitance_w_m2_nm": 1272.9823453778338,
+          "radiance_w_m2_sr_nm": 405.2028654711932
+        },
+        {
+          "wavelength_nm": 2995.0,
+          "exitance_w_m2_nm": 1265.461632798687,
+          "radiance_w_m2_sr_nm": 402.808948306104
+        },
+        {
+          "wavelength_nm": 3000.0,
+          "exitance_w_m2_nm": 1257.9960173145048,
+          "radiance_w_m2_sr_nm": 400.432569091042
+        }
+      ]
+    }
+  },
+  "einstein": {
+    "high_temperature_limit_j_mol_k": 24.94338785445972,
+    "materials": [
+      {
+        "material": "Gold",
+        "symbol": "Au",
+        "debye_temperature_k": 170.0,
+        "einstein_temperature_k": 137.019316091,
+        "einstein_frequency_hz": 2855019301935.329,
+        "official_frequency_1e13_hz": 0.2855
+      },
+      {
+        "material": "Copper",
+        "symbol": "Cu",
+        "debye_temperature_k": 343.5,
+        "einstein_temperature_k": 276.859618102,
+        "einstein_frequency_hz": 5768818413028.15,
+        "official_frequency_1e13_hz": 0.5769
+      },
+      {
+        "material": "Titanium",
+        "symbol": "Ti",
+        "debye_temperature_k": 420.0,
+        "einstein_temperature_k": 338.518310343,
+        "einstein_frequency_hz": 7053577098899.048,
+        "official_frequency_1e13_hz": 0.7054
+      },
+      {
+        "material": "Aluminium",
+        "symbol": "Al",
+        "debye_temperature_k": 428.0,
+        "einstein_temperature_k": 344.96627816,
+        "einstein_frequency_hz": 7187930948401.888,
+        "official_frequency_1e13_hz": 0.7188
+      },
+      {
+        "material": "Iron",
+        "symbol": "Fe",
+        "debye_temperature_k": 470.0,
+        "einstein_temperature_k": 378.818109194,
+        "einstein_frequency_hz": 7893288658291.792,
+        "official_frequency_1e13_hz": 0.7893
+      },
+      {
+        "material": "Silicon",
+        "symbol": "Si",
+        "debye_temperature_k": 645.0,
+        "einstein_temperature_k": 519.86740517,
+        "einstein_frequency_hz": 10832279116166.396,
+        "official_frequency_1e13_hz": 1.0832
+      },
+      {
+        "material": "Carbon",
+        "symbol": "C",
+        "debye_temperature_k": 2230.0,
+        "einstein_temperature_k": 1797.371028728,
+        "einstein_frequency_hz": 37451135548916.375,
+        "official_frequency_1e13_hz": 3.7451
+      }
+    ],
+    "series": {
+      "Au": [
+        {
+          "temperature_k": 0.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 4.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 8.0,
+          "cv_j_mol_k": 0.0002666843
+        },
+        {
+          "temperature_k": 12.0,
+          "cv_j_mol_k": 0.0357496405
+        },
+        {
+          "temperature_k": 16.0,
+          "cv_j_mol_k": 0.3493607393
+        },
+        {
+          "temperature_k": 20.0,
+          "cv_j_mol_k": 1.2417730347
+        },
+        {
+          "temperature_k": 24.0,
+          "cv_j_mol_k": 2.7135258288
+        },
+        {
+          "temperature_k": 28.0,
+          "cv_j_mol_k": 4.5446131237
+        },
+        {
+          "temperature_k": 32.0,
+          "cv_j_mol_k": 6.497086833
+        },
+        {
+          "temperature_k": 36.0,
+          "cv_j_mol_k": 8.4038862244
+        },
+        {
+          "temperature_k": 40.0,
+          "cv_j_mol_k": 10.1732311863
+        },
+        {
+          "temperature_k": 44.0,
+          "cv_j_mol_k": 11.7666660319
+        },
+        {
+          "temperature_k": 48.0,
+          "cv_j_mol_k": 13.177242695
+        },
+        {
+          "temperature_k": 52.0,
+          "cv_j_mol_k": 14.4143156
+        },
+        {
+          "temperature_k": 56.0,
+          "cv_j_mol_k": 15.4943922293
+        },
+        {
+          "temperature_k": 60.0,
+          "cv_j_mol_k": 16.4361049922
+        },
+        {
+          "temperature_k": 64.0,
+          "cv_j_mol_k": 17.2576668551
+        },
+        {
+          "temperature_k": 68.0,
+          "cv_j_mol_k": 17.9757239874
+        },
+        {
+          "temperature_k": 72.0,
+          "cv_j_mol_k": 18.604953652
+        },
+        {
+          "temperature_k": 76.0,
+          "cv_j_mol_k": 19.1580373816
+        },
+        {
+          "temperature_k": 80.0,
+          "cv_j_mol_k": 19.6458072399
+        },
+        {
+          "temperature_k": 84.0,
+          "cv_j_mol_k": 20.0774584501
+        },
+        {
+          "temperature_k": 88.0,
+          "cv_j_mol_k": 20.4607744886
+        },
+        {
+          "temperature_k": 92.0,
+          "cv_j_mol_k": 20.8023392845
+        },
+        {
+          "temperature_k": 96.0,
+          "cv_j_mol_k": 21.1077261981
+        },
+        {
+          "temperature_k": 100.0,
+          "cv_j_mol_k": 21.3816611008
+        },
+        {
+          "temperature_k": 104.0,
+          "cv_j_mol_k": 21.6281605387
+        },
+        {
+          "temperature_k": 108.0,
+          "cv_j_mol_k": 21.8506475188
+        },
+        {
+          "temperature_k": 112.0,
+          "cv_j_mol_k": 22.0520479412
+        },
+        {
+          "temperature_k": 116.0,
+          "cv_j_mol_k": 22.2348706521
+        },
+        {
+          "temperature_k": 120.0,
+          "cv_j_mol_k": 22.4012738179
+        },
+        {
+          "temperature_k": 124.0,
+          "cv_j_mol_k": 22.5531199666
+        },
+        {
+          "temperature_k": 128.0,
+          "cv_j_mol_k": 22.6920216798
+        },
+        {
+          "temperature_k": 132.0,
+          "cv_j_mol_k": 22.8193795903
+        },
+        {
+          "temperature_k": 136.0,
+          "cv_j_mol_k": 22.93641405
+        },
+        {
+          "temperature_k": 140.0,
+          "cv_j_mol_k": 23.0441915899
+        },
+        {
+          "temperature_k": 144.0,
+          "cv_j_mol_k": 23.1436470875
+        },
+        {
+          "temperature_k": 148.0,
+          "cv_j_mol_k": 23.2356023923
+        },
+        {
+          "temperature_k": 152.0,
+          "cv_j_mol_k": 23.3207820211
+        },
+        {
+          "temperature_k": 156.0,
+          "cv_j_mol_k": 23.3998264229
+        },
+        {
+          "temperature_k": 160.0,
+          "cv_j_mol_k": 23.473303224
+        },
+        {
+          "temperature_k": 164.0,
+          "cv_j_mol_k": 23.5417167889
+        },
+        {
+          "temperature_k": 168.0,
+          "cv_j_mol_k": 23.605516373
+        },
+        {
+          "temperature_k": 172.0,
+          "cv_j_mol_k": 23.6651030946
+        },
+        {
+          "temperature_k": 176.0,
+          "cv_j_mol_k": 23.7208359151
+        },
+        {
+          "temperature_k": 180.0,
+          "cv_j_mol_k": 23.7730367813
+        },
+        {
+          "temperature_k": 184.0,
+          "cv_j_mol_k": 23.8219950601
+        },
+        {
+          "temperature_k": 188.0,
+          "cv_j_mol_k": 23.8679713739
+        },
+        {
+          "temperature_k": 192.0,
+          "cv_j_mol_k": 23.9112009243
+        },
+        {
+          "temperature_k": 196.0,
+          "cv_j_mol_k": 23.9518963817
+        },
+        {
+          "temperature_k": 200.0,
+          "cv_j_mol_k": 23.9902504022
+        },
+        {
+          "temperature_k": 204.0,
+          "cv_j_mol_k": 24.0264378263
+        },
+        {
+          "temperature_k": 208.0,
+          "cv_j_mol_k": 24.0606176027
+        },
+        {
+          "temperature_k": 212.0,
+          "cv_j_mol_k": 24.092934477
+        },
+        {
+          "temperature_k": 216.0,
+          "cv_j_mol_k": 24.1235204759
+        },
+        {
+          "temperature_k": 220.0,
+          "cv_j_mol_k": 24.1524962154
+        },
+        {
+          "temperature_k": 224.0,
+          "cv_j_mol_k": 24.1799720553
+        },
+        {
+          "temperature_k": 228.0,
+          "cv_j_mol_k": 24.2060491214
+        },
+        {
+          "temperature_k": 232.0,
+          "cv_j_mol_k": 24.2308202113
+        },
+        {
+          "temperature_k": 236.0,
+          "cv_j_mol_k": 24.2543705985
+        },
+        {
+          "temperature_k": 240.0,
+          "cv_j_mol_k": 24.2767787488
+        },
+        {
+          "temperature_k": 244.0,
+          "cv_j_mol_k": 24.2981169582
+        },
+        {
+          "temperature_k": 248.0,
+          "cv_j_mol_k": 24.3184519227
+        },
+        {
+          "temperature_k": 252.0,
+          "cv_j_mol_k": 24.3378452482
+        },
+        {
+          "temperature_k": 256.0,
+          "cv_j_mol_k": 24.3563539071
+        },
+        {
+          "temperature_k": 260.0,
+          "cv_j_mol_k": 24.3740306481
+        },
+        {
+          "temperature_k": 264.0,
+          "cv_j_mol_k": 24.3909243648
+        },
+        {
+          "temperature_k": 268.0,
+          "cv_j_mol_k": 24.4070804272
+        },
+        {
+          "temperature_k": 272.0,
+          "cv_j_mol_k": 24.4225409807
+        },
+        {
+          "temperature_k": 276.0,
+          "cv_j_mol_k": 24.437345216
+        },
+        {
+          "temperature_k": 280.0,
+          "cv_j_mol_k": 24.4515296134
+        },
+        {
+          "temperature_k": 284.0,
+          "cv_j_mol_k": 24.4651281633
+        },
+        {
+          "temperature_k": 288.0,
+          "cv_j_mol_k": 24.4781725669
+        },
+        {
+          "temperature_k": 292.0,
+          "cv_j_mol_k": 24.4906924181
+        },
+        {
+          "temperature_k": 296.0,
+          "cv_j_mol_k": 24.5027153683
+        },
+        {
+          "temperature_k": 300.0,
+          "cv_j_mol_k": 24.5142672774
+        },
+        {
+          "temperature_k": 304.0,
+          "cv_j_mol_k": 24.5253723502
+        },
+        {
+          "temperature_k": 308.0,
+          "cv_j_mol_k": 24.5360532621
+        },
+        {
+          "temperature_k": 312.0,
+          "cv_j_mol_k": 24.5463312727
+        },
+        {
+          "temperature_k": 316.0,
+          "cv_j_mol_k": 24.5562263306
+        },
+        {
+          "temperature_k": 320.0,
+          "cv_j_mol_k": 24.5657571687
+        },
+        {
+          "temperature_k": 324.0,
+          "cv_j_mol_k": 24.5749413916
+        },
+        {
+          "temperature_k": 328.0,
+          "cv_j_mol_k": 24.5837955564
+        },
+        {
+          "temperature_k": 332.0,
+          "cv_j_mol_k": 24.592335246
+        },
+        {
+          "temperature_k": 336.0,
+          "cv_j_mol_k": 24.6005751371
+        },
+        {
+          "temperature_k": 340.0,
+          "cv_j_mol_k": 24.6085290622
+        },
+        {
+          "temperature_k": 344.0,
+          "cv_j_mol_k": 24.6162100675
+        },
+        {
+          "temperature_k": 348.0,
+          "cv_j_mol_k": 24.6236304656
+        },
+        {
+          "temperature_k": 352.0,
+          "cv_j_mol_k": 24.6308018841
+        },
+        {
+          "temperature_k": 356.0,
+          "cv_j_mol_k": 24.637735311
+        },
+        {
+          "temperature_k": 360.0,
+          "cv_j_mol_k": 24.6444411363
+        },
+        {
+          "temperature_k": 364.0,
+          "cv_j_mol_k": 24.6509291905
+        },
+        {
+          "temperature_k": 368.0,
+          "cv_j_mol_k": 24.6572087801
+        },
+        {
+          "temperature_k": 372.0,
+          "cv_j_mol_k": 24.663288721
+        },
+        {
+          "temperature_k": 376.0,
+          "cv_j_mol_k": 24.6691773691
+        },
+        {
+          "temperature_k": 380.0,
+          "cv_j_mol_k": 24.6748826484
+        },
+        {
+          "temperature_k": 384.0,
+          "cv_j_mol_k": 24.6804120778
+        },
+        {
+          "temperature_k": 388.0,
+          "cv_j_mol_k": 24.6857727957
+        },
+        {
+          "temperature_k": 392.0,
+          "cv_j_mol_k": 24.6909715823
+        },
+        {
+          "temperature_k": 396.0,
+          "cv_j_mol_k": 24.6960148817
+        },
+        {
+          "temperature_k": 400.0,
+          "cv_j_mol_k": 24.700908821
+        },
+        {
+          "temperature_k": 404.0,
+          "cv_j_mol_k": 24.7056592289
+        },
+        {
+          "temperature_k": 408.0,
+          "cv_j_mol_k": 24.7102716534
+        },
+        {
+          "temperature_k": 412.0,
+          "cv_j_mol_k": 24.7147513773
+        },
+        {
+          "temperature_k": 416.0,
+          "cv_j_mol_k": 24.7191034334
+        },
+        {
+          "temperature_k": 420.0,
+          "cv_j_mol_k": 24.7233326188
+        },
+        {
+          "temperature_k": 424.0,
+          "cv_j_mol_k": 24.7274435074
+        },
+        {
+          "temperature_k": 428.0,
+          "cv_j_mol_k": 24.731440463
+        },
+        {
+          "temperature_k": 432.0,
+          "cv_j_mol_k": 24.7353276501
+        },
+        {
+          "temperature_k": 436.0,
+          "cv_j_mol_k": 24.7391090451
+        },
+        {
+          "temperature_k": 440.0,
+          "cv_j_mol_k": 24.7427884463
+        },
+        {
+          "temperature_k": 444.0,
+          "cv_j_mol_k": 24.746369483
+        },
+        {
+          "temperature_k": 448.0,
+          "cv_j_mol_k": 24.7498556252
+        },
+        {
+          "temperature_k": 452.0,
+          "cv_j_mol_k": 24.7532501911
+        },
+        {
+          "temperature_k": 456.0,
+          "cv_j_mol_k": 24.7565563555
+        },
+        {
+          "temperature_k": 460.0,
+          "cv_j_mol_k": 24.7597771571
+        },
+        {
+          "temperature_k": 464.0,
+          "cv_j_mol_k": 24.762915505
+        },
+        {
+          "temperature_k": 468.0,
+          "cv_j_mol_k": 24.7659741861
+        },
+        {
+          "temperature_k": 472.0,
+          "cv_j_mol_k": 24.7689558703
+        },
+        {
+          "temperature_k": 476.0,
+          "cv_j_mol_k": 24.7718631169
+        },
+        {
+          "temperature_k": 480.0,
+          "cv_j_mol_k": 24.7746983798
+        },
+        {
+          "temperature_k": 484.0,
+          "cv_j_mol_k": 24.7774640128
+        },
+        {
+          "temperature_k": 488.0,
+          "cv_j_mol_k": 24.7801622746
+        },
+        {
+          "temperature_k": 492.0,
+          "cv_j_mol_k": 24.7827953327
+        },
+        {
+          "temperature_k": 496.0,
+          "cv_j_mol_k": 24.7853652687
+        },
+        {
+          "temperature_k": 500.0,
+          "cv_j_mol_k": 24.7878740817
+        },
+        {
+          "temperature_k": 504.0,
+          "cv_j_mol_k": 24.7903236923
+        },
+        {
+          "temperature_k": 508.0,
+          "cv_j_mol_k": 24.7927159465
+        },
+        {
+          "temperature_k": 512.0,
+          "cv_j_mol_k": 24.7950526189
+        },
+        {
+          "temperature_k": 516.0,
+          "cv_j_mol_k": 24.797335416
+        },
+        {
+          "temperature_k": 520.0,
+          "cv_j_mol_k": 24.7995659797
+        },
+        {
+          "temperature_k": 524.0,
+          "cv_j_mol_k": 24.8017458895
+        },
+        {
+          "temperature_k": 528.0,
+          "cv_j_mol_k": 24.803876666
+        },
+        {
+          "temperature_k": 532.0,
+          "cv_j_mol_k": 24.8059597731
+        },
+        {
+          "temperature_k": 536.0,
+          "cv_j_mol_k": 24.8079966206
+        },
+        {
+          "temperature_k": 540.0,
+          "cv_j_mol_k": 24.8099885668
+        },
+        {
+          "temperature_k": 544.0,
+          "cv_j_mol_k": 24.8119369203
+        },
+        {
+          "temperature_k": 548.0,
+          "cv_j_mol_k": 24.8138429427
+        },
+        {
+          "temperature_k": 552.0,
+          "cv_j_mol_k": 24.8157078501
+        },
+        {
+          "temperature_k": 556.0,
+          "cv_j_mol_k": 24.8175328155
+        },
+        {
+          "temperature_k": 560.0,
+          "cv_j_mol_k": 24.8193189702
+        },
+        {
+          "temperature_k": 564.0,
+          "cv_j_mol_k": 24.8210674059
+        },
+        {
+          "temperature_k": 568.0,
+          "cv_j_mol_k": 24.8227791762
+        },
+        {
+          "temperature_k": 572.0,
+          "cv_j_mol_k": 24.8244552982
+        },
+        {
+          "temperature_k": 576.0,
+          "cv_j_mol_k": 24.8260967539
+        },
+        {
+          "temperature_k": 580.0,
+          "cv_j_mol_k": 24.827704492
+        },
+        {
+          "temperature_k": 584.0,
+          "cv_j_mol_k": 24.8292794288
+        },
+        {
+          "temperature_k": 588.0,
+          "cv_j_mol_k": 24.8308224496
+        },
+        {
+          "temperature_k": 592.0,
+          "cv_j_mol_k": 24.8323344104
+        },
+        {
+          "temperature_k": 596.0,
+          "cv_j_mol_k": 24.8338161385
+        },
+        {
+          "temperature_k": 600.0,
+          "cv_j_mol_k": 24.8352684338
+        },
+        {
+          "temperature_k": 604.0,
+          "cv_j_mol_k": 24.8366920702
+        },
+        {
+          "temperature_k": 608.0,
+          "cv_j_mol_k": 24.838087796
+        },
+        {
+          "temperature_k": 612.0,
+          "cv_j_mol_k": 24.8394563355
+        },
+        {
+          "temperature_k": 616.0,
+          "cv_j_mol_k": 24.8407983897
+        },
+        {
+          "temperature_k": 620.0,
+          "cv_j_mol_k": 24.8421146371
+        },
+        {
+          "temperature_k": 624.0,
+          "cv_j_mol_k": 24.8434057345
+        },
+        {
+          "temperature_k": 628.0,
+          "cv_j_mol_k": 24.8446723181
+        },
+        {
+          "temperature_k": 632.0,
+          "cv_j_mol_k": 24.8459150042
+        },
+        {
+          "temperature_k": 636.0,
+          "cv_j_mol_k": 24.8471343896
+        },
+        {
+          "temperature_k": 640.0,
+          "cv_j_mol_k": 24.8483310529
+        },
+        {
+          "temperature_k": 644.0,
+          "cv_j_mol_k": 24.8495055547
+        },
+        {
+          "temperature_k": 648.0,
+          "cv_j_mol_k": 24.8506584385
+        },
+        {
+          "temperature_k": 652.0,
+          "cv_j_mol_k": 24.8517902311
+        },
+        {
+          "temperature_k": 656.0,
+          "cv_j_mol_k": 24.8529014435
+        },
+        {
+          "temperature_k": 660.0,
+          "cv_j_mol_k": 24.8539925713
+        },
+        {
+          "temperature_k": 664.0,
+          "cv_j_mol_k": 24.8550640954
+        },
+        {
+          "temperature_k": 668.0,
+          "cv_j_mol_k": 24.8561164822
+        },
+        {
+          "temperature_k": 672.0,
+          "cv_j_mol_k": 24.8571501844
+        },
+        {
+          "temperature_k": 676.0,
+          "cv_j_mol_k": 24.8581656414
+        },
+        {
+          "temperature_k": 680.0,
+          "cv_j_mol_k": 24.8591632798
+        },
+        {
+          "temperature_k": 684.0,
+          "cv_j_mol_k": 24.8601435137
+        },
+        {
+          "temperature_k": 688.0,
+          "cv_j_mol_k": 24.8611067456
+        },
+        {
+          "temperature_k": 692.0,
+          "cv_j_mol_k": 24.8620533659
+        },
+        {
+          "temperature_k": 696.0,
+          "cv_j_mol_k": 24.8629837542
+        },
+        {
+          "temperature_k": 700.0,
+          "cv_j_mol_k": 24.8638982794
+        },
+        {
+          "temperature_k": 704.0,
+          "cv_j_mol_k": 24.8647972997
+        },
+        {
+          "temperature_k": 708.0,
+          "cv_j_mol_k": 24.8656811636
+        },
+        {
+          "temperature_k": 712.0,
+          "cv_j_mol_k": 24.8665502094
+        },
+        {
+          "temperature_k": 716.0,
+          "cv_j_mol_k": 24.8674047666
+        },
+        {
+          "temperature_k": 720.0,
+          "cv_j_mol_k": 24.868245155
+        },
+        {
+          "temperature_k": 724.0,
+          "cv_j_mol_k": 24.8690716861
+        },
+        {
+          "temperature_k": 728.0,
+          "cv_j_mol_k": 24.8698846627
+        },
+        {
+          "temperature_k": 732.0,
+          "cv_j_mol_k": 24.8706843794
+        },
+        {
+          "temperature_k": 736.0,
+          "cv_j_mol_k": 24.8714711228
+        },
+        {
+          "temperature_k": 740.0,
+          "cv_j_mol_k": 24.8722451718
+        },
+        {
+          "temperature_k": 744.0,
+          "cv_j_mol_k": 24.873006798
+        },
+        {
+          "temperature_k": 748.0,
+          "cv_j_mol_k": 24.8737562656
+        },
+        {
+          "temperature_k": 752.0,
+          "cv_j_mol_k": 24.8744938319
+        },
+        {
+          "temperature_k": 756.0,
+          "cv_j_mol_k": 24.8752197474
+        },
+        {
+          "temperature_k": 760.0,
+          "cv_j_mol_k": 24.8759342561
+        },
+        {
+          "temperature_k": 764.0,
+          "cv_j_mol_k": 24.8766375957
+        },
+        {
+          "temperature_k": 768.0,
+          "cv_j_mol_k": 24.8773299974
+        },
+        {
+          "temperature_k": 772.0,
+          "cv_j_mol_k": 24.878011687
+        },
+        {
+          "temperature_k": 776.0,
+          "cv_j_mol_k": 24.8786828841
+        },
+        {
+          "temperature_k": 780.0,
+          "cv_j_mol_k": 24.8793438027
+        },
+        {
+          "temperature_k": 784.0,
+          "cv_j_mol_k": 24.8799946517
+        },
+        {
+          "temperature_k": 788.0,
+          "cv_j_mol_k": 24.8806356345
+        },
+        {
+          "temperature_k": 792.0,
+          "cv_j_mol_k": 24.8812669492
+        },
+        {
+          "temperature_k": 796.0,
+          "cv_j_mol_k": 24.8818887894
+        },
+        {
+          "temperature_k": 800.0,
+          "cv_j_mol_k": 24.8825013436
+        }
+      ],
+      "Cu": [
+        {
+          "temperature_k": 0.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 4.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 8.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 12.0,
+          "cv_j_mol_k": 1.2683e-06
+        },
+        {
+          "temperature_k": 16.0,
+          "cv_j_mol_k": 0.0002282033
+        },
+        {
+          "temperature_k": 20.0,
+          "cv_j_mol_k": 0.0046503464
+        },
+        {
+          "temperature_k": 24.0,
+          "cv_j_mol_k": 0.0324428371
+        },
+        {
+          "temperature_k": 28.0,
+          "cv_j_mol_k": 0.1238702037
+        },
+        {
+          "temperature_k": 32.0,
+          "cv_j_mol_k": 0.326490215
+        },
+        {
+          "temperature_k": 36.0,
+          "cv_j_mol_k": 0.6750028147
+        },
+        {
+          "temperature_k": 40.0,
+          "cv_j_mol_k": 1.1809914165
+        },
+        {
+          "temperature_k": 44.0,
+          "cv_j_mol_k": 1.8343518118
+        },
+        {
+          "temperature_k": 48.0,
+          "cv_j_mol_k": 2.610603911
+        },
+        {
+          "temperature_k": 52.0,
+          "cv_j_mol_k": 3.4787991349
+        },
+        {
+          "temperature_k": 56.0,
+          "cv_j_mol_k": 4.4075061301
+        },
+        {
+          "temperature_k": 60.0,
+          "cv_j_mol_k": 5.3684025373
+        },
+        {
+          "temperature_k": 64.0,
+          "cv_j_mol_k": 6.3379226253
+        },
+        {
+          "temperature_k": 68.0,
+          "cv_j_mol_k": 7.2976214545
+        },
+        {
+          "temperature_k": 72.0,
+          "cv_j_mol_k": 8.2338205441
+        },
+        {
+          "temperature_k": 76.0,
+          "cv_j_mol_k": 9.1369272466
+        },
+        {
+          "temperature_k": 80.0,
+          "cv_j_mol_k": 10.0006655915
+        },
+        {
+          "temperature_k": 84.0,
+          "cv_j_mol_k": 10.8213455909
+        },
+        {
+          "temperature_k": 88.0,
+          "cv_j_mol_k": 11.5972278911
+        },
+        {
+          "temperature_k": 92.0,
+          "cv_j_mol_k": 12.3280004254
+        },
+        {
+          "temperature_k": 96.0,
+          "cv_j_mol_k": 13.0143629281
+        },
+        {
+          "temperature_k": 100.0,
+          "cv_j_mol_k": 13.6577059707
+        },
+        {
+          "temperature_k": 104.0,
+          "cv_j_mol_k": 14.2598684062
+        },
+        {
+          "temperature_k": 108.0,
+          "cv_j_mol_k": 14.8229575684
+        },
+        {
+          "temperature_k": 112.0,
+          "cv_j_mol_k": 15.3492184502
+        },
+        {
+          "temperature_k": 116.0,
+          "cv_j_mol_k": 15.8409403976
+        },
+        {
+          "temperature_k": 120.0,
+          "cv_j_mol_k": 16.3003921092
+        },
+        {
+          "temperature_k": 124.0,
+          "cv_j_mol_k": 16.7297777169
+        },
+        {
+          "temperature_k": 128.0,
+          "cv_j_mol_k": 17.1312083808
+        },
+        {
+          "temperature_k": 132.0,
+          "cv_j_mol_k": 17.5066851637
+        },
+        {
+          "temperature_k": 136.0,
+          "cv_j_mol_k": 17.8580899953
+        },
+        {
+          "temperature_k": 140.0,
+          "cv_j_mol_k": 18.1871823493
+        },
+        {
+          "temperature_k": 144.0,
+          "cv_j_mol_k": 18.4955998706
+        },
+        {
+          "temperature_k": 148.0,
+          "cv_j_mol_k": 18.7848616612
+        },
+        {
+          "temperature_k": 152.0,
+          "cv_j_mol_k": 19.056373282
+        },
+        {
+          "temperature_k": 156.0,
+          "cv_j_mol_k": 19.3114327922
+        },
+        {
+          "temperature_k": 160.0,
+          "cv_j_mol_k": 19.5512373411
+        },
+        {
+          "temperature_k": 164.0,
+          "cv_j_mol_k": 19.7768899716
+        },
+        {
+          "temperature_k": 168.0,
+          "cv_j_mol_k": 19.9894064015
+        },
+        {
+          "temperature_k": 172.0,
+          "cv_j_mol_k": 20.1897216239
+        },
+        {
+          "temperature_k": 176.0,
+          "cv_j_mol_k": 20.3786962253
+        },
+        {
+          "temperature_k": 180.0,
+          "cv_j_mol_k": 20.55712236
+        },
+        {
+          "temperature_k": 184.0,
+          "cv_j_mol_k": 20.7257293487
+        },
+        {
+          "temperature_k": 188.0,
+          "cv_j_mol_k": 20.8851888876
+        },
+        {
+          "temperature_k": 192.0,
+          "cv_j_mol_k": 21.03611987
+        },
+        {
+          "temperature_k": 196.0,
+          "cv_j_mol_k": 21.1790928307
+        },
+        {
+          "temperature_k": 200.0,
+          "cv_j_mol_k": 21.3146340295
+        },
+        {
+          "temperature_k": 204.0,
+          "cv_j_mol_k": 21.4432291949
+        },
+        {
+          "temperature_k": 208.0,
+          "cv_j_mol_k": 21.565326948
+        },
+        {
+          "temperature_k": 212.0,
+          "cv_j_mol_k": 21.6813419317
+        },
+        {
+          "temperature_k": 216.0,
+          "cv_j_mol_k": 21.7916576661
+        },
+        {
+          "temperature_k": 220.0,
+          "cv_j_mol_k": 21.8966291529
+        },
+        {
+          "temperature_k": 224.0,
+          "cv_j_mol_k": 21.9965852493
+        },
+        {
+          "temperature_k": 228.0,
+          "cv_j_mol_k": 22.0918308321
+        },
+        {
+          "temperature_k": 232.0,
+          "cv_j_mol_k": 22.182648769
+        },
+        {
+          "temperature_k": 236.0,
+          "cv_j_mol_k": 22.2693017161
+        },
+        {
+          "temperature_k": 240.0,
+          "cv_j_mol_k": 22.3520337557
+        },
+        {
+          "temperature_k": 244.0,
+          "cv_j_mol_k": 22.4310718896
+        },
+        {
+          "temperature_k": 248.0,
+          "cv_j_mol_k": 22.5066274018
+        },
+        {
+          "temperature_k": 252.0,
+          "cv_j_mol_k": 22.5788971014
+        },
+        {
+          "temperature_k": 256.0,
+          "cv_j_mol_k": 22.6480644573
+        },
+        {
+          "temperature_k": 260.0,
+          "cv_j_mol_k": 22.7143006352
+        },
+        {
+          "temperature_k": 264.0,
+          "cv_j_mol_k": 22.7777654451
+        },
+        {
+          "temperature_k": 268.0,
+          "cv_j_mol_k": 22.8386082076
+        },
+        {
+          "temperature_k": 272.0,
+          "cv_j_mol_k": 22.8969685477
+        },
+        {
+          "temperature_k": 276.0,
+          "cv_j_mol_k": 22.95297712
+        },
+        {
+          "temperature_k": 280.0,
+          "cv_j_mol_k": 23.0067562753
+        },
+        {
+          "temperature_k": 284.0,
+          "cv_j_mol_k": 23.0584206705
+        },
+        {
+          "temperature_k": 288.0,
+          "cv_j_mol_k": 23.1080778285
+        },
+        {
+          "temperature_k": 292.0,
+          "cv_j_mol_k": 23.1558286532
+        },
+        {
+          "temperature_k": 296.0,
+          "cv_j_mol_k": 23.2017679017
+        },
+        {
+          "temperature_k": 300.0,
+          "cv_j_mol_k": 23.2459846194
+        },
+        {
+          "temperature_k": 304.0,
+          "cv_j_mol_k": 23.2885625398
+        },
+        {
+          "temperature_k": 308.0,
+          "cv_j_mol_k": 23.3295804536
+        },
+        {
+          "temperature_k": 312.0,
+          "cv_j_mol_k": 23.3691125481
+        },
+        {
+          "temperature_k": 316.0,
+          "cv_j_mol_k": 23.4072287205
+        },
+        {
+          "temperature_k": 320.0,
+          "cv_j_mol_k": 23.4439948672
+        },
+        {
+          "temperature_k": 324.0,
+          "cv_j_mol_k": 23.4794731511
+        },
+        {
+          "temperature_k": 328.0,
+          "cv_j_mol_k": 23.5137222485
+        },
+        {
+          "temperature_k": 332.0,
+          "cv_j_mol_k": 23.5467975773
+        },
+        {
+          "temperature_k": 336.0,
+          "cv_j_mol_k": 23.578751509
+        },
+        {
+          "temperature_k": 340.0,
+          "cv_j_mol_k": 23.6096335641
+        },
+        {
+          "temperature_k": 344.0,
+          "cv_j_mol_k": 23.6394905942
+        },
+        {
+          "temperature_k": 348.0,
+          "cv_j_mol_k": 23.6683669499
+        },
+        {
+          "temperature_k": 352.0,
+          "cv_j_mol_k": 23.6963046376
+        },
+        {
+          "temperature_k": 356.0,
+          "cv_j_mol_k": 23.7233434646
+        },
+        {
+          "temperature_k": 360.0,
+          "cv_j_mol_k": 23.749521174
+        },
+        {
+          "temperature_k": 364.0,
+          "cv_j_mol_k": 23.7748735703
+        },
+        {
+          "temperature_k": 368.0,
+          "cv_j_mol_k": 23.7994346366
+        },
+        {
+          "temperature_k": 372.0,
+          "cv_j_mol_k": 23.8232366428
+        },
+        {
+          "temperature_k": 376.0,
+          "cv_j_mol_k": 23.8463102475
+        },
+        {
+          "temperature_k": 380.0,
+          "cv_j_mol_k": 23.8686845923
+        },
+        {
+          "temperature_k": 384.0,
+          "cv_j_mol_k": 23.8903873904
+        },
+        {
+          "temperature_k": 388.0,
+          "cv_j_mol_k": 23.9114450084
+        },
+        {
+          "temperature_k": 392.0,
+          "cv_j_mol_k": 23.9318825435
+        },
+        {
+          "temperature_k": 396.0,
+          "cv_j_mol_k": 23.9517238957
+        },
+        {
+          "temperature_k": 400.0,
+          "cv_j_mol_k": 23.9709918346
+        },
+        {
+          "temperature_k": 404.0,
+          "cv_j_mol_k": 23.9897080626
+        },
+        {
+          "temperature_k": 408.0,
+          "cv_j_mol_k": 24.0078932738
+        },
+        {
+          "temperature_k": 412.0,
+          "cv_j_mol_k": 24.0255672089
+        },
+        {
+          "temperature_k": 416.0,
+          "cv_j_mol_k": 24.0427487075
+        },
+        {
+          "temperature_k": 420.0,
+          "cv_j_mol_k": 24.0594557562
+        },
+        {
+          "temperature_k": 424.0,
+          "cv_j_mol_k": 24.0757055341
+        },
+        {
+          "temperature_k": 428.0,
+          "cv_j_mol_k": 24.091514456
+        },
+        {
+          "temperature_k": 432.0,
+          "cv_j_mol_k": 24.106898212
+        },
+        {
+          "temperature_k": 436.0,
+          "cv_j_mol_k": 24.1218718055
+        },
+        {
+          "temperature_k": 440.0,
+          "cv_j_mol_k": 24.1364495886
+        },
+        {
+          "temperature_k": 444.0,
+          "cv_j_mol_k": 24.1506452959
+        },
+        {
+          "temperature_k": 448.0,
+          "cv_j_mol_k": 24.1644720749
+        },
+        {
+          "temperature_k": 452.0,
+          "cv_j_mol_k": 24.1779425169
+        },
+        {
+          "temperature_k": 456.0,
+          "cv_j_mol_k": 24.1910686836
+        },
+        {
+          "temperature_k": 460.0,
+          "cv_j_mol_k": 24.2038621344
+        },
+        {
+          "temperature_k": 464.0,
+          "cv_j_mol_k": 24.2163339504
+        },
+        {
+          "temperature_k": 468.0,
+          "cv_j_mol_k": 24.2284947583
+        },
+        {
+          "temperature_k": 472.0,
+          "cv_j_mol_k": 24.2403547522
+        },
+        {
+          "temperature_k": 476.0,
+          "cv_j_mol_k": 24.2519237143
+        },
+        {
+          "temperature_k": 480.0,
+          "cv_j_mol_k": 24.2632110349
+        },
+        {
+          "temperature_k": 484.0,
+          "cv_j_mol_k": 24.2742257308
+        },
+        {
+          "temperature_k": 488.0,
+          "cv_j_mol_k": 24.2849764629
+        },
+        {
+          "temperature_k": 492.0,
+          "cv_j_mol_k": 24.2954715528
+        },
+        {
+          "temperature_k": 496.0,
+          "cv_j_mol_k": 24.3057189986
+        },
+        {
+          "temperature_k": 500.0,
+          "cv_j_mol_k": 24.3157264895
+        },
+        {
+          "temperature_k": 504.0,
+          "cv_j_mol_k": 24.3255014206
+        },
+        {
+          "temperature_k": 508.0,
+          "cv_j_mol_k": 24.3350509055
+        },
+        {
+          "temperature_k": 512.0,
+          "cv_j_mol_k": 24.3443817894
+        },
+        {
+          "temperature_k": 516.0,
+          "cv_j_mol_k": 24.3535006608
+        },
+        {
+          "temperature_k": 520.0,
+          "cv_j_mol_k": 24.3624138634
+        },
+        {
+          "temperature_k": 524.0,
+          "cv_j_mol_k": 24.3711275063
+        },
+        {
+          "temperature_k": 528.0,
+          "cv_j_mol_k": 24.3796474746
+        },
+        {
+          "temperature_k": 532.0,
+          "cv_j_mol_k": 24.3879794393
+        },
+        {
+          "temperature_k": 536.0,
+          "cv_j_mol_k": 24.3961288659
+        },
+        {
+          "temperature_k": 540.0,
+          "cv_j_mol_k": 24.4041010241
+        },
+        {
+          "temperature_k": 544.0,
+          "cv_j_mol_k": 24.4119009954
+        },
+        {
+          "temperature_k": 548.0,
+          "cv_j_mol_k": 24.4195336813
+        },
+        {
+          "temperature_k": 552.0,
+          "cv_j_mol_k": 24.427003811
+        },
+        {
+          "temperature_k": 556.0,
+          "cv_j_mol_k": 24.4343159485
+        },
+        {
+          "temperature_k": 560.0,
+          "cv_j_mol_k": 24.4414744994
+        },
+        {
+          "temperature_k": 564.0,
+          "cv_j_mol_k": 24.4484837174
+        },
+        {
+          "temperature_k": 568.0,
+          "cv_j_mol_k": 24.4553477106
+        },
+        {
+          "temperature_k": 572.0,
+          "cv_j_mol_k": 24.4620704474
+        },
+        {
+          "temperature_k": 576.0,
+          "cv_j_mol_k": 24.468655762
+        },
+        {
+          "temperature_k": 580.0,
+          "cv_j_mol_k": 24.4751073602
+        },
+        {
+          "temperature_k": 584.0,
+          "cv_j_mol_k": 24.4814288238
+        },
+        {
+          "temperature_k": 588.0,
+          "cv_j_mol_k": 24.4876236162
+        },
+        {
+          "temperature_k": 592.0,
+          "cv_j_mol_k": 24.4936950868
+        },
+        {
+          "temperature_k": 596.0,
+          "cv_j_mol_k": 24.4996464753
+        },
+        {
+          "temperature_k": 600.0,
+          "cv_j_mol_k": 24.5054809161
+        },
+        {
+          "temperature_k": 604.0,
+          "cv_j_mol_k": 24.5112014426
+        },
+        {
+          "temperature_k": 608.0,
+          "cv_j_mol_k": 24.5168109905
+        },
+        {
+          "temperature_k": 612.0,
+          "cv_j_mol_k": 24.5223124021
+        },
+        {
+          "temperature_k": 616.0,
+          "cv_j_mol_k": 24.5277084296
+        },
+        {
+          "temperature_k": 620.0,
+          "cv_j_mol_k": 24.5330017384
+        },
+        {
+          "temperature_k": 624.0,
+          "cv_j_mol_k": 24.5381949105
+        },
+        {
+          "temperature_k": 628.0,
+          "cv_j_mol_k": 24.5432904475
+        },
+        {
+          "temperature_k": 632.0,
+          "cv_j_mol_k": 24.5482907737
+        },
+        {
+          "temperature_k": 636.0,
+          "cv_j_mol_k": 24.5531982388
+        },
+        {
+          "temperature_k": 640.0,
+          "cv_j_mol_k": 24.5580151209
+        },
+        {
+          "temperature_k": 644.0,
+          "cv_j_mol_k": 24.5627436285
+        },
+        {
+          "temperature_k": 648.0,
+          "cv_j_mol_k": 24.5673859037
+        },
+        {
+          "temperature_k": 652.0,
+          "cv_j_mol_k": 24.5719440243
+        },
+        {
+          "temperature_k": 656.0,
+          "cv_j_mol_k": 24.576420006
+        },
+        {
+          "temperature_k": 660.0,
+          "cv_j_mol_k": 24.5808158047
+        },
+        {
+          "temperature_k": 664.0,
+          "cv_j_mol_k": 24.5851333185
+        },
+        {
+          "temperature_k": 668.0,
+          "cv_j_mol_k": 24.58937439
+        },
+        {
+          "temperature_k": 672.0,
+          "cv_j_mol_k": 24.593540808
+        },
+        {
+          "temperature_k": 676.0,
+          "cv_j_mol_k": 24.5976343095
+        },
+        {
+          "temperature_k": 680.0,
+          "cv_j_mol_k": 24.6016565812
+        },
+        {
+          "temperature_k": 684.0,
+          "cv_j_mol_k": 24.6056092618
+        },
+        {
+          "temperature_k": 688.0,
+          "cv_j_mol_k": 24.6094939428
+        },
+        {
+          "temperature_k": 692.0,
+          "cv_j_mol_k": 24.6133121711
+        },
+        {
+          "temperature_k": 696.0,
+          "cv_j_mol_k": 24.6170654497
+        },
+        {
+          "temperature_k": 700.0,
+          "cv_j_mol_k": 24.6207552394
+        },
+        {
+          "temperature_k": 704.0,
+          "cv_j_mol_k": 24.6243829604
+        },
+        {
+          "temperature_k": 708.0,
+          "cv_j_mol_k": 24.6279499935
+        },
+        {
+          "temperature_k": 712.0,
+          "cv_j_mol_k": 24.6314576814
+        },
+        {
+          "temperature_k": 716.0,
+          "cv_j_mol_k": 24.63490733
+        },
+        {
+          "temperature_k": 720.0,
+          "cv_j_mol_k": 24.6383002095
+        },
+        {
+          "temperature_k": 724.0,
+          "cv_j_mol_k": 24.6416375557
+        },
+        {
+          "temperature_k": 728.0,
+          "cv_j_mol_k": 24.6449205709
+        },
+        {
+          "temperature_k": 732.0,
+          "cv_j_mol_k": 24.6481504253
+        },
+        {
+          "temperature_k": 736.0,
+          "cv_j_mol_k": 24.6513282578
+        },
+        {
+          "temperature_k": 740.0,
+          "cv_j_mol_k": 24.6544551768
+        },
+        {
+          "temperature_k": 744.0,
+          "cv_j_mol_k": 24.6575322618
+        },
+        {
+          "temperature_k": 748.0,
+          "cv_j_mol_k": 24.6605605636
+        },
+        {
+          "temperature_k": 752.0,
+          "cv_j_mol_k": 24.6635411057
+        },
+        {
+          "temperature_k": 756.0,
+          "cv_j_mol_k": 24.6664748847
+        },
+        {
+          "temperature_k": 760.0,
+          "cv_j_mol_k": 24.6693628718
+        },
+        {
+          "temperature_k": 764.0,
+          "cv_j_mol_k": 24.6722060128
+        },
+        {
+          "temperature_k": 768.0,
+          "cv_j_mol_k": 24.6750052295
+        },
+        {
+          "temperature_k": 772.0,
+          "cv_j_mol_k": 24.6777614201
+        },
+        {
+          "temperature_k": 776.0,
+          "cv_j_mol_k": 24.6804754599
+        },
+        {
+          "temperature_k": 780.0,
+          "cv_j_mol_k": 24.6831482023
+        },
+        {
+          "temperature_k": 784.0,
+          "cv_j_mol_k": 24.6857804791
+        },
+        {
+          "temperature_k": 788.0,
+          "cv_j_mol_k": 24.6883731015
+        },
+        {
+          "temperature_k": 792.0,
+          "cv_j_mol_k": 24.6909268603
+        },
+        {
+          "temperature_k": 796.0,
+          "cv_j_mol_k": 24.6934425268
+        },
+        {
+          "temperature_k": 800.0,
+          "cv_j_mol_k": 24.6959208534
+        }
+      ],
+      "Ti": [
+        {
+          "temperature_k": 0.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 4.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 8.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 12.0,
+          "cv_j_mol_k": 1.11e-08
+        },
+        {
+          "temperature_k": 16.0,
+          "cv_j_mol_k": 7.2334e-06
+        },
+        {
+          "temperature_k": 20.0,
+          "cv_j_mol_k": 0.000318587
+        },
+        {
+          "temperature_k": 24.0,
+          "cv_j_mol_k": 0.0037153937
+        },
+        {
+          "temperature_k": 28.0,
+          "cv_j_mol_k": 0.0204745566
+        },
+        {
+          "temperature_k": 32.0,
+          "cv_j_mol_k": 0.0710513119
+        },
+        {
+          "temperature_k": 36.0,
+          "cv_j_mol_k": 0.1818825327
+        },
+        {
+          "temperature_k": 40.0,
+          "cv_j_mol_k": 0.377369981
+        },
+        {
+          "temperature_k": 44.0,
+          "cv_j_mol_k": 0.6734776872
+        },
+        {
+          "temperature_k": 48.0,
+          "cv_j_mol_k": 1.075332175
+        },
+        {
+          "temperature_k": 52.0,
+          "cv_j_mol_k": 1.5782071199
+        },
+        {
+          "temperature_k": 56.0,
+          "cv_j_mol_k": 2.1702384764
+        },
+        {
+          "temperature_k": 60.0,
+          "cv_j_mol_k": 2.8354722929
+        },
+        {
+          "temperature_k": 64.0,
+          "cv_j_mol_k": 3.5564611869
+        },
+        {
+          "temperature_k": 68.0,
+          "cv_j_mol_k": 4.3161321811
+        },
+        {
+          "temperature_k": 72.0,
+          "cv_j_mol_k": 5.0989434122
+        },
+        {
+          "temperature_k": 76.0,
+          "cv_j_mol_k": 5.8914726076
+        },
+        {
+          "temperature_k": 80.0,
+          "cv_j_mol_k": 6.6826056216
+        },
+        {
+          "temperature_k": 84.0,
+          "cv_j_mol_k": 7.4634723202
+        },
+        {
+          "temperature_k": 88.0,
+          "cv_j_mol_k": 8.2272414814
+        },
+        {
+          "temperature_k": 92.0,
+          "cv_j_mol_k": 8.9688516038
+        },
+        {
+          "temperature_k": 96.0,
+          "cv_j_mol_k": 9.6847264119
+        },
+        {
+          "temperature_k": 100.0,
+          "cv_j_mol_k": 10.3725033879
+        },
+        {
+          "temperature_k": 104.0,
+          "cv_j_mol_k": 11.030789842
+        },
+        {
+          "temperature_k": 108.0,
+          "cv_j_mol_k": 11.6589522642
+        },
+        {
+          "temperature_k": 112.0,
+          "cv_j_mol_k": 12.2569395037
+        },
+        {
+          "temperature_k": 116.0,
+          "cv_j_mol_k": 12.8251375007
+        },
+        {
+          "temperature_k": 120.0,
+          "cv_j_mol_k": 13.3642519725
+        },
+        {
+          "temperature_k": 124.0,
+          "cv_j_mol_k": 13.8752150396
+        },
+        {
+          "temperature_k": 128.0,
+          "cv_j_mol_k": 14.3591118652
+        },
+        {
+          "temperature_k": 132.0,
+          "cv_j_mol_k": 14.8171237263
+        },
+        {
+          "temperature_k": 136.0,
+          "cv_j_mol_k": 15.250484392
+        },
+        {
+          "temperature_k": 140.0,
+          "cv_j_mol_k": 15.6604471548
+        },
+        {
+          "temperature_k": 144.0,
+          "cv_j_mol_k": 16.0482603084
+        },
+        {
+          "temperature_k": 148.0,
+          "cv_j_mol_k": 16.4151492689
+        },
+        {
+          "temperature_k": 152.0,
+          "cv_j_mol_k": 16.762303875
+        },
+        {
+          "temperature_k": 156.0,
+          "cv_j_mol_k": 17.0908696966
+        },
+        {
+          "temperature_k": 160.0,
+          "cv_j_mol_k": 17.4019424199
+        },
+        {
+          "temperature_k": 164.0,
+          "cv_j_mol_k": 17.6965645692
+        },
+        {
+          "temperature_k": 168.0,
+          "cv_j_mol_k": 17.9757239874
+        },
+        {
+          "temperature_k": 172.0,
+          "cv_j_mol_k": 18.2403536213
+        },
+        {
+          "temperature_k": 176.0,
+          "cv_j_mol_k": 18.4913322573
+        },
+        {
+          "temperature_k": 180.0,
+          "cv_j_mol_k": 18.7294859377
+        },
+        {
+          "temperature_k": 184.0,
+          "cv_j_mol_k": 18.9555898436
+        },
+        {
+          "temperature_k": 188.0,
+          "cv_j_mol_k": 19.1703704869
+        },
+        {
+          "temperature_k": 192.0,
+          "cv_j_mol_k": 19.3745080888
+        },
+        {
+          "temperature_k": 196.0,
+          "cv_j_mol_k": 19.5686390523
+        },
+        {
+          "temperature_k": 200.0,
+          "cv_j_mol_k": 19.7533584624
+        },
+        {
+          "temperature_k": 204.0,
+          "cv_j_mol_k": 19.9292225635
+        },
+        {
+          "temperature_k": 208.0,
+          "cv_j_mol_k": 20.0967511782
+        },
+        {
+          "temperature_k": 212.0,
+          "cv_j_mol_k": 20.2564300442
+        },
+        {
+          "temperature_k": 216.0,
+          "cv_j_mol_k": 20.4087130507
+        },
+        {
+          "temperature_k": 220.0,
+          "cv_j_mol_k": 20.5540243663
+        },
+        {
+          "temperature_k": 224.0,
+          "cv_j_mol_k": 20.6927604514
+        },
+        {
+          "temperature_k": 228.0,
+          "cv_j_mol_k": 20.8252919539
+        },
+        {
+          "temperature_k": 232.0,
+          "cv_j_mol_k": 20.9519654884
+        },
+        {
+          "temperature_k": 236.0,
+          "cv_j_mol_k": 21.0731053022
+        },
+        {
+          "temperature_k": 240.0,
+          "cv_j_mol_k": 21.1890148304
+        },
+        {
+          "temperature_k": 244.0,
+          "cv_j_mol_k": 21.2999781457
+        },
+        {
+          "temperature_k": 248.0,
+          "cv_j_mol_k": 21.4062613084
+        },
+        {
+          "temperature_k": 252.0,
+          "cv_j_mol_k": 21.5081136209
+        },
+        {
+          "temperature_k": 256.0,
+          "cv_j_mol_k": 21.6057687935
+        },
+        {
+          "temperature_k": 260.0,
+          "cv_j_mol_k": 21.6994460257
+        },
+        {
+          "temperature_k": 264.0,
+          "cv_j_mol_k": 21.7893510098
+        },
+        {
+          "temperature_k": 268.0,
+          "cv_j_mol_k": 21.8756768619
+        },
+        {
+          "temperature_k": 272.0,
+          "cv_j_mol_k": 21.958604984
+        },
+        {
+          "temperature_k": 276.0,
+          "cv_j_mol_k": 22.0383058638
+        },
+        {
+          "temperature_k": 280.0,
+          "cv_j_mol_k": 22.1149398158
+        },
+        {
+          "temperature_k": 284.0,
+          "cv_j_mol_k": 22.1886576683
+        },
+        {
+          "temperature_k": 288.0,
+          "cv_j_mol_k": 22.2596013998
+        },
+        {
+          "temperature_k": 292.0,
+          "cv_j_mol_k": 22.3279047297
+        },
+        {
+          "temperature_k": 296.0,
+          "cv_j_mol_k": 22.3936936653
+        },
+        {
+          "temperature_k": 300.0,
+          "cv_j_mol_k": 22.4570870096
+        },
+        {
+          "temperature_k": 304.0,
+          "cv_j_mol_k": 22.5181968322
+        },
+        {
+          "temperature_k": 308.0,
+          "cv_j_mol_k": 22.5771289066
+        },
+        {
+          "temperature_k": 312.0,
+          "cv_j_mol_k": 22.6339831157
+        },
+        {
+          "temperature_k": 316.0,
+          "cv_j_mol_k": 22.6888538291
+        },
+        {
+          "temperature_k": 320.0,
+          "cv_j_mol_k": 22.7418302527
+        },
+        {
+          "temperature_k": 324.0,
+          "cv_j_mol_k": 22.7929967546
+        },
+        {
+          "temperature_k": 328.0,
+          "cv_j_mol_k": 22.8424331675
+        },
+        {
+          "temperature_k": 332.0,
+          "cv_j_mol_k": 22.8902150703
+        },
+        {
+          "temperature_k": 336.0,
+          "cv_j_mol_k": 22.93641405
+        },
+        {
+          "temperature_k": 340.0,
+          "cv_j_mol_k": 22.981097946
+        },
+        {
+          "temperature_k": 344.0,
+          "cv_j_mol_k": 23.0243310771
+        },
+        {
+          "temperature_k": 348.0,
+          "cv_j_mol_k": 23.0661744531
+        },
+        {
+          "temperature_k": 352.0,
+          "cv_j_mol_k": 23.1066859731
+        },
+        {
+          "temperature_k": 356.0,
+          "cv_j_mol_k": 23.1459206089
+        },
+        {
+          "temperature_k": 360.0,
+          "cv_j_mol_k": 23.1839305775
+        },
+        {
+          "temperature_k": 364.0,
+          "cv_j_mol_k": 23.2207655015
+        },
+        {
+          "temperature_k": 368.0,
+          "cv_j_mol_k": 23.2564725594
+        },
+        {
+          "temperature_k": 372.0,
+          "cv_j_mol_k": 23.2910966254
+        },
+        {
+          "temperature_k": 376.0,
+          "cv_j_mol_k": 23.3246804012
+        },
+        {
+          "temperature_k": 380.0,
+          "cv_j_mol_k": 23.357264538
+        },
+        {
+          "temperature_k": 384.0,
+          "cv_j_mol_k": 23.388887752
+        },
+        {
+          "temperature_k": 388.0,
+          "cv_j_mol_k": 23.4195869318
+        },
+        {
+          "temperature_k": 392.0,
+          "cv_j_mol_k": 23.4493972389
+        },
+        {
+          "temperature_k": 396.0,
+          "cv_j_mol_k": 23.4783522027
+        },
+        {
+          "temperature_k": 400.0,
+          "cv_j_mol_k": 23.5064838089
+        },
+        {
+          "temperature_k": 404.0,
+          "cv_j_mol_k": 23.5338225827
+        },
+        {
+          "temperature_k": 408.0,
+          "cv_j_mol_k": 23.5603976669
+        },
+        {
+          "temperature_k": 412.0,
+          "cv_j_mol_k": 23.586236895
+        },
+        {
+          "temperature_k": 416.0,
+          "cv_j_mol_k": 23.6113668608
+        },
+        {
+          "temperature_k": 420.0,
+          "cv_j_mol_k": 23.6358129825
+        },
+        {
+          "temperature_k": 424.0,
+          "cv_j_mol_k": 23.6595995637
+        },
+        {
+          "temperature_k": 428.0,
+          "cv_j_mol_k": 23.6827498513
+        },
+        {
+          "temperature_k": 432.0,
+          "cv_j_mol_k": 23.7052860888
+        },
+        {
+          "temperature_k": 436.0,
+          "cv_j_mol_k": 23.7272295676
+        },
+        {
+          "temperature_k": 440.0,
+          "cv_j_mol_k": 23.7486006746
+        },
+        {
+          "temperature_k": 444.0,
+          "cv_j_mol_k": 23.7694189374
+        },
+        {
+          "temperature_k": 448.0,
+          "cv_j_mol_k": 23.7897030673
+        },
+        {
+          "temperature_k": 452.0,
+          "cv_j_mol_k": 23.8094709986
+        },
+        {
+          "temperature_k": 456.0,
+          "cv_j_mol_k": 23.8287399275
+        },
+        {
+          "temperature_k": 460.0,
+          "cv_j_mol_k": 23.8475263471
+        },
+        {
+          "temperature_k": 464.0,
+          "cv_j_mol_k": 23.8658460816
+        },
+        {
+          "temperature_k": 468.0,
+          "cv_j_mol_k": 23.8837143183
+        },
+        {
+          "temperature_k": 472.0,
+          "cv_j_mol_k": 23.9011456374
+        },
+        {
+          "temperature_k": 476.0,
+          "cv_j_mol_k": 23.9181540411
+        },
+        {
+          "temperature_k": 480.0,
+          "cv_j_mol_k": 23.9347529804
+        },
+        {
+          "temperature_k": 484.0,
+          "cv_j_mol_k": 23.9509553804
+        },
+        {
+          "temperature_k": 488.0,
+          "cv_j_mol_k": 23.9667736649
+        },
+        {
+          "temperature_k": 492.0,
+          "cv_j_mol_k": 23.9822197793
+        },
+        {
+          "temperature_k": 496.0,
+          "cv_j_mol_k": 23.9973052121
+        },
+        {
+          "temperature_k": 500.0,
+          "cv_j_mol_k": 24.0120410158
+        },
+        {
+          "temperature_k": 504.0,
+          "cv_j_mol_k": 24.0264378263
+        },
+        {
+          "temperature_k": 508.0,
+          "cv_j_mol_k": 24.0405058813
+        },
+        {
+          "temperature_k": 512.0,
+          "cv_j_mol_k": 24.0542550381
+        },
+        {
+          "temperature_k": 516.0,
+          "cv_j_mol_k": 24.0676947902
+        },
+        {
+          "temperature_k": 520.0,
+          "cv_j_mol_k": 24.0808342834
+        },
+        {
+          "temperature_k": 524.0,
+          "cv_j_mol_k": 24.0936823304
+        },
+        {
+          "temperature_k": 528.0,
+          "cv_j_mol_k": 24.1062474253
+        },
+        {
+          "temperature_k": 532.0,
+          "cv_j_mol_k": 24.1185377576
+        },
+        {
+          "temperature_k": 536.0,
+          "cv_j_mol_k": 24.1305612246
+        },
+        {
+          "temperature_k": 540.0,
+          "cv_j_mol_k": 24.1423254438
+        },
+        {
+          "temperature_k": 544.0,
+          "cv_j_mol_k": 24.1538377651
+        },
+        {
+          "temperature_k": 548.0,
+          "cv_j_mol_k": 24.1651052813
+        },
+        {
+          "temperature_k": 552.0,
+          "cv_j_mol_k": 24.176134839
+        },
+        {
+          "temperature_k": 556.0,
+          "cv_j_mol_k": 24.1869330488
+        },
+        {
+          "temperature_k": 560.0,
+          "cv_j_mol_k": 24.197506295
+        },
+        {
+          "temperature_k": 564.0,
+          "cv_j_mol_k": 24.2078607443
+        },
+        {
+          "temperature_k": 568.0,
+          "cv_j_mol_k": 24.218002355
+        },
+        {
+          "temperature_k": 572.0,
+          "cv_j_mol_k": 24.2279368855
+        },
+        {
+          "temperature_k": 576.0,
+          "cv_j_mol_k": 24.2376699015
+        },
+        {
+          "temperature_k": 580.0,
+          "cv_j_mol_k": 24.2472067846
+        },
+        {
+          "temperature_k": 584.0,
+          "cv_j_mol_k": 24.2565527386
+        },
+        {
+          "temperature_k": 588.0,
+          "cv_j_mol_k": 24.2657127971
+        },
+        {
+          "temperature_k": 592.0,
+          "cv_j_mol_k": 24.27469183
+        },
+        {
+          "temperature_k": 596.0,
+          "cv_j_mol_k": 24.2834945493
+        },
+        {
+          "temperature_k": 600.0,
+          "cv_j_mol_k": 24.292125516
+        },
+        {
+          "temperature_k": 604.0,
+          "cv_j_mol_k": 24.3005891451
+        },
+        {
+          "temperature_k": 608.0,
+          "cv_j_mol_k": 24.3088897115
+        },
+        {
+          "temperature_k": 612.0,
+          "cv_j_mol_k": 24.3170313552
+        },
+        {
+          "temperature_k": 616.0,
+          "cv_j_mol_k": 24.3250180864
+        },
+        {
+          "temperature_k": 620.0,
+          "cv_j_mol_k": 24.3328537902
+        },
+        {
+          "temperature_k": 624.0,
+          "cv_j_mol_k": 24.3405422314
+        },
+        {
+          "temperature_k": 628.0,
+          "cv_j_mol_k": 24.3480870586
+        },
+        {
+          "temperature_k": 632.0,
+          "cv_j_mol_k": 24.355491809
+        },
+        {
+          "temperature_k": 636.0,
+          "cv_j_mol_k": 24.3627599118
+        },
+        {
+          "temperature_k": 640.0,
+          "cv_j_mol_k": 24.3698946927
+        },
+        {
+          "temperature_k": 644.0,
+          "cv_j_mol_k": 24.376899377
+        },
+        {
+          "temperature_k": 648.0,
+          "cv_j_mol_k": 24.383777094
+        },
+        {
+          "temperature_k": 652.0,
+          "cv_j_mol_k": 24.3905308794
+        },
+        {
+          "temperature_k": 656.0,
+          "cv_j_mol_k": 24.3971636794
+        },
+        {
+          "temperature_k": 660.0,
+          "cv_j_mol_k": 24.4036783537
+        },
+        {
+          "temperature_k": 664.0,
+          "cv_j_mol_k": 24.4100776782
+        },
+        {
+          "temperature_k": 668.0,
+          "cv_j_mol_k": 24.416364348
+        },
+        {
+          "temperature_k": 672.0,
+          "cv_j_mol_k": 24.4225409807
+        },
+        {
+          "temperature_k": 676.0,
+          "cv_j_mol_k": 24.4286101182
+        },
+        {
+          "temperature_k": 680.0,
+          "cv_j_mol_k": 24.43457423
+        },
+        {
+          "temperature_k": 684.0,
+          "cv_j_mol_k": 24.4404357153
+        },
+        {
+          "temperature_k": 688.0,
+          "cv_j_mol_k": 24.4461969056
+        },
+        {
+          "temperature_k": 692.0,
+          "cv_j_mol_k": 24.4518600666
+        },
+        {
+          "temperature_k": 696.0,
+          "cv_j_mol_k": 24.4574274009
+        },
+        {
+          "temperature_k": 700.0,
+          "cv_j_mol_k": 24.4629010498
+        },
+        {
+          "temperature_k": 704.0,
+          "cv_j_mol_k": 24.4682830951
+        },
+        {
+          "temperature_k": 708.0,
+          "cv_j_mol_k": 24.4735755616
+        },
+        {
+          "temperature_k": 712.0,
+          "cv_j_mol_k": 24.4787804187
+        },
+        {
+          "temperature_k": 716.0,
+          "cv_j_mol_k": 24.483899582
+        },
+        {
+          "temperature_k": 720.0,
+          "cv_j_mol_k": 24.4889349153
+        },
+        {
+          "temperature_k": 724.0,
+          "cv_j_mol_k": 24.4938882323
+        },
+        {
+          "temperature_k": 728.0,
+          "cv_j_mol_k": 24.4987612979
+        },
+        {
+          "temperature_k": 732.0,
+          "cv_j_mol_k": 24.5035558301
+        },
+        {
+          "temperature_k": 736.0,
+          "cv_j_mol_k": 24.5082735014
+        },
+        {
+          "temperature_k": 740.0,
+          "cv_j_mol_k": 24.51291594
+        },
+        {
+          "temperature_k": 744.0,
+          "cv_j_mol_k": 24.5174847316
+        },
+        {
+          "temperature_k": 748.0,
+          "cv_j_mol_k": 24.5219814201
+        },
+        {
+          "temperature_k": 752.0,
+          "cv_j_mol_k": 24.5264075097
+        },
+        {
+          "temperature_k": 756.0,
+          "cv_j_mol_k": 24.5307644656
+        },
+        {
+          "temperature_k": 760.0,
+          "cv_j_mol_k": 24.5350537152
+        },
+        {
+          "temperature_k": 764.0,
+          "cv_j_mol_k": 24.5392766494
+        },
+        {
+          "temperature_k": 768.0,
+          "cv_j_mol_k": 24.5434346239
+        },
+        {
+          "temperature_k": 772.0,
+          "cv_j_mol_k": 24.5475289597
+        },
+        {
+          "temperature_k": 776.0,
+          "cv_j_mol_k": 24.5515609448
+        },
+        {
+          "temperature_k": 780.0,
+          "cv_j_mol_k": 24.5555318347
+        },
+        {
+          "temperature_k": 784.0,
+          "cv_j_mol_k": 24.5594428537
+        },
+        {
+          "temperature_k": 788.0,
+          "cv_j_mol_k": 24.5632951956
+        },
+        {
+          "temperature_k": 792.0,
+          "cv_j_mol_k": 24.5670900247
+        },
+        {
+          "temperature_k": 796.0,
+          "cv_j_mol_k": 24.5708284766
+        },
+        {
+          "temperature_k": 800.0,
+          "cv_j_mol_k": 24.5745116592
+        }
+      ],
+      "Al": [
+        {
+          "temperature_k": 0.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 4.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 8.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 12.0,
+          "cv_j_mol_k": 6.8e-09
+        },
+        {
+          "temperature_k": 16.0,
+          "cv_j_mol_k": 5.0201e-06
+        },
+        {
+          "temperature_k": 20.0,
+          "cv_j_mol_k": 0.0002396631
+        },
+        {
+          "temperature_k": 24.0,
+          "cv_j_mol_k": 0.0029492649
+        },
+        {
+          "temperature_k": 28.0,
+          "cv_j_mol_k": 0.0168885025
+        },
+        {
+          "temperature_k": 32.0,
+          "cv_j_mol_k": 0.0603180263
+        },
+        {
+          "temperature_k": 36.0,
+          "cv_j_mol_k": 0.1578998168
+        },
+        {
+          "temperature_k": 40.0,
+          "cv_j_mol_k": 0.3335193815
+        },
+        {
+          "temperature_k": 44.0,
+          "cv_j_mol_k": 0.6039689644
+        },
+        {
+          "temperature_k": 48.0,
+          "cv_j_mol_k": 0.9761062966
+        },
+        {
+          "temperature_k": 52.0,
+          "cv_j_mol_k": 1.4472705245
+        },
+        {
+          "temperature_k": 56.0,
+          "cv_j_mol_k": 2.0075500845
+        },
+        {
+          "temperature_k": 60.0,
+          "cv_j_mol_k": 2.6425763101
+        },
+        {
+          "temperature_k": 64.0,
+          "cv_j_mol_k": 3.336030965
+        },
+        {
+          "temperature_k": 68.0,
+          "cv_j_mol_k": 4.0715321218
+        },
+        {
+          "temperature_k": 72.0,
+          "cv_j_mol_k": 4.8338627121
+        },
+        {
+          "temperature_k": 76.0,
+          "cv_j_mol_k": 5.6096478342
+        },
+        {
+          "temperature_k": 80.0,
+          "cv_j_mol_k": 6.3876280932
+        },
+        {
+          "temperature_k": 84.0,
+          "cv_j_mol_k": 7.1586666725
+        },
+        {
+          "temperature_k": 88.0,
+          "cv_j_mol_k": 7.9155991726
+        },
+        {
+          "temperature_k": 92.0,
+          "cv_j_mol_k": 8.653004113
+        },
+        {
+          "temperature_k": 96.0,
+          "cv_j_mol_k": 9.3669454071
+        },
+        {
+          "temperature_k": 100.0,
+          "cv_j_mol_k": 10.0547180017
+        },
+        {
+          "temperature_k": 104.0,
+          "cv_j_mol_k": 10.7146138145
+        },
+        {
+          "temperature_k": 108.0,
+          "cv_j_mol_k": 11.345715879
+        },
+        {
+          "temperature_k": 112.0,
+          "cv_j_mol_k": 11.9477229216
+        },
+        {
+          "temperature_k": 116.0,
+          "cv_j_mol_k": 12.5208033307
+        },
+        {
+          "temperature_k": 120.0,
+          "cv_j_mol_k": 13.0654758036
+        },
+        {
+          "temperature_k": 124.0,
+          "cv_j_mol_k": 13.5825132606
+        },
+        {
+          "temperature_k": 128.0,
+          "cv_j_mol_k": 14.0728664995
+        },
+        {
+          "temperature_k": 132.0,
+          "cv_j_mol_k": 14.5376042686
+        },
+        {
+          "temperature_k": 136.0,
+          "cv_j_mol_k": 14.9778667824
+        },
+        {
+          "temperature_k": 140.0,
+          "cv_j_mol_k": 15.3948301145
+        },
+        {
+          "temperature_k": 144.0,
+          "cv_j_mol_k": 15.7896792982
+        },
+        {
+          "temperature_k": 148.0,
+          "cv_j_mol_k": 16.1635883425
+        },
+        {
+          "temperature_k": 152.0,
+          "cv_j_mol_k": 16.5177056917
+        },
+        {
+          "temperature_k": 156.0,
+          "cv_j_mol_k": 16.8531439399
+        },
+        {
+          "temperature_k": 160.0,
+          "cv_j_mol_k": 17.1709728464
+        },
+        {
+          "temperature_k": 164.0,
+          "cv_j_mol_k": 17.4722148872
+        },
+        {
+          "temperature_k": 168.0,
+          "cv_j_mol_k": 17.7578427409
+        },
+        {
+          "temperature_k": 172.0,
+          "cv_j_mol_k": 18.0287782316
+        },
+        {
+          "temperature_k": 176.0,
+          "cv_j_mol_k": 18.2858923549
+        },
+        {
+          "temperature_k": 180.0,
+          "cv_j_mol_k": 18.5300060946
+        },
+        {
+          "temperature_k": 184.0,
+          "cv_j_mol_k": 18.7618918052
+        },
+        {
+          "temperature_k": 188.0,
+          "cv_j_mol_k": 18.9822749832
+        },
+        {
+          "temperature_k": 192.0,
+          "cv_j_mol_k": 19.1918362939
+        },
+        {
+          "temperature_k": 196.0,
+          "cv_j_mol_k": 19.3912137518
+        },
+        {
+          "temperature_k": 200.0,
+          "cv_j_mol_k": 19.5810049766
+        },
+        {
+          "temperature_k": 204.0,
+          "cv_j_mol_k": 19.7617694685
+        },
+        {
+          "temperature_k": 208.0,
+          "cv_j_mol_k": 19.9340308595
+        },
+        {
+          "temperature_k": 212.0,
+          "cv_j_mol_k": 20.0982791114
+        },
+        {
+          "temperature_k": 216.0,
+          "cv_j_mol_k": 20.2549726387
+        },
+        {
+          "temperature_k": 220.0,
+          "cv_j_mol_k": 20.4045403425
+        },
+        {
+          "temperature_k": 224.0,
+          "cv_j_mol_k": 20.5473835462
+        },
+        {
+          "temperature_k": 228.0,
+          "cv_j_mol_k": 20.6838778293
+        },
+        {
+          "temperature_k": 232.0,
+          "cv_j_mol_k": 20.8143747564
+        },
+        {
+          "temperature_k": 236.0,
+          "cv_j_mol_k": 20.9392035017
+        },
+        {
+          "temperature_k": 240.0,
+          "cv_j_mol_k": 21.0586723728
+        },
+        {
+          "temperature_k": 244.0,
+          "cv_j_mol_k": 21.1730702349
+        },
+        {
+          "temperature_k": 248.0,
+          "cv_j_mol_k": 21.2826678409
+        },
+        {
+          "temperature_k": 252.0,
+          "cv_j_mol_k": 21.3877190711
+        },
+        {
+          "temperature_k": 256.0,
+          "cv_j_mol_k": 21.4884620875
+        },
+        {
+          "temperature_k": 260.0,
+          "cv_j_mol_k": 21.5851204078
+        },
+        {
+          "temperature_k": 264.0,
+          "cv_j_mol_k": 21.6779039033
+        },
+        {
+          "temperature_k": 268.0,
+          "cv_j_mol_k": 21.7670097264
+        },
+        {
+          "temperature_k": 272.0,
+          "cv_j_mol_k": 21.852623172
+        },
+        {
+          "temperature_k": 276.0,
+          "cv_j_mol_k": 21.9349184766
+        },
+        {
+          "temperature_k": 280.0,
+          "cv_j_mol_k": 22.0140595609
+        },
+        {
+          "temperature_k": 284.0,
+          "cv_j_mol_k": 22.0902007185
+        },
+        {
+          "temperature_k": 288.0,
+          "cv_j_mol_k": 22.1634872552
+        },
+        {
+          "temperature_k": 292.0,
+          "cv_j_mol_k": 22.2340560827
+        },
+        {
+          "temperature_k": 296.0,
+          "cv_j_mol_k": 22.3020362693
+        },
+        {
+          "temperature_k": 300.0,
+          "cv_j_mol_k": 22.3675495518
+        },
+        {
+          "temperature_k": 304.0,
+          "cv_j_mol_k": 22.4307108102
+        },
+        {
+          "temperature_k": 308.0,
+          "cv_j_mol_k": 22.4916285094
+        },
+        {
+          "temperature_k": 312.0,
+          "cv_j_mol_k": 22.550405109
+        },
+        {
+          "temperature_k": 316.0,
+          "cv_j_mol_k": 22.607137445
+        },
+        {
+          "temperature_k": 320.0,
+          "cv_j_mol_k": 22.6619170836
+        },
+        {
+          "temperature_k": 324.0,
+          "cv_j_mol_k": 22.7148306516
+        },
+        {
+          "temperature_k": 328.0,
+          "cv_j_mol_k": 22.7659601427
+        },
+        {
+          "temperature_k": 332.0,
+          "cv_j_mol_k": 22.8153832035
+        },
+        {
+          "temperature_k": 336.0,
+          "cv_j_mol_k": 22.8631733995
+        },
+        {
+          "temperature_k": 340.0,
+          "cv_j_mol_k": 22.9094004626
+        },
+        {
+          "temperature_k": 344.0,
+          "cv_j_mol_k": 22.9541305227
+        },
+        {
+          "temperature_k": 348.0,
+          "cv_j_mol_k": 22.9974263228
+        },
+        {
+          "temperature_k": 352.0,
+          "cv_j_mol_k": 23.0393474202
+        },
+        {
+          "temperature_k": 356.0,
+          "cv_j_mol_k": 23.0799503739
+        },
+        {
+          "temperature_k": 360.0,
+          "cv_j_mol_k": 23.1192889201
+        },
+        {
+          "temperature_k": 364.0,
+          "cv_j_mol_k": 23.1574141358
+        },
+        {
+          "temperature_k": 368.0,
+          "cv_j_mol_k": 23.194374592
+        },
+        {
+          "temperature_k": 372.0,
+          "cv_j_mol_k": 23.2302164963
+        },
+        {
+          "temperature_k": 376.0,
+          "cv_j_mol_k": 23.2649838273
+        },
+        {
+          "temperature_k": 380.0,
+          "cv_j_mol_k": 23.2987184598
+        },
+        {
+          "temperature_k": 384.0,
+          "cv_j_mol_k": 23.3314602819
+        },
+        {
+          "temperature_k": 388.0,
+          "cv_j_mol_k": 23.3632473055
+        },
+        {
+          "temperature_k": 392.0,
+          "cv_j_mol_k": 23.3941157688
+        },
+        {
+          "temperature_k": 396.0,
+          "cv_j_mol_k": 23.4241002331
+        },
+        {
+          "temperature_k": 400.0,
+          "cv_j_mol_k": 23.4532336737
+        },
+        {
+          "temperature_k": 404.0,
+          "cv_j_mol_k": 23.4815475651
+        },
+        {
+          "temperature_k": 408.0,
+          "cv_j_mol_k": 23.5090719604
+        },
+        {
+          "temperature_k": 412.0,
+          "cv_j_mol_k": 23.535835567
+        },
+        {
+          "temperature_k": 416.0,
+          "cv_j_mol_k": 23.5618658169
+        },
+        {
+          "temperature_k": 420.0,
+          "cv_j_mol_k": 23.587188933
+        },
+        {
+          "temperature_k": 424.0,
+          "cv_j_mol_k": 23.6118299919
+        },
+        {
+          "temperature_k": 428.0,
+          "cv_j_mol_k": 23.6358129825
+        },
+        {
+          "temperature_k": 432.0,
+          "cv_j_mol_k": 23.6591608611
+        },
+        {
+          "temperature_k": 436.0,
+          "cv_j_mol_k": 23.681895604
+        },
+        {
+          "temperature_k": 440.0,
+          "cv_j_mol_k": 23.7040382562
+        },
+        {
+          "temperature_k": 444.0,
+          "cv_j_mol_k": 23.7256089784
+        },
+        {
+          "temperature_k": 448.0,
+          "cv_j_mol_k": 23.7466270897
+        },
+        {
+          "temperature_k": 452.0,
+          "cv_j_mol_k": 23.7671111098
+        },
+        {
+          "temperature_k": 456.0,
+          "cv_j_mol_k": 23.7870787973
+        },
+        {
+          "temperature_k": 460.0,
+          "cv_j_mol_k": 23.8065471869
+        },
+        {
+          "temperature_k": 464.0,
+          "cv_j_mol_k": 23.8255326238
+        },
+        {
+          "temperature_k": 468.0,
+          "cv_j_mol_k": 23.8440507967
+        },
+        {
+          "temperature_k": 472.0,
+          "cv_j_mol_k": 23.8621167688
+        },
+        {
+          "temperature_k": 476.0,
+          "cv_j_mol_k": 23.8797450072
+        },
+        {
+          "temperature_k": 480.0,
+          "cv_j_mol_k": 23.8969494107
+        },
+        {
+          "temperature_k": 484.0,
+          "cv_j_mol_k": 23.9137433361
+        },
+        {
+          "temperature_k": 488.0,
+          "cv_j_mol_k": 23.930139623
+        },
+        {
+          "temperature_k": 492.0,
+          "cv_j_mol_k": 23.9461506174
+        },
+        {
+          "temperature_k": 496.0,
+          "cv_j_mol_k": 23.9617881944
+        },
+        {
+          "temperature_k": 500.0,
+          "cv_j_mol_k": 23.9770637791
+        },
+        {
+          "temperature_k": 504.0,
+          "cv_j_mol_k": 23.9919883666
+        },
+        {
+          "temperature_k": 508.0,
+          "cv_j_mol_k": 24.0065725414
+        },
+        {
+          "temperature_k": 512.0,
+          "cv_j_mol_k": 24.0208264954
+        },
+        {
+          "temperature_k": 516.0,
+          "cv_j_mol_k": 24.034760045
+        },
+        {
+          "temperature_k": 520.0,
+          "cv_j_mol_k": 24.0483826475
+        },
+        {
+          "temperature_k": 524.0,
+          "cv_j_mol_k": 24.0617034166
+        },
+        {
+          "temperature_k": 528.0,
+          "cv_j_mol_k": 24.0747311371
+        },
+        {
+          "temperature_k": 532.0,
+          "cv_j_mol_k": 24.0874742791
+        },
+        {
+          "temperature_k": 536.0,
+          "cv_j_mol_k": 24.0999410112
+        },
+        {
+          "temperature_k": 540.0,
+          "cv_j_mol_k": 24.112139213
+        },
+        {
+          "temperature_k": 544.0,
+          "cv_j_mol_k": 24.1240764876
+        },
+        {
+          "temperature_k": 548.0,
+          "cv_j_mol_k": 24.1357601727
+        },
+        {
+          "temperature_k": 552.0,
+          "cv_j_mol_k": 24.1471973518
+        },
+        {
+          "temperature_k": 556.0,
+          "cv_j_mol_k": 24.1583948644
+        },
+        {
+          "temperature_k": 560.0,
+          "cv_j_mol_k": 24.1693593161
+        },
+        {
+          "temperature_k": 564.0,
+          "cv_j_mol_k": 24.1800970883
+        },
+        {
+          "temperature_k": 568.0,
+          "cv_j_mol_k": 24.1906143464
+        },
+        {
+          "temperature_k": 572.0,
+          "cv_j_mol_k": 24.2009170494
+        },
+        {
+          "temperature_k": 576.0,
+          "cv_j_mol_k": 24.2110109576
+        },
+        {
+          "temperature_k": 580.0,
+          "cv_j_mol_k": 24.2209016404
+        },
+        {
+          "temperature_k": 584.0,
+          "cv_j_mol_k": 24.230594484
+        },
+        {
+          "temperature_k": 588.0,
+          "cv_j_mol_k": 24.2400946983
+        },
+        {
+          "temperature_k": 592.0,
+          "cv_j_mol_k": 24.249407324
+        },
+        {
+          "temperature_k": 596.0,
+          "cv_j_mol_k": 24.258537239
+        },
+        {
+          "temperature_k": 600.0,
+          "cv_j_mol_k": 24.2674891646
+        },
+        {
+          "temperature_k": 604.0,
+          "cv_j_mol_k": 24.2762676713
+        },
+        {
+          "temperature_k": 608.0,
+          "cv_j_mol_k": 24.2848771849
+        },
+        {
+          "temperature_k": 612.0,
+          "cv_j_mol_k": 24.2933219917
+        },
+        {
+          "temperature_k": 616.0,
+          "cv_j_mol_k": 24.3016062435
+        },
+        {
+          "temperature_k": 620.0,
+          "cv_j_mol_k": 24.3097339631
+        },
+        {
+          "temperature_k": 624.0,
+          "cv_j_mol_k": 24.3177090485
+        },
+        {
+          "temperature_k": 628.0,
+          "cv_j_mol_k": 24.325535278
+        },
+        {
+          "temperature_k": 632.0,
+          "cv_j_mol_k": 24.3332163143
+        },
+        {
+          "temperature_k": 636.0,
+          "cv_j_mol_k": 24.3407557087
+        },
+        {
+          "temperature_k": 640.0,
+          "cv_j_mol_k": 24.3481569049
+        },
+        {
+          "temperature_k": 644.0,
+          "cv_j_mol_k": 24.3554232435
+        },
+        {
+          "temperature_k": 648.0,
+          "cv_j_mol_k": 24.3625579651
+        },
+        {
+          "temperature_k": 652.0,
+          "cv_j_mol_k": 24.369564214
+        },
+        {
+          "temperature_k": 656.0,
+          "cv_j_mol_k": 24.3764450416
+        },
+        {
+          "temperature_k": 660.0,
+          "cv_j_mol_k": 24.3832034097
+        },
+        {
+          "temperature_k": 664.0,
+          "cv_j_mol_k": 24.3898421938
+        },
+        {
+          "temperature_k": 668.0,
+          "cv_j_mol_k": 24.3963641855
+        },
+        {
+          "temperature_k": 672.0,
+          "cv_j_mol_k": 24.4027720962
+        },
+        {
+          "temperature_k": 676.0,
+          "cv_j_mol_k": 24.4090685591
+        },
+        {
+          "temperature_k": 680.0,
+          "cv_j_mol_k": 24.4152561324
+        },
+        {
+          "temperature_k": 684.0,
+          "cv_j_mol_k": 24.4213373016
+        },
+        {
+          "temperature_k": 688.0,
+          "cv_j_mol_k": 24.427314482
+        },
+        {
+          "temperature_k": 692.0,
+          "cv_j_mol_k": 24.433190021
+        },
+        {
+          "temperature_k": 696.0,
+          "cv_j_mol_k": 24.4389662005
+        },
+        {
+          "temperature_k": 700.0,
+          "cv_j_mol_k": 24.4446452391
+        },
+        {
+          "temperature_k": 704.0,
+          "cv_j_mol_k": 24.4502292937
+        },
+        {
+          "temperature_k": 708.0,
+          "cv_j_mol_k": 24.4557204623
+        },
+        {
+          "temperature_k": 712.0,
+          "cv_j_mol_k": 24.4611207853
+        },
+        {
+          "temperature_k": 716.0,
+          "cv_j_mol_k": 24.4664322478
+        },
+        {
+          "temperature_k": 720.0,
+          "cv_j_mol_k": 24.4716567811
+        },
+        {
+          "temperature_k": 724.0,
+          "cv_j_mol_k": 24.4767962644
+        },
+        {
+          "temperature_k": 728.0,
+          "cv_j_mol_k": 24.4818525268
+        },
+        {
+          "temperature_k": 732.0,
+          "cv_j_mol_k": 24.4868273485
+        },
+        {
+          "temperature_k": 736.0,
+          "cv_j_mol_k": 24.4917224627
+        },
+        {
+          "temperature_k": 740.0,
+          "cv_j_mol_k": 24.4965395568
+        },
+        {
+          "temperature_k": 744.0,
+          "cv_j_mol_k": 24.501280274
+        },
+        {
+          "temperature_k": 748.0,
+          "cv_j_mol_k": 24.5059462146
+        },
+        {
+          "temperature_k": 752.0,
+          "cv_j_mol_k": 24.5105389374
+        },
+        {
+          "temperature_k": 756.0,
+          "cv_j_mol_k": 24.5150599609
+        },
+        {
+          "temperature_k": 760.0,
+          "cv_j_mol_k": 24.5195107645
+        },
+        {
+          "temperature_k": 764.0,
+          "cv_j_mol_k": 24.52389279
+        },
+        {
+          "temperature_k": 768.0,
+          "cv_j_mol_k": 24.5282074423
+        },
+        {
+          "temperature_k": 772.0,
+          "cv_j_mol_k": 24.5324560908
+        },
+        {
+          "temperature_k": 776.0,
+          "cv_j_mol_k": 24.5366400704
+        },
+        {
+          "temperature_k": 780.0,
+          "cv_j_mol_k": 24.5407606826
+        },
+        {
+          "temperature_k": 784.0,
+          "cv_j_mol_k": 24.5448191964
+        },
+        {
+          "temperature_k": 788.0,
+          "cv_j_mol_k": 24.5488168492
+        },
+        {
+          "temperature_k": 792.0,
+          "cv_j_mol_k": 24.5527548481
+        },
+        {
+          "temperature_k": 796.0,
+          "cv_j_mol_k": 24.5566343701
+        },
+        {
+          "temperature_k": 800.0,
+          "cv_j_mol_k": 24.5604565637
+        }
+      ],
+      "Fe": [
+        {
+          "temperature_k": 0.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 4.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 8.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 12.0,
+          "cv_j_mol_k": 5e-10
+        },
+        {
+          "temperature_k": 16.0,
+          "cv_j_mol_k": 7.297e-07
+        },
+        {
+          "temperature_k": 20.0,
+          "cv_j_mol_k": 5.31895e-05
+        },
+        {
+          "temperature_k": 24.0,
+          "cv_j_mol_k": 0.0008678652
+        },
+        {
+          "temperature_k": 28.0,
+          "cv_j_mol_k": 0.0060790707
+        },
+        {
+          "temperature_k": 32.0,
+          "cv_j_mol_k": 0.0252532059
+        },
+        {
+          "temperature_k": 36.0,
+          "cv_j_mol_k": 0.0743487669
+        },
+        {
+          "temperature_k": 40.0,
+          "cv_j_mol_k": 0.1725037447
+        },
+        {
+          "temperature_k": 44.0,
+          "cv_j_mol_k": 0.3372954987
+        },
+        {
+          "temperature_k": 48.0,
+          "cv_j_mol_k": 0.5810158112
+        },
+        {
+          "temperature_k": 52.0,
+          "cv_j_mol_k": 0.9090474794
+        },
+        {
+          "temperature_k": 56.0,
+          "cv_j_mol_k": 1.3201135561
+        },
+        {
+          "temperature_k": 60.0,
+          "cv_j_mol_k": 1.8076415516
+        },
+        {
+          "temperature_k": 64.0,
+          "cv_j_mol_k": 2.3615184323
+        },
+        {
+          "temperature_k": 68.0,
+          "cv_j_mol_k": 2.9697569984
+        },
+        {
+          "temperature_k": 72.0,
+          "cv_j_mol_k": 3.6198395841
+        },
+        {
+          "temperature_k": 76.0,
+          "cv_j_mol_k": 4.2996764104
+        },
+        {
+          "temperature_k": 80.0,
+          "cv_j_mol_k": 4.9982104761
+        },
+        {
+          "temperature_k": 84.0,
+          "cv_j_mol_k": 5.7057400248
+        },
+        {
+          "temperature_k": 88.0,
+          "cv_j_mol_k": 6.4140362139
+        },
+        {
+          "temperature_k": 92.0,
+          "cv_j_mol_k": 7.1163244575
+        },
+        {
+          "temperature_k": 96.0,
+          "cv_j_mol_k": 7.8071832828
+        },
+        {
+          "temperature_k": 100.0,
+          "cv_j_mol_k": 8.4823998162
+        },
+        {
+          "temperature_k": 104.0,
+          "cv_j_mol_k": 9.1388084975
+        },
+        {
+          "temperature_k": 108.0,
+          "cv_j_mol_k": 9.7741299553
+        },
+        {
+          "temperature_k": 112.0,
+          "cv_j_mol_k": 10.3868199761
+        },
+        {
+          "temperature_k": 116.0,
+          "cv_j_mol_k": 10.975933698
+        },
+        {
+          "temperature_k": 120.0,
+          "cv_j_mol_k": 11.5410070251
+        },
+        {
+          "temperature_k": 124.0,
+          "cv_j_mol_k": 12.0819553231
+        },
+        {
+          "temperature_k": 128.0,
+          "cv_j_mol_k": 12.5989883499
+        },
+        {
+          "temperature_k": 132.0,
+          "cv_j_mol_k": 13.0925398125
+        },
+        {
+          "temperature_k": 136.0,
+          "cv_j_mol_k": 13.5632097271
+        },
+        {
+          "temperature_k": 140.0,
+          "cv_j_mol_k": 14.0117177553
+        },
+        {
+          "temperature_k": 144.0,
+          "cv_j_mol_k": 14.438865802
+        },
+        {
+          "temperature_k": 148.0,
+          "cv_j_mol_k": 14.84550833
+        },
+        {
+          "temperature_k": 152.0,
+          "cv_j_mol_k": 15.232529041
+        },
+        {
+          "temperature_k": 156.0,
+          "cv_j_mol_k": 15.6008227636
+        },
+        {
+          "temperature_k": 160.0,
+          "cv_j_mol_k": 15.951281568
+        },
+        {
+          "temperature_k": 164.0,
+          "cv_j_mol_k": 16.2847842894
+        },
+        {
+          "temperature_k": 168.0,
+          "cv_j_mol_k": 16.6021887825
+        },
+        {
+          "temperature_k": 172.0,
+          "cv_j_mol_k": 16.9043263508
+        },
+        {
+          "temperature_k": 176.0,
+          "cv_j_mol_k": 17.1919978954
+        },
+        {
+          "temperature_k": 180.0,
+          "cv_j_mol_k": 17.465971415
+        },
+        {
+          "temperature_k": 184.0,
+          "cv_j_mol_k": 17.7269805581
+        },
+        {
+          "temperature_k": 188.0,
+          "cv_j_mol_k": 17.9757239874
+        },
+        {
+          "temperature_k": 192.0,
+          "cv_j_mol_k": 18.2128653644
+        },
+        {
+          "temperature_k": 196.0,
+          "cv_j_mol_k": 18.4390337989
+        },
+        {
+          "temperature_k": 200.0,
+          "cv_j_mol_k": 18.6548246439
+        },
+        {
+          "temperature_k": 204.0,
+          "cv_j_mol_k": 18.8608005371
+        },
+        {
+          "temperature_k": 208.0,
+          "cv_j_mol_k": 19.0574926134
+        },
+        {
+          "temperature_k": 212.0,
+          "cv_j_mol_k": 19.2454018305
+        },
+        {
+          "temperature_k": 216.0,
+          "cv_j_mol_k": 19.4250003593
+        },
+        {
+          "temperature_k": 220.0,
+          "cv_j_mol_k": 19.5967330051
+        },
+        {
+          "temperature_k": 224.0,
+          "cv_j_mol_k": 19.7610186317
+        },
+        {
+          "temperature_k": 228.0,
+          "cv_j_mol_k": 19.9182515689
+        },
+        {
+          "temperature_k": 232.0,
+          "cv_j_mol_k": 20.0688029874
+        },
+        {
+          "temperature_k": 236.0,
+          "cv_j_mol_k": 20.2130222308
+        },
+        {
+          "temperature_k": 240.0,
+          "cv_j_mol_k": 20.3512380984
+        },
+        {
+          "temperature_k": 244.0,
+          "cv_j_mol_k": 20.483760071
+        },
+        {
+          "temperature_k": 248.0,
+          "cv_j_mol_k": 20.6108794805
+        },
+        {
+          "temperature_k": 252.0,
+          "cv_j_mol_k": 20.7328706186
+        },
+        {
+          "temperature_k": 256.0,
+          "cv_j_mol_k": 20.8499917869
+        },
+        {
+          "temperature_k": 260.0,
+          "cv_j_mol_k": 20.9624862877
+        },
+        {
+          "temperature_k": 264.0,
+          "cv_j_mol_k": 21.0705833575
+        },
+        {
+          "temperature_k": 268.0,
+          "cv_j_mol_k": 21.1744990446
+        },
+        {
+          "temperature_k": 272.0,
+          "cv_j_mol_k": 21.2744370338
+        },
+        {
+          "temperature_k": 276.0,
+          "cv_j_mol_k": 21.3705894189
+        },
+        {
+          "temperature_k": 280.0,
+          "cv_j_mol_k": 21.4631374276
+        },
+        {
+          "temperature_k": 284.0,
+          "cv_j_mol_k": 21.5522520994
+        },
+        {
+          "temperature_k": 288.0,
+          "cv_j_mol_k": 21.6380949208
+        },
+        {
+          "temperature_k": 292.0,
+          "cv_j_mol_k": 21.7208184183
+        },
+        {
+          "temperature_k": 296.0,
+          "cv_j_mol_k": 21.8005667141
+        },
+        {
+          "temperature_k": 300.0,
+          "cv_j_mol_k": 21.8774760442
+        },
+        {
+          "temperature_k": 304.0,
+          "cv_j_mol_k": 21.9516752435
+        },
+        {
+          "temperature_k": 308.0,
+          "cv_j_mol_k": 22.0232861988
+        },
+        {
+          "temperature_k": 312.0,
+          "cv_j_mol_k": 22.0924242719
+        },
+        {
+          "temperature_k": 316.0,
+          "cv_j_mol_k": 22.1591986949
+        },
+        {
+          "temperature_k": 320.0,
+          "cv_j_mol_k": 22.2237129403
+        },
+        {
+          "temperature_k": 324.0,
+          "cv_j_mol_k": 22.2860650657
+        },
+        {
+          "temperature_k": 328.0,
+          "cv_j_mol_k": 22.3463480368
+        },
+        {
+          "temperature_k": 332.0,
+          "cv_j_mol_k": 22.4046500294
+        },
+        {
+          "temperature_k": 336.0,
+          "cv_j_mol_k": 22.461054711
+        },
+        {
+          "temperature_k": 340.0,
+          "cv_j_mol_k": 22.5156415054
+        },
+        {
+          "temperature_k": 344.0,
+          "cv_j_mol_k": 22.5684858389
+        },
+        {
+          "temperature_k": 348.0,
+          "cv_j_mol_k": 22.6196593714
+        },
+        {
+          "temperature_k": 352.0,
+          "cv_j_mol_k": 22.6692302133
+        },
+        {
+          "temperature_k": 356.0,
+          "cv_j_mol_k": 22.7172631269
+        },
+        {
+          "temperature_k": 360.0,
+          "cv_j_mol_k": 22.7638197169
+        },
+        {
+          "temperature_k": 364.0,
+          "cv_j_mol_k": 22.8089586077
+        },
+        {
+          "temperature_k": 368.0,
+          "cv_j_mol_k": 22.8527356099
+        },
+        {
+          "temperature_k": 372.0,
+          "cv_j_mol_k": 22.8952038767
+        },
+        {
+          "temperature_k": 376.0,
+          "cv_j_mol_k": 22.93641405
+        },
+        {
+          "temperature_k": 380.0,
+          "cv_j_mol_k": 22.9764143983
+        },
+        {
+          "temperature_k": 384.0,
+          "cv_j_mol_k": 23.0152509454
+        },
+        {
+          "temperature_k": 388.0,
+          "cv_j_mol_k": 23.0529675912
+        },
+        {
+          "temperature_k": 392.0,
+          "cv_j_mol_k": 23.0896062264
+        },
+        {
+          "temperature_k": 396.0,
+          "cv_j_mol_k": 23.1252068385
+        },
+        {
+          "temperature_k": 400.0,
+          "cv_j_mol_k": 23.1598076129
+        },
+        {
+          "temperature_k": 404.0,
+          "cv_j_mol_k": 23.1934450273
+        },
+        {
+          "temperature_k": 408.0,
+          "cv_j_mol_k": 23.2261539404
+        },
+        {
+          "temperature_k": 412.0,
+          "cv_j_mol_k": 23.2579676761
+        },
+        {
+          "temperature_k": 416.0,
+          "cv_j_mol_k": 23.2889181019
+        },
+        {
+          "temperature_k": 420.0,
+          "cv_j_mol_k": 23.3190357033
+        },
+        {
+          "temperature_k": 424.0,
+          "cv_j_mol_k": 23.348349654
+        },
+        {
+          "temperature_k": 428.0,
+          "cv_j_mol_k": 23.3768878815
+        },
+        {
+          "temperature_k": 432.0,
+          "cv_j_mol_k": 23.4046771294
+        },
+        {
+          "temperature_k": 436.0,
+          "cv_j_mol_k": 23.4317430163
+        },
+        {
+          "temperature_k": 440.0,
+          "cv_j_mol_k": 23.4581100909
+        },
+        {
+          "temperature_k": 444.0,
+          "cv_j_mol_k": 23.4838018844
+        },
+        {
+          "temperature_k": 448.0,
+          "cv_j_mol_k": 23.5088409599
+        },
+        {
+          "temperature_k": 452.0,
+          "cv_j_mol_k": 23.5332489591
+        },
+        {
+          "temperature_k": 456.0,
+          "cv_j_mol_k": 23.5570466465
+        },
+        {
+          "temperature_k": 460.0,
+          "cv_j_mol_k": 23.5802539506
+        },
+        {
+          "temperature_k": 464.0,
+          "cv_j_mol_k": 23.6028900039
+        },
+        {
+          "temperature_k": 468.0,
+          "cv_j_mol_k": 23.6249731802
+        },
+        {
+          "temperature_k": 472.0,
+          "cv_j_mol_k": 23.6465211296
+        },
+        {
+          "temperature_k": 476.0,
+          "cv_j_mol_k": 23.667550812
+        },
+        {
+          "temperature_k": 480.0,
+          "cv_j_mol_k": 23.6880785291
+        },
+        {
+          "temperature_k": 484.0,
+          "cv_j_mol_k": 23.7081199542
+        },
+        {
+          "temperature_k": 488.0,
+          "cv_j_mol_k": 23.7276901608
+        },
+        {
+          "temperature_k": 492.0,
+          "cv_j_mol_k": 23.7468036494
+        },
+        {
+          "temperature_k": 496.0,
+          "cv_j_mol_k": 23.7654743733
+        },
+        {
+          "temperature_k": 500.0,
+          "cv_j_mol_k": 23.7837157629
+        },
+        {
+          "temperature_k": 504.0,
+          "cv_j_mol_k": 23.8015407484
+        },
+        {
+          "temperature_k": 508.0,
+          "cv_j_mol_k": 23.8189617824
+        },
+        {
+          "temperature_k": 512.0,
+          "cv_j_mol_k": 23.8359908601
+        },
+        {
+          "temperature_k": 516.0,
+          "cv_j_mol_k": 23.8526395394
+        },
+        {
+          "temperature_k": 520.0,
+          "cv_j_mol_k": 23.8689189593
+        },
+        {
+          "temperature_k": 524.0,
+          "cv_j_mol_k": 23.8848398585
+        },
+        {
+          "temperature_k": 528.0,
+          "cv_j_mol_k": 23.9004125916
+        },
+        {
+          "temperature_k": 532.0,
+          "cv_j_mol_k": 23.9156471458
+        },
+        {
+          "temperature_k": 536.0,
+          "cv_j_mol_k": 23.9305531559
+        },
+        {
+          "temperature_k": 540.0,
+          "cv_j_mol_k": 23.9451399194
+        },
+        {
+          "temperature_k": 544.0,
+          "cv_j_mol_k": 23.95941641
+        },
+        {
+          "temperature_k": 548.0,
+          "cv_j_mol_k": 23.9733912914
+        },
+        {
+          "temperature_k": 552.0,
+          "cv_j_mol_k": 23.9870729293
+        },
+        {
+          "temperature_k": 556.0,
+          "cv_j_mol_k": 24.0004694041
+        },
+        {
+          "temperature_k": 560.0,
+          "cv_j_mol_k": 24.013588522
+        },
+        {
+          "temperature_k": 564.0,
+          "cv_j_mol_k": 24.0264378263
+        },
+        {
+          "temperature_k": 568.0,
+          "cv_j_mol_k": 24.0390246075
+        },
+        {
+          "temperature_k": 572.0,
+          "cv_j_mol_k": 24.0513559137
+        },
+        {
+          "temperature_k": 576.0,
+          "cv_j_mol_k": 24.0634385598
+        },
+        {
+          "temperature_k": 580.0,
+          "cv_j_mol_k": 24.0752791368
+        },
+        {
+          "temperature_k": 584.0,
+          "cv_j_mol_k": 24.0868840204
+        },
+        {
+          "temperature_k": 588.0,
+          "cv_j_mol_k": 24.0982593795
+        },
+        {
+          "temperature_k": 592.0,
+          "cv_j_mol_k": 24.1094111839
+        },
+        {
+          "temperature_k": 596.0,
+          "cv_j_mol_k": 24.1203452119
+        },
+        {
+          "temperature_k": 600.0,
+          "cv_j_mol_k": 24.1310670579
+        },
+        {
+          "temperature_k": 604.0,
+          "cv_j_mol_k": 24.1415821389
+        },
+        {
+          "temperature_k": 608.0,
+          "cv_j_mol_k": 24.1518957015
+        },
+        {
+          "temperature_k": 612.0,
+          "cv_j_mol_k": 24.1620128279
+        },
+        {
+          "temperature_k": 616.0,
+          "cv_j_mol_k": 24.1719384425
+        },
+        {
+          "temperature_k": 620.0,
+          "cv_j_mol_k": 24.181677317
+        },
+        {
+          "temperature_k": 624.0,
+          "cv_j_mol_k": 24.1912340768
+        },
+        {
+          "temperature_k": 628.0,
+          "cv_j_mol_k": 24.2006132056
+        },
+        {
+          "temperature_k": 632.0,
+          "cv_j_mol_k": 24.209819051
+        },
+        {
+          "temperature_k": 636.0,
+          "cv_j_mol_k": 24.2188558293
+        },
+        {
+          "temperature_k": 640.0,
+          "cv_j_mol_k": 24.22772763
+        },
+        {
+          "temperature_k": 644.0,
+          "cv_j_mol_k": 24.2364384206
+        },
+        {
+          "temperature_k": 648.0,
+          "cv_j_mol_k": 24.2449920507
+        },
+        {
+          "temperature_k": 652.0,
+          "cv_j_mol_k": 24.2533922563
+        },
+        {
+          "temperature_k": 656.0,
+          "cv_j_mol_k": 24.2616426637
+        },
+        {
+          "temperature_k": 660.0,
+          "cv_j_mol_k": 24.2697467931
+        },
+        {
+          "temperature_k": 664.0,
+          "cv_j_mol_k": 24.2777080629
+        },
+        {
+          "temperature_k": 668.0,
+          "cv_j_mol_k": 24.2855297925
+        },
+        {
+          "temperature_k": 672.0,
+          "cv_j_mol_k": 24.2932152061
+        },
+        {
+          "temperature_k": 676.0,
+          "cv_j_mol_k": 24.3007674358
+        },
+        {
+          "temperature_k": 680.0,
+          "cv_j_mol_k": 24.3081895249
+        },
+        {
+          "temperature_k": 684.0,
+          "cv_j_mol_k": 24.3154844305
+        },
+        {
+          "temperature_k": 688.0,
+          "cv_j_mol_k": 24.3226550268
+        },
+        {
+          "temperature_k": 692.0,
+          "cv_j_mol_k": 24.3297041077
+        },
+        {
+          "temperature_k": 696.0,
+          "cv_j_mol_k": 24.3366343894
+        },
+        {
+          "temperature_k": 700.0,
+          "cv_j_mol_k": 24.343448513
+        },
+        {
+          "temperature_k": 704.0,
+          "cv_j_mol_k": 24.3501490472
+        },
+        {
+          "temperature_k": 708.0,
+          "cv_j_mol_k": 24.35673849
+        },
+        {
+          "temperature_k": 712.0,
+          "cv_j_mol_k": 24.363219272
+        },
+        {
+          "temperature_k": 716.0,
+          "cv_j_mol_k": 24.3695937577
+        },
+        {
+          "temperature_k": 720.0,
+          "cv_j_mol_k": 24.3758642479
+        },
+        {
+          "temperature_k": 724.0,
+          "cv_j_mol_k": 24.3820329819
+        },
+        {
+          "temperature_k": 728.0,
+          "cv_j_mol_k": 24.3881021395
+        },
+        {
+          "temperature_k": 732.0,
+          "cv_j_mol_k": 24.3940738423
+        },
+        {
+          "temperature_k": 736.0,
+          "cv_j_mol_k": 24.3999501563
+        },
+        {
+          "temperature_k": 740.0,
+          "cv_j_mol_k": 24.4057330933
+        },
+        {
+          "temperature_k": 744.0,
+          "cv_j_mol_k": 24.4114246124
+        },
+        {
+          "temperature_k": 748.0,
+          "cv_j_mol_k": 24.4170266218
+        },
+        {
+          "temperature_k": 752.0,
+          "cv_j_mol_k": 24.4225409807
+        },
+        {
+          "temperature_k": 756.0,
+          "cv_j_mol_k": 24.4279695001
+        },
+        {
+          "temperature_k": 760.0,
+          "cv_j_mol_k": 24.433313945
+        },
+        {
+          "temperature_k": 764.0,
+          "cv_j_mol_k": 24.4385760352
+        },
+        {
+          "temperature_k": 768.0,
+          "cv_j_mol_k": 24.4437574472
+        },
+        {
+          "temperature_k": 772.0,
+          "cv_j_mol_k": 24.448859815
+        },
+        {
+          "temperature_k": 776.0,
+          "cv_j_mol_k": 24.4538847317
+        },
+        {
+          "temperature_k": 780.0,
+          "cv_j_mol_k": 24.4588337507
+        },
+        {
+          "temperature_k": 784.0,
+          "cv_j_mol_k": 24.4637083868
+        },
+        {
+          "temperature_k": 788.0,
+          "cv_j_mol_k": 24.4685101171
+        },
+        {
+          "temperature_k": 792.0,
+          "cv_j_mol_k": 24.4732403828
+        },
+        {
+          "temperature_k": 796.0,
+          "cv_j_mol_k": 24.4779005894
+        },
+        {
+          "temperature_k": 800.0,
+          "cv_j_mol_k": 24.4824921084
+        }
+      ],
+      "Si": [
+        {
+          "temperature_k": 0.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 4.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 8.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 12.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 16.0,
+          "cv_j_mol_k": 2e-10
+        },
+        {
+          "temperature_k": 20.0,
+          "cv_j_mol_k": 8.67e-08
+        },
+        {
+          "temperature_k": 24.0,
+          "cv_j_mol_k": 4.5815e-06
+        },
+        {
+          "temperature_k": 28.0,
+          "cv_j_mol_k": 7.4304e-05
+        },
+        {
+          "temperature_k": 32.0,
+          "cv_j_mol_k": 0.0005793686
+        },
+        {
+          "temperature_k": 36.0,
+          "cv_j_mol_k": 0.0027835124
+        },
+        {
+          "temperature_k": 40.0,
+          "cv_j_mol_k": 0.0095550721
+        },
+        {
+          "temperature_k": 44.0,
+          "cv_j_mol_k": 0.0257382663
+        },
+        {
+          "temperature_k": 48.0,
+          "cv_j_mol_k": 0.0578919439
+        },
+        {
+          "temperature_k": 52.0,
+          "cv_j_mol_k": 0.1134843708
+        },
+        {
+          "temperature_k": 56.0,
+          "cv_j_mol_k": 0.1998661022
+        },
+        {
+          "temperature_k": 60.0,
+          "cv_j_mol_k": 0.323342136
+        },
+        {
+          "temperature_k": 64.0,
+          "cv_j_mol_k": 0.4885347774
+        },
+        {
+          "temperature_k": 68.0,
+          "cv_j_mol_k": 0.6980873957
+        },
+        {
+          "temperature_k": 72.0,
+          "cv_j_mol_k": 0.9526640718
+        },
+        {
+          "temperature_k": 76.0,
+          "cv_j_mol_k": 1.2511581653
+        },
+        {
+          "temperature_k": 80.0,
+          "cv_j_mol_k": 1.5910189366
+        },
+        {
+          "temperature_k": 84.0,
+          "cv_j_mol_k": 1.9686213253
+        },
+        {
+          "temperature_k": 88.0,
+          "cv_j_mol_k": 2.3796263266
+        },
+        {
+          "temperature_k": 92.0,
+          "cv_j_mol_k": 2.8193004736
+        },
+        {
+          "temperature_k": 96.0,
+          "cv_j_mol_k": 3.2827795116
+        },
+        {
+          "temperature_k": 100.0,
+          "cv_j_mol_k": 3.7652728155
+        },
+        {
+          "temperature_k": 104.0,
+          "cv_j_mol_k": 4.2622121472
+        },
+        {
+          "temperature_k": 108.0,
+          "cv_j_mol_k": 4.7693520258
+        },
+        {
+          "temperature_k": 112.0,
+          "cv_j_mol_k": 5.2828303761
+        },
+        {
+          "temperature_k": 116.0,
+          "cv_j_mol_k": 5.7991980885
+        },
+        {
+          "temperature_k": 120.0,
+          "cv_j_mol_k": 6.3154253138
+        },
+        {
+          "temperature_k": 124.0,
+          "cv_j_mol_k": 6.8288911487
+        },
+        {
+          "temperature_k": 128.0,
+          "cv_j_mol_k": 7.3373621265
+        },
+        {
+          "temperature_k": 132.0,
+          "cv_j_mol_k": 7.8389637465
+        },
+        {
+          "temperature_k": 136.0,
+          "cv_j_mol_k": 8.3321482477
+        },
+        {
+          "temperature_k": 140.0,
+          "cv_j_mol_k": 8.8156609673
+        },
+        {
+          "temperature_k": 144.0,
+          "cv_j_mol_k": 9.2885069311
+        },
+        {
+          "temperature_k": 148.0,
+          "cv_j_mol_k": 9.749918786
+        },
+        {
+          "temperature_k": 152.0,
+          "cv_j_mol_k": 10.1993267685
+        },
+        {
+          "temperature_k": 156.0,
+          "cv_j_mol_k": 10.6363311057
+        },
+        {
+          "temperature_k": 160.0,
+          "cv_j_mol_k": 11.0606770216
+        },
+        {
+          "temperature_k": 164.0,
+          "cv_j_mol_k": 11.4722323733
+        },
+        {
+          "temperature_k": 168.0,
+          "cv_j_mol_k": 11.8709678374
+        },
+        {
+          "temperature_k": 172.0,
+          "cv_j_mol_k": 12.2569395037
+        },
+        {
+          "temperature_k": 176.0,
+          "cv_j_mol_k": 12.6302736944
+        },
+        {
+          "temperature_k": 180.0,
+          "cv_j_mol_k": 12.9911538106
+        },
+        {
+          "temperature_k": 184.0,
+          "cv_j_mol_k": 13.3398090022
+        },
+        {
+          "temperature_k": 188.0,
+          "cv_j_mol_k": 13.6765044629
+        },
+        {
+          "temperature_k": 192.0,
+          "cv_j_mol_k": 14.0015331593
+        },
+        {
+          "temperature_k": 196.0,
+          "cv_j_mol_k": 14.3152088202
+        },
+        {
+          "temperature_k": 200.0,
+          "cv_j_mol_k": 14.6178600253
+        },
+        {
+          "temperature_k": 204.0,
+          "cv_j_mol_k": 14.9098252469
+        },
+        {
+          "temperature_k": 208.0,
+          "cv_j_mol_k": 15.1914487166
+        },
+        {
+          "temperature_k": 212.0,
+          "cv_j_mol_k": 15.4630770018
+        },
+        {
+          "temperature_k": 216.0,
+          "cv_j_mol_k": 15.7250561903
+        },
+        {
+          "temperature_k": 220.0,
+          "cv_j_mol_k": 15.977729595
+        },
+        {
+          "temperature_k": 224.0,
+          "cv_j_mol_k": 16.2214359015
+        },
+        {
+          "temperature_k": 228.0,
+          "cv_j_mol_k": 16.4565076917
+        },
+        {
+          "temperature_k": 232.0,
+          "cv_j_mol_k": 16.6832702851
+        },
+        {
+          "temperature_k": 236.0,
+          "cv_j_mol_k": 16.9020408484
+        },
+        {
+          "temperature_k": 240.0,
+          "cv_j_mol_k": 17.1131277298
+        },
+        {
+          "temperature_k": 244.0,
+          "cv_j_mol_k": 17.3168299827
+        },
+        {
+          "temperature_k": 248.0,
+          "cv_j_mol_k": 17.5134370446
+        },
+        {
+          "temperature_k": 252.0,
+          "cv_j_mol_k": 17.7032285475
+        },
+        {
+          "temperature_k": 256.0,
+          "cv_j_mol_k": 17.8864742346
+        },
+        {
+          "temperature_k": 260.0,
+          "cv_j_mol_k": 18.0634339644
+        },
+        {
+          "temperature_k": 264.0,
+          "cv_j_mol_k": 18.2343577868
+        },
+        {
+          "temperature_k": 268.0,
+          "cv_j_mol_k": 18.3994860757
+        },
+        {
+          "temperature_k": 272.0,
+          "cv_j_mol_k": 18.5590497069
+        },
+        {
+          "temperature_k": 276.0,
+          "cv_j_mol_k": 18.7132702723
+        },
+        {
+          "temperature_k": 280.0,
+          "cv_j_mol_k": 18.8623603204
+        },
+        {
+          "temperature_k": 284.0,
+          "cv_j_mol_k": 19.0065236177
+        },
+        {
+          "temperature_k": 288.0,
+          "cv_j_mol_k": 19.1459554239
+        },
+        {
+          "temperature_k": 292.0,
+          "cv_j_mol_k": 19.2808427776
+        },
+        {
+          "temperature_k": 296.0,
+          "cv_j_mol_k": 19.4113647864
+        },
+        {
+          "temperature_k": 300.0,
+          "cv_j_mol_k": 19.5376929208
+        },
+        {
+          "temperature_k": 304.0,
+          "cv_j_mol_k": 19.6599913068
+        },
+        {
+          "temperature_k": 308.0,
+          "cv_j_mol_k": 19.7784170162
+        },
+        {
+          "temperature_k": 312.0,
+          "cv_j_mol_k": 19.8931203531
+        },
+        {
+          "temperature_k": 316.0,
+          "cv_j_mol_k": 20.0042451346
+        },
+        {
+          "temperature_k": 320.0,
+          "cv_j_mol_k": 20.1119289648
+        },
+        {
+          "temperature_k": 324.0,
+          "cv_j_mol_k": 20.2163035017
+        },
+        {
+          "temperature_k": 328.0,
+          "cv_j_mol_k": 20.3174947156
+        },
+        {
+          "temperature_k": 332.0,
+          "cv_j_mol_k": 20.4156231396
+        },
+        {
+          "temperature_k": 336.0,
+          "cv_j_mol_k": 20.5108041108
+        },
+        {
+          "temperature_k": 340.0,
+          "cv_j_mol_k": 20.6031480033
+        },
+        {
+          "temperature_k": 344.0,
+          "cv_j_mol_k": 20.6927604514
+        },
+        {
+          "temperature_k": 348.0,
+          "cv_j_mol_k": 20.7797425648
+        },
+        {
+          "temperature_k": 352.0,
+          "cv_j_mol_k": 20.8641911343
+        },
+        {
+          "temperature_k": 356.0,
+          "cv_j_mol_k": 20.9461988288
+        },
+        {
+          "temperature_k": 360.0,
+          "cv_j_mol_k": 21.0258543846
+        },
+        {
+          "temperature_k": 364.0,
+          "cv_j_mol_k": 21.1032427854
+        },
+        {
+          "temperature_k": 368.0,
+          "cv_j_mol_k": 21.1784454347
+        },
+        {
+          "temperature_k": 372.0,
+          "cv_j_mol_k": 21.2515403203
+        },
+        {
+          "temperature_k": 376.0,
+          "cv_j_mol_k": 21.3226021715
+        },
+        {
+          "temperature_k": 380.0,
+          "cv_j_mol_k": 21.3917026088
+        },
+        {
+          "temperature_k": 384.0,
+          "cv_j_mol_k": 21.4589102863
+        },
+        {
+          "temperature_k": 388.0,
+          "cv_j_mol_k": 21.5242910282
+        },
+        {
+          "temperature_k": 392.0,
+          "cv_j_mol_k": 21.587907958
+        },
+        {
+          "temperature_k": 396.0,
+          "cv_j_mol_k": 21.6498216219
+        },
+        {
+          "temperature_k": 400.0,
+          "cv_j_mol_k": 21.7100901066
+        },
+        {
+          "temperature_k": 404.0,
+          "cv_j_mol_k": 21.768769151
+        },
+        {
+          "temperature_k": 408.0,
+          "cv_j_mol_k": 21.8259122526
+        },
+        {
+          "temperature_k": 412.0,
+          "cv_j_mol_k": 21.8815707692
+        },
+        {
+          "temperature_k": 416.0,
+          "cv_j_mol_k": 21.9357940148
+        },
+        {
+          "temperature_k": 420.0,
+          "cv_j_mol_k": 21.9886293521
+        },
+        {
+          "temperature_k": 424.0,
+          "cv_j_mol_k": 22.0401222794
+        },
+        {
+          "temperature_k": 428.0,
+          "cv_j_mol_k": 22.090316514
+        },
+        {
+          "temperature_k": 432.0,
+          "cv_j_mol_k": 22.1392540714
+        },
+        {
+          "temperature_k": 436.0,
+          "cv_j_mol_k": 22.1869753404
+        },
+        {
+          "temperature_k": 440.0,
+          "cv_j_mol_k": 22.2335191551
+        },
+        {
+          "temperature_k": 444.0,
+          "cv_j_mol_k": 22.2789228629
+        },
+        {
+          "temperature_k": 448.0,
+          "cv_j_mol_k": 22.3232223899
+        },
+        {
+          "temperature_k": 452.0,
+          "cv_j_mol_k": 22.3664523021
+        },
+        {
+          "temperature_k": 456.0,
+          "cv_j_mol_k": 22.4086458653
+        },
+        {
+          "temperature_k": 460.0,
+          "cv_j_mol_k": 22.4498351001
+        },
+        {
+          "temperature_k": 464.0,
+          "cv_j_mol_k": 22.4900508362
+        },
+        {
+          "temperature_k": 468.0,
+          "cv_j_mol_k": 22.5293227632
+        },
+        {
+          "temperature_k": 472.0,
+          "cv_j_mol_k": 22.5676794785
+        },
+        {
+          "temperature_k": 476.0,
+          "cv_j_mol_k": 22.6051485342
+        },
+        {
+          "temperature_k": 480.0,
+          "cv_j_mol_k": 22.6417564811
+        },
+        {
+          "temperature_k": 484.0,
+          "cv_j_mol_k": 22.67752891
+        },
+        {
+          "temperature_k": 488.0,
+          "cv_j_mol_k": 22.7124904927
+        },
+        {
+          "temperature_k": 492.0,
+          "cv_j_mol_k": 22.7466650195
+        },
+        {
+          "temperature_k": 496.0,
+          "cv_j_mol_k": 22.7800754357
+        },
+        {
+          "temperature_k": 500.0,
+          "cv_j_mol_k": 22.8127438767
+        },
+        {
+          "temperature_k": 504.0,
+          "cv_j_mol_k": 22.8446917005
+        },
+        {
+          "temperature_k": 508.0,
+          "cv_j_mol_k": 22.8759395201
+        },
+        {
+          "temperature_k": 512.0,
+          "cv_j_mol_k": 22.9065072329
+        },
+        {
+          "temperature_k": 516.0,
+          "cv_j_mol_k": 22.93641405
+        },
+        {
+          "temperature_k": 520.0,
+          "cv_j_mol_k": 22.9656785236
+        },
+        {
+          "temperature_k": 524.0,
+          "cv_j_mol_k": 22.994318573
+        },
+        {
+          "temperature_k": 528.0,
+          "cv_j_mol_k": 23.0223515103
+        },
+        {
+          "temperature_k": 532.0,
+          "cv_j_mol_k": 23.0497940635
+        },
+        {
+          "temperature_k": 536.0,
+          "cv_j_mol_k": 23.0766624002
+        },
+        {
+          "temperature_k": 540.0,
+          "cv_j_mol_k": 23.1029721491
+        },
+        {
+          "temperature_k": 544.0,
+          "cv_j_mol_k": 23.128738421
+        },
+        {
+          "temperature_k": 548.0,
+          "cv_j_mol_k": 23.1539758288
+        },
+        {
+          "temperature_k": 552.0,
+          "cv_j_mol_k": 23.1786985067
+        },
+        {
+          "temperature_k": 556.0,
+          "cv_j_mol_k": 23.2029201282
+        },
+        {
+          "temperature_k": 560.0,
+          "cv_j_mol_k": 23.2266539242
+        },
+        {
+          "temperature_k": 564.0,
+          "cv_j_mol_k": 23.2499126993
+        },
+        {
+          "temperature_k": 568.0,
+          "cv_j_mol_k": 23.2727088479
+        },
+        {
+          "temperature_k": 572.0,
+          "cv_j_mol_k": 23.2950543696
+        },
+        {
+          "temperature_k": 576.0,
+          "cv_j_mol_k": 23.3169608842
+        },
+        {
+          "temperature_k": 580.0,
+          "cv_j_mol_k": 23.3384396452
+        },
+        {
+          "temperature_k": 584.0,
+          "cv_j_mol_k": 23.3595015539
+        },
+        {
+          "temperature_k": 588.0,
+          "cv_j_mol_k": 23.3801571716
+        },
+        {
+          "temperature_k": 592.0,
+          "cv_j_mol_k": 23.400416733
+        },
+        {
+          "temperature_k": 596.0,
+          "cv_j_mol_k": 23.4202901572
+        },
+        {
+          "temperature_k": 600.0,
+          "cv_j_mol_k": 23.4397870593
+        },
+        {
+          "temperature_k": 604.0,
+          "cv_j_mol_k": 23.4589167616
+        },
+        {
+          "temperature_k": 608.0,
+          "cv_j_mol_k": 23.4776883038
+        },
+        {
+          "temperature_k": 612.0,
+          "cv_j_mol_k": 23.4961104532
+        },
+        {
+          "temperature_k": 616.0,
+          "cv_j_mol_k": 23.5141917143
+        },
+        {
+          "temperature_k": 620.0,
+          "cv_j_mol_k": 23.5319403379
+        },
+        {
+          "temperature_k": 624.0,
+          "cv_j_mol_k": 23.5493643301
+        },
+        {
+          "temperature_k": 628.0,
+          "cv_j_mol_k": 23.566471461
+        },
+        {
+          "temperature_k": 632.0,
+          "cv_j_mol_k": 23.5832692725
+        },
+        {
+          "temperature_k": 636.0,
+          "cv_j_mol_k": 23.5997650866
+        },
+        {
+          "temperature_k": 640.0,
+          "cv_j_mol_k": 23.6159660126
+        },
+        {
+          "temperature_k": 644.0,
+          "cv_j_mol_k": 23.6318789544
+        },
+        {
+          "temperature_k": 648.0,
+          "cv_j_mol_k": 23.6475106179
+        },
+        {
+          "temperature_k": 652.0,
+          "cv_j_mol_k": 23.6628675171
+        },
+        {
+          "temperature_k": 656.0,
+          "cv_j_mol_k": 23.6779559808
+        },
+        {
+          "temperature_k": 660.0,
+          "cv_j_mol_k": 23.6927821589
+        },
+        {
+          "temperature_k": 664.0,
+          "cv_j_mol_k": 23.7073520284
+        },
+        {
+          "temperature_k": 668.0,
+          "cv_j_mol_k": 23.7216713987
+        },
+        {
+          "temperature_k": 672.0,
+          "cv_j_mol_k": 23.7357459178
+        },
+        {
+          "temperature_k": 676.0,
+          "cv_j_mol_k": 23.749581077
+        },
+        {
+          "temperature_k": 680.0,
+          "cv_j_mol_k": 23.7631822162
+        },
+        {
+          "temperature_k": 684.0,
+          "cv_j_mol_k": 23.776554529
+        },
+        {
+          "temperature_k": 688.0,
+          "cv_j_mol_k": 23.7897030673
+        },
+        {
+          "temperature_k": 692.0,
+          "cv_j_mol_k": 23.8026327457
+        },
+        {
+          "temperature_k": 696.0,
+          "cv_j_mol_k": 23.8153483463
+        },
+        {
+          "temperature_k": 700.0,
+          "cv_j_mol_k": 23.8278545225
+        },
+        {
+          "temperature_k": 704.0,
+          "cv_j_mol_k": 23.8401558032
+        },
+        {
+          "temperature_k": 708.0,
+          "cv_j_mol_k": 23.852256597
+        },
+        {
+          "temperature_k": 712.0,
+          "cv_j_mol_k": 23.8641611956
+        },
+        {
+          "temperature_k": 716.0,
+          "cv_j_mol_k": 23.8758737776
+        },
+        {
+          "temperature_k": 720.0,
+          "cv_j_mol_k": 23.8873984122
+        },
+        {
+          "temperature_k": 724.0,
+          "cv_j_mol_k": 23.8987390623
+        },
+        {
+          "temperature_k": 728.0,
+          "cv_j_mol_k": 23.9098995879
+        },
+        {
+          "temperature_k": 732.0,
+          "cv_j_mol_k": 23.9208837493
+        },
+        {
+          "temperature_k": 736.0,
+          "cv_j_mol_k": 23.9316952102
+        },
+        {
+          "temperature_k": 740.0,
+          "cv_j_mol_k": 23.9423375404
+        },
+        {
+          "temperature_k": 744.0,
+          "cv_j_mol_k": 23.9528142187
+        },
+        {
+          "temperature_k": 748.0,
+          "cv_j_mol_k": 23.963128636
+        },
+        {
+          "temperature_k": 752.0,
+          "cv_j_mol_k": 23.9732840974
+        },
+        {
+          "temperature_k": 756.0,
+          "cv_j_mol_k": 23.9832838252
+        },
+        {
+          "temperature_k": 760.0,
+          "cv_j_mol_k": 23.993130961
+        },
+        {
+          "temperature_k": 764.0,
+          "cv_j_mol_k": 24.0028285684
+        },
+        {
+          "temperature_k": 768.0,
+          "cv_j_mol_k": 24.0123796351
+        },
+        {
+          "temperature_k": 772.0,
+          "cv_j_mol_k": 24.0217870752
+        },
+        {
+          "temperature_k": 776.0,
+          "cv_j_mol_k": 24.0310537313
+        },
+        {
+          "temperature_k": 780.0,
+          "cv_j_mol_k": 24.0401823766
+        },
+        {
+          "temperature_k": 784.0,
+          "cv_j_mol_k": 24.0491757169
+        },
+        {
+          "temperature_k": 788.0,
+          "cv_j_mol_k": 24.0580363926
+        },
+        {
+          "temperature_k": 792.0,
+          "cv_j_mol_k": 24.0667669805
+        },
+        {
+          "temperature_k": 796.0,
+          "cv_j_mol_k": 24.0753699955
+        },
+        {
+          "temperature_k": 800.0,
+          "cv_j_mol_k": 24.0838478927
+        }
+      ],
+      "C": [
+        {
+          "temperature_k": 0.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 4.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 8.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 12.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 16.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 20.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 24.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 28.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 32.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 36.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 40.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 44.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 48.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 52.0,
+          "cv_j_mol_k": 0.0
+        },
+        {
+          "temperature_k": 56.0,
+          "cv_j_mol_k": 3e-10
+        },
+        {
+          "temperature_k": 60.0,
+          "cv_j_mol_k": 2.2e-09
+        },
+        {
+          "temperature_k": 64.0,
+          "cv_j_mol_k": 1.25e-08
+        },
+        {
+          "temperature_k": 68.0,
+          "cv_j_mol_k": 5.78e-08
+        },
+        {
+          "temperature_k": 72.0,
+          "cv_j_mol_k": 2.239e-07
+        },
+        {
+          "temperature_k": 76.0,
+          "cv_j_mol_k": 7.477e-07
+        },
+        {
+          "temperature_k": 80.0,
+          "cv_j_mol_k": 2.2014e-06
+        },
+        {
+          "temperature_k": 84.0,
+          "cv_j_mol_k": 5.8204e-06
+        },
+        {
+          "temperature_k": 88.0,
+          "cv_j_mol_k": 1.40263e-05
+        },
+        {
+          "temperature_k": 92.0,
+          "cv_j_mol_k": 3.11889e-05
+        },
+        {
+          "temperature_k": 96.0,
+          "cv_j_mol_k": 6.46487e-05
+        },
+        {
+          "temperature_k": 100.0,
+          "cv_j_mol_k": 0.0001259934
+        },
+        {
+          "temperature_k": 104.0,
+          "cv_j_mol_k": 0.0002325452
+        },
+        {
+          "temperature_k": 108.0,
+          "cv_j_mol_k": 0.0004089911
+        },
+        {
+          "temperature_k": 112.0,
+          "cv_j_mol_k": 0.000689059
+        },
+        {
+          "temperature_k": 116.0,
+          "cv_j_mol_k": 0.0011171345
+        },
+        {
+          "temperature_k": 120.0,
+          "cv_j_mol_k": 0.0017497098
+        },
+        {
+          "temperature_k": 124.0,
+          "cv_j_mol_k": 0.0026565677
+        },
+        {
+          "temperature_k": 128.0,
+          "cv_j_mol_k": 0.0039216192
+        },
+        {
+          "temperature_k": 132.0,
+          "cv_j_mol_k": 0.0056433402
+        },
+        {
+          "temperature_k": 136.0,
+          "cv_j_mol_k": 0.0079347762
+        },
+        {
+          "temperature_k": 140.0,
+          "cv_j_mol_k": 0.0109231097
+        },
+        {
+          "temperature_k": 144.0,
+          "cv_j_mol_k": 0.0147488109
+        },
+        {
+          "temperature_k": 148.0,
+          "cv_j_mol_k": 0.0195644075
+        },
+        {
+          "temperature_k": 152.0,
+          "cv_j_mol_k": 0.0255329283
+        },
+        {
+          "temperature_k": 156.0,
+          "cv_j_mol_k": 0.0328260818
+        },
+        {
+          "temperature_k": 160.0,
+          "cv_j_mol_k": 0.0416222387
+        },
+        {
+          "temperature_k": 164.0,
+          "cv_j_mol_k": 0.0521042858
+        },
+        {
+          "temperature_k": 168.0,
+          "cv_j_mol_k": 0.0644574194
+        },
+        {
+          "temperature_k": 172.0,
+          "cv_j_mol_k": 0.0788669389
+        },
+        {
+          "temperature_k": 176.0,
+          "cv_j_mol_k": 0.0955160956
+        },
+        {
+          "temperature_k": 180.0,
+          "cv_j_mol_k": 0.1145840432
+        },
+        {
+          "temperature_k": 184.0,
+          "cv_j_mol_k": 0.1362439292
+        },
+        {
+          "temperature_k": 188.0,
+          "cv_j_mol_k": 0.1606611558
+        },
+        {
+          "temperature_k": 192.0,
+          "cv_j_mol_k": 0.1879918331
+        },
+        {
+          "temperature_k": 196.0,
+          "cv_j_mol_k": 0.2183814368
+        },
+        {
+          "temperature_k": 200.0,
+          "cv_j_mol_k": 0.2519636794
+        },
+        {
+          "temperature_k": 204.0,
+          "cv_j_mol_k": 0.2888595937
+        },
+        {
+          "temperature_k": 208.0,
+          "cv_j_mol_k": 0.3291768267
+        },
+        {
+          "temperature_k": 212.0,
+          "cv_j_mol_k": 0.373009134
+        },
+        {
+          "temperature_k": 216.0,
+          "cv_j_mol_k": 0.4204360652
+        },
+        {
+          "temperature_k": 220.0,
+          "cv_j_mol_k": 0.4715228245
+        },
+        {
+          "temperature_k": 224.0,
+          "cv_j_mol_k": 0.526320293
+        },
+        {
+          "temperature_k": 228.0,
+          "cv_j_mol_k": 0.5848651957
+        },
+        {
+          "temperature_k": 232.0,
+          "cv_j_mol_k": 0.6471803953
+        },
+        {
+          "temperature_k": 236.0,
+          "cv_j_mol_k": 0.7132752975
+        },
+        {
+          "temperature_k": 240.0,
+          "cv_j_mol_k": 0.7831463509
+        },
+        {
+          "temperature_k": 244.0,
+          "cv_j_mol_k": 0.8567776239
+        },
+        {
+          "temperature_k": 248.0,
+          "cv_j_mol_k": 0.9341414465
+        },
+        {
+          "temperature_k": 252.0,
+          "cv_j_mol_k": 1.0151991003
+        },
+        {
+          "temperature_k": 256.0,
+          "cv_j_mol_k": 1.0999015451
+        },
+        {
+          "temperature_k": 260.0,
+          "cv_j_mol_k": 1.1881901706
+        },
+        {
+          "temperature_k": 264.0,
+          "cv_j_mol_k": 1.2799975613
+        },
+        {
+          "temperature_k": 268.0,
+          "cv_j_mol_k": 1.3752482672
+        },
+        {
+          "temperature_k": 272.0,
+          "cv_j_mol_k": 1.4738595702
+        },
+        {
+          "temperature_k": 276.0,
+          "cv_j_mol_k": 1.5757422404
+        },
+        {
+          "temperature_k": 280.0,
+          "cv_j_mol_k": 1.6808012761
+        },
+        {
+          "temperature_k": 284.0,
+          "cv_j_mol_k": 1.7889366217
+        },
+        {
+          "temperature_k": 288.0,
+          "cv_j_mol_k": 1.9000438606
+        },
+        {
+          "temperature_k": 292.0,
+          "cv_j_mol_k": 2.0140148788
+        },
+        {
+          "temperature_k": 296.0,
+          "cv_j_mol_k": 2.1307384971
+        },
+        {
+          "temperature_k": 300.0,
+          "cv_j_mol_k": 2.2501010699
+        },
+        {
+          "temperature_k": 304.0,
+          "cv_j_mol_k": 2.3719870494
+        },
+        {
+          "temperature_k": 308.0,
+          "cv_j_mol_k": 2.4962795145
+        },
+        {
+          "temperature_k": 312.0,
+          "cv_j_mol_k": 2.6228606641
+        },
+        {
+          "temperature_k": 316.0,
+          "cv_j_mol_k": 2.7516122742
+        },
+        {
+          "temperature_k": 320.0,
+          "cv_j_mol_k": 2.8824161205
+        },
+        {
+          "temperature_k": 324.0,
+          "cv_j_mol_k": 3.015154366
+        },
+        {
+          "temperature_k": 328.0,
+          "cv_j_mol_k": 3.1497099152
+        },
+        {
+          "temperature_k": 332.0,
+          "cv_j_mol_k": 3.2859667359
+        },
+        {
+          "temperature_k": 336.0,
+          "cv_j_mol_k": 3.4238101495
+        },
+        {
+          "temperature_k": 340.0,
+          "cv_j_mol_k": 3.5631270914
+        },
+        {
+          "temperature_k": 344.0,
+          "cv_j_mol_k": 3.7038063432
+        },
+        {
+          "temperature_k": 348.0,
+          "cv_j_mol_k": 3.8457387376
+        },
+        {
+          "temperature_k": 352.0,
+          "cv_j_mol_k": 3.9888173383
+        },
+        {
+          "temperature_k": 356.0,
+          "cv_j_mol_k": 4.1329375957
+        },
+        {
+          "temperature_k": 360.0,
+          "cv_j_mol_k": 4.27799748
+        },
+        {
+          "temperature_k": 364.0,
+          "cv_j_mol_k": 4.423897594
+        },
+        {
+          "temperature_k": 368.0,
+          "cv_j_mol_k": 4.570541266
+        },
+        {
+          "temperature_k": 372.0,
+          "cv_j_mol_k": 4.7178346253
+        },
+        {
+          "temperature_k": 376.0,
+          "cv_j_mol_k": 4.8656866606
+        },
+        {
+          "temperature_k": 380.0,
+          "cv_j_mol_k": 5.0140092639
+        },
+        {
+          "temperature_k": 384.0,
+          "cv_j_mol_k": 5.1627172596
+        },
+        {
+          "temperature_k": 388.0,
+          "cv_j_mol_k": 5.3117284219
+        },
+        {
+          "temperature_k": 392.0,
+          "cv_j_mol_k": 5.4609634797
+        },
+        {
+          "temperature_k": 396.0,
+          "cv_j_mol_k": 5.6103461124
+        },
+        {
+          "temperature_k": 400.0,
+          "cv_j_mol_k": 5.759802935
+        },
+        {
+          "temperature_k": 404.0,
+          "cv_j_mol_k": 5.9092634756
+        },
+        {
+          "temperature_k": 408.0,
+          "cv_j_mol_k": 6.0586601451
+        },
+        {
+          "temperature_k": 412.0,
+          "cv_j_mol_k": 6.2079282008
+        },
+        {
+          "temperature_k": 416.0,
+          "cv_j_mol_k": 6.3570057036
+        },
+        {
+          "temperature_k": 420.0,
+          "cv_j_mol_k": 6.50583347
+        },
+        {
+          "temperature_k": 424.0,
+          "cv_j_mol_k": 6.6543550209
+        },
+        {
+          "temperature_k": 428.0,
+          "cv_j_mol_k": 6.8025165248
+        },
+        {
+          "temperature_k": 432.0,
+          "cv_j_mol_k": 6.9502667395
+        },
+        {
+          "temperature_k": 436.0,
+          "cv_j_mol_k": 7.0975569502
+        },
+        {
+          "temperature_k": 440.0,
+          "cv_j_mol_k": 7.2443409055
+        },
+        {
+          "temperature_k": 444.0,
+          "cv_j_mol_k": 7.3905747524
+        },
+        {
+          "temperature_k": 448.0,
+          "cv_j_mol_k": 7.5362169686
+        },
+        {
+          "temperature_k": 452.0,
+          "cv_j_mol_k": 7.6812282955
+        },
+        {
+          "temperature_k": 456.0,
+          "cv_j_mol_k": 7.8255716694
+        },
+        {
+          "temperature_k": 460.0,
+          "cv_j_mol_k": 7.9692121526
+        },
+        {
+          "temperature_k": 464.0,
+          "cv_j_mol_k": 8.1121168648
+        },
+        {
+          "temperature_k": 468.0,
+          "cv_j_mol_k": 8.2542549145
+        },
+        {
+          "temperature_k": 472.0,
+          "cv_j_mol_k": 8.3955973308
+        },
+        {
+          "temperature_k": 476.0,
+          "cv_j_mol_k": 8.5361169956
+        },
+        {
+          "temperature_k": 480.0,
+          "cv_j_mol_k": 8.6757885768
+        },
+        {
+          "temperature_k": 484.0,
+          "cv_j_mol_k": 8.8145884625
+        },
+        {
+          "temperature_k": 488.0,
+          "cv_j_mol_k": 8.9524946956
+        },
+        {
+          "temperature_k": 492.0,
+          "cv_j_mol_k": 9.0894869107
+        },
+        {
+          "temperature_k": 496.0,
+          "cv_j_mol_k": 9.2255462708
+        },
+        {
+          "temperature_k": 500.0,
+          "cv_j_mol_k": 9.3606554068
+        },
+        {
+          "temperature_k": 504.0,
+          "cv_j_mol_k": 9.4947983568
+        },
+        {
+          "temperature_k": 508.0,
+          "cv_j_mol_k": 9.6279605082
+        },
+        {
+          "temperature_k": 512.0,
+          "cv_j_mol_k": 9.7601285408
+        },
+        {
+          "temperature_k": 516.0,
+          "cv_j_mol_k": 9.8912903707
+        },
+        {
+          "temperature_k": 520.0,
+          "cv_j_mol_k": 10.0214350972
+        },
+        {
+          "temperature_k": 524.0,
+          "cv_j_mol_k": 10.1505529496
+        },
+        {
+          "temperature_k": 528.0,
+          "cv_j_mol_k": 10.2786352371
+        },
+        {
+          "temperature_k": 532.0,
+          "cv_j_mol_k": 10.4056742989
+        },
+        {
+          "temperature_k": 536.0,
+          "cv_j_mol_k": 10.531663457
+        },
+        {
+          "temperature_k": 540.0,
+          "cv_j_mol_k": 10.6565969696
+        },
+        {
+          "temperature_k": 544.0,
+          "cv_j_mol_k": 10.7804699866
+        },
+        {
+          "temperature_k": 548.0,
+          "cv_j_mol_k": 10.9032785068
+        },
+        {
+          "temperature_k": 552.0,
+          "cv_j_mol_k": 11.0250193357
+        },
+        {
+          "temperature_k": 556.0,
+          "cv_j_mol_k": 11.1456900459
+        },
+        {
+          "temperature_k": 560.0,
+          "cv_j_mol_k": 11.2652889378
+        },
+        {
+          "temperature_k": 564.0,
+          "cv_j_mol_k": 11.3838150032
+        },
+        {
+          "temperature_k": 568.0,
+          "cv_j_mol_k": 11.5012678883
+        },
+        {
+          "temperature_k": 572.0,
+          "cv_j_mol_k": 11.6176478603
+        },
+        {
+          "temperature_k": 576.0,
+          "cv_j_mol_k": 11.7329557734
+        },
+        {
+          "temperature_k": 580.0,
+          "cv_j_mol_k": 11.8471930373
+        },
+        {
+          "temperature_k": 584.0,
+          "cv_j_mol_k": 11.9603615864
+        },
+        {
+          "temperature_k": 588.0,
+          "cv_j_mol_k": 12.0724638506
+        },
+        {
+          "temperature_k": 592.0,
+          "cv_j_mol_k": 12.1835027268
+        },
+        {
+          "temperature_k": 596.0,
+          "cv_j_mol_k": 12.293481552
+        },
+        {
+          "temperature_k": 600.0,
+          "cv_j_mol_k": 12.4024040778
+        },
+        {
+          "temperature_k": 604.0,
+          "cv_j_mol_k": 12.5102744446
+        },
+        {
+          "temperature_k": 608.0,
+          "cv_j_mol_k": 12.6170971588
+        },
+        {
+          "temperature_k": 612.0,
+          "cv_j_mol_k": 12.7228770696
+        },
+        {
+          "temperature_k": 616.0,
+          "cv_j_mol_k": 12.8276193471
+        },
+        {
+          "temperature_k": 620.0,
+          "cv_j_mol_k": 12.9313294619
+        },
+        {
+          "temperature_k": 624.0,
+          "cv_j_mol_k": 13.0340131647
+        },
+        {
+          "temperature_k": 628.0,
+          "cv_j_mol_k": 13.1356764679
+        },
+        {
+          "temperature_k": 632.0,
+          "cv_j_mol_k": 13.2363256269
+        },
+        {
+          "temperature_k": 636.0,
+          "cv_j_mol_k": 13.3359671231
+        },
+        {
+          "temperature_k": 640.0,
+          "cv_j_mol_k": 13.4346076473
+        },
+        {
+          "temperature_k": 644.0,
+          "cv_j_mol_k": 13.532254084
+        },
+        {
+          "temperature_k": 648.0,
+          "cv_j_mol_k": 13.628913496
+        },
+        {
+          "temperature_k": 652.0,
+          "cv_j_mol_k": 13.7245931108
+        },
+        {
+          "temperature_k": 656.0,
+          "cv_j_mol_k": 13.8193003062
+        },
+        {
+          "temperature_k": 660.0,
+          "cv_j_mol_k": 13.913042598
+        },
+        {
+          "temperature_k": 664.0,
+          "cv_j_mol_k": 14.0058276271
+        },
+        {
+          "temperature_k": 668.0,
+          "cv_j_mol_k": 14.0976631481
+        },
+        {
+          "temperature_k": 672.0,
+          "cv_j_mol_k": 14.1885570178
+        },
+        {
+          "temperature_k": 676.0,
+          "cv_j_mol_k": 14.2785171852
+        },
+        {
+          "temperature_k": 680.0,
+          "cv_j_mol_k": 14.3675516805
+        },
+        {
+          "temperature_k": 684.0,
+          "cv_j_mol_k": 14.4556686066
+        },
+        {
+          "temperature_k": 688.0,
+          "cv_j_mol_k": 14.542876129
+        },
+        {
+          "temperature_k": 692.0,
+          "cv_j_mol_k": 14.629182468
+        },
+        {
+          "temperature_k": 696.0,
+          "cv_j_mol_k": 14.7145958899
+        },
+        {
+          "temperature_k": 700.0,
+          "cv_j_mol_k": 14.7991246997
+        },
+        {
+          "temperature_k": 704.0,
+          "cv_j_mol_k": 14.8827772337
+        },
+        {
+          "temperature_k": 708.0,
+          "cv_j_mol_k": 14.9655618524
+        },
+        {
+          "temperature_k": 712.0,
+          "cv_j_mol_k": 15.0474869341
+        },
+        {
+          "temperature_k": 716.0,
+          "cv_j_mol_k": 15.1285608686
+        },
+        {
+          "temperature_k": 720.0,
+          "cv_j_mol_k": 15.2087920516
+        },
+        {
+          "temperature_k": 724.0,
+          "cv_j_mol_k": 15.2881888787
+        },
+        {
+          "temperature_k": 728.0,
+          "cv_j_mol_k": 15.3667597406
+        },
+        {
+          "temperature_k": 732.0,
+          "cv_j_mol_k": 15.4445130183
+        },
+        {
+          "temperature_k": 736.0,
+          "cv_j_mol_k": 15.521457078
+        },
+        {
+          "temperature_k": 740.0,
+          "cv_j_mol_k": 15.597600267
+        },
+        {
+          "temperature_k": 744.0,
+          "cv_j_mol_k": 15.6729509098
+        },
+        {
+          "temperature_k": 748.0,
+          "cv_j_mol_k": 15.747517304
+        },
+        {
+          "temperature_k": 752.0,
+          "cv_j_mol_k": 15.8213077168
+        },
+        {
+          "temperature_k": 756.0,
+          "cv_j_mol_k": 15.8943303816
+        },
+        {
+          "temperature_k": 760.0,
+          "cv_j_mol_k": 15.9665934949
+        },
+        {
+          "temperature_k": 764.0,
+          "cv_j_mol_k": 16.0381052133
+        },
+        {
+          "temperature_k": 768.0,
+          "cv_j_mol_k": 16.1088736507
+        },
+        {
+          "temperature_k": 772.0,
+          "cv_j_mol_k": 16.1789068759
+        },
+        {
+          "temperature_k": 776.0,
+          "cv_j_mol_k": 16.2482129099
+        },
+        {
+          "temperature_k": 780.0,
+          "cv_j_mol_k": 16.3167997241
+        },
+        {
+          "temperature_k": 784.0,
+          "cv_j_mol_k": 16.3846752378
+        },
+        {
+          "temperature_k": 788.0,
+          "cv_j_mol_k": 16.4518473166
+        },
+        {
+          "temperature_k": 792.0,
+          "cv_j_mol_k": 16.5183237706
+        },
+        {
+          "temperature_k": 796.0,
+          "cv_j_mol_k": 16.5841123526
+        },
+        {
+          "temperature_k": 800.0,
+          "cv_j_mol_k": 16.6492207566
+        }
+      ]
+    },
+    "normalized_series": {
+      "Au": [
+        {
+          "reduced_temperature": 0.0,
+          "cv_over_3r": 0.0
+        },
+        {
+          "reduced_temperature": 0.025,
+          "cv_over_3r": 0.0
+        },
+        {
+          "reduced_temperature": 0.05,
+          "cv_over_3r": 8.24461e-07
+        },
+        {
+          "reduced_temperature": 0.075,
+          "cv_over_3r": 0.000287929251
+        },
+        {
+          "reduced_temperature": 0.1,
+          "cv_over_3r": 0.004540405235
+        },
+        {
+          "reduced_temperature": 0.125,
+          "cv_over_3r": 0.02148401994
+        },
+        {
+          "reduced_temperature": 0.15,
+          "cv_over_3r": 0.056705741729
+        },
+        {
+          "reduced_temperature": 0.175,
+          "cv_over_3r": 0.108420381272
+        },
+        {
+          "reduced_temperature": 0.2,
+          "cv_over_3r": 0.170741822005
+        },
+        {
+          "reduced_temperature": 0.225,
+          "cv_over_3r": 0.237518816368
+        },
+        {
+          "reduced_temperature": 0.25,
+          "cv_over_3r": 0.304087319352
+        },
+        {
+          "reduced_temperature": 0.275,
+          "cv_over_3r": 0.367514444727
+        },
+        {
+          "reduced_temperature": 0.3,
+          "cv_over_3r": 0.426247121303
+        },
+        {
+          "reduced_temperature": 0.325,
+          "cv_over_3r": 0.479664607773
+        },
+        {
+          "reduced_temperature": 0.35,
+          "cv_over_3r": 0.527712913963
+        },
+        {
+          "reduced_temperature": 0.375,
+          "cv_over_3r": 0.570651080133
+        },
+        {
+          "reduced_temperature": 0.4,
+          "cv_over_3r": 0.608890050412
+        },
+        {
+          "reduced_temperature": 0.425,
+          "cv_over_3r": 0.642896571087
+        },
+        {
+          "reduced_temperature": 0.45,
+          "cv_over_3r": 0.673139154981
+        },
+        {
+          "reduced_temperature": 0.475,
+          "cv_over_3r": 0.700059909854
+        },
+        {
+          "reduced_temperature": 0.5,
+          "cv_over_3r": 0.724061660966
+        },
+        {
+          "reduced_temperature": 0.525,
+          "cv_over_3r": 0.745503776933
+        },
+        {
+          "reduced_temperature": 0.55,
+          "cv_over_3r": 0.764702712773
+        },
+        {
+          "reduced_temperature": 0.575,
+          "cv_over_3r": 0.781934919176
+        },
+        {
+          "reduced_temperature": 0.6,
+          "cv_over_3r": 0.797440766846
+        },
+        {
+          "reduced_temperature": 0.625,
+          "cv_over_3r": 0.811428734766
+        },
+        {
+          "reduced_temperature": 0.65,
+          "cv_over_3r": 0.824079465358
+        },
+        {
+          "reduced_temperature": 0.675,
+          "cv_over_3r": 0.835549494782
+        },
+        {
+          "reduced_temperature": 0.7,
+          "cv_over_3r": 0.845974582902
+        },
+        {
+          "reduced_temperature": 0.725,
+          "cv_over_3r": 0.855472631039
+        },
+        {
+          "reduced_temperature": 0.75,
+          "cv_over_3r": 0.864146208405
+        },
+        {
+          "reduced_temperature": 0.775,
+          "cv_over_3r": 0.87208472327
+        },
+        {
+          "reduced_temperature": 0.8,
+          "cv_over_3r": 0.879366280088
+        },
+        {
+          "reduced_temperature": 0.825,
+          "cv_over_3r": 0.886059263713
+        },
+        {
+          "reduced_temperature": 0.85,
+          "cv_over_3r": 0.892223689016
+        },
+        {
+          "reduced_temperature": 0.875,
+          "cv_over_3r": 0.897912350258
+        },
+        {
+          "reduced_temperature": 0.9,
+          "cv_over_3r": 0.903171800345
+        },
+        {
+          "reduced_temperature": 0.925,
+          "cv_over_3r": 0.90804318588
+        },
+        {
+          "reduced_temperature": 0.95,
+          "cv_over_3r": 0.912562960224
+        },
+        {
+          "reduced_temperature": 0.975,
+          "cv_over_3r": 0.91676349332
+        },
+        {
+          "reduced_temperature": 1.0,
+          "cv_over_3r": 0.920673594208
+        },
+        {
+          "reduced_temperature": 1.025,
+          "cv_over_3r": 0.924318959577
+        },
+        {
+          "reduced_temperature": 1.05,
+          "cv_over_3r": 0.927722559628
+        },
+        {
+          "reduced_temperature": 1.075,
+          "cv_over_3r": 0.930904970714
+        },
+        {
+          "reduced_temperature": 1.1,
+          "cv_over_3r": 0.933884662714
+        },
+        {
+          "reduced_temperature": 1.125,
+          "cv_over_3r": 0.936678247851
+        },
+        {
+          "reduced_temperature": 1.15,
+          "cv_over_3r": 0.939300696589
+        },
+        {
+          "reduced_temperature": 1.175,
+          "cv_over_3r": 0.941765525388
+        },
+        {
+          "reduced_temperature": 1.2,
+          "cv_over_3r": 0.94408496032
+        },
+        {
+          "reduced_temperature": 1.225,
+          "cv_over_3r": 0.946270079978
+        },
+        {
+          "reduced_temperature": 1.25,
+          "cv_over_3r": 0.948330940539
+        },
+        {
+          "reduced_temperature": 1.275,
+          "cv_over_3r": 0.950276685454
+        },
+        {
+          "reduced_temperature": 1.3,
+          "cv_over_3r": 0.952115641845
+        },
+        {
+          "reduced_temperature": 1.325,
+          "cv_over_3r": 0.953855405388
+        },
+        {
+          "reduced_temperature": 1.35,
+          "cv_over_3r": 0.955502915207
+        },
+        {
+          "reduced_temperature": 1.375,
+          "cv_over_3r": 0.957064520082
+        },
+        {
+          "reduced_temperature": 1.4,
+          "cv_over_3r": 0.958546037078
+        },
+        {
+          "reduced_temperature": 1.425,
+          "cv_over_3r": 0.959952803582
+        },
+        {
+          "reduced_temperature": 1.45,
+          "cv_over_3r": 0.96128972354
+        },
+        {
+          "reduced_temperature": 1.475,
+          "cv_over_3r": 0.962561308637
+        },
+        {
+          "reduced_temperature": 1.5,
+          "cv_over_3r": 0.963771715028
+        },
+        {
+          "reduced_temperature": 1.525,
+          "cv_over_3r": 0.964924776154
+        },
+        {
+          "reduced_temperature": 1.55,
+          "cv_over_3r": 0.966024032103
+        },
+        {
+          "reduced_temperature": 1.575,
+          "cv_over_3r": 0.967072755941
+        },
+        {
+          "reduced_temperature": 1.6,
+          "cv_over_3r": 0.96807397733
+        },
+        {
+          "reduced_temperature": 1.625,
+          "cv_over_3r": 0.969030503783
+        },
+        {
+          "reduced_temperature": 1.65,
+          "cv_over_3r": 0.969944939785
+        },
+        {
+          "reduced_temperature": 1.675,
+          "cv_over_3r": 0.970819704044
+        },
+        {
+          "reduced_temperature": 1.7,
+          "cv_over_3r": 0.971657045065
+        },
+        {
+          "reduced_temperature": 1.725,
+          "cv_over_3r": 0.972459055233
+        },
+        {
+          "reduced_temperature": 1.75,
+          "cv_over_3r": 0.973227683562
+        },
+        {
+          "reduced_temperature": 1.775,
+          "cv_over_3r": 0.973964747255
+        },
+        {
+          "reduced_temperature": 1.8,
+          "cv_over_3r": 0.974671942196
+        },
+        {
+          "reduced_temperature": 1.825,
+          "cv_over_3r": 0.975350852489
+        },
+        {
+          "reduced_temperature": 1.85,
+          "cv_over_3r": 0.976002959138
+        },
+        {
+          "reduced_temperature": 1.875,
+          "cv_over_3r": 0.976629647947
+        },
+        {
+          "reduced_temperature": 1.9,
+          "cv_over_3r": 0.977232216741
+        },
+        {
+          "reduced_temperature": 1.925,
+          "cv_over_3r": 0.977811881947
+        },
+        {
+          "reduced_temperature": 1.95,
+          "cv_over_3r": 0.978369784615
+        },
+        {
+          "reduced_temperature": 1.975,
+          "cv_over_3r": 0.97890699593
+        },
+        {
+          "reduced_temperature": 2.0,
+          "cv_over_3r": 0.979424522258
+        },
+        {
+          "reduced_temperature": 2.025,
+          "cv_over_3r": 0.979923309778
+        },
+        {
+          "reduced_temperature": 2.05,
+          "cv_over_3r": 0.980404248728
+        },
+        {
+          "reduced_temperature": 2.075,
+          "cv_over_3r": 0.980868177317
+        },
+        {
+          "reduced_temperature": 2.1,
+          "cv_over_3r": 0.98131588531
+        },
+        {
+          "reduced_temperature": 2.125,
+          "cv_over_3r": 0.981748117342
+        },
+        {
+          "reduced_temperature": 2.15,
+          "cv_over_3r": 0.982165575962
+        },
+        {
+          "reduced_temperature": 2.175,
+          "cv_over_3r": 0.982568924446
+        },
+        {
+          "reduced_temperature": 2.2,
+          "cv_over_3r": 0.982958789391
+        },
+        {
+          "reduced_temperature": 2.225,
+          "cv_over_3r": 0.983335763118
+        },
+        {
+          "reduced_temperature": 2.25,
+          "cv_over_3r": 0.983700405885
+        },
+        {
+          "reduced_temperature": 2.275,
+          "cv_over_3r": 0.984053247941
+        },
+        {
+          "reduced_temperature": 2.3,
+          "cv_over_3r": 0.984394791433
+        },
+        {
+          "reduced_temperature": 2.325,
+          "cv_over_3r": 0.98472551216
+        },
+        {
+          "reduced_temperature": 2.35,
+          "cv_over_3r": 0.985045861217
+        },
+        {
+          "reduced_temperature": 2.375,
+          "cv_over_3r": 0.98535626651
+        },
+        {
+          "reduced_temperature": 2.4,
+          "cv_over_3r": 0.985657134168
+        },
+        {
+          "reduced_temperature": 2.425,
+          "cv_over_3r": 0.985948849856
+        },
+        {
+          "reduced_temperature": 2.45,
+          "cv_over_3r": 0.986231779997
+        },
+        {
+          "reduced_temperature": 2.475,
+          "cv_over_3r": 0.986506272907
+        },
+        {
+          "reduced_temperature": 2.5,
+          "cv_over_3r": 0.986772659858
+        },
+        {
+          "reduced_temperature": 2.525,
+          "cv_over_3r": 0.987031256064
+        },
+        {
+          "reduced_temperature": 2.55,
+          "cv_over_3r": 0.987282361606
+        },
+        {
+          "reduced_temperature": 2.575,
+          "cv_over_3r": 0.987526262291
+        },
+        {
+          "reduced_temperature": 2.6,
+          "cv_over_3r": 0.987763230459
+        },
+        {
+          "reduced_temperature": 2.625,
+          "cv_over_3r": 0.987993525733
+        },
+        {
+          "reduced_temperature": 2.65,
+          "cv_over_3r": 0.988217395726
+        },
+        {
+          "reduced_temperature": 2.675,
+          "cv_over_3r": 0.988435076697
+        },
+        {
+          "reduced_temperature": 2.7,
+          "cv_over_3r": 0.988646794172
+        },
+        {
+          "reduced_temperature": 2.725,
+          "cv_over_3r": 0.988852763519
+        },
+        {
+          "reduced_temperature": 2.75,
+          "cv_over_3r": 0.989053190495
+        },
+        {
+          "reduced_temperature": 2.775,
+          "cv_over_3r": 0.989248271748
+        },
+        {
+          "reduced_temperature": 2.8,
+          "cv_over_3r": 0.989438195305
+        },
+        {
+          "reduced_temperature": 2.825,
+          "cv_over_3r": 0.989623141012
+        },
+        {
+          "reduced_temperature": 2.85,
+          "cv_over_3r": 0.989803280962
+        },
+        {
+          "reduced_temperature": 2.875,
+          "cv_over_3r": 0.989978779891
+        },
+        {
+          "reduced_temperature": 2.9,
+          "cv_over_3r": 0.990149795547
+        },
+        {
+          "reduced_temperature": 2.925,
+          "cv_over_3r": 0.99031647905
+        },
+        {
+          "reduced_temperature": 2.95,
+          "cv_over_3r": 0.990478975214
+        },
+        {
+          "reduced_temperature": 2.975,
+          "cv_over_3r": 0.990637422867
+        },
+        {
+          "reduced_temperature": 3.0,
+          "cv_over_3r": 0.99079195514
+        },
+        {
+          "reduced_temperature": 3.025,
+          "cv_over_3r": 0.990942699746
+        },
+        {
+          "reduced_temperature": 3.05,
+          "cv_over_3r": 0.991089779244
+        },
+        {
+          "reduced_temperature": 3.075,
+          "cv_over_3r": 0.991233311283
+        },
+        {
+          "reduced_temperature": 3.1,
+          "cv_over_3r": 0.991373408838
+        },
+        {
+          "reduced_temperature": 3.125,
+          "cv_over_3r": 0.991510180431
+        },
+        {
+          "reduced_temperature": 3.15,
+          "cv_over_3r": 0.991643730336
+        },
+        {
+          "reduced_temperature": 3.175,
+          "cv_over_3r": 0.991774158781
+        },
+        {
+          "reduced_temperature": 3.2,
+          "cv_over_3r": 0.991901562133
+        },
+        {
+          "reduced_temperature": 3.225,
+          "cv_over_3r": 0.992026033073
+        },
+        {
+          "reduced_temperature": 3.25,
+          "cv_over_3r": 0.992147660768
+        },
+        {
+          "reduced_temperature": 3.275,
+          "cv_over_3r": 0.992266531023
+        },
+        {
+          "reduced_temperature": 3.3,
+          "cv_over_3r": 0.99238272644
+        },
+        {
+          "reduced_temperature": 3.325,
+          "cv_over_3r": 0.992496326551
+        },
+        {
+          "reduced_temperature": 3.35,
+          "cv_over_3r": 0.992607407962
+        },
+        {
+          "reduced_temperature": 3.375,
+          "cv_over_3r": 0.992716044476
+        },
+        {
+          "reduced_temperature": 3.4,
+          "cv_over_3r": 0.992822307215
+        },
+        {
+          "reduced_temperature": 3.425,
+          "cv_over_3r": 0.992926264739
+        },
+        {
+          "reduced_temperature": 3.45,
+          "cv_over_3r": 0.993027983154
+        },
+        {
+          "reduced_temperature": 3.475,
+          "cv_over_3r": 0.993127526216
+        },
+        {
+          "reduced_temperature": 3.5,
+          "cv_over_3r": 0.993224955431
+        },
+        {
+          "reduced_temperature": 3.525,
+          "cv_over_3r": 0.993320330149
+        },
+        {
+          "reduced_temperature": 3.55,
+          "cv_over_3r": 0.993413707655
+        },
+        {
+          "reduced_temperature": 3.575,
+          "cv_over_3r": 0.993505143254
+        },
+        {
+          "reduced_temperature": 3.6,
+          "cv_over_3r": 0.993594690352
+        },
+        {
+          "reduced_temperature": 3.625,
+          "cv_over_3r": 0.993682400533
+        },
+        {
+          "reduced_temperature": 3.65,
+          "cv_over_3r": 0.993768323637
+        },
+        {
+          "reduced_temperature": 3.675,
+          "cv_over_3r": 0.993852507822
+        },
+        {
+          "reduced_temperature": 3.7,
+          "cv_over_3r": 0.993934999642
+        },
+        {
+          "reduced_temperature": 3.725,
+          "cv_over_3r": 0.994015844102
+        },
+        {
+          "reduced_temperature": 3.75,
+          "cv_over_3r": 0.994095084724
+        },
+        {
+          "reduced_temperature": 3.775,
+          "cv_over_3r": 0.994172763603
+        },
+        {
+          "reduced_temperature": 3.8,
+          "cv_over_3r": 0.994248921464
+        },
+        {
+          "reduced_temperature": 3.825,
+          "cv_over_3r": 0.994323597715
+        },
+        {
+          "reduced_temperature": 3.85,
+          "cv_over_3r": 0.994396830498
+        },
+        {
+          "reduced_temperature": 3.875,
+          "cv_over_3r": 0.994468656734
+        },
+        {
+          "reduced_temperature": 3.9,
+          "cv_over_3r": 0.994539112175
+        },
+        {
+          "reduced_temperature": 3.925,
+          "cv_over_3r": 0.994608231445
+        },
+        {
+          "reduced_temperature": 3.95,
+          "cv_over_3r": 0.994676048082
+        },
+        {
+          "reduced_temperature": 3.975,
+          "cv_over_3r": 0.994742594581
+        },
+        {
+          "reduced_temperature": 4.0,
+          "cv_over_3r": 0.994807902429
+        },
+        {
+          "reduced_temperature": 4.025,
+          "cv_over_3r": 0.994872002146
+        },
+        {
+          "reduced_temperature": 4.05,
+          "cv_over_3r": 0.994934923318
+        },
+        {
+          "reduced_temperature": 4.075,
+          "cv_over_3r": 0.994996694632
+        },
+        {
+          "reduced_temperature": 4.1,
+          "cv_over_3r": 0.995057343907
+        },
+        {
+          "reduced_temperature": 4.125,
+          "cv_over_3r": 0.99511689813
+        },
+        {
+          "reduced_temperature": 4.15,
+          "cv_over_3r": 0.995175383478
+        },
+        {
+          "reduced_temperature": 4.175,
+          "cv_over_3r": 0.995232825353
+        },
+        {
+          "reduced_temperature": 4.2,
+          "cv_over_3r": 0.99528924841
+        },
+        {
+          "reduced_temperature": 4.225,
+          "cv_over_3r": 0.995344676577
+        },
+        {
+          "reduced_temperature": 4.25,
+          "cv_over_3r": 0.995399133086
+        },
+        {
+          "reduced_temperature": 4.275,
+          "cv_over_3r": 0.995452640495
+        },
+        {
+          "reduced_temperature": 4.3,
+          "cv_over_3r": 0.995505220713
+        },
+        {
+          "reduced_temperature": 4.325,
+          "cv_over_3r": 0.99555689502
+        },
+        {
+          "reduced_temperature": 4.35,
+          "cv_over_3r": 0.995607684088
+        },
+        {
+          "reduced_temperature": 4.375,
+          "cv_over_3r": 0.995657608007
+        },
+        {
+          "reduced_temperature": 4.4,
+          "cv_over_3r": 0.995706686297
+        },
+        {
+          "reduced_temperature": 4.425,
+          "cv_over_3r": 0.995754937933
+        },
+        {
+          "reduced_temperature": 4.45,
+          "cv_over_3r": 0.995802381361
+        },
+        {
+          "reduced_temperature": 4.475,
+          "cv_over_3r": 0.995849034516
+        },
+        {
+          "reduced_temperature": 4.5,
+          "cv_over_3r": 0.995894914838
+        },
+        {
+          "reduced_temperature": 4.525,
+          "cv_over_3r": 0.995940039288
+        },
+        {
+          "reduced_temperature": 4.55,
+          "cv_over_3r": 0.995984424368
+        },
+        {
+          "reduced_temperature": 4.575,
+          "cv_over_3r": 0.996028086128
+        },
+        {
+          "reduced_temperature": 4.6,
+          "cv_over_3r": 0.996071040189
+        },
+        {
+          "reduced_temperature": 4.625,
+          "cv_over_3r": 0.996113301752
+        },
+        {
+          "reduced_temperature": 4.65,
+          "cv_over_3r": 0.996154885609
+        },
+        {
+          "reduced_temperature": 4.675,
+          "cv_over_3r": 0.996195806165
+        },
+        {
+          "reduced_temperature": 4.7,
+          "cv_over_3r": 0.996236077441
+        },
+        {
+          "reduced_temperature": 4.725,
+          "cv_over_3r": 0.996275713089
+        },
+        {
+          "reduced_temperature": 4.75,
+          "cv_over_3r": 0.996314726408
+        },
+        {
+          "reduced_temperature": 4.775,
+          "cv_over_3r": 0.996353130348
+        },
+        {
+          "reduced_temperature": 4.8,
+          "cv_over_3r": 0.996390937525
+        },
+        {
+          "reduced_temperature": 4.825,
+          "cv_over_3r": 0.996428160231
+        },
+        {
+          "reduced_temperature": 4.85,
+          "cv_over_3r": 0.996464810443
+        },
+        {
+          "reduced_temperature": 4.875,
+          "cv_over_3r": 0.996500899833
+        },
+        {
+          "reduced_temperature": 4.9,
+          "cv_over_3r": 0.996536439778
+        },
+        {
+          "reduced_temperature": 4.925,
+          "cv_over_3r": 0.996571441366
+        },
+        {
+          "reduced_temperature": 4.95,
+          "cv_over_3r": 0.99660591541
+        },
+        {
+          "reduced_temperature": 4.975,
+          "cv_over_3r": 0.99663987245
+        },
+        {
+          "reduced_temperature": 5.0,
+          "cv_over_3r": 0.996673322766
+        }
+      ],
+      "Cu": [
+        {
+          "reduced_temperature": 0.0,
+          "cv_over_3r": 0.0
+        },
+        {
+          "reduced_temperature": 0.025,
+          "cv_over_3r": 0.0
+        },
+        {
+          "reduced_temperature": 0.05,
+          "cv_over_3r": 8.24461e-07
+        },
+        {
+          "reduced_temperature": 0.075,
+          "cv_over_3r": 0.000287929251
+        },
+        {
+          "reduced_temperature": 0.1,
+          "cv_over_3r": 0.004540405235
+        },
+        {
+          "reduced_temperature": 0.125,
+          "cv_over_3r": 0.02148401994
+        },
+        {
+          "reduced_temperature": 0.15,
+          "cv_over_3r": 0.056705741729
+        },
+        {
+          "reduced_temperature": 0.175,
+          "cv_over_3r": 0.108420381272
+        },
+        {
+          "reduced_temperature": 0.2,
+          "cv_over_3r": 0.170741822005
+        },
+        {
+          "reduced_temperature": 0.225,
+          "cv_over_3r": 0.237518816368
+        },
+        {
+          "reduced_temperature": 0.25,
+          "cv_over_3r": 0.304087319352
+        },
+        {
+          "reduced_temperature": 0.275,
+          "cv_over_3r": 0.367514444727
+        },
+        {
+          "reduced_temperature": 0.3,
+          "cv_over_3r": 0.426247121303
+        },
+        {
+          "reduced_temperature": 0.325,
+          "cv_over_3r": 0.479664607773
+        },
+        {
+          "reduced_temperature": 0.35,
+          "cv_over_3r": 0.527712913963
+        },
+        {
+          "reduced_temperature": 0.375,
+          "cv_over_3r": 0.570651080133
+        },
+        {
+          "reduced_temperature": 0.4,
+          "cv_over_3r": 0.608890050412
+        },
+        {
+          "reduced_temperature": 0.425,
+          "cv_over_3r": 0.642896571087
+        },
+        {
+          "reduced_temperature": 0.45,
+          "cv_over_3r": 0.673139154981
+        },
+        {
+          "reduced_temperature": 0.475,
+          "cv_over_3r": 0.700059909854
+        },
+        {
+          "reduced_temperature": 0.5,
+          "cv_over_3r": 0.724061660966
+        },
+        {
+          "reduced_temperature": 0.525,
+          "cv_over_3r": 0.745503776933
+        },
+        {
+          "reduced_temperature": 0.55,
+          "cv_over_3r": 0.764702712773
+        },
+        {
+          "reduced_temperature": 0.575,
+          "cv_over_3r": 0.781934919176
+        },
+        {
+          "reduced_temperature": 0.6,
+          "cv_over_3r": 0.797440766846
+        },
+        {
+          "reduced_temperature": 0.625,
+          "cv_over_3r": 0.811428734766
+        },
+        {
+          "reduced_temperature": 0.65,
+          "cv_over_3r": 0.824079465358
+        },
+        {
+          "reduced_temperature": 0.675,
+          "cv_over_3r": 0.835549494782
+        },
+        {
+          "reduced_temperature": 0.7,
+          "cv_over_3r": 0.845974582902
+        },
+        {
+          "reduced_temperature": 0.725,
+          "cv_over_3r": 0.855472631039
+        },
+        {
+          "reduced_temperature": 0.75,
+          "cv_over_3r": 0.864146208405
+        },
+        {
+          "reduced_temperature": 0.775,
+          "cv_over_3r": 0.87208472327
+        },
+        {
+          "reduced_temperature": 0.8,
+          "cv_over_3r": 0.879366280088
+        },
+        {
+          "reduced_temperature": 0.825,
+          "cv_over_3r": 0.886059263713
+        },
+        {
+          "reduced_temperature": 0.85,
+          "cv_over_3r": 0.892223689016
+        },
+        {
+          "reduced_temperature": 0.875,
+          "cv_over_3r": 0.897912350258
+        },
+        {
+          "reduced_temperature": 0.9,
+          "cv_over_3r": 0.903171800345
+        },
+        {
+          "reduced_temperature": 0.925,
+          "cv_over_3r": 0.90804318588
+        },
+        {
+          "reduced_temperature": 0.95,
+          "cv_over_3r": 0.912562960224
+        },
+        {
+          "reduced_temperature": 0.975,
+          "cv_over_3r": 0.91676349332
+        },
+        {
+          "reduced_temperature": 1.0,
+          "cv_over_3r": 0.920673594208
+        },
+        {
+          "reduced_temperature": 1.025,
+          "cv_over_3r": 0.924318959577
+        },
+        {
+          "reduced_temperature": 1.05,
+          "cv_over_3r": 0.927722559628
+        },
+        {
+          "reduced_temperature": 1.075,
+          "cv_over_3r": 0.930904970714
+        },
+        {
+          "reduced_temperature": 1.1,
+          "cv_over_3r": 0.933884662714
+        },
+        {
+          "reduced_temperature": 1.125,
+          "cv_over_3r": 0.936678247851
+        },
+        {
+          "reduced_temperature": 1.15,
+          "cv_over_3r": 0.939300696589
+        },
+        {
+          "reduced_temperature": 1.175,
+          "cv_over_3r": 0.941765525388
+        },
+        {
+          "reduced_temperature": 1.2,
+          "cv_over_3r": 0.94408496032
+        },
+        {
+          "reduced_temperature": 1.225,
+          "cv_over_3r": 0.946270079978
+        },
+        {
+          "reduced_temperature": 1.25,
+          "cv_over_3r": 0.948330940539
+        },
+        {
+          "reduced_temperature": 1.275,
+          "cv_over_3r": 0.950276685454
+        },
+        {
+          "reduced_temperature": 1.3,
+          "cv_over_3r": 0.952115641845
+        },
+        {
+          "reduced_temperature": 1.325,
+          "cv_over_3r": 0.953855405388
+        },
+        {
+          "reduced_temperature": 1.35,
+          "cv_over_3r": 0.955502915207
+        },
+        {
+          "reduced_temperature": 1.375,
+          "cv_over_3r": 0.957064520082
+        },
+        {
+          "reduced_temperature": 1.4,
+          "cv_over_3r": 0.958546037078
+        },
+        {
+          "reduced_temperature": 1.425,
+          "cv_over_3r": 0.959952803582
+        },
+        {
+          "reduced_temperature": 1.45,
+          "cv_over_3r": 0.96128972354
+        },
+        {
+          "reduced_temperature": 1.475,
+          "cv_over_3r": 0.962561308637
+        },
+        {
+          "reduced_temperature": 1.5,
+          "cv_over_3r": 0.963771715028
+        },
+        {
+          "reduced_temperature": 1.525,
+          "cv_over_3r": 0.964924776154
+        },
+        {
+          "reduced_temperature": 1.55,
+          "cv_over_3r": 0.966024032103
+        },
+        {
+          "reduced_temperature": 1.575,
+          "cv_over_3r": 0.967072755941
+        },
+        {
+          "reduced_temperature": 1.6,
+          "cv_over_3r": 0.96807397733
+        },
+        {
+          "reduced_temperature": 1.625,
+          "cv_over_3r": 0.969030503783
+        },
+        {
+          "reduced_temperature": 1.65,
+          "cv_over_3r": 0.969944939785
+        },
+        {
+          "reduced_temperature": 1.675,
+          "cv_over_3r": 0.970819704044
+        },
+        {
+          "reduced_temperature": 1.7,
+          "cv_over_3r": 0.971657045065
+        },
+        {
+          "reduced_temperature": 1.725,
+          "cv_over_3r": 0.972459055233
+        },
+        {
+          "reduced_temperature": 1.75,
+          "cv_over_3r": 0.973227683562
+        },
+        {
+          "reduced_temperature": 1.775,
+          "cv_over_3r": 0.973964747255
+        },
+        {
+          "reduced_temperature": 1.8,
+          "cv_over_3r": 0.974671942196
+        },
+        {
+          "reduced_temperature": 1.825,
+          "cv_over_3r": 0.975350852489
+        },
+        {
+          "reduced_temperature": 1.85,
+          "cv_over_3r": 0.976002959138
+        },
+        {
+          "reduced_temperature": 1.875,
+          "cv_over_3r": 0.976629647947
+        },
+        {
+          "reduced_temperature": 1.9,
+          "cv_over_3r": 0.977232216741
+        },
+        {
+          "reduced_temperature": 1.925,
+          "cv_over_3r": 0.977811881947
+        },
+        {
+          "reduced_temperature": 1.95,
+          "cv_over_3r": 0.978369784615
+        },
+        {
+          "reduced_temperature": 1.975,
+          "cv_over_3r": 0.97890699593
+        },
+        {
+          "reduced_temperature": 2.0,
+          "cv_over_3r": 0.979424522258
+        },
+        {
+          "reduced_temperature": 2.025,
+          "cv_over_3r": 0.979923309778
+        },
+        {
+          "reduced_temperature": 2.05,
+          "cv_over_3r": 0.980404248728
+        },
+        {
+          "reduced_temperature": 2.075,
+          "cv_over_3r": 0.980868177317
+        },
+        {
+          "reduced_temperature": 2.1,
+          "cv_over_3r": 0.98131588531
+        },
+        {
+          "reduced_temperature": 2.125,
+          "cv_over_3r": 0.981748117342
+        },
+        {
+          "reduced_temperature": 2.15,
+          "cv_over_3r": 0.982165575962
+        },
+        {
+          "reduced_temperature": 2.175,
+          "cv_over_3r": 0.982568924446
+        },
+        {
+          "reduced_temperature": 2.2,
+          "cv_over_3r": 0.982958789391
+        },
+        {
+          "reduced_temperature": 2.225,
+          "cv_over_3r": 0.983335763118
+        },
+        {
+          "reduced_temperature": 2.25,
+          "cv_over_3r": 0.983700405885
+        },
+        {
+          "reduced_temperature": 2.275,
+          "cv_over_3r": 0.984053247941
+        },
+        {
+          "reduced_temperature": 2.3,
+          "cv_over_3r": 0.984394791433
+        },
+        {
+          "reduced_temperature": 2.325,
+          "cv_over_3r": 0.98472551216
+        },
+        {
+          "reduced_temperature": 2.35,
+          "cv_over_3r": 0.985045861217
+        },
+        {
+          "reduced_temperature": 2.375,
+          "cv_over_3r": 0.98535626651
+        },
+        {
+          "reduced_temperature": 2.4,
+          "cv_over_3r": 0.985657134168
+        },
+        {
+          "reduced_temperature": 2.425,
+          "cv_over_3r": 0.985948849856
+        },
+        {
+          "reduced_temperature": 2.45,
+          "cv_over_3r": 0.986231779997
+        },
+        {
+          "reduced_temperature": 2.475,
+          "cv_over_3r": 0.986506272907
+        },
+        {
+          "reduced_temperature": 2.5,
+          "cv_over_3r": 0.986772659858
+        },
+        {
+          "reduced_temperature": 2.525,
+          "cv_over_3r": 0.987031256064
+        },
+        {
+          "reduced_temperature": 2.55,
+          "cv_over_3r": 0.987282361606
+        },
+        {
+          "reduced_temperature": 2.575,
+          "cv_over_3r": 0.987526262291
+        },
+        {
+          "reduced_temperature": 2.6,
+          "cv_over_3r": 0.987763230459
+        },
+        {
+          "reduced_temperature": 2.625,
+          "cv_over_3r": 0.987993525733
+        },
+        {
+          "reduced_temperature": 2.65,
+          "cv_over_3r": 0.988217395726
+        },
+        {
+          "reduced_temperature": 2.675,
+          "cv_over_3r": 0.988435076697
+        },
+        {
+          "reduced_temperature": 2.7,
+          "cv_over_3r": 0.988646794172
+        },
+        {
+          "reduced_temperature": 2.725,
+          "cv_over_3r": 0.988852763519
+        },
+        {
+          "reduced_temperature": 2.75,
+          "cv_over_3r": 0.989053190495
+        },
+        {
+          "reduced_temperature": 2.775,
+          "cv_over_3r": 0.989248271748
+        },
+        {
+          "reduced_temperature": 2.8,
+          "cv_over_3r": 0.989438195305
+        },
+        {
+          "reduced_temperature": 2.825,
+          "cv_over_3r": 0.989623141012
+        },
+        {
+          "reduced_temperature": 2.85,
+          "cv_over_3r": 0.989803280962
+        },
+        {
+          "reduced_temperature": 2.875,
+          "cv_over_3r": 0.989978779891
+        },
+        {
+          "reduced_temperature": 2.9,
+          "cv_over_3r": 0.990149795547
+        },
+        {
+          "reduced_temperature": 2.925,
+          "cv_over_3r": 0.99031647905
+        },
+        {
+          "reduced_temperature": 2.95,
+          "cv_over_3r": 0.990478975214
+        },
+        {
+          "reduced_temperature": 2.975,
+          "cv_over_3r": 0.990637422867
+        },
+        {
+          "reduced_temperature": 3.0,
+          "cv_over_3r": 0.99079195514
+        },
+        {
+          "reduced_temperature": 3.025,
+          "cv_over_3r": 0.990942699746
+        },
+        {
+          "reduced_temperature": 3.05,
+          "cv_over_3r": 0.991089779244
+        },
+        {
+          "reduced_temperature": 3.075,
+          "cv_over_3r": 0.991233311283
+        },
+        {
+          "reduced_temperature": 3.1,
+          "cv_over_3r": 0.991373408838
+        },
+        {
+          "reduced_temperature": 3.125,
+          "cv_over_3r": 0.991510180431
+        },
+        {
+          "reduced_temperature": 3.15,
+          "cv_over_3r": 0.991643730336
+        },
+        {
+          "reduced_temperature": 3.175,
+          "cv_over_3r": 0.991774158781
+        },
+        {
+          "reduced_temperature": 3.2,
+          "cv_over_3r": 0.991901562133
+        },
+        {
+          "reduced_temperature": 3.225,
+          "cv_over_3r": 0.992026033073
+        },
+        {
+          "reduced_temperature": 3.25,
+          "cv_over_3r": 0.992147660768
+        },
+        {
+          "reduced_temperature": 3.275,
+          "cv_over_3r": 0.992266531023
+        },
+        {
+          "reduced_temperature": 3.3,
+          "cv_over_3r": 0.99238272644
+        },
+        {
+          "reduced_temperature": 3.325,
+          "cv_over_3r": 0.992496326551
+        },
+        {
+          "reduced_temperature": 3.35,
+          "cv_over_3r": 0.992607407962
+        },
+        {
+          "reduced_temperature": 3.375,
+          "cv_over_3r": 0.992716044476
+        },
+        {
+          "reduced_temperature": 3.4,
+          "cv_over_3r": 0.992822307215
+        },
+        {
+          "reduced_temperature": 3.425,
+          "cv_over_3r": 0.992926264739
+        },
+        {
+          "reduced_temperature": 3.45,
+          "cv_over_3r": 0.993027983154
+        },
+        {
+          "reduced_temperature": 3.475,
+          "cv_over_3r": 0.993127526216
+        },
+        {
+          "reduced_temperature": 3.5,
+          "cv_over_3r": 0.993224955431
+        },
+        {
+          "reduced_temperature": 3.525,
+          "cv_over_3r": 0.993320330149
+        },
+        {
+          "reduced_temperature": 3.55,
+          "cv_over_3r": 0.993413707655
+        },
+        {
+          "reduced_temperature": 3.575,
+          "cv_over_3r": 0.993505143254
+        },
+        {
+          "reduced_temperature": 3.6,
+          "cv_over_3r": 0.993594690352
+        },
+        {
+          "reduced_temperature": 3.625,
+          "cv_over_3r": 0.993682400533
+        },
+        {
+          "reduced_temperature": 3.65,
+          "cv_over_3r": 0.993768323637
+        },
+        {
+          "reduced_temperature": 3.675,
+          "cv_over_3r": 0.993852507822
+        },
+        {
+          "reduced_temperature": 3.7,
+          "cv_over_3r": 0.993934999642
+        },
+        {
+          "reduced_temperature": 3.725,
+          "cv_over_3r": 0.994015844102
+        },
+        {
+          "reduced_temperature": 3.75,
+          "cv_over_3r": 0.994095084724
+        },
+        {
+          "reduced_temperature": 3.775,
+          "cv_over_3r": 0.994172763603
+        },
+        {
+          "reduced_temperature": 3.8,
+          "cv_over_3r": 0.994248921464
+        },
+        {
+          "reduced_temperature": 3.825,
+          "cv_over_3r": 0.994323597715
+        },
+        {
+          "reduced_temperature": 3.85,
+          "cv_over_3r": 0.994396830498
+        },
+        {
+          "reduced_temperature": 3.875,
+          "cv_over_3r": 0.994468656734
+        },
+        {
+          "reduced_temperature": 3.9,
+          "cv_over_3r": 0.994539112175
+        },
+        {
+          "reduced_temperature": 3.925,
+          "cv_over_3r": 0.994608231445
+        },
+        {
+          "reduced_temperature": 3.95,
+          "cv_over_3r": 0.994676048082
+        },
+        {
+          "reduced_temperature": 3.975,
+          "cv_over_3r": 0.994742594581
+        },
+        {
+          "reduced_temperature": 4.0,
+          "cv_over_3r": 0.994807902429
+        },
+        {
+          "reduced_temperature": 4.025,
+          "cv_over_3r": 0.994872002146
+        },
+        {
+          "reduced_temperature": 4.05,
+          "cv_over_3r": 0.994934923318
+        },
+        {
+          "reduced_temperature": 4.075,
+          "cv_over_3r": 0.994996694632
+        },
+        {
+          "reduced_temperature": 4.1,
+          "cv_over_3r": 0.995057343907
+        },
+        {
+          "reduced_temperature": 4.125,
+          "cv_over_3r": 0.99511689813
+        },
+        {
+          "reduced_temperature": 4.15,
+          "cv_over_3r": 0.995175383478
+        },
+        {
+          "reduced_temperature": 4.175,
+          "cv_over_3r": 0.995232825353
+        },
+        {
+          "reduced_temperature": 4.2,
+          "cv_over_3r": 0.99528924841
+        },
+        {
+          "reduced_temperature": 4.225,
+          "cv_over_3r": 0.995344676577
+        },
+        {
+          "reduced_temperature": 4.25,
+          "cv_over_3r": 0.995399133086
+        },
+        {
+          "reduced_temperature": 4.275,
+          "cv_over_3r": 0.995452640495
+        },
+        {
+          "reduced_temperature": 4.3,
+          "cv_over_3r": 0.995505220713
+        },
+        {
+          "reduced_temperature": 4.325,
+          "cv_over_3r": 0.99555689502
+        },
+        {
+          "reduced_temperature": 4.35,
+          "cv_over_3r": 0.995607684088
+        },
+        {
+          "reduced_temperature": 4.375,
+          "cv_over_3r": 0.995657608007
+        },
+        {
+          "reduced_temperature": 4.4,
+          "cv_over_3r": 0.995706686297
+        },
+        {
+          "reduced_temperature": 4.425,
+          "cv_over_3r": 0.995754937933
+        },
+        {
+          "reduced_temperature": 4.45,
+          "cv_over_3r": 0.995802381361
+        },
+        {
+          "reduced_temperature": 4.475,
+          "cv_over_3r": 0.995849034516
+        },
+        {
+          "reduced_temperature": 4.5,
+          "cv_over_3r": 0.995894914838
+        },
+        {
+          "reduced_temperature": 4.525,
+          "cv_over_3r": 0.995940039288
+        },
+        {
+          "reduced_temperature": 4.55,
+          "cv_over_3r": 0.995984424368
+        },
+        {
+          "reduced_temperature": 4.575,
+          "cv_over_3r": 0.996028086128
+        },
+        {
+          "reduced_temperature": 4.6,
+          "cv_over_3r": 0.996071040189
+        },
+        {
+          "reduced_temperature": 4.625,
+          "cv_over_3r": 0.996113301752
+        },
+        {
+          "reduced_temperature": 4.65,
+          "cv_over_3r": 0.996154885609
+        },
+        {
+          "reduced_temperature": 4.675,
+          "cv_over_3r": 0.996195806165
+        },
+        {
+          "reduced_temperature": 4.7,
+          "cv_over_3r": 0.996236077441
+        },
+        {
+          "reduced_temperature": 4.725,
+          "cv_over_3r": 0.996275713089
+        },
+        {
+          "reduced_temperature": 4.75,
+          "cv_over_3r": 0.996314726408
+        },
+        {
+          "reduced_temperature": 4.775,
+          "cv_over_3r": 0.996353130348
+        },
+        {
+          "reduced_temperature": 4.8,
+          "cv_over_3r": 0.996390937525
+        },
+        {
+          "reduced_temperature": 4.825,
+          "cv_over_3r": 0.996428160231
+        },
+        {
+          "reduced_temperature": 4.85,
+          "cv_over_3r": 0.996464810443
+        },
+        {
+          "reduced_temperature": 4.875,
+          "cv_over_3r": 0.996500899833
+        },
+        {
+          "reduced_temperature": 4.9,
+          "cv_over_3r": 0.996536439778
+        },
+        {
+          "reduced_temperature": 4.925,
+          "cv_over_3r": 0.996571441366
+        },
+        {
+          "reduced_temperature": 4.95,
+          "cv_over_3r": 0.99660591541
+        },
+        {
+          "reduced_temperature": 4.975,
+          "cv_over_3r": 0.99663987245
+        },
+        {
+          "reduced_temperature": 5.0,
+          "cv_over_3r": 0.996673322766
+        }
+      ],
+      "Ti": [
+        {
+          "reduced_temperature": 0.0,
+          "cv_over_3r": 0.0
+        },
+        {
+          "reduced_temperature": 0.025,
+          "cv_over_3r": 0.0
+        },
+        {
+          "reduced_temperature": 0.05,
+          "cv_over_3r": 8.24461e-07
+        },
+        {
+          "reduced_temperature": 0.075,
+          "cv_over_3r": 0.000287929251
+        },
+        {
+          "reduced_temperature": 0.1,
+          "cv_over_3r": 0.004540405235
+        },
+        {
+          "reduced_temperature": 0.125,
+          "cv_over_3r": 0.02148401994
+        },
+        {
+          "reduced_temperature": 0.15,
+          "cv_over_3r": 0.056705741729
+        },
+        {
+          "reduced_temperature": 0.175,
+          "cv_over_3r": 0.108420381272
+        },
+        {
+          "reduced_temperature": 0.2,
+          "cv_over_3r": 0.170741822005
+        },
+        {
+          "reduced_temperature": 0.225,
+          "cv_over_3r": 0.237518816368
+        },
+        {
+          "reduced_temperature": 0.25,
+          "cv_over_3r": 0.304087319352
+        },
+        {
+          "reduced_temperature": 0.275,
+          "cv_over_3r": 0.367514444727
+        },
+        {
+          "reduced_temperature": 0.3,
+          "cv_over_3r": 0.426247121303
+        },
+        {
+          "reduced_temperature": 0.325,
+          "cv_over_3r": 0.479664607773
+        },
+        {
+          "reduced_temperature": 0.35,
+          "cv_over_3r": 0.527712913963
+        },
+        {
+          "reduced_temperature": 0.375,
+          "cv_over_3r": 0.570651080133
+        },
+        {
+          "reduced_temperature": 0.4,
+          "cv_over_3r": 0.608890050412
+        },
+        {
+          "reduced_temperature": 0.425,
+          "cv_over_3r": 0.642896571087
+        },
+        {
+          "reduced_temperature": 0.45,
+          "cv_over_3r": 0.673139154981
+        },
+        {
+          "reduced_temperature": 0.475,
+          "cv_over_3r": 0.700059909854
+        },
+        {
+          "reduced_temperature": 0.5,
+          "cv_over_3r": 0.724061660966
+        },
+        {
+          "reduced_temperature": 0.525,
+          "cv_over_3r": 0.745503776933
+        },
+        {
+          "reduced_temperature": 0.55,
+          "cv_over_3r": 0.764702712773
+        },
+        {
+          "reduced_temperature": 0.575,
+          "cv_over_3r": 0.781934919176
+        },
+        {
+          "reduced_temperature": 0.6,
+          "cv_over_3r": 0.797440766846
+        },
+        {
+          "reduced_temperature": 0.625,
+          "cv_over_3r": 0.811428734766
+        },
+        {
+          "reduced_temperature": 0.65,
+          "cv_over_3r": 0.824079465358
+        },
+        {
+          "reduced_temperature": 0.675,
+          "cv_over_3r": 0.835549494782
+        },
+        {
+          "reduced_temperature": 0.7,
+          "cv_over_3r": 0.845974582902
+        },
+        {
+          "reduced_temperature": 0.725,
+          "cv_over_3r": 0.855472631039
+        },
+        {
+          "reduced_temperature": 0.75,
+          "cv_over_3r": 0.864146208405
+        },
+        {
+          "reduced_temperature": 0.775,
+          "cv_over_3r": 0.87208472327
+        },
+        {
+          "reduced_temperature": 0.8,
+          "cv_over_3r": 0.879366280088
+        },
+        {
+          "reduced_temperature": 0.825,
+          "cv_over_3r": 0.886059263713
+        },
+        {
+          "reduced_temperature": 0.85,
+          "cv_over_3r": 0.892223689016
+        },
+        {
+          "reduced_temperature": 0.875,
+          "cv_over_3r": 0.897912350258
+        },
+        {
+          "reduced_temperature": 0.9,
+          "cv_over_3r": 0.903171800345
+        },
+        {
+          "reduced_temperature": 0.925,
+          "cv_over_3r": 0.90804318588
+        },
+        {
+          "reduced_temperature": 0.95,
+          "cv_over_3r": 0.912562960224
+        },
+        {
+          "reduced_temperature": 0.975,
+          "cv_over_3r": 0.91676349332
+        },
+        {
+          "reduced_temperature": 1.0,
+          "cv_over_3r": 0.920673594208
+        },
+        {
+          "reduced_temperature": 1.025,
+          "cv_over_3r": 0.924318959577
+        },
+        {
+          "reduced_temperature": 1.05,
+          "cv_over_3r": 0.927722559628
+        },
+        {
+          "reduced_temperature": 1.075,
+          "cv_over_3r": 0.930904970714
+        },
+        {
+          "reduced_temperature": 1.1,
+          "cv_over_3r": 0.933884662714
+        },
+        {
+          "reduced_temperature": 1.125,
+          "cv_over_3r": 0.936678247851
+        },
+        {
+          "reduced_temperature": 1.15,
+          "cv_over_3r": 0.939300696589
+        },
+        {
+          "reduced_temperature": 1.175,
+          "cv_over_3r": 0.941765525388
+        },
+        {
+          "reduced_temperature": 1.2,
+          "cv_over_3r": 0.94408496032
+        },
+        {
+          "reduced_temperature": 1.225,
+          "cv_over_3r": 0.946270079978
+        },
+        {
+          "reduced_temperature": 1.25,
+          "cv_over_3r": 0.948330940539
+        },
+        {
+          "reduced_temperature": 1.275,
+          "cv_over_3r": 0.950276685454
+        },
+        {
+          "reduced_temperature": 1.3,
+          "cv_over_3r": 0.952115641845
+        },
+        {
+          "reduced_temperature": 1.325,
+          "cv_over_3r": 0.953855405388
+        },
+        {
+          "reduced_temperature": 1.35,
+          "cv_over_3r": 0.955502915207
+        },
+        {
+          "reduced_temperature": 1.375,
+          "cv_over_3r": 0.957064520082
+        },
+        {
+          "reduced_temperature": 1.4,
+          "cv_over_3r": 0.958546037078
+        },
+        {
+          "reduced_temperature": 1.425,
+          "cv_over_3r": 0.959952803582
+        },
+        {
+          "reduced_temperature": 1.45,
+          "cv_over_3r": 0.96128972354
+        },
+        {
+          "reduced_temperature": 1.475,
+          "cv_over_3r": 0.962561308637
+        },
+        {
+          "reduced_temperature": 1.5,
+          "cv_over_3r": 0.963771715028
+        },
+        {
+          "reduced_temperature": 1.525,
+          "cv_over_3r": 0.964924776154
+        },
+        {
+          "reduced_temperature": 1.55,
+          "cv_over_3r": 0.966024032103
+        },
+        {
+          "reduced_temperature": 1.575,
+          "cv_over_3r": 0.967072755941
+        },
+        {
+          "reduced_temperature": 1.6,
+          "cv_over_3r": 0.96807397733
+        },
+        {
+          "reduced_temperature": 1.625,
+          "cv_over_3r": 0.969030503783
+        },
+        {
+          "reduced_temperature": 1.65,
+          "cv_over_3r": 0.969944939785
+        },
+        {
+          "reduced_temperature": 1.675,
+          "cv_over_3r": 0.970819704044
+        },
+        {
+          "reduced_temperature": 1.7,
+          "cv_over_3r": 0.971657045065
+        },
+        {
+          "reduced_temperature": 1.725,
+          "cv_over_3r": 0.972459055233
+        },
+        {
+          "reduced_temperature": 1.75,
+          "cv_over_3r": 0.973227683562
+        },
+        {
+          "reduced_temperature": 1.775,
+          "cv_over_3r": 0.973964747255
+        },
+        {
+          "reduced_temperature": 1.8,
+          "cv_over_3r": 0.974671942196
+        },
+        {
+          "reduced_temperature": 1.825,
+          "cv_over_3r": 0.975350852489
+        },
+        {
+          "reduced_temperature": 1.85,
+          "cv_over_3r": 0.976002959138
+        },
+        {
+          "reduced_temperature": 1.875,
+          "cv_over_3r": 0.976629647947
+        },
+        {
+          "reduced_temperature": 1.9,
+          "cv_over_3r": 0.977232216741
+        },
+        {
+          "reduced_temperature": 1.925,
+          "cv_over_3r": 0.977811881947
+        },
+        {
+          "reduced_temperature": 1.95,
+          "cv_over_3r": 0.978369784615
+        },
+        {
+          "reduced_temperature": 1.975,
+          "cv_over_3r": 0.97890699593
+        },
+        {
+          "reduced_temperature": 2.0,
+          "cv_over_3r": 0.979424522258
+        },
+        {
+          "reduced_temperature": 2.025,
+          "cv_over_3r": 0.979923309778
+        },
+        {
+          "reduced_temperature": 2.05,
+          "cv_over_3r": 0.980404248728
+        },
+        {
+          "reduced_temperature": 2.075,
+          "cv_over_3r": 0.980868177317
+        },
+        {
+          "reduced_temperature": 2.1,
+          "cv_over_3r": 0.98131588531
+        },
+        {
+          "reduced_temperature": 2.125,
+          "cv_over_3r": 0.981748117342
+        },
+        {
+          "reduced_temperature": 2.15,
+          "cv_over_3r": 0.982165575962
+        },
+        {
+          "reduced_temperature": 2.175,
+          "cv_over_3r": 0.982568924446
+        },
+        {
+          "reduced_temperature": 2.2,
+          "cv_over_3r": 0.982958789391
+        },
+        {
+          "reduced_temperature": 2.225,
+          "cv_over_3r": 0.983335763118
+        },
+        {
+          "reduced_temperature": 2.25,
+          "cv_over_3r": 0.983700405885
+        },
+        {
+          "reduced_temperature": 2.275,
+          "cv_over_3r": 0.984053247941
+        },
+        {
+          "reduced_temperature": 2.3,
+          "cv_over_3r": 0.984394791433
+        },
+        {
+          "reduced_temperature": 2.325,
+          "cv_over_3r": 0.98472551216
+        },
+        {
+          "reduced_temperature": 2.35,
+          "cv_over_3r": 0.985045861217
+        },
+        {
+          "reduced_temperature": 2.375,
+          "cv_over_3r": 0.98535626651
+        },
+        {
+          "reduced_temperature": 2.4,
+          "cv_over_3r": 0.985657134168
+        },
+        {
+          "reduced_temperature": 2.425,
+          "cv_over_3r": 0.985948849856
+        },
+        {
+          "reduced_temperature": 2.45,
+          "cv_over_3r": 0.986231779997
+        },
+        {
+          "reduced_temperature": 2.475,
+          "cv_over_3r": 0.986506272907
+        },
+        {
+          "reduced_temperature": 2.5,
+          "cv_over_3r": 0.986772659858
+        },
+        {
+          "reduced_temperature": 2.525,
+          "cv_over_3r": 0.987031256064
+        },
+        {
+          "reduced_temperature": 2.55,
+          "cv_over_3r": 0.987282361606
+        },
+        {
+          "reduced_temperature": 2.575,
+          "cv_over_3r": 0.987526262291
+        },
+        {
+          "reduced_temperature": 2.6,
+          "cv_over_3r": 0.987763230459
+        },
+        {
+          "reduced_temperature": 2.625,
+          "cv_over_3r": 0.987993525733
+        },
+        {
+          "reduced_temperature": 2.65,
+          "cv_over_3r": 0.988217395726
+        },
+        {
+          "reduced_temperature": 2.675,
+          "cv_over_3r": 0.988435076697
+        },
+        {
+          "reduced_temperature": 2.7,
+          "cv_over_3r": 0.988646794172
+        },
+        {
+          "reduced_temperature": 2.725,
+          "cv_over_3r": 0.988852763519
+        },
+        {
+          "reduced_temperature": 2.75,
+          "cv_over_3r": 0.989053190495
+        },
+        {
+          "reduced_temperature": 2.775,
+          "cv_over_3r": 0.989248271748
+        },
+        {
+          "reduced_temperature": 2.8,
+          "cv_over_3r": 0.989438195305
+        },
+        {
+          "reduced_temperature": 2.825,
+          "cv_over_3r": 0.989623141012
+        },
+        {
+          "reduced_temperature": 2.85,
+          "cv_over_3r": 0.989803280962
+        },
+        {
+          "reduced_temperature": 2.875,
+          "cv_over_3r": 0.989978779891
+        },
+        {
+          "reduced_temperature": 2.9,
+          "cv_over_3r": 0.990149795547
+        },
+        {
+          "reduced_temperature": 2.925,
+          "cv_over_3r": 0.99031647905
+        },
+        {
+          "reduced_temperature": 2.95,
+          "cv_over_3r": 0.990478975214
+        },
+        {
+          "reduced_temperature": 2.975,
+          "cv_over_3r": 0.990637422867
+        },
+        {
+          "reduced_temperature": 3.0,
+          "cv_over_3r": 0.99079195514
+        },
+        {
+          "reduced_temperature": 3.025,
+          "cv_over_3r": 0.990942699746
+        },
+        {
+          "reduced_temperature": 3.05,
+          "cv_over_3r": 0.991089779244
+        },
+        {
+          "reduced_temperature": 3.075,
+          "cv_over_3r": 0.991233311283
+        },
+        {
+          "reduced_temperature": 3.1,
+          "cv_over_3r": 0.991373408838
+        },
+        {
+          "reduced_temperature": 3.125,
+          "cv_over_3r": 0.991510180431
+        },
+        {
+          "reduced_temperature": 3.15,
+          "cv_over_3r": 0.991643730336
+        },
+        {
+          "reduced_temperature": 3.175,
+          "cv_over_3r": 0.991774158781
+        },
+        {
+          "reduced_temperature": 3.2,
+          "cv_over_3r": 0.991901562133
+        },
+        {
+          "reduced_temperature": 3.225,
+          "cv_over_3r": 0.992026033073
+        },
+        {
+          "reduced_temperature": 3.25,
+          "cv_over_3r": 0.992147660768
+        },
+        {
+          "reduced_temperature": 3.275,
+          "cv_over_3r": 0.992266531023
+        },
+        {
+          "reduced_temperature": 3.3,
+          "cv_over_3r": 0.99238272644
+        },
+        {
+          "reduced_temperature": 3.325,
+          "cv_over_3r": 0.992496326551
+        },
+        {
+          "reduced_temperature": 3.35,
+          "cv_over_3r": 0.992607407962
+        },
+        {
+          "reduced_temperature": 3.375,
+          "cv_over_3r": 0.992716044476
+        },
+        {
+          "reduced_temperature": 3.4,
+          "cv_over_3r": 0.992822307215
+        },
+        {
+          "reduced_temperature": 3.425,
+          "cv_over_3r": 0.992926264739
+        },
+        {
+          "reduced_temperature": 3.45,
+          "cv_over_3r": 0.993027983154
+        },
+        {
+          "reduced_temperature": 3.475,
+          "cv_over_3r": 0.993127526216
+        },
+        {
+          "reduced_temperature": 3.5,
+          "cv_over_3r": 0.993224955431
+        },
+        {
+          "reduced_temperature": 3.525,
+          "cv_over_3r": 0.993320330149
+        },
+        {
+          "reduced_temperature": 3.55,
+          "cv_over_3r": 0.993413707655
+        },
+        {
+          "reduced_temperature": 3.575,
+          "cv_over_3r": 0.993505143254
+        },
+        {
+          "reduced_temperature": 3.6,
+          "cv_over_3r": 0.993594690352
+        },
+        {
+          "reduced_temperature": 3.625,
+          "cv_over_3r": 0.993682400533
+        },
+        {
+          "reduced_temperature": 3.65,
+          "cv_over_3r": 0.993768323637
+        },
+        {
+          "reduced_temperature": 3.675,
+          "cv_over_3r": 0.993852507822
+        },
+        {
+          "reduced_temperature": 3.7,
+          "cv_over_3r": 0.993934999642
+        },
+        {
+          "reduced_temperature": 3.725,
+          "cv_over_3r": 0.994015844102
+        },
+        {
+          "reduced_temperature": 3.75,
+          "cv_over_3r": 0.994095084724
+        },
+        {
+          "reduced_temperature": 3.775,
+          "cv_over_3r": 0.994172763603
+        },
+        {
+          "reduced_temperature": 3.8,
+          "cv_over_3r": 0.994248921464
+        },
+        {
+          "reduced_temperature": 3.825,
+          "cv_over_3r": 0.994323597715
+        },
+        {
+          "reduced_temperature": 3.85,
+          "cv_over_3r": 0.994396830498
+        },
+        {
+          "reduced_temperature": 3.875,
+          "cv_over_3r": 0.994468656734
+        },
+        {
+          "reduced_temperature": 3.9,
+          "cv_over_3r": 0.994539112175
+        },
+        {
+          "reduced_temperature": 3.925,
+          "cv_over_3r": 0.994608231445
+        },
+        {
+          "reduced_temperature": 3.95,
+          "cv_over_3r": 0.994676048082
+        },
+        {
+          "reduced_temperature": 3.975,
+          "cv_over_3r": 0.994742594581
+        },
+        {
+          "reduced_temperature": 4.0,
+          "cv_over_3r": 0.994807902429
+        },
+        {
+          "reduced_temperature": 4.025,
+          "cv_over_3r": 0.994872002146
+        },
+        {
+          "reduced_temperature": 4.05,
+          "cv_over_3r": 0.994934923318
+        },
+        {
+          "reduced_temperature": 4.075,
+          "cv_over_3r": 0.994996694632
+        },
+        {
+          "reduced_temperature": 4.1,
+          "cv_over_3r": 0.995057343907
+        },
+        {
+          "reduced_temperature": 4.125,
+          "cv_over_3r": 0.99511689813
+        },
+        {
+          "reduced_temperature": 4.15,
+          "cv_over_3r": 0.995175383478
+        },
+        {
+          "reduced_temperature": 4.175,
+          "cv_over_3r": 0.995232825353
+        },
+        {
+          "reduced_temperature": 4.2,
+          "cv_over_3r": 0.99528924841
+        },
+        {
+          "reduced_temperature": 4.225,
+          "cv_over_3r": 0.995344676577
+        },
+        {
+          "reduced_temperature": 4.25,
+          "cv_over_3r": 0.995399133086
+        },
+        {
+          "reduced_temperature": 4.275,
+          "cv_over_3r": 0.995452640495
+        },
+        {
+          "reduced_temperature": 4.3,
+          "cv_over_3r": 0.995505220713
+        },
+        {
+          "reduced_temperature": 4.325,
+          "cv_over_3r": 0.99555689502
+        },
+        {
+          "reduced_temperature": 4.35,
+          "cv_over_3r": 0.995607684088
+        },
+        {
+          "reduced_temperature": 4.375,
+          "cv_over_3r": 0.995657608007
+        },
+        {
+          "reduced_temperature": 4.4,
+          "cv_over_3r": 0.995706686297
+        },
+        {
+          "reduced_temperature": 4.425,
+          "cv_over_3r": 0.995754937933
+        },
+        {
+          "reduced_temperature": 4.45,
+          "cv_over_3r": 0.995802381361
+        },
+        {
+          "reduced_temperature": 4.475,
+          "cv_over_3r": 0.995849034516
+        },
+        {
+          "reduced_temperature": 4.5,
+          "cv_over_3r": 0.995894914838
+        },
+        {
+          "reduced_temperature": 4.525,
+          "cv_over_3r": 0.995940039288
+        },
+        {
+          "reduced_temperature": 4.55,
+          "cv_over_3r": 0.995984424368
+        },
+        {
+          "reduced_temperature": 4.575,
+          "cv_over_3r": 0.996028086128
+        },
+        {
+          "reduced_temperature": 4.6,
+          "cv_over_3r": 0.996071040189
+        },
+        {
+          "reduced_temperature": 4.625,
+          "cv_over_3r": 0.996113301752
+        },
+        {
+          "reduced_temperature": 4.65,
+          "cv_over_3r": 0.996154885609
+        },
+        {
+          "reduced_temperature": 4.675,
+          "cv_over_3r": 0.996195806165
+        },
+        {
+          "reduced_temperature": 4.7,
+          "cv_over_3r": 0.996236077441
+        },
+        {
+          "reduced_temperature": 4.725,
+          "cv_over_3r": 0.996275713089
+        },
+        {
+          "reduced_temperature": 4.75,
+          "cv_over_3r": 0.996314726408
+        },
+        {
+          "reduced_temperature": 4.775,
+          "cv_over_3r": 0.996353130348
+        },
+        {
+          "reduced_temperature": 4.8,
+          "cv_over_3r": 0.996390937525
+        },
+        {
+          "reduced_temperature": 4.825,
+          "cv_over_3r": 0.996428160231
+        },
+        {
+          "reduced_temperature": 4.85,
+          "cv_over_3r": 0.996464810443
+        },
+        {
+          "reduced_temperature": 4.875,
+          "cv_over_3r": 0.996500899833
+        },
+        {
+          "reduced_temperature": 4.9,
+          "cv_over_3r": 0.996536439778
+        },
+        {
+          "reduced_temperature": 4.925,
+          "cv_over_3r": 0.996571441366
+        },
+        {
+          "reduced_temperature": 4.95,
+          "cv_over_3r": 0.99660591541
+        },
+        {
+          "reduced_temperature": 4.975,
+          "cv_over_3r": 0.99663987245
+        },
+        {
+          "reduced_temperature": 5.0,
+          "cv_over_3r": 0.996673322766
+        }
+      ],
+      "Al": [
+        {
+          "reduced_temperature": 0.0,
+          "cv_over_3r": 0.0
+        },
+        {
+          "reduced_temperature": 0.025,
+          "cv_over_3r": 0.0
+        },
+        {
+          "reduced_temperature": 0.05,
+          "cv_over_3r": 8.24461e-07
+        },
+        {
+          "reduced_temperature": 0.075,
+          "cv_over_3r": 0.000287929251
+        },
+        {
+          "reduced_temperature": 0.1,
+          "cv_over_3r": 0.004540405235
+        },
+        {
+          "reduced_temperature": 0.125,
+          "cv_over_3r": 0.02148401994
+        },
+        {
+          "reduced_temperature": 0.15,
+          "cv_over_3r": 0.056705741729
+        },
+        {
+          "reduced_temperature": 0.175,
+          "cv_over_3r": 0.108420381272
+        },
+        {
+          "reduced_temperature": 0.2,
+          "cv_over_3r": 0.170741822005
+        },
+        {
+          "reduced_temperature": 0.225,
+          "cv_over_3r": 0.237518816368
+        },
+        {
+          "reduced_temperature": 0.25,
+          "cv_over_3r": 0.304087319352
+        },
+        {
+          "reduced_temperature": 0.275,
+          "cv_over_3r": 0.367514444727
+        },
+        {
+          "reduced_temperature": 0.3,
+          "cv_over_3r": 0.426247121303
+        },
+        {
+          "reduced_temperature": 0.325,
+          "cv_over_3r": 0.479664607773
+        },
+        {
+          "reduced_temperature": 0.35,
+          "cv_over_3r": 0.527712913963
+        },
+        {
+          "reduced_temperature": 0.375,
+          "cv_over_3r": 0.570651080133
+        },
+        {
+          "reduced_temperature": 0.4,
+          "cv_over_3r": 0.608890050412
+        },
+        {
+          "reduced_temperature": 0.425,
+          "cv_over_3r": 0.642896571087
+        },
+        {
+          "reduced_temperature": 0.45,
+          "cv_over_3r": 0.673139154981
+        },
+        {
+          "reduced_temperature": 0.475,
+          "cv_over_3r": 0.700059909854
+        },
+        {
+          "reduced_temperature": 0.5,
+          "cv_over_3r": 0.724061660966
+        },
+        {
+          "reduced_temperature": 0.525,
+          "cv_over_3r": 0.745503776933
+        },
+        {
+          "reduced_temperature": 0.55,
+          "cv_over_3r": 0.764702712773
+        },
+        {
+          "reduced_temperature": 0.575,
+          "cv_over_3r": 0.781934919176
+        },
+        {
+          "reduced_temperature": 0.6,
+          "cv_over_3r": 0.797440766846
+        },
+        {
+          "reduced_temperature": 0.625,
+          "cv_over_3r": 0.811428734766
+        },
+        {
+          "reduced_temperature": 0.65,
+          "cv_over_3r": 0.824079465358
+        },
+        {
+          "reduced_temperature": 0.675,
+          "cv_over_3r": 0.835549494782
+        },
+        {
+          "reduced_temperature": 0.7,
+          "cv_over_3r": 0.845974582902
+        },
+        {
+          "reduced_temperature": 0.725,
+          "cv_over_3r": 0.855472631039
+        },
+        {
+          "reduced_temperature": 0.75,
+          "cv_over_3r": 0.864146208405
+        },
+        {
+          "reduced_temperature": 0.775,
+          "cv_over_3r": 0.87208472327
+        },
+        {
+          "reduced_temperature": 0.8,
+          "cv_over_3r": 0.879366280088
+        },
+        {
+          "reduced_temperature": 0.825,
+          "cv_over_3r": 0.886059263713
+        },
+        {
+          "reduced_temperature": 0.85,
+          "cv_over_3r": 0.892223689016
+        },
+        {
+          "reduced_temperature": 0.875,
+          "cv_over_3r": 0.897912350258
+        },
+        {
+          "reduced_temperature": 0.9,
+          "cv_over_3r": 0.903171800345
+        },
+        {
+          "reduced_temperature": 0.925,
+          "cv_over_3r": 0.90804318588
+        },
+        {
+          "reduced_temperature": 0.95,
+          "cv_over_3r": 0.912562960224
+        },
+        {
+          "reduced_temperature": 0.975,
+          "cv_over_3r": 0.91676349332
+        },
+        {
+          "reduced_temperature": 1.0,
+          "cv_over_3r": 0.920673594208
+        },
+        {
+          "reduced_temperature": 1.025,
+          "cv_over_3r": 0.924318959577
+        },
+        {
+          "reduced_temperature": 1.05,
+          "cv_over_3r": 0.927722559628
+        },
+        {
+          "reduced_temperature": 1.075,
+          "cv_over_3r": 0.930904970714
+        },
+        {
+          "reduced_temperature": 1.1,
+          "cv_over_3r": 0.933884662714
+        },
+        {
+          "reduced_temperature": 1.125,
+          "cv_over_3r": 0.936678247851
+        },
+        {
+          "reduced_temperature": 1.15,
+          "cv_over_3r": 0.939300696589
+        },
+        {
+          "reduced_temperature": 1.175,
+          "cv_over_3r": 0.941765525388
+        },
+        {
+          "reduced_temperature": 1.2,
+          "cv_over_3r": 0.94408496032
+        },
+        {
+          "reduced_temperature": 1.225,
+          "cv_over_3r": 0.946270079978
+        },
+        {
+          "reduced_temperature": 1.25,
+          "cv_over_3r": 0.948330940539
+        },
+        {
+          "reduced_temperature": 1.275,
+          "cv_over_3r": 0.950276685454
+        },
+        {
+          "reduced_temperature": 1.3,
+          "cv_over_3r": 0.952115641845
+        },
+        {
+          "reduced_temperature": 1.325,
+          "cv_over_3r": 0.953855405388
+        },
+        {
+          "reduced_temperature": 1.35,
+          "cv_over_3r": 0.955502915207
+        },
+        {
+          "reduced_temperature": 1.375,
+          "cv_over_3r": 0.957064520082
+        },
+        {
+          "reduced_temperature": 1.4,
+          "cv_over_3r": 0.958546037078
+        },
+        {
+          "reduced_temperature": 1.425,
+          "cv_over_3r": 0.959952803582
+        },
+        {
+          "reduced_temperature": 1.45,
+          "cv_over_3r": 0.96128972354
+        },
+        {
+          "reduced_temperature": 1.475,
+          "cv_over_3r": 0.962561308637
+        },
+        {
+          "reduced_temperature": 1.5,
+          "cv_over_3r": 0.963771715028
+        },
+        {
+          "reduced_temperature": 1.525,
+          "cv_over_3r": 0.964924776154
+        },
+        {
+          "reduced_temperature": 1.55,
+          "cv_over_3r": 0.966024032103
+        },
+        {
+          "reduced_temperature": 1.575,
+          "cv_over_3r": 0.967072755941
+        },
+        {
+          "reduced_temperature": 1.6,
+          "cv_over_3r": 0.96807397733
+        },
+        {
+          "reduced_temperature": 1.625,
+          "cv_over_3r": 0.969030503783
+        },
+        {
+          "reduced_temperature": 1.65,
+          "cv_over_3r": 0.969944939785
+        },
+        {
+          "reduced_temperature": 1.675,
+          "cv_over_3r": 0.970819704044
+        },
+        {
+          "reduced_temperature": 1.7,
+          "cv_over_3r": 0.971657045065
+        },
+        {
+          "reduced_temperature": 1.725,
+          "cv_over_3r": 0.972459055233
+        },
+        {
+          "reduced_temperature": 1.75,
+          "cv_over_3r": 0.973227683562
+        },
+        {
+          "reduced_temperature": 1.775,
+          "cv_over_3r": 0.973964747255
+        },
+        {
+          "reduced_temperature": 1.8,
+          "cv_over_3r": 0.974671942196
+        },
+        {
+          "reduced_temperature": 1.825,
+          "cv_over_3r": 0.975350852489
+        },
+        {
+          "reduced_temperature": 1.85,
+          "cv_over_3r": 0.976002959138
+        },
+        {
+          "reduced_temperature": 1.875,
+          "cv_over_3r": 0.976629647947
+        },
+        {
+          "reduced_temperature": 1.9,
+          "cv_over_3r": 0.977232216741
+        },
+        {
+          "reduced_temperature": 1.925,
+          "cv_over_3r": 0.977811881947
+        },
+        {
+          "reduced_temperature": 1.95,
+          "cv_over_3r": 0.978369784615
+        },
+        {
+          "reduced_temperature": 1.975,
+          "cv_over_3r": 0.97890699593
+        },
+        {
+          "reduced_temperature": 2.0,
+          "cv_over_3r": 0.979424522258
+        },
+        {
+          "reduced_temperature": 2.025,
+          "cv_over_3r": 0.979923309778
+        },
+        {
+          "reduced_temperature": 2.05,
+          "cv_over_3r": 0.980404248728
+        },
+        {
+          "reduced_temperature": 2.075,
+          "cv_over_3r": 0.980868177317
+        },
+        {
+          "reduced_temperature": 2.1,
+          "cv_over_3r": 0.98131588531
+        },
+        {
+          "reduced_temperature": 2.125,
+          "cv_over_3r": 0.981748117342
+        },
+        {
+          "reduced_temperature": 2.15,
+          "cv_over_3r": 0.982165575962
+        },
+        {
+          "reduced_temperature": 2.175,
+          "cv_over_3r": 0.982568924446
+        },
+        {
+          "reduced_temperature": 2.2,
+          "cv_over_3r": 0.982958789391
+        },
+        {
+          "reduced_temperature": 2.225,
+          "cv_over_3r": 0.983335763118
+        },
+        {
+          "reduced_temperature": 2.25,
+          "cv_over_3r": 0.983700405885
+        },
+        {
+          "reduced_temperature": 2.275,
+          "cv_over_3r": 0.984053247941
+        },
+        {
+          "reduced_temperature": 2.3,
+          "cv_over_3r": 0.984394791433
+        },
+        {
+          "reduced_temperature": 2.325,
+          "cv_over_3r": 0.98472551216
+        },
+        {
+          "reduced_temperature": 2.35,
+          "cv_over_3r": 0.985045861217
+        },
+        {
+          "reduced_temperature": 2.375,
+          "cv_over_3r": 0.98535626651
+        },
+        {
+          "reduced_temperature": 2.4,
+          "cv_over_3r": 0.985657134168
+        },
+        {
+          "reduced_temperature": 2.425,
+          "cv_over_3r": 0.985948849856
+        },
+        {
+          "reduced_temperature": 2.45,
+          "cv_over_3r": 0.986231779997
+        },
+        {
+          "reduced_temperature": 2.475,
+          "cv_over_3r": 0.986506272907
+        },
+        {
+          "reduced_temperature": 2.5,
+          "cv_over_3r": 0.986772659858
+        },
+        {
+          "reduced_temperature": 2.525,
+          "cv_over_3r": 0.987031256064
+        },
+        {
+          "reduced_temperature": 2.55,
+          "cv_over_3r": 0.987282361606
+        },
+        {
+          "reduced_temperature": 2.575,
+          "cv_over_3r": 0.987526262291
+        },
+        {
+          "reduced_temperature": 2.6,
+          "cv_over_3r": 0.987763230459
+        },
+        {
+          "reduced_temperature": 2.625,
+          "cv_over_3r": 0.987993525733
+        },
+        {
+          "reduced_temperature": 2.65,
+          "cv_over_3r": 0.988217395726
+        },
+        {
+          "reduced_temperature": 2.675,
+          "cv_over_3r": 0.988435076697
+        },
+        {
+          "reduced_temperature": 2.7,
+          "cv_over_3r": 0.988646794172
+        },
+        {
+          "reduced_temperature": 2.725,
+          "cv_over_3r": 0.988852763519
+        },
+        {
+          "reduced_temperature": 2.75,
+          "cv_over_3r": 0.989053190495
+        },
+        {
+          "reduced_temperature": 2.775,
+          "cv_over_3r": 0.989248271748
+        },
+        {
+          "reduced_temperature": 2.8,
+          "cv_over_3r": 0.989438195305
+        },
+        {
+          "reduced_temperature": 2.825,
+          "cv_over_3r": 0.989623141012
+        },
+        {
+          "reduced_temperature": 2.85,
+          "cv_over_3r": 0.989803280962
+        },
+        {
+          "reduced_temperature": 2.875,
+          "cv_over_3r": 0.989978779891
+        },
+        {
+          "reduced_temperature": 2.9,
+          "cv_over_3r": 0.990149795547
+        },
+        {
+          "reduced_temperature": 2.925,
+          "cv_over_3r": 0.99031647905
+        },
+        {
+          "reduced_temperature": 2.95,
+          "cv_over_3r": 0.990478975214
+        },
+        {
+          "reduced_temperature": 2.975,
+          "cv_over_3r": 0.990637422867
+        },
+        {
+          "reduced_temperature": 3.0,
+          "cv_over_3r": 0.99079195514
+        },
+        {
+          "reduced_temperature": 3.025,
+          "cv_over_3r": 0.990942699746
+        },
+        {
+          "reduced_temperature": 3.05,
+          "cv_over_3r": 0.991089779244
+        },
+        {
+          "reduced_temperature": 3.075,
+          "cv_over_3r": 0.991233311283
+        },
+        {
+          "reduced_temperature": 3.1,
+          "cv_over_3r": 0.991373408838
+        },
+        {
+          "reduced_temperature": 3.125,
+          "cv_over_3r": 0.991510180431
+        },
+        {
+          "reduced_temperature": 3.15,
+          "cv_over_3r": 0.991643730336
+        },
+        {
+          "reduced_temperature": 3.175,
+          "cv_over_3r": 0.991774158781
+        },
+        {
+          "reduced_temperature": 3.2,
+          "cv_over_3r": 0.991901562133
+        },
+        {
+          "reduced_temperature": 3.225,
+          "cv_over_3r": 0.992026033073
+        },
+        {
+          "reduced_temperature": 3.25,
+          "cv_over_3r": 0.992147660768
+        },
+        {
+          "reduced_temperature": 3.275,
+          "cv_over_3r": 0.992266531023
+        },
+        {
+          "reduced_temperature": 3.3,
+          "cv_over_3r": 0.99238272644
+        },
+        {
+          "reduced_temperature": 3.325,
+          "cv_over_3r": 0.992496326551
+        },
+        {
+          "reduced_temperature": 3.35,
+          "cv_over_3r": 0.992607407962
+        },
+        {
+          "reduced_temperature": 3.375,
+          "cv_over_3r": 0.992716044476
+        },
+        {
+          "reduced_temperature": 3.4,
+          "cv_over_3r": 0.992822307215
+        },
+        {
+          "reduced_temperature": 3.425,
+          "cv_over_3r": 0.992926264739
+        },
+        {
+          "reduced_temperature": 3.45,
+          "cv_over_3r": 0.993027983154
+        },
+        {
+          "reduced_temperature": 3.475,
+          "cv_over_3r": 0.993127526216
+        },
+        {
+          "reduced_temperature": 3.5,
+          "cv_over_3r": 0.993224955431
+        },
+        {
+          "reduced_temperature": 3.525,
+          "cv_over_3r": 0.993320330149
+        },
+        {
+          "reduced_temperature": 3.55,
+          "cv_over_3r": 0.993413707655
+        },
+        {
+          "reduced_temperature": 3.575,
+          "cv_over_3r": 0.993505143254
+        },
+        {
+          "reduced_temperature": 3.6,
+          "cv_over_3r": 0.993594690352
+        },
+        {
+          "reduced_temperature": 3.625,
+          "cv_over_3r": 0.993682400533
+        },
+        {
+          "reduced_temperature": 3.65,
+          "cv_over_3r": 0.993768323637
+        },
+        {
+          "reduced_temperature": 3.675,
+          "cv_over_3r": 0.993852507822
+        },
+        {
+          "reduced_temperature": 3.7,
+          "cv_over_3r": 0.993934999642
+        },
+        {
+          "reduced_temperature": 3.725,
+          "cv_over_3r": 0.994015844102
+        },
+        {
+          "reduced_temperature": 3.75,
+          "cv_over_3r": 0.994095084724
+        },
+        {
+          "reduced_temperature": 3.775,
+          "cv_over_3r": 0.994172763603
+        },
+        {
+          "reduced_temperature": 3.8,
+          "cv_over_3r": 0.994248921464
+        },
+        {
+          "reduced_temperature": 3.825,
+          "cv_over_3r": 0.994323597715
+        },
+        {
+          "reduced_temperature": 3.85,
+          "cv_over_3r": 0.994396830498
+        },
+        {
+          "reduced_temperature": 3.875,
+          "cv_over_3r": 0.994468656734
+        },
+        {
+          "reduced_temperature": 3.9,
+          "cv_over_3r": 0.994539112175
+        },
+        {
+          "reduced_temperature": 3.925,
+          "cv_over_3r": 0.994608231445
+        },
+        {
+          "reduced_temperature": 3.95,
+          "cv_over_3r": 0.994676048082
+        },
+        {
+          "reduced_temperature": 3.975,
+          "cv_over_3r": 0.994742594581
+        },
+        {
+          "reduced_temperature": 4.0,
+          "cv_over_3r": 0.994807902429
+        },
+        {
+          "reduced_temperature": 4.025,
+          "cv_over_3r": 0.994872002146
+        },
+        {
+          "reduced_temperature": 4.05,
+          "cv_over_3r": 0.994934923318
+        },
+        {
+          "reduced_temperature": 4.075,
+          "cv_over_3r": 0.994996694632
+        },
+        {
+          "reduced_temperature": 4.1,
+          "cv_over_3r": 0.995057343907
+        },
+        {
+          "reduced_temperature": 4.125,
+          "cv_over_3r": 0.99511689813
+        },
+        {
+          "reduced_temperature": 4.15,
+          "cv_over_3r": 0.995175383478
+        },
+        {
+          "reduced_temperature": 4.175,
+          "cv_over_3r": 0.995232825353
+        },
+        {
+          "reduced_temperature": 4.2,
+          "cv_over_3r": 0.99528924841
+        },
+        {
+          "reduced_temperature": 4.225,
+          "cv_over_3r": 0.995344676577
+        },
+        {
+          "reduced_temperature": 4.25,
+          "cv_over_3r": 0.995399133086
+        },
+        {
+          "reduced_temperature": 4.275,
+          "cv_over_3r": 0.995452640495
+        },
+        {
+          "reduced_temperature": 4.3,
+          "cv_over_3r": 0.995505220713
+        },
+        {
+          "reduced_temperature": 4.325,
+          "cv_over_3r": 0.99555689502
+        },
+        {
+          "reduced_temperature": 4.35,
+          "cv_over_3r": 0.995607684088
+        },
+        {
+          "reduced_temperature": 4.375,
+          "cv_over_3r": 0.995657608007
+        },
+        {
+          "reduced_temperature": 4.4,
+          "cv_over_3r": 0.995706686297
+        },
+        {
+          "reduced_temperature": 4.425,
+          "cv_over_3r": 0.995754937933
+        },
+        {
+          "reduced_temperature": 4.45,
+          "cv_over_3r": 0.995802381361
+        },
+        {
+          "reduced_temperature": 4.475,
+          "cv_over_3r": 0.995849034516
+        },
+        {
+          "reduced_temperature": 4.5,
+          "cv_over_3r": 0.995894914838
+        },
+        {
+          "reduced_temperature": 4.525,
+          "cv_over_3r": 0.995940039288
+        },
+        {
+          "reduced_temperature": 4.55,
+          "cv_over_3r": 0.995984424368
+        },
+        {
+          "reduced_temperature": 4.575,
+          "cv_over_3r": 0.996028086128
+        },
+        {
+          "reduced_temperature": 4.6,
+          "cv_over_3r": 0.996071040189
+        },
+        {
+          "reduced_temperature": 4.625,
+          "cv_over_3r": 0.996113301752
+        },
+        {
+          "reduced_temperature": 4.65,
+          "cv_over_3r": 0.996154885609
+        },
+        {
+          "reduced_temperature": 4.675,
+          "cv_over_3r": 0.996195806165
+        },
+        {
+          "reduced_temperature": 4.7,
+          "cv_over_3r": 0.996236077441
+        },
+        {
+          "reduced_temperature": 4.725,
+          "cv_over_3r": 0.996275713089
+        },
+        {
+          "reduced_temperature": 4.75,
+          "cv_over_3r": 0.996314726408
+        },
+        {
+          "reduced_temperature": 4.775,
+          "cv_over_3r": 0.996353130348
+        },
+        {
+          "reduced_temperature": 4.8,
+          "cv_over_3r": 0.996390937525
+        },
+        {
+          "reduced_temperature": 4.825,
+          "cv_over_3r": 0.996428160231
+        },
+        {
+          "reduced_temperature": 4.85,
+          "cv_over_3r": 0.996464810443
+        },
+        {
+          "reduced_temperature": 4.875,
+          "cv_over_3r": 0.996500899833
+        },
+        {
+          "reduced_temperature": 4.9,
+          "cv_over_3r": 0.996536439778
+        },
+        {
+          "reduced_temperature": 4.925,
+          "cv_over_3r": 0.996571441366
+        },
+        {
+          "reduced_temperature": 4.95,
+          "cv_over_3r": 0.99660591541
+        },
+        {
+          "reduced_temperature": 4.975,
+          "cv_over_3r": 0.99663987245
+        },
+        {
+          "reduced_temperature": 5.0,
+          "cv_over_3r": 0.996673322766
+        }
+      ],
+      "Fe": [
+        {
+          "reduced_temperature": 0.0,
+          "cv_over_3r": 0.0
+        },
+        {
+          "reduced_temperature": 0.025,
+          "cv_over_3r": 0.0
+        },
+        {
+          "reduced_temperature": 0.05,
+          "cv_over_3r": 8.24461e-07
+        },
+        {
+          "reduced_temperature": 0.075,
+          "cv_over_3r": 0.000287929251
+        },
+        {
+          "reduced_temperature": 0.1,
+          "cv_over_3r": 0.004540405235
+        },
+        {
+          "reduced_temperature": 0.125,
+          "cv_over_3r": 0.02148401994
+        },
+        {
+          "reduced_temperature": 0.15,
+          "cv_over_3r": 0.056705741729
+        },
+        {
+          "reduced_temperature": 0.175,
+          "cv_over_3r": 0.108420381272
+        },
+        {
+          "reduced_temperature": 0.2,
+          "cv_over_3r": 0.170741822005
+        },
+        {
+          "reduced_temperature": 0.225,
+          "cv_over_3r": 0.237518816368
+        },
+        {
+          "reduced_temperature": 0.25,
+          "cv_over_3r": 0.304087319352
+        },
+        {
+          "reduced_temperature": 0.275,
+          "cv_over_3r": 0.367514444727
+        },
+        {
+          "reduced_temperature": 0.3,
+          "cv_over_3r": 0.426247121303
+        },
+        {
+          "reduced_temperature": 0.325,
+          "cv_over_3r": 0.479664607773
+        },
+        {
+          "reduced_temperature": 0.35,
+          "cv_over_3r": 0.527712913963
+        },
+        {
+          "reduced_temperature": 0.375,
+          "cv_over_3r": 0.570651080133
+        },
+        {
+          "reduced_temperature": 0.4,
+          "cv_over_3r": 0.608890050412
+        },
+        {
+          "reduced_temperature": 0.425,
+          "cv_over_3r": 0.642896571087
+        },
+        {
+          "reduced_temperature": 0.45,
+          "cv_over_3r": 0.673139154981
+        },
+        {
+          "reduced_temperature": 0.475,
+          "cv_over_3r": 0.700059909854
+        },
+        {
+          "reduced_temperature": 0.5,
+          "cv_over_3r": 0.724061660966
+        },
+        {
+          "reduced_temperature": 0.525,
+          "cv_over_3r": 0.745503776933
+        },
+        {
+          "reduced_temperature": 0.55,
+          "cv_over_3r": 0.764702712773
+        },
+        {
+          "reduced_temperature": 0.575,
+          "cv_over_3r": 0.781934919176
+        },
+        {
+          "reduced_temperature": 0.6,
+          "cv_over_3r": 0.797440766846
+        },
+        {
+          "reduced_temperature": 0.625,
+          "cv_over_3r": 0.811428734766
+        },
+        {
+          "reduced_temperature": 0.65,
+          "cv_over_3r": 0.824079465358
+        },
+        {
+          "reduced_temperature": 0.675,
+          "cv_over_3r": 0.835549494782
+        },
+        {
+          "reduced_temperature": 0.7,
+          "cv_over_3r": 0.845974582902
+        },
+        {
+          "reduced_temperature": 0.725,
+          "cv_over_3r": 0.855472631039
+        },
+        {
+          "reduced_temperature": 0.75,
+          "cv_over_3r": 0.864146208405
+        },
+        {
+          "reduced_temperature": 0.775,
+          "cv_over_3r": 0.87208472327
+        },
+        {
+          "reduced_temperature": 0.8,
+          "cv_over_3r": 0.879366280088
+        },
+        {
+          "reduced_temperature": 0.825,
+          "cv_over_3r": 0.886059263713
+        },
+        {
+          "reduced_temperature": 0.85,
+          "cv_over_3r": 0.892223689016
+        },
+        {
+          "reduced_temperature": 0.875,
+          "cv_over_3r": 0.897912350258
+        },
+        {
+          "reduced_temperature": 0.9,
+          "cv_over_3r": 0.903171800345
+        },
+        {
+          "reduced_temperature": 0.925,
+          "cv_over_3r": 0.90804318588
+        },
+        {
+          "reduced_temperature": 0.95,
+          "cv_over_3r": 0.912562960224
+        },
+        {
+          "reduced_temperature": 0.975,
+          "cv_over_3r": 0.91676349332
+        },
+        {
+          "reduced_temperature": 1.0,
+          "cv_over_3r": 0.920673594208
+        },
+        {
+          "reduced_temperature": 1.025,
+          "cv_over_3r": 0.924318959577
+        },
+        {
+          "reduced_temperature": 1.05,
+          "cv_over_3r": 0.927722559628
+        },
+        {
+          "reduced_temperature": 1.075,
+          "cv_over_3r": 0.930904970714
+        },
+        {
+          "reduced_temperature": 1.1,
+          "cv_over_3r": 0.933884662714
+        },
+        {
+          "reduced_temperature": 1.125,
+          "cv_over_3r": 0.936678247851
+        },
+        {
+          "reduced_temperature": 1.15,
+          "cv_over_3r": 0.939300696589
+        },
+        {
+          "reduced_temperature": 1.175,
+          "cv_over_3r": 0.941765525388
+        },
+        {
+          "reduced_temperature": 1.2,
+          "cv_over_3r": 0.94408496032
+        },
+        {
+          "reduced_temperature": 1.225,
+          "cv_over_3r": 0.946270079978
+        },
+        {
+          "reduced_temperature": 1.25,
+          "cv_over_3r": 0.948330940539
+        },
+        {
+          "reduced_temperature": 1.275,
+          "cv_over_3r": 0.950276685454
+        },
+        {
+          "reduced_temperature": 1.3,
+          "cv_over_3r": 0.952115641845
+        },
+        {
+          "reduced_temperature": 1.325,
+          "cv_over_3r": 0.953855405388
+        },
+        {
+          "reduced_temperature": 1.35,
+          "cv_over_3r": 0.955502915207
+        },
+        {
+          "reduced_temperature": 1.375,
+          "cv_over_3r": 0.957064520082
+        },
+        {
+          "reduced_temperature": 1.4,
+          "cv_over_3r": 0.958546037078
+        },
+        {
+          "reduced_temperature": 1.425,
+          "cv_over_3r": 0.959952803582
+        },
+        {
+          "reduced_temperature": 1.45,
+          "cv_over_3r": 0.96128972354
+        },
+        {
+          "reduced_temperature": 1.475,
+          "cv_over_3r": 0.962561308637
+        },
+        {
+          "reduced_temperature": 1.5,
+          "cv_over_3r": 0.963771715028
+        },
+        {
+          "reduced_temperature": 1.525,
+          "cv_over_3r": 0.964924776154
+        },
+        {
+          "reduced_temperature": 1.55,
+          "cv_over_3r": 0.966024032103
+        },
+        {
+          "reduced_temperature": 1.575,
+          "cv_over_3r": 0.967072755941
+        },
+        {
+          "reduced_temperature": 1.6,
+          "cv_over_3r": 0.96807397733
+        },
+        {
+          "reduced_temperature": 1.625,
+          "cv_over_3r": 0.969030503783
+        },
+        {
+          "reduced_temperature": 1.65,
+          "cv_over_3r": 0.969944939785
+        },
+        {
+          "reduced_temperature": 1.675,
+          "cv_over_3r": 0.970819704044
+        },
+        {
+          "reduced_temperature": 1.7,
+          "cv_over_3r": 0.971657045065
+        },
+        {
+          "reduced_temperature": 1.725,
+          "cv_over_3r": 0.972459055233
+        },
+        {
+          "reduced_temperature": 1.75,
+          "cv_over_3r": 0.973227683562
+        },
+        {
+          "reduced_temperature": 1.775,
+          "cv_over_3r": 0.973964747255
+        },
+        {
+          "reduced_temperature": 1.8,
+          "cv_over_3r": 0.974671942196
+        },
+        {
+          "reduced_temperature": 1.825,
+          "cv_over_3r": 0.975350852489
+        },
+        {
+          "reduced_temperature": 1.85,
+          "cv_over_3r": 0.976002959138
+        },
+        {
+          "reduced_temperature": 1.875,
+          "cv_over_3r": 0.976629647947
+        },
+        {
+          "reduced_temperature": 1.9,
+          "cv_over_3r": 0.977232216741
+        },
+        {
+          "reduced_temperature": 1.925,
+          "cv_over_3r": 0.977811881947
+        },
+        {
+          "reduced_temperature": 1.95,
+          "cv_over_3r": 0.978369784615
+        },
+        {
+          "reduced_temperature": 1.975,
+          "cv_over_3r": 0.97890699593
+        },
+        {
+          "reduced_temperature": 2.0,
+          "cv_over_3r": 0.979424522258
+        },
+        {
+          "reduced_temperature": 2.025,
+          "cv_over_3r": 0.979923309778
+        },
+        {
+          "reduced_temperature": 2.05,
+          "cv_over_3r": 0.980404248728
+        },
+        {
+          "reduced_temperature": 2.075,
+          "cv_over_3r": 0.980868177317
+        },
+        {
+          "reduced_temperature": 2.1,
+          "cv_over_3r": 0.98131588531
+        },
+        {
+          "reduced_temperature": 2.125,
+          "cv_over_3r": 0.981748117342
+        },
+        {
+          "reduced_temperature": 2.15,
+          "cv_over_3r": 0.982165575962
+        },
+        {
+          "reduced_temperature": 2.175,
+          "cv_over_3r": 0.982568924446
+        },
+        {
+          "reduced_temperature": 2.2,
+          "cv_over_3r": 0.982958789391
+        },
+        {
+          "reduced_temperature": 2.225,
+          "cv_over_3r": 0.983335763118
+        },
+        {
+          "reduced_temperature": 2.25,
+          "cv_over_3r": 0.983700405885
+        },
+        {
+          "reduced_temperature": 2.275,
+          "cv_over_3r": 0.984053247941
+        },
+        {
+          "reduced_temperature": 2.3,
+          "cv_over_3r": 0.984394791433
+        },
+        {
+          "reduced_temperature": 2.325,
+          "cv_over_3r": 0.98472551216
+        },
+        {
+          "reduced_temperature": 2.35,
+          "cv_over_3r": 0.985045861217
+        },
+        {
+          "reduced_temperature": 2.375,
+          "cv_over_3r": 0.98535626651
+        },
+        {
+          "reduced_temperature": 2.4,
+          "cv_over_3r": 0.985657134168
+        },
+        {
+          "reduced_temperature": 2.425,
+          "cv_over_3r": 0.985948849856
+        },
+        {
+          "reduced_temperature": 2.45,
+          "cv_over_3r": 0.986231779997
+        },
+        {
+          "reduced_temperature": 2.475,
+          "cv_over_3r": 0.986506272907
+        },
+        {
+          "reduced_temperature": 2.5,
+          "cv_over_3r": 0.986772659858
+        },
+        {
+          "reduced_temperature": 2.525,
+          "cv_over_3r": 0.987031256064
+        },
+        {
+          "reduced_temperature": 2.55,
+          "cv_over_3r": 0.987282361606
+        },
+        {
+          "reduced_temperature": 2.575,
+          "cv_over_3r": 0.987526262291
+        },
+        {
+          "reduced_temperature": 2.6,
+          "cv_over_3r": 0.987763230459
+        },
+        {
+          "reduced_temperature": 2.625,
+          "cv_over_3r": 0.987993525733
+        },
+        {
+          "reduced_temperature": 2.65,
+          "cv_over_3r": 0.988217395726
+        },
+        {
+          "reduced_temperature": 2.675,
+          "cv_over_3r": 0.988435076697
+        },
+        {
+          "reduced_temperature": 2.7,
+          "cv_over_3r": 0.988646794172
+        },
+        {
+          "reduced_temperature": 2.725,
+          "cv_over_3r": 0.988852763519
+        },
+        {
+          "reduced_temperature": 2.75,
+          "cv_over_3r": 0.989053190495
+        },
+        {
+          "reduced_temperature": 2.775,
+          "cv_over_3r": 0.989248271748
+        },
+        {
+          "reduced_temperature": 2.8,
+          "cv_over_3r": 0.989438195305
+        },
+        {
+          "reduced_temperature": 2.825,
+          "cv_over_3r": 0.989623141012
+        },
+        {
+          "reduced_temperature": 2.85,
+          "cv_over_3r": 0.989803280962
+        },
+        {
+          "reduced_temperature": 2.875,
+          "cv_over_3r": 0.989978779891
+        },
+        {
+          "reduced_temperature": 2.9,
+          "cv_over_3r": 0.990149795547
+        },
+        {
+          "reduced_temperature": 2.925,
+          "cv_over_3r": 0.99031647905
+        },
+        {
+          "reduced_temperature": 2.95,
+          "cv_over_3r": 0.990478975214
+        },
+        {
+          "reduced_temperature": 2.975,
+          "cv_over_3r": 0.990637422867
+        },
+        {
+          "reduced_temperature": 3.0,
+          "cv_over_3r": 0.99079195514
+        },
+        {
+          "reduced_temperature": 3.025,
+          "cv_over_3r": 0.990942699746
+        },
+        {
+          "reduced_temperature": 3.05,
+          "cv_over_3r": 0.991089779244
+        },
+        {
+          "reduced_temperature": 3.075,
+          "cv_over_3r": 0.991233311283
+        },
+        {
+          "reduced_temperature": 3.1,
+          "cv_over_3r": 0.991373408838
+        },
+        {
+          "reduced_temperature": 3.125,
+          "cv_over_3r": 0.991510180431
+        },
+        {
+          "reduced_temperature": 3.15,
+          "cv_over_3r": 0.991643730336
+        },
+        {
+          "reduced_temperature": 3.175,
+          "cv_over_3r": 0.991774158781
+        },
+        {
+          "reduced_temperature": 3.2,
+          "cv_over_3r": 0.991901562133
+        },
+        {
+          "reduced_temperature": 3.225,
+          "cv_over_3r": 0.992026033073
+        },
+        {
+          "reduced_temperature": 3.25,
+          "cv_over_3r": 0.992147660768
+        },
+        {
+          "reduced_temperature": 3.275,
+          "cv_over_3r": 0.992266531023
+        },
+        {
+          "reduced_temperature": 3.3,
+          "cv_over_3r": 0.99238272644
+        },
+        {
+          "reduced_temperature": 3.325,
+          "cv_over_3r": 0.992496326551
+        },
+        {
+          "reduced_temperature": 3.35,
+          "cv_over_3r": 0.992607407962
+        },
+        {
+          "reduced_temperature": 3.375,
+          "cv_over_3r": 0.992716044476
+        },
+        {
+          "reduced_temperature": 3.4,
+          "cv_over_3r": 0.992822307215
+        },
+        {
+          "reduced_temperature": 3.425,
+          "cv_over_3r": 0.992926264739
+        },
+        {
+          "reduced_temperature": 3.45,
+          "cv_over_3r": 0.993027983154
+        },
+        {
+          "reduced_temperature": 3.475,
+          "cv_over_3r": 0.993127526216
+        },
+        {
+          "reduced_temperature": 3.5,
+          "cv_over_3r": 0.993224955431
+        },
+        {
+          "reduced_temperature": 3.525,
+          "cv_over_3r": 0.993320330149
+        },
+        {
+          "reduced_temperature": 3.55,
+          "cv_over_3r": 0.993413707655
+        },
+        {
+          "reduced_temperature": 3.575,
+          "cv_over_3r": 0.993505143254
+        },
+        {
+          "reduced_temperature": 3.6,
+          "cv_over_3r": 0.993594690352
+        },
+        {
+          "reduced_temperature": 3.625,
+          "cv_over_3r": 0.993682400533
+        },
+        {
+          "reduced_temperature": 3.65,
+          "cv_over_3r": 0.993768323637
+        },
+        {
+          "reduced_temperature": 3.675,
+          "cv_over_3r": 0.993852507822
+        },
+        {
+          "reduced_temperature": 3.7,
+          "cv_over_3r": 0.993934999642
+        },
+        {
+          "reduced_temperature": 3.725,
+          "cv_over_3r": 0.994015844102
+        },
+        {
+          "reduced_temperature": 3.75,
+          "cv_over_3r": 0.994095084724
+        },
+        {
+          "reduced_temperature": 3.775,
+          "cv_over_3r": 0.994172763603
+        },
+        {
+          "reduced_temperature": 3.8,
+          "cv_over_3r": 0.994248921464
+        },
+        {
+          "reduced_temperature": 3.825,
+          "cv_over_3r": 0.994323597715
+        },
+        {
+          "reduced_temperature": 3.85,
+          "cv_over_3r": 0.994396830498
+        },
+        {
+          "reduced_temperature": 3.875,
+          "cv_over_3r": 0.994468656734
+        },
+        {
+          "reduced_temperature": 3.9,
+          "cv_over_3r": 0.994539112175
+        },
+        {
+          "reduced_temperature": 3.925,
+          "cv_over_3r": 0.994608231445
+        },
+        {
+          "reduced_temperature": 3.95,
+          "cv_over_3r": 0.994676048082
+        },
+        {
+          "reduced_temperature": 3.975,
+          "cv_over_3r": 0.994742594581
+        },
+        {
+          "reduced_temperature": 4.0,
+          "cv_over_3r": 0.994807902429
+        },
+        {
+          "reduced_temperature": 4.025,
+          "cv_over_3r": 0.994872002146
+        },
+        {
+          "reduced_temperature": 4.05,
+          "cv_over_3r": 0.994934923318
+        },
+        {
+          "reduced_temperature": 4.075,
+          "cv_over_3r": 0.994996694632
+        },
+        {
+          "reduced_temperature": 4.1,
+          "cv_over_3r": 0.995057343907
+        },
+        {
+          "reduced_temperature": 4.125,
+          "cv_over_3r": 0.99511689813
+        },
+        {
+          "reduced_temperature": 4.15,
+          "cv_over_3r": 0.995175383478
+        },
+        {
+          "reduced_temperature": 4.175,
+          "cv_over_3r": 0.995232825353
+        },
+        {
+          "reduced_temperature": 4.2,
+          "cv_over_3r": 0.99528924841
+        },
+        {
+          "reduced_temperature": 4.225,
+          "cv_over_3r": 0.995344676577
+        },
+        {
+          "reduced_temperature": 4.25,
+          "cv_over_3r": 0.995399133086
+        },
+        {
+          "reduced_temperature": 4.275,
+          "cv_over_3r": 0.995452640495
+        },
+        {
+          "reduced_temperature": 4.3,
+          "cv_over_3r": 0.995505220713
+        },
+        {
+          "reduced_temperature": 4.325,
+          "cv_over_3r": 0.99555689502
+        },
+        {
+          "reduced_temperature": 4.35,
+          "cv_over_3r": 0.995607684088
+        },
+        {
+          "reduced_temperature": 4.375,
+          "cv_over_3r": 0.995657608007
+        },
+        {
+          "reduced_temperature": 4.4,
+          "cv_over_3r": 0.995706686297
+        },
+        {
+          "reduced_temperature": 4.425,
+          "cv_over_3r": 0.995754937933
+        },
+        {
+          "reduced_temperature": 4.45,
+          "cv_over_3r": 0.995802381361
+        },
+        {
+          "reduced_temperature": 4.475,
+          "cv_over_3r": 0.995849034516
+        },
+        {
+          "reduced_temperature": 4.5,
+          "cv_over_3r": 0.995894914838
+        },
+        {
+          "reduced_temperature": 4.525,
+          "cv_over_3r": 0.995940039288
+        },
+        {
+          "reduced_temperature": 4.55,
+          "cv_over_3r": 0.995984424368
+        },
+        {
+          "reduced_temperature": 4.575,
+          "cv_over_3r": 0.996028086128
+        },
+        {
+          "reduced_temperature": 4.6,
+          "cv_over_3r": 0.996071040189
+        },
+        {
+          "reduced_temperature": 4.625,
+          "cv_over_3r": 0.996113301752
+        },
+        {
+          "reduced_temperature": 4.65,
+          "cv_over_3r": 0.996154885609
+        },
+        {
+          "reduced_temperature": 4.675,
+          "cv_over_3r": 0.996195806165
+        },
+        {
+          "reduced_temperature": 4.7,
+          "cv_over_3r": 0.996236077441
+        },
+        {
+          "reduced_temperature": 4.725,
+          "cv_over_3r": 0.996275713089
+        },
+        {
+          "reduced_temperature": 4.75,
+          "cv_over_3r": 0.996314726408
+        },
+        {
+          "reduced_temperature": 4.775,
+          "cv_over_3r": 0.996353130348
+        },
+        {
+          "reduced_temperature": 4.8,
+          "cv_over_3r": 0.996390937525
+        },
+        {
+          "reduced_temperature": 4.825,
+          "cv_over_3r": 0.996428160231
+        },
+        {
+          "reduced_temperature": 4.85,
+          "cv_over_3r": 0.996464810443
+        },
+        {
+          "reduced_temperature": 4.875,
+          "cv_over_3r": 0.996500899833
+        },
+        {
+          "reduced_temperature": 4.9,
+          "cv_over_3r": 0.996536439778
+        },
+        {
+          "reduced_temperature": 4.925,
+          "cv_over_3r": 0.996571441366
+        },
+        {
+          "reduced_temperature": 4.95,
+          "cv_over_3r": 0.99660591541
+        },
+        {
+          "reduced_temperature": 4.975,
+          "cv_over_3r": 0.99663987245
+        },
+        {
+          "reduced_temperature": 5.0,
+          "cv_over_3r": 0.996673322766
+        }
+      ],
+      "Si": [
+        {
+          "reduced_temperature": 0.0,
+          "cv_over_3r": 0.0
+        },
+        {
+          "reduced_temperature": 0.025,
+          "cv_over_3r": 0.0
+        },
+        {
+          "reduced_temperature": 0.05,
+          "cv_over_3r": 8.24461e-07
+        },
+        {
+          "reduced_temperature": 0.075,
+          "cv_over_3r": 0.000287929251
+        },
+        {
+          "reduced_temperature": 0.1,
+          "cv_over_3r": 0.004540405235
+        },
+        {
+          "reduced_temperature": 0.125,
+          "cv_over_3r": 0.02148401994
+        },
+        {
+          "reduced_temperature": 0.15,
+          "cv_over_3r": 0.056705741729
+        },
+        {
+          "reduced_temperature": 0.175,
+          "cv_over_3r": 0.108420381272
+        },
+        {
+          "reduced_temperature": 0.2,
+          "cv_over_3r": 0.170741822005
+        },
+        {
+          "reduced_temperature": 0.225,
+          "cv_over_3r": 0.237518816368
+        },
+        {
+          "reduced_temperature": 0.25,
+          "cv_over_3r": 0.304087319352
+        },
+        {
+          "reduced_temperature": 0.275,
+          "cv_over_3r": 0.367514444727
+        },
+        {
+          "reduced_temperature": 0.3,
+          "cv_over_3r": 0.426247121303
+        },
+        {
+          "reduced_temperature": 0.325,
+          "cv_over_3r": 0.479664607773
+        },
+        {
+          "reduced_temperature": 0.35,
+          "cv_over_3r": 0.527712913963
+        },
+        {
+          "reduced_temperature": 0.375,
+          "cv_over_3r": 0.570651080133
+        },
+        {
+          "reduced_temperature": 0.4,
+          "cv_over_3r": 0.608890050412
+        },
+        {
+          "reduced_temperature": 0.425,
+          "cv_over_3r": 0.642896571087
+        },
+        {
+          "reduced_temperature": 0.45,
+          "cv_over_3r": 0.673139154981
+        },
+        {
+          "reduced_temperature": 0.475,
+          "cv_over_3r": 0.700059909854
+        },
+        {
+          "reduced_temperature": 0.5,
+          "cv_over_3r": 0.724061660966
+        },
+        {
+          "reduced_temperature": 0.525,
+          "cv_over_3r": 0.745503776933
+        },
+        {
+          "reduced_temperature": 0.55,
+          "cv_over_3r": 0.764702712773
+        },
+        {
+          "reduced_temperature": 0.575,
+          "cv_over_3r": 0.781934919176
+        },
+        {
+          "reduced_temperature": 0.6,
+          "cv_over_3r": 0.797440766846
+        },
+        {
+          "reduced_temperature": 0.625,
+          "cv_over_3r": 0.811428734766
+        },
+        {
+          "reduced_temperature": 0.65,
+          "cv_over_3r": 0.824079465358
+        },
+        {
+          "reduced_temperature": 0.675,
+          "cv_over_3r": 0.835549494782
+        },
+        {
+          "reduced_temperature": 0.7,
+          "cv_over_3r": 0.845974582902
+        },
+        {
+          "reduced_temperature": 0.725,
+          "cv_over_3r": 0.855472631039
+        },
+        {
+          "reduced_temperature": 0.75,
+          "cv_over_3r": 0.864146208405
+        },
+        {
+          "reduced_temperature": 0.775,
+          "cv_over_3r": 0.87208472327
+        },
+        {
+          "reduced_temperature": 0.8,
+          "cv_over_3r": 0.879366280088
+        },
+        {
+          "reduced_temperature": 0.825,
+          "cv_over_3r": 0.886059263713
+        },
+        {
+          "reduced_temperature": 0.85,
+          "cv_over_3r": 0.892223689016
+        },
+        {
+          "reduced_temperature": 0.875,
+          "cv_over_3r": 0.897912350258
+        },
+        {
+          "reduced_temperature": 0.9,
+          "cv_over_3r": 0.903171800345
+        },
+        {
+          "reduced_temperature": 0.925,
+          "cv_over_3r": 0.90804318588
+        },
+        {
+          "reduced_temperature": 0.95,
+          "cv_over_3r": 0.912562960224
+        },
+        {
+          "reduced_temperature": 0.975,
+          "cv_over_3r": 0.91676349332
+        },
+        {
+          "reduced_temperature": 1.0,
+          "cv_over_3r": 0.920673594208
+        },
+        {
+          "reduced_temperature": 1.025,
+          "cv_over_3r": 0.924318959577
+        },
+        {
+          "reduced_temperature": 1.05,
+          "cv_over_3r": 0.927722559628
+        },
+        {
+          "reduced_temperature": 1.075,
+          "cv_over_3r": 0.930904970714
+        },
+        {
+          "reduced_temperature": 1.1,
+          "cv_over_3r": 0.933884662714
+        },
+        {
+          "reduced_temperature": 1.125,
+          "cv_over_3r": 0.936678247851
+        },
+        {
+          "reduced_temperature": 1.15,
+          "cv_over_3r": 0.939300696589
+        },
+        {
+          "reduced_temperature": 1.175,
+          "cv_over_3r": 0.941765525388
+        },
+        {
+          "reduced_temperature": 1.2,
+          "cv_over_3r": 0.94408496032
+        },
+        {
+          "reduced_temperature": 1.225,
+          "cv_over_3r": 0.946270079978
+        },
+        {
+          "reduced_temperature": 1.25,
+          "cv_over_3r": 0.948330940539
+        },
+        {
+          "reduced_temperature": 1.275,
+          "cv_over_3r": 0.950276685454
+        },
+        {
+          "reduced_temperature": 1.3,
+          "cv_over_3r": 0.952115641845
+        },
+        {
+          "reduced_temperature": 1.325,
+          "cv_over_3r": 0.953855405388
+        },
+        {
+          "reduced_temperature": 1.35,
+          "cv_over_3r": 0.955502915207
+        },
+        {
+          "reduced_temperature": 1.375,
+          "cv_over_3r": 0.957064520082
+        },
+        {
+          "reduced_temperature": 1.4,
+          "cv_over_3r": 0.958546037078
+        },
+        {
+          "reduced_temperature": 1.425,
+          "cv_over_3r": 0.959952803582
+        },
+        {
+          "reduced_temperature": 1.45,
+          "cv_over_3r": 0.96128972354
+        },
+        {
+          "reduced_temperature": 1.475,
+          "cv_over_3r": 0.962561308637
+        },
+        {
+          "reduced_temperature": 1.5,
+          "cv_over_3r": 0.963771715028
+        },
+        {
+          "reduced_temperature": 1.525,
+          "cv_over_3r": 0.964924776154
+        },
+        {
+          "reduced_temperature": 1.55,
+          "cv_over_3r": 0.966024032103
+        },
+        {
+          "reduced_temperature": 1.575,
+          "cv_over_3r": 0.967072755941
+        },
+        {
+          "reduced_temperature": 1.6,
+          "cv_over_3r": 0.96807397733
+        },
+        {
+          "reduced_temperature": 1.625,
+          "cv_over_3r": 0.969030503783
+        },
+        {
+          "reduced_temperature": 1.65,
+          "cv_over_3r": 0.969944939785
+        },
+        {
+          "reduced_temperature": 1.675,
+          "cv_over_3r": 0.970819704044
+        },
+        {
+          "reduced_temperature": 1.7,
+          "cv_over_3r": 0.971657045065
+        },
+        {
+          "reduced_temperature": 1.725,
+          "cv_over_3r": 0.972459055233
+        },
+        {
+          "reduced_temperature": 1.75,
+          "cv_over_3r": 0.973227683562
+        },
+        {
+          "reduced_temperature": 1.775,
+          "cv_over_3r": 0.973964747255
+        },
+        {
+          "reduced_temperature": 1.8,
+          "cv_over_3r": 0.974671942196
+        },
+        {
+          "reduced_temperature": 1.825,
+          "cv_over_3r": 0.975350852489
+        },
+        {
+          "reduced_temperature": 1.85,
+          "cv_over_3r": 0.976002959138
+        },
+        {
+          "reduced_temperature": 1.875,
+          "cv_over_3r": 0.976629647947
+        },
+        {
+          "reduced_temperature": 1.9,
+          "cv_over_3r": 0.977232216741
+        },
+        {
+          "reduced_temperature": 1.925,
+          "cv_over_3r": 0.977811881947
+        },
+        {
+          "reduced_temperature": 1.95,
+          "cv_over_3r": 0.978369784615
+        },
+        {
+          "reduced_temperature": 1.975,
+          "cv_over_3r": 0.97890699593
+        },
+        {
+          "reduced_temperature": 2.0,
+          "cv_over_3r": 0.979424522258
+        },
+        {
+          "reduced_temperature": 2.025,
+          "cv_over_3r": 0.979923309778
+        },
+        {
+          "reduced_temperature": 2.05,
+          "cv_over_3r": 0.980404248728
+        },
+        {
+          "reduced_temperature": 2.075,
+          "cv_over_3r": 0.980868177317
+        },
+        {
+          "reduced_temperature": 2.1,
+          "cv_over_3r": 0.98131588531
+        },
+        {
+          "reduced_temperature": 2.125,
+          "cv_over_3r": 0.981748117342
+        },
+        {
+          "reduced_temperature": 2.15,
+          "cv_over_3r": 0.982165575962
+        },
+        {
+          "reduced_temperature": 2.175,
+          "cv_over_3r": 0.982568924446
+        },
+        {
+          "reduced_temperature": 2.2,
+          "cv_over_3r": 0.982958789391
+        },
+        {
+          "reduced_temperature": 2.225,
+          "cv_over_3r": 0.983335763118
+        },
+        {
+          "reduced_temperature": 2.25,
+          "cv_over_3r": 0.983700405885
+        },
+        {
+          "reduced_temperature": 2.275,
+          "cv_over_3r": 0.984053247941
+        },
+        {
+          "reduced_temperature": 2.3,
+          "cv_over_3r": 0.984394791433
+        },
+        {
+          "reduced_temperature": 2.325,
+          "cv_over_3r": 0.98472551216
+        },
+        {
+          "reduced_temperature": 2.35,
+          "cv_over_3r": 0.985045861217
+        },
+        {
+          "reduced_temperature": 2.375,
+          "cv_over_3r": 0.98535626651
+        },
+        {
+          "reduced_temperature": 2.4,
+          "cv_over_3r": 0.985657134168
+        },
+        {
+          "reduced_temperature": 2.425,
+          "cv_over_3r": 0.985948849856
+        },
+        {
+          "reduced_temperature": 2.45,
+          "cv_over_3r": 0.986231779997
+        },
+        {
+          "reduced_temperature": 2.475,
+          "cv_over_3r": 0.986506272907
+        },
+        {
+          "reduced_temperature": 2.5,
+          "cv_over_3r": 0.986772659858
+        },
+        {
+          "reduced_temperature": 2.525,
+          "cv_over_3r": 0.987031256064
+        },
+        {
+          "reduced_temperature": 2.55,
+          "cv_over_3r": 0.987282361606
+        },
+        {
+          "reduced_temperature": 2.575,
+          "cv_over_3r": 0.987526262291
+        },
+        {
+          "reduced_temperature": 2.6,
+          "cv_over_3r": 0.987763230459
+        },
+        {
+          "reduced_temperature": 2.625,
+          "cv_over_3r": 0.987993525733
+        },
+        {
+          "reduced_temperature": 2.65,
+          "cv_over_3r": 0.988217395726
+        },
+        {
+          "reduced_temperature": 2.675,
+          "cv_over_3r": 0.988435076697
+        },
+        {
+          "reduced_temperature": 2.7,
+          "cv_over_3r": 0.988646794172
+        },
+        {
+          "reduced_temperature": 2.725,
+          "cv_over_3r": 0.988852763519
+        },
+        {
+          "reduced_temperature": 2.75,
+          "cv_over_3r": 0.989053190495
+        },
+        {
+          "reduced_temperature": 2.775,
+          "cv_over_3r": 0.989248271748
+        },
+        {
+          "reduced_temperature": 2.8,
+          "cv_over_3r": 0.989438195305
+        },
+        {
+          "reduced_temperature": 2.825,
+          "cv_over_3r": 0.989623141012
+        },
+        {
+          "reduced_temperature": 2.85,
+          "cv_over_3r": 0.989803280962
+        },
+        {
+          "reduced_temperature": 2.875,
+          "cv_over_3r": 0.989978779891
+        },
+        {
+          "reduced_temperature": 2.9,
+          "cv_over_3r": 0.990149795547
+        },
+        {
+          "reduced_temperature": 2.925,
+          "cv_over_3r": 0.99031647905
+        },
+        {
+          "reduced_temperature": 2.95,
+          "cv_over_3r": 0.990478975214
+        },
+        {
+          "reduced_temperature": 2.975,
+          "cv_over_3r": 0.990637422867
+        },
+        {
+          "reduced_temperature": 3.0,
+          "cv_over_3r": 0.99079195514
+        },
+        {
+          "reduced_temperature": 3.025,
+          "cv_over_3r": 0.990942699746
+        },
+        {
+          "reduced_temperature": 3.05,
+          "cv_over_3r": 0.991089779244
+        },
+        {
+          "reduced_temperature": 3.075,
+          "cv_over_3r": 0.991233311283
+        },
+        {
+          "reduced_temperature": 3.1,
+          "cv_over_3r": 0.991373408838
+        },
+        {
+          "reduced_temperature": 3.125,
+          "cv_over_3r": 0.991510180431
+        },
+        {
+          "reduced_temperature": 3.15,
+          "cv_over_3r": 0.991643730336
+        },
+        {
+          "reduced_temperature": 3.175,
+          "cv_over_3r": 0.991774158781
+        },
+        {
+          "reduced_temperature": 3.2,
+          "cv_over_3r": 0.991901562133
+        },
+        {
+          "reduced_temperature": 3.225,
+          "cv_over_3r": 0.992026033073
+        },
+        {
+          "reduced_temperature": 3.25,
+          "cv_over_3r": 0.992147660768
+        },
+        {
+          "reduced_temperature": 3.275,
+          "cv_over_3r": 0.992266531023
+        },
+        {
+          "reduced_temperature": 3.3,
+          "cv_over_3r": 0.99238272644
+        },
+        {
+          "reduced_temperature": 3.325,
+          "cv_over_3r": 0.992496326551
+        },
+        {
+          "reduced_temperature": 3.35,
+          "cv_over_3r": 0.992607407962
+        },
+        {
+          "reduced_temperature": 3.375,
+          "cv_over_3r": 0.992716044476
+        },
+        {
+          "reduced_temperature": 3.4,
+          "cv_over_3r": 0.992822307215
+        },
+        {
+          "reduced_temperature": 3.425,
+          "cv_over_3r": 0.992926264739
+        },
+        {
+          "reduced_temperature": 3.45,
+          "cv_over_3r": 0.993027983154
+        },
+        {
+          "reduced_temperature": 3.475,
+          "cv_over_3r": 0.993127526216
+        },
+        {
+          "reduced_temperature": 3.5,
+          "cv_over_3r": 0.993224955431
+        },
+        {
+          "reduced_temperature": 3.525,
+          "cv_over_3r": 0.993320330149
+        },
+        {
+          "reduced_temperature": 3.55,
+          "cv_over_3r": 0.993413707655
+        },
+        {
+          "reduced_temperature": 3.575,
+          "cv_over_3r": 0.993505143254
+        },
+        {
+          "reduced_temperature": 3.6,
+          "cv_over_3r": 0.993594690352
+        },
+        {
+          "reduced_temperature": 3.625,
+          "cv_over_3r": 0.993682400533
+        },
+        {
+          "reduced_temperature": 3.65,
+          "cv_over_3r": 0.993768323637
+        },
+        {
+          "reduced_temperature": 3.675,
+          "cv_over_3r": 0.993852507822
+        },
+        {
+          "reduced_temperature": 3.7,
+          "cv_over_3r": 0.993934999642
+        },
+        {
+          "reduced_temperature": 3.725,
+          "cv_over_3r": 0.994015844102
+        },
+        {
+          "reduced_temperature": 3.75,
+          "cv_over_3r": 0.994095084724
+        },
+        {
+          "reduced_temperature": 3.775,
+          "cv_over_3r": 0.994172763603
+        },
+        {
+          "reduced_temperature": 3.8,
+          "cv_over_3r": 0.994248921464
+        },
+        {
+          "reduced_temperature": 3.825,
+          "cv_over_3r": 0.994323597715
+        },
+        {
+          "reduced_temperature": 3.85,
+          "cv_over_3r": 0.994396830498
+        },
+        {
+          "reduced_temperature": 3.875,
+          "cv_over_3r": 0.994468656734
+        },
+        {
+          "reduced_temperature": 3.9,
+          "cv_over_3r": 0.994539112175
+        },
+        {
+          "reduced_temperature": 3.925,
+          "cv_over_3r": 0.994608231445
+        },
+        {
+          "reduced_temperature": 3.95,
+          "cv_over_3r": 0.994676048082
+        },
+        {
+          "reduced_temperature": 3.975,
+          "cv_over_3r": 0.994742594581
+        },
+        {
+          "reduced_temperature": 4.0,
+          "cv_over_3r": 0.994807902429
+        },
+        {
+          "reduced_temperature": 4.025,
+          "cv_over_3r": 0.994872002146
+        },
+        {
+          "reduced_temperature": 4.05,
+          "cv_over_3r": 0.994934923318
+        },
+        {
+          "reduced_temperature": 4.075,
+          "cv_over_3r": 0.994996694632
+        },
+        {
+          "reduced_temperature": 4.1,
+          "cv_over_3r": 0.995057343907
+        },
+        {
+          "reduced_temperature": 4.125,
+          "cv_over_3r": 0.99511689813
+        },
+        {
+          "reduced_temperature": 4.15,
+          "cv_over_3r": 0.995175383478
+        },
+        {
+          "reduced_temperature": 4.175,
+          "cv_over_3r": 0.995232825353
+        },
+        {
+          "reduced_temperature": 4.2,
+          "cv_over_3r": 0.99528924841
+        },
+        {
+          "reduced_temperature": 4.225,
+          "cv_over_3r": 0.995344676577
+        },
+        {
+          "reduced_temperature": 4.25,
+          "cv_over_3r": 0.995399133086
+        },
+        {
+          "reduced_temperature": 4.275,
+          "cv_over_3r": 0.995452640495
+        },
+        {
+          "reduced_temperature": 4.3,
+          "cv_over_3r": 0.995505220713
+        },
+        {
+          "reduced_temperature": 4.325,
+          "cv_over_3r": 0.99555689502
+        },
+        {
+          "reduced_temperature": 4.35,
+          "cv_over_3r": 0.995607684088
+        },
+        {
+          "reduced_temperature": 4.375,
+          "cv_over_3r": 0.995657608007
+        },
+        {
+          "reduced_temperature": 4.4,
+          "cv_over_3r": 0.995706686297
+        },
+        {
+          "reduced_temperature": 4.425,
+          "cv_over_3r": 0.995754937933
+        },
+        {
+          "reduced_temperature": 4.45,
+          "cv_over_3r": 0.995802381361
+        },
+        {
+          "reduced_temperature": 4.475,
+          "cv_over_3r": 0.995849034516
+        },
+        {
+          "reduced_temperature": 4.5,
+          "cv_over_3r": 0.995894914838
+        },
+        {
+          "reduced_temperature": 4.525,
+          "cv_over_3r": 0.995940039288
+        },
+        {
+          "reduced_temperature": 4.55,
+          "cv_over_3r": 0.995984424368
+        },
+        {
+          "reduced_temperature": 4.575,
+          "cv_over_3r": 0.996028086128
+        },
+        {
+          "reduced_temperature": 4.6,
+          "cv_over_3r": 0.996071040189
+        },
+        {
+          "reduced_temperature": 4.625,
+          "cv_over_3r": 0.996113301752
+        },
+        {
+          "reduced_temperature": 4.65,
+          "cv_over_3r": 0.996154885609
+        },
+        {
+          "reduced_temperature": 4.675,
+          "cv_over_3r": 0.996195806165
+        },
+        {
+          "reduced_temperature": 4.7,
+          "cv_over_3r": 0.996236077441
+        },
+        {
+          "reduced_temperature": 4.725,
+          "cv_over_3r": 0.996275713089
+        },
+        {
+          "reduced_temperature": 4.75,
+          "cv_over_3r": 0.996314726408
+        },
+        {
+          "reduced_temperature": 4.775,
+          "cv_over_3r": 0.996353130348
+        },
+        {
+          "reduced_temperature": 4.8,
+          "cv_over_3r": 0.996390937525
+        },
+        {
+          "reduced_temperature": 4.825,
+          "cv_over_3r": 0.996428160231
+        },
+        {
+          "reduced_temperature": 4.85,
+          "cv_over_3r": 0.996464810443
+        },
+        {
+          "reduced_temperature": 4.875,
+          "cv_over_3r": 0.996500899833
+        },
+        {
+          "reduced_temperature": 4.9,
+          "cv_over_3r": 0.996536439778
+        },
+        {
+          "reduced_temperature": 4.925,
+          "cv_over_3r": 0.996571441366
+        },
+        {
+          "reduced_temperature": 4.95,
+          "cv_over_3r": 0.99660591541
+        },
+        {
+          "reduced_temperature": 4.975,
+          "cv_over_3r": 0.99663987245
+        },
+        {
+          "reduced_temperature": 5.0,
+          "cv_over_3r": 0.996673322766
+        }
+      ],
+      "C": [
+        {
+          "reduced_temperature": 0.0,
+          "cv_over_3r": 0.0
+        },
+        {
+          "reduced_temperature": 0.025,
+          "cv_over_3r": 0.0
+        },
+        {
+          "reduced_temperature": 0.05,
+          "cv_over_3r": 8.24461e-07
+        },
+        {
+          "reduced_temperature": 0.075,
+          "cv_over_3r": 0.000287929251
+        },
+        {
+          "reduced_temperature": 0.1,
+          "cv_over_3r": 0.004540405235
+        },
+        {
+          "reduced_temperature": 0.125,
+          "cv_over_3r": 0.02148401994
+        },
+        {
+          "reduced_temperature": 0.15,
+          "cv_over_3r": 0.056705741729
+        },
+        {
+          "reduced_temperature": 0.175,
+          "cv_over_3r": 0.108420381272
+        },
+        {
+          "reduced_temperature": 0.2,
+          "cv_over_3r": 0.170741822005
+        },
+        {
+          "reduced_temperature": 0.225,
+          "cv_over_3r": 0.237518816368
+        },
+        {
+          "reduced_temperature": 0.25,
+          "cv_over_3r": 0.304087319352
+        },
+        {
+          "reduced_temperature": 0.275,
+          "cv_over_3r": 0.367514444727
+        },
+        {
+          "reduced_temperature": 0.3,
+          "cv_over_3r": 0.426247121303
+        },
+        {
+          "reduced_temperature": 0.325,
+          "cv_over_3r": 0.479664607773
+        },
+        {
+          "reduced_temperature": 0.35,
+          "cv_over_3r": 0.527712913963
+        },
+        {
+          "reduced_temperature": 0.375,
+          "cv_over_3r": 0.570651080133
+        },
+        {
+          "reduced_temperature": 0.4,
+          "cv_over_3r": 0.608890050412
+        },
+        {
+          "reduced_temperature": 0.425,
+          "cv_over_3r": 0.642896571087
+        },
+        {
+          "reduced_temperature": 0.45,
+          "cv_over_3r": 0.673139154981
+        },
+        {
+          "reduced_temperature": 0.475,
+          "cv_over_3r": 0.700059909854
+        },
+        {
+          "reduced_temperature": 0.5,
+          "cv_over_3r": 0.724061660966
+        },
+        {
+          "reduced_temperature": 0.525,
+          "cv_over_3r": 0.745503776933
+        },
+        {
+          "reduced_temperature": 0.55,
+          "cv_over_3r": 0.764702712773
+        },
+        {
+          "reduced_temperature": 0.575,
+          "cv_over_3r": 0.781934919176
+        },
+        {
+          "reduced_temperature": 0.6,
+          "cv_over_3r": 0.797440766846
+        },
+        {
+          "reduced_temperature": 0.625,
+          "cv_over_3r": 0.811428734766
+        },
+        {
+          "reduced_temperature": 0.65,
+          "cv_over_3r": 0.824079465358
+        },
+        {
+          "reduced_temperature": 0.675,
+          "cv_over_3r": 0.835549494782
+        },
+        {
+          "reduced_temperature": 0.7,
+          "cv_over_3r": 0.845974582902
+        },
+        {
+          "reduced_temperature": 0.725,
+          "cv_over_3r": 0.855472631039
+        },
+        {
+          "reduced_temperature": 0.75,
+          "cv_over_3r": 0.864146208405
+        },
+        {
+          "reduced_temperature": 0.775,
+          "cv_over_3r": 0.87208472327
+        },
+        {
+          "reduced_temperature": 0.8,
+          "cv_over_3r": 0.879366280088
+        },
+        {
+          "reduced_temperature": 0.825,
+          "cv_over_3r": 0.886059263713
+        },
+        {
+          "reduced_temperature": 0.85,
+          "cv_over_3r": 0.892223689016
+        },
+        {
+          "reduced_temperature": 0.875,
+          "cv_over_3r": 0.897912350258
+        },
+        {
+          "reduced_temperature": 0.9,
+          "cv_over_3r": 0.903171800345
+        },
+        {
+          "reduced_temperature": 0.925,
+          "cv_over_3r": 0.90804318588
+        },
+        {
+          "reduced_temperature": 0.95,
+          "cv_over_3r": 0.912562960224
+        },
+        {
+          "reduced_temperature": 0.975,
+          "cv_over_3r": 0.91676349332
+        },
+        {
+          "reduced_temperature": 1.0,
+          "cv_over_3r": 0.920673594208
+        },
+        {
+          "reduced_temperature": 1.025,
+          "cv_over_3r": 0.924318959577
+        },
+        {
+          "reduced_temperature": 1.05,
+          "cv_over_3r": 0.927722559628
+        },
+        {
+          "reduced_temperature": 1.075,
+          "cv_over_3r": 0.930904970714
+        },
+        {
+          "reduced_temperature": 1.1,
+          "cv_over_3r": 0.933884662714
+        },
+        {
+          "reduced_temperature": 1.125,
+          "cv_over_3r": 0.936678247851
+        },
+        {
+          "reduced_temperature": 1.15,
+          "cv_over_3r": 0.939300696589
+        },
+        {
+          "reduced_temperature": 1.175,
+          "cv_over_3r": 0.941765525388
+        },
+        {
+          "reduced_temperature": 1.2,
+          "cv_over_3r": 0.94408496032
+        },
+        {
+          "reduced_temperature": 1.225,
+          "cv_over_3r": 0.946270079978
+        },
+        {
+          "reduced_temperature": 1.25,
+          "cv_over_3r": 0.948330940539
+        },
+        {
+          "reduced_temperature": 1.275,
+          "cv_over_3r": 0.950276685454
+        },
+        {
+          "reduced_temperature": 1.3,
+          "cv_over_3r": 0.952115641845
+        },
+        {
+          "reduced_temperature": 1.325,
+          "cv_over_3r": 0.953855405388
+        },
+        {
+          "reduced_temperature": 1.35,
+          "cv_over_3r": 0.955502915207
+        },
+        {
+          "reduced_temperature": 1.375,
+          "cv_over_3r": 0.957064520082
+        },
+        {
+          "reduced_temperature": 1.4,
+          "cv_over_3r": 0.958546037078
+        },
+        {
+          "reduced_temperature": 1.425,
+          "cv_over_3r": 0.959952803582
+        },
+        {
+          "reduced_temperature": 1.45,
+          "cv_over_3r": 0.96128972354
+        },
+        {
+          "reduced_temperature": 1.475,
+          "cv_over_3r": 0.962561308637
+        },
+        {
+          "reduced_temperature": 1.5,
+          "cv_over_3r": 0.963771715028
+        },
+        {
+          "reduced_temperature": 1.525,
+          "cv_over_3r": 0.964924776154
+        },
+        {
+          "reduced_temperature": 1.55,
+          "cv_over_3r": 0.966024032103
+        },
+        {
+          "reduced_temperature": 1.575,
+          "cv_over_3r": 0.967072755941
+        },
+        {
+          "reduced_temperature": 1.6,
+          "cv_over_3r": 0.96807397733
+        },
+        {
+          "reduced_temperature": 1.625,
+          "cv_over_3r": 0.969030503783
+        },
+        {
+          "reduced_temperature": 1.65,
+          "cv_over_3r": 0.969944939785
+        },
+        {
+          "reduced_temperature": 1.675,
+          "cv_over_3r": 0.970819704044
+        },
+        {
+          "reduced_temperature": 1.7,
+          "cv_over_3r": 0.971657045065
+        },
+        {
+          "reduced_temperature": 1.725,
+          "cv_over_3r": 0.972459055233
+        },
+        {
+          "reduced_temperature": 1.75,
+          "cv_over_3r": 0.973227683562
+        },
+        {
+          "reduced_temperature": 1.775,
+          "cv_over_3r": 0.973964747255
+        },
+        {
+          "reduced_temperature": 1.8,
+          "cv_over_3r": 0.974671942196
+        },
+        {
+          "reduced_temperature": 1.825,
+          "cv_over_3r": 0.975350852489
+        },
+        {
+          "reduced_temperature": 1.85,
+          "cv_over_3r": 0.976002959138
+        },
+        {
+          "reduced_temperature": 1.875,
+          "cv_over_3r": 0.976629647947
+        },
+        {
+          "reduced_temperature": 1.9,
+          "cv_over_3r": 0.977232216741
+        },
+        {
+          "reduced_temperature": 1.925,
+          "cv_over_3r": 0.977811881947
+        },
+        {
+          "reduced_temperature": 1.95,
+          "cv_over_3r": 0.978369784615
+        },
+        {
+          "reduced_temperature": 1.975,
+          "cv_over_3r": 0.97890699593
+        },
+        {
+          "reduced_temperature": 2.0,
+          "cv_over_3r": 0.979424522258
+        },
+        {
+          "reduced_temperature": 2.025,
+          "cv_over_3r": 0.979923309778
+        },
+        {
+          "reduced_temperature": 2.05,
+          "cv_over_3r": 0.980404248728
+        },
+        {
+          "reduced_temperature": 2.075,
+          "cv_over_3r": 0.980868177317
+        },
+        {
+          "reduced_temperature": 2.1,
+          "cv_over_3r": 0.98131588531
+        },
+        {
+          "reduced_temperature": 2.125,
+          "cv_over_3r": 0.981748117342
+        },
+        {
+          "reduced_temperature": 2.15,
+          "cv_over_3r": 0.982165575962
+        },
+        {
+          "reduced_temperature": 2.175,
+          "cv_over_3r": 0.982568924446
+        },
+        {
+          "reduced_temperature": 2.2,
+          "cv_over_3r": 0.982958789391
+        },
+        {
+          "reduced_temperature": 2.225,
+          "cv_over_3r": 0.983335763118
+        },
+        {
+          "reduced_temperature": 2.25,
+          "cv_over_3r": 0.983700405885
+        },
+        {
+          "reduced_temperature": 2.275,
+          "cv_over_3r": 0.984053247941
+        },
+        {
+          "reduced_temperature": 2.3,
+          "cv_over_3r": 0.984394791433
+        },
+        {
+          "reduced_temperature": 2.325,
+          "cv_over_3r": 0.98472551216
+        },
+        {
+          "reduced_temperature": 2.35,
+          "cv_over_3r": 0.985045861217
+        },
+        {
+          "reduced_temperature": 2.375,
+          "cv_over_3r": 0.98535626651
+        },
+        {
+          "reduced_temperature": 2.4,
+          "cv_over_3r": 0.985657134168
+        },
+        {
+          "reduced_temperature": 2.425,
+          "cv_over_3r": 0.985948849856
+        },
+        {
+          "reduced_temperature": 2.45,
+          "cv_over_3r": 0.986231779997
+        },
+        {
+          "reduced_temperature": 2.475,
+          "cv_over_3r": 0.986506272907
+        },
+        {
+          "reduced_temperature": 2.5,
+          "cv_over_3r": 0.986772659858
+        },
+        {
+          "reduced_temperature": 2.525,
+          "cv_over_3r": 0.987031256064
+        },
+        {
+          "reduced_temperature": 2.55,
+          "cv_over_3r": 0.987282361606
+        },
+        {
+          "reduced_temperature": 2.575,
+          "cv_over_3r": 0.987526262291
+        },
+        {
+          "reduced_temperature": 2.6,
+          "cv_over_3r": 0.987763230459
+        },
+        {
+          "reduced_temperature": 2.625,
+          "cv_over_3r": 0.987993525733
+        },
+        {
+          "reduced_temperature": 2.65,
+          "cv_over_3r": 0.988217395726
+        },
+        {
+          "reduced_temperature": 2.675,
+          "cv_over_3r": 0.988435076697
+        },
+        {
+          "reduced_temperature": 2.7,
+          "cv_over_3r": 0.988646794172
+        },
+        {
+          "reduced_temperature": 2.725,
+          "cv_over_3r": 0.988852763519
+        },
+        {
+          "reduced_temperature": 2.75,
+          "cv_over_3r": 0.989053190495
+        },
+        {
+          "reduced_temperature": 2.775,
+          "cv_over_3r": 0.989248271748
+        },
+        {
+          "reduced_temperature": 2.8,
+          "cv_over_3r": 0.989438195305
+        },
+        {
+          "reduced_temperature": 2.825,
+          "cv_over_3r": 0.989623141012
+        },
+        {
+          "reduced_temperature": 2.85,
+          "cv_over_3r": 0.989803280962
+        },
+        {
+          "reduced_temperature": 2.875,
+          "cv_over_3r": 0.989978779891
+        },
+        {
+          "reduced_temperature": 2.9,
+          "cv_over_3r": 0.990149795547
+        },
+        {
+          "reduced_temperature": 2.925,
+          "cv_over_3r": 0.99031647905
+        },
+        {
+          "reduced_temperature": 2.95,
+          "cv_over_3r": 0.990478975214
+        },
+        {
+          "reduced_temperature": 2.975,
+          "cv_over_3r": 0.990637422867
+        },
+        {
+          "reduced_temperature": 3.0,
+          "cv_over_3r": 0.99079195514
+        },
+        {
+          "reduced_temperature": 3.025,
+          "cv_over_3r": 0.990942699746
+        },
+        {
+          "reduced_temperature": 3.05,
+          "cv_over_3r": 0.991089779244
+        },
+        {
+          "reduced_temperature": 3.075,
+          "cv_over_3r": 0.991233311283
+        },
+        {
+          "reduced_temperature": 3.1,
+          "cv_over_3r": 0.991373408838
+        },
+        {
+          "reduced_temperature": 3.125,
+          "cv_over_3r": 0.991510180431
+        },
+        {
+          "reduced_temperature": 3.15,
+          "cv_over_3r": 0.991643730336
+        },
+        {
+          "reduced_temperature": 3.175,
+          "cv_over_3r": 0.991774158781
+        },
+        {
+          "reduced_temperature": 3.2,
+          "cv_over_3r": 0.991901562133
+        },
+        {
+          "reduced_temperature": 3.225,
+          "cv_over_3r": 0.992026033073
+        },
+        {
+          "reduced_temperature": 3.25,
+          "cv_over_3r": 0.992147660768
+        },
+        {
+          "reduced_temperature": 3.275,
+          "cv_over_3r": 0.992266531023
+        },
+        {
+          "reduced_temperature": 3.3,
+          "cv_over_3r": 0.99238272644
+        },
+        {
+          "reduced_temperature": 3.325,
+          "cv_over_3r": 0.992496326551
+        },
+        {
+          "reduced_temperature": 3.35,
+          "cv_over_3r": 0.992607407962
+        },
+        {
+          "reduced_temperature": 3.375,
+          "cv_over_3r": 0.992716044476
+        },
+        {
+          "reduced_temperature": 3.4,
+          "cv_over_3r": 0.992822307215
+        },
+        {
+          "reduced_temperature": 3.425,
+          "cv_over_3r": 0.992926264739
+        },
+        {
+          "reduced_temperature": 3.45,
+          "cv_over_3r": 0.993027983154
+        },
+        {
+          "reduced_temperature": 3.475,
+          "cv_over_3r": 0.993127526216
+        },
+        {
+          "reduced_temperature": 3.5,
+          "cv_over_3r": 0.993224955431
+        },
+        {
+          "reduced_temperature": 3.525,
+          "cv_over_3r": 0.993320330149
+        },
+        {
+          "reduced_temperature": 3.55,
+          "cv_over_3r": 0.993413707655
+        },
+        {
+          "reduced_temperature": 3.575,
+          "cv_over_3r": 0.993505143254
+        },
+        {
+          "reduced_temperature": 3.6,
+          "cv_over_3r": 0.993594690352
+        },
+        {
+          "reduced_temperature": 3.625,
+          "cv_over_3r": 0.993682400533
+        },
+        {
+          "reduced_temperature": 3.65,
+          "cv_over_3r": 0.993768323637
+        },
+        {
+          "reduced_temperature": 3.675,
+          "cv_over_3r": 0.993852507822
+        },
+        {
+          "reduced_temperature": 3.7,
+          "cv_over_3r": 0.993934999642
+        },
+        {
+          "reduced_temperature": 3.725,
+          "cv_over_3r": 0.994015844102
+        },
+        {
+          "reduced_temperature": 3.75,
+          "cv_over_3r": 0.994095084724
+        },
+        {
+          "reduced_temperature": 3.775,
+          "cv_over_3r": 0.994172763603
+        },
+        {
+          "reduced_temperature": 3.8,
+          "cv_over_3r": 0.994248921464
+        },
+        {
+          "reduced_temperature": 3.825,
+          "cv_over_3r": 0.994323597715
+        },
+        {
+          "reduced_temperature": 3.85,
+          "cv_over_3r": 0.994396830498
+        },
+        {
+          "reduced_temperature": 3.875,
+          "cv_over_3r": 0.994468656734
+        },
+        {
+          "reduced_temperature": 3.9,
+          "cv_over_3r": 0.994539112175
+        },
+        {
+          "reduced_temperature": 3.925,
+          "cv_over_3r": 0.994608231445
+        },
+        {
+          "reduced_temperature": 3.95,
+          "cv_over_3r": 0.994676048082
+        },
+        {
+          "reduced_temperature": 3.975,
+          "cv_over_3r": 0.994742594581
+        },
+        {
+          "reduced_temperature": 4.0,
+          "cv_over_3r": 0.994807902429
+        },
+        {
+          "reduced_temperature": 4.025,
+          "cv_over_3r": 0.994872002146
+        },
+        {
+          "reduced_temperature": 4.05,
+          "cv_over_3r": 0.994934923318
+        },
+        {
+          "reduced_temperature": 4.075,
+          "cv_over_3r": 0.994996694632
+        },
+        {
+          "reduced_temperature": 4.1,
+          "cv_over_3r": 0.995057343907
+        },
+        {
+          "reduced_temperature": 4.125,
+          "cv_over_3r": 0.99511689813
+        },
+        {
+          "reduced_temperature": 4.15,
+          "cv_over_3r": 0.995175383478
+        },
+        {
+          "reduced_temperature": 4.175,
+          "cv_over_3r": 0.995232825353
+        },
+        {
+          "reduced_temperature": 4.2,
+          "cv_over_3r": 0.99528924841
+        },
+        {
+          "reduced_temperature": 4.225,
+          "cv_over_3r": 0.995344676577
+        },
+        {
+          "reduced_temperature": 4.25,
+          "cv_over_3r": 0.995399133086
+        },
+        {
+          "reduced_temperature": 4.275,
+          "cv_over_3r": 0.995452640495
+        },
+        {
+          "reduced_temperature": 4.3,
+          "cv_over_3r": 0.995505220713
+        },
+        {
+          "reduced_temperature": 4.325,
+          "cv_over_3r": 0.99555689502
+        },
+        {
+          "reduced_temperature": 4.35,
+          "cv_over_3r": 0.995607684088
+        },
+        {
+          "reduced_temperature": 4.375,
+          "cv_over_3r": 0.995657608007
+        },
+        {
+          "reduced_temperature": 4.4,
+          "cv_over_3r": 0.995706686297
+        },
+        {
+          "reduced_temperature": 4.425,
+          "cv_over_3r": 0.995754937933
+        },
+        {
+          "reduced_temperature": 4.45,
+          "cv_over_3r": 0.995802381361
+        },
+        {
+          "reduced_temperature": 4.475,
+          "cv_over_3r": 0.995849034516
+        },
+        {
+          "reduced_temperature": 4.5,
+          "cv_over_3r": 0.995894914838
+        },
+        {
+          "reduced_temperature": 4.525,
+          "cv_over_3r": 0.995940039288
+        },
+        {
+          "reduced_temperature": 4.55,
+          "cv_over_3r": 0.995984424368
+        },
+        {
+          "reduced_temperature": 4.575,
+          "cv_over_3r": 0.996028086128
+        },
+        {
+          "reduced_temperature": 4.6,
+          "cv_over_3r": 0.996071040189
+        },
+        {
+          "reduced_temperature": 4.625,
+          "cv_over_3r": 0.996113301752
+        },
+        {
+          "reduced_temperature": 4.65,
+          "cv_over_3r": 0.996154885609
+        },
+        {
+          "reduced_temperature": 4.675,
+          "cv_over_3r": 0.996195806165
+        },
+        {
+          "reduced_temperature": 4.7,
+          "cv_over_3r": 0.996236077441
+        },
+        {
+          "reduced_temperature": 4.725,
+          "cv_over_3r": 0.996275713089
+        },
+        {
+          "reduced_temperature": 4.75,
+          "cv_over_3r": 0.996314726408
+        },
+        {
+          "reduced_temperature": 4.775,
+          "cv_over_3r": 0.996353130348
+        },
+        {
+          "reduced_temperature": 4.8,
+          "cv_over_3r": 0.996390937525
+        },
+        {
+          "reduced_temperature": 4.825,
+          "cv_over_3r": 0.996428160231
+        },
+        {
+          "reduced_temperature": 4.85,
+          "cv_over_3r": 0.996464810443
+        },
+        {
+          "reduced_temperature": 4.875,
+          "cv_over_3r": 0.996500899833
+        },
+        {
+          "reduced_temperature": 4.9,
+          "cv_over_3r": 0.996536439778
+        },
+        {
+          "reduced_temperature": 4.925,
+          "cv_over_3r": 0.996571441366
+        },
+        {
+          "reduced_temperature": 4.95,
+          "cv_over_3r": 0.99660591541
+        },
+        {
+          "reduced_temperature": 4.975,
+          "cv_over_3r": 0.99663987245
+        },
+        {
+          "reduced_temperature": 5.0,
+          "cv_over_3r": 0.996673322766
+        }
+      ]
+    }
+  }
+};
