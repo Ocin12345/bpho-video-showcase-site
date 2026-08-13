@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A focused video showcase for the BPhO Computational Challenge 2026 quantum mechanics project."
+    />
+    <meta name="theme-color" content="#071018" />
+    <title>Quantum Mechanics — BPhO Computational Challenge 2026</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <canvas id="quantum-map" aria-hidden="true"></canvas>
+    <div class="frame" aria-hidden="true"></div>
+
+    <header class="masthead">
+      <a class="identity" href="./" aria-label="BPhO Computational Challenge home">
+        <span class="identity__mark" aria-hidden="true">Q/26</span>
+        <span class="identity__text">
+          <strong>BPhO Computational Challenge</strong>
+          <span>Quantum mechanics · 2026</span>
+        </span>
+      </a>
+
+      <p class="edition">
+        <span class="edition__dot" aria-hidden="true"></span>
+        Interactive submission
+      </p>
+    </header>
+
+    <main class="hero" id="main-content">
+      <section class="hero__copy" aria-labelledby="page-title">
+        <p class="eyebrow">Ten official tasks · One connected investigation</p>
+        <h1 id="page-title">
+          Quantum mechanics,
+          <em>made visible.</em>
+        </h1>
+        <p class="intro">
+          A computational journey from random motion to hydrogenic orbitals,
+          combining interactive models, numerical evidence, and physical validation.
+        </p>
+
+        <div class="hero__footer">
+          <button class="start-button" type="button" data-start>
+            <span>Start the journey</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h13M13 6l6 6-6 6" />
+            </svg>
+          </button>
+
+          <p class="credit">
+            Created by <strong>Qingxiang Liao</strong>
+          </p>
+        </div>
+      </section>
+
+      <aside class="task-readout" aria-live="polite" aria-label="Official task sequence">
+        <p class="task-readout__label">Official task sequence</p>
+        <div class="task-readout__current">
+          <span class="task-readout__number" data-task-number>01</span>
+          <span class="task-readout__divider" aria-hidden="true"></span>
+          <span class="task-readout__name" data-task-name>Random Walk</span>
+        </div>
+        <div class="task-readout__progress" aria-hidden="true" data-task-progress></div>
+        <p class="task-readout__count"><span data-task-position>01</span> / 10</p>
+      </aside>
+    </main>
+
+    <p class="interaction-note">
+      <span aria-hidden="true">↗</span>
+      Move to explore the quantum field
+    </p>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
