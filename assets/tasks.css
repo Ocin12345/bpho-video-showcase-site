@@ -333,21 +333,6 @@ body {
   transform: translate(0, 0);
 }
 
-.tasks-footer {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 34px 4px 0;
-  color: var(--muted);
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.tasks-footer a {
-  color: var(--ivory);
-}
-
 .cursor {
   position: fixed;
   top: 0;
@@ -426,9 +411,6 @@ body {
     grid-row: 1 / 3;
   }
 
-  .tasks-footer {
-    flex-direction: column;
-  }
 }
 
 @media (pointer: coarse), (prefers-reduced-motion: reduce) {
