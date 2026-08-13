@@ -207,19 +207,6 @@ body {
   -webkit-background-clip: text;
 }
 
-.tasks-intro > div {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 7px;
-  padding-bottom: 5px;
-  color: var(--muted);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-}
-
 .task-list {
   border-top: 1px solid var(--line);
 }
@@ -380,11 +367,6 @@ body {
 
   .tasks-intro > p {
     margin-bottom: 28px;
-  }
-
-  .tasks-intro > div {
-    align-items: flex-start;
-    margin-top: 22px;
   }
 
   .task-row {
