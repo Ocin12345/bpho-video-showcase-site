@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A short visual explanation of the photoelectric effect: threshold frequency, stopping voltage, intensity and Planck's constant."
+    />
+    <meta name="theme-color" content="#f7f3eb" />
+    <title>Task 04 — Photoelectric Effect | BPhO Computational Challenge 2026</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f7f3eb'/%3E%3Cpath d='M12 31h15M37 31h15M27 25l6 6-6 6' fill='none' stroke='%23a27624' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="../assets/local-shell-fonts.css" />
+    <link rel="stylesheet" href="../assets/task-04.css" />
+  </head>
+  <body class="task-04-video">
+    <a class="skip-link" href="#story-stage">Skip to the visual explanation</a>
+
+    <header class="lab-header">
+      <a class="back-link" href="../tasks.html" aria-label="Return to all tasks">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M19 12H5M11 18l-6-6 6-6" />
+        </svg>
+        All tasks
+      </a>
+
+      <div class="lab-identity">
+        <span>Task 04</span>
+        <strong>Photoelectric effect</strong>
+      </div>
+
+      <nav class="section-nav" aria-label="Task 4 sections">
+        <a href="#story-stage" aria-current="page">Story</a>
+        <a href="#what-changes">What changes</a>
+        <a href="#result">Result</a>
+      </nav>
+    </header>
+
+    <main class="task-main">
+      <section class="video-hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Task 04 / Photoelectric effect / video cut</p>
+          <h1 id="page-title">Light in.<br /><em>Energy out.</em></h1>
+          <p class="hero-lede">
+            A photon only ejects an electron when its energy clears the metal's
+            work function. The short film below makes that threshold—and the
+            stopping voltage it creates—visible.
+          </p>
+          <div class="hero-actions">
+            <button class="button button--primary" type="button" data-play>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z" /></svg>
+              <span>Play the cut</span>
+            </button>
+            <a class="text-link" href="#result">Jump to the result <span aria-hidden="true">↓</span></a>
+          </div>
+          <p class="sequence-status" data-sequence-status role="status" aria-live="polite">
+            Ready — four moments, one relationship.
+          </p>
+        </div>
+
+        <div class="hero-facts" aria-label="Key facts from the film">
+          <div>
+            <span>Question</span>
+            <strong>What does frequency change?</strong>
+          </div>
+          <div>
+            <span>Measurement</span>
+            <strong>Drive photocurrent to zero</strong>
+          </div>
+          <div>
+            <span>Recovery</span>
+            <strong>Same slope gives <i>h</i>/<i>e</i></strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="story-section" id="story-stage" aria-labelledby="story-title">
+        <header class="section-heading">
+          <div>
+            <span class="section-number">01—04</span>
+            <h2 id="story-title">The four-beat explanation</h2>
+          </div>
+          <p>Use the controls to pause on the physical idea behind the graph.</p>
+        </header>
+
+        <div class="storyboard">
+          <div class="story-stage" data-stage-shell>
+            <div class="stage-meta">
+              <span data-scene-label>01 / Threshold</span>
+              <span data-stage-state>Photon energy below Φ</span>
+            </div>
+            <canvas
+              id="photoelectric-canvas"
+              role="img"
+              aria-label="Animated photoelectric apparatus showing photons striking a metal surface and electrons moving toward a collector"
+            ></canvas>
+            <div class="stage-caption">
+              <p data-scene-caption>Below threshold: the light arrives, but no electron leaves the surface.</p>
+              <span class="stage-progress" aria-hidden="true"><i data-stage-progress></i></span>
+            </div>
+          </div>
+
+          <aside class="control-rail" aria-label="Film controls and live readings">
+            <div class="rail-heading">
+              <span>Film controls</span>
+              <h3 data-scene-title>Threshold</h3>
+            </div>
+
+            <div class="scene-tabs" role="tablist" aria-label="Film moments">
+              <button type="button" role="tab" aria-selected="true" data-scene="0"><span>01</span>Threshold</button>
+              <button type="button" role="tab" aria-selected="false" data-scene="1"><span>02</span>Energy</button>
+              <button type="button" role="tab" aria-selected="false" data-scene="2"><span>03</span>Stopping</button>
+              <button type="button" role="tab" aria-selected="false" data-scene="3"><span>04</span>Compare</button>
+            </div>
+
+            <div class="control-block">
+              <label for="material-select">Photocathode</label>
+              <select id="material-select" data-material>
+                <option value="Sodium">Sodium · Na</option>
+                <option value="Copper">Copper · Cu</option>
+                <option value="Gold">Gold · Au</option>
+                <option value="Silver">Silver · Ag</option>
+              </select>
+            </div>
+
+            <div class="control-block">
+              <div class="control-label-line">
+                <label for="wavelength-range">Wavelength</label>
+                <output for="wavelength-range" data-wavelength-output>540 nm</output>
+              </div>
+              <input id="wavelength-range" data-wavelength type="range" min="200" max="700" step="1" value="540" />
+              <div class="range-ends"><span>200 nm</span><span>700 nm</span></div>
+            </div>
+
+            <div class="control-block">
+              <div class="control-label-line">
+                <label for="intensity-range">Intensity</label>
+                <output for="intensity-range" data-intensity-output>48%</output>
+              </div>
+              <input id="intensity-range" data-intensity type="range" min="10" max="100" step="1" value="48" />
+              <div class="range-ends"><span>Fewer photons</span><span>More photons</span></div>
+            </div>
+
+            <div class="control-block">
+              <div class="control-label-line">
+                <label for="voltage-range">Collector bias</label>
+                <output for="voltage-range" data-voltage-output>0.00 V</output>
+              </div>
+              <input id="voltage-range" data-voltage type="range" min="-5" max="1" step="0.01" value="0" />
+              <div class="range-ends"><span>Reverse</span><span>Forward</span></div>
+            </div>
+
+            <dl class="live-readings" aria-live="polite">
+              <div><dt>Threshold wavelength</dt><dd data-threshold>517.0 nm</dd></div>
+              <div><dt>Photon energy</dt><dd data-photon-energy>2.30 eV</dd></div>
+              <div><dt>Maximum kinetic energy</dt><dd data-kinetic-energy>—</dd></div>
+              <div><dt>Photocurrent</dt><dd data-current>0.0 nA</dd></div>
+            </dl>
+
+            <p class="rail-note" data-rail-note>
+              The light is present, but each photon is still short of the work function.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="explanation-section" id="what-changes" aria-labelledby="changes-title">
+        <header class="section-heading section-heading--wide">
+          <div>
+            <span class="section-number">Three distinctions</span>
+            <h2 id="changes-title">What the knobs actually change</h2>
+          </div>
+          <p>These are the ideas worth saying aloud in the video.</p>
+        </header>
+
+        <div class="explanation-grid">
+          <article class="explanation-card">
+            <span class="card-index">01</span>
+            <h3>Frequency unlocks emission</h3>
+            <p>
+              Below <i>f</i><sub>0</sub>, no individual photon has enough energy
+              to overcome Φ. Increasing brightness cannot repair that deficit.
+            </p>
+            <div class="mini-equation"><i>f</i><sub>0</sub> = Φ / <i>h</i></div>
+          </article>
+
+          <article class="explanation-card">
+            <span class="card-index">02</span>
+            <h3>Intensity changes the count</h3>
+            <p>
+              Once emission is allowed, brighter light sends more photons and
+              raises the current. At fixed wavelength it does not raise
+              <i>K</i><sub>max</sub> or the stopping voltage.
+            </p>
+            <div class="mini-meter" aria-label="Intensity changes current, not electron energy">
+              <span><i style="--meter-size: 34%"></i><b>dim</b></span>
+              <span><i style="--meter-size: 82%"></i><b>bright</b></span>
+            </div>
+          </article>
+
+          <article class="explanation-card">
+            <span class="card-index">03</span>
+            <h3>Reverse bias reveals energy</h3>
+            <p>
+              A reverse collector voltage turns back even the fastest emitted
+              electrons. When the current reaches zero, <i>eV</i><sub>s</sub>
+              equals their maximum kinetic energy.
+            </p>
+            <div class="mini-equation"><i>eV</i><sub>s</sub> = <i>K</i><sub>max</sub></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="result-section" id="result" aria-labelledby="result-title">
+        <header class="section-heading section-heading--wide">
+          <div>
+            <span class="section-number">The final frame</span>
+            <h2 id="result-title">One slope. Different thresholds.</h2>
+          </div>
+          <p>The graph is the evidence: the work function shifts the intercept, not the gradient.</p>
+        </header>
+
+        <div class="result-layout">
+          <div class="graph-panel">
+            <div class="graph-meta"><span>Stopping voltage against frequency</span><span>Model reference</span></div>
+            <canvas
+              id="comparison-canvas"
+              role="img"
+              aria-label="Comparison graph of stopping voltage against photon frequency for nine metals"
+            ></canvas>
+            <div class="graph-legend" data-legend aria-label="Graph legend"></div>
+          </div>
+
+          <aside class="result-copy">
+            <div class="result-equation"><i>V</i><sub>s</sub> = <span><i>h</i></span>/<span><i>e</i></span> <i>f</i> − Φ/<i>e</i></div>
+            <p>
+              Every metal recovers the same frequency gradient. Fit the lines,
+              multiply the slope by <i>e</i>, and the model returns Planck's
+              constant.
+            </p>
+            <dl class="result-readings">
+              <div><dt>Shared gradient</dt><dd>4.136 × 10<sup>−15</sup> V s</dd></div>
+              <div><dt>Recovered <i>h</i></dt><dd>6.626 × 10<sup>−34</sup> J s</dd></div>
+              <div><dt>Model agreement</dt><dd>within floating-point precision</dd></div>
+            </dl>
+            <p class="result-disclaimer">
+              This film visualises the deterministic teaching model. The
+              interactive laboratory keeps the simulated readings, uncertainty
+              labels and full nine-metal data table available for inspection.
+            </p>
+          </aside>
+        </div>
+
+        <div class="material-strip" data-material-strip aria-label="Official Task 4 metals"></div>
+      </section>
+
+      <section class="closing-section" aria-labelledby="closing-title">
+        <p class="eyebrow">Task 04 / end frame</p>
+        <h2 id="closing-title">The question is not how bright the light is.</h2>
+        <p>It is whether one photon carries enough energy to pay the work function.</p>
+        <a class="text-link" href="../tasks.html">Return to all tasks <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+
+    <script type="module" src="../assets/task-04.js"></script>
+  </body>
+</html>
