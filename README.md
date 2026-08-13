@@ -1,8 +1,9 @@
 # BPhO video showcase
 
-A standalone publication of the animated opening page for the BPhO
-Computational Challenge 2026 quantum mechanics project. The current stage
-contains the homepage only.
+A standalone publication of the animated opening page and ten-task index for
+the BPhO Computational Challenge 2026 quantum mechanics project. The current
+stage contains the homepage and Tasks index; individual task laboratories will
+be added separately.
 
 ## Local preview
 
