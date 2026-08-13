@@ -1,0 +1,233 @@
+/* Task 01 Gold presentation layer: visible evidence without changing the model. */
+
+.video-cut[data-task="01"] .dimension-picker,
+.video-cut[data-task="01"] .simulation-controls .control:has(#walk-speed),
+.video-cut[data-task="01"] .seed-control,
+.video-cut[data-task="01"] [data-new-seed],
+.video-cut[data-task="01"] .ensemble-actions {
+  display: revert !important;
+}
+
+.video-cut[data-task="01"] .advanced-controls {
+  margin: 2px 0 10px;
+  border: 1px solid var(--line-strong);
+  background: #fafaf8;
+}
+
+.video-cut[data-task="01"] .advanced-controls summary {
+  padding: 11px 13px;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+  list-style-position: inside;
+}
+
+.video-cut[data-task="01"] .advanced-controls summary::marker {
+  color: var(--accent);
+}
+
+.video-cut[data-task="01"] .advanced-controls > p {
+  margin: 0;
+  padding: 0 13px 11px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.video-cut[data-task="01"] .advanced-controls > p strong {
+  color: var(--accent-dark);
+}
+
+.video-cut[data-task="01"] .advanced-controls .dimension-picker {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0 13px 5px;
+  border-color: var(--line);
+}
+
+.video-cut[data-task="01"] .advanced-controls .dimension-picker span {
+  min-height: 34px;
+  padding: 4px 5px;
+  font-size: 10px;
+  text-align: center;
+}
+
+.video-cut[data-task="01"] .advanced-controls .control,
+.video-cut[data-task="01"] .advanced-controls .seed-control {
+  display: grid !important;
+  margin: 0 13px;
+}
+
+.video-cut[data-task="01"] .advanced-controls .control {
+  grid-template-columns: minmax(0, 1fr) 88px;
+}
+
+.video-cut[data-task="01"] .advanced-controls > [data-new-seed] {
+  display: inline-block !important;
+  margin: 8px 13px 13px;
+}
+
+.video-cut[data-task="01"] .ensemble-actions {
+  display: flex !important;
+}
+
+.video-cut[data-task="01"] .units-note {
+  margin: 7px 0 0;
+  color: #777771;
+  font-size: 10px;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.video-cut[data-task="01"] .walk-legend {
+  position: absolute;
+  right: 18px;
+  bottom: 28px;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 7px 12px;
+  max-width: min(52%, 430px);
+  padding: 7px 9px;
+  border: 1px solid rgba(222, 222, 216, 0.9);
+  color: #676761;
+  background: rgba(255, 255, 255, 0.94);
+  font-size: 10px;
+}
+
+.video-cut[data-task="01"] .walk-legend > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.video-cut[data-task="01"] .legend-swatch {
+  display: inline-block;
+  width: 15px;
+  height: 2px;
+  background: var(--accent);
+}
+
+.video-cut[data-task="01"] .legend-swatch--rms {
+  height: 0;
+  border-top: 2px dashed #3f64b2;
+  background: transparent;
+}
+
+.video-cut[data-task="01"] .legend-swatch--origin,
+.video-cut[data-task="01"] .legend-swatch--endpoint {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #1b1b18;
+}
+
+.video-cut[data-task="01"] .legend-swatch--endpoint {
+  background: #c94f70;
+}
+
+.video-cut[data-task="01"] .result-kicker {
+  margin: 20px 0 0;
+  padding: 9px 22px 0;
+  color: var(--accent-dark);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.video-cut[data-task="01"] .ensemble-results {
+  border-top: 0;
+}
+
+.video-cut[data-task="01"] .method-assumptions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+
+.video-cut[data-task="01"] .method-assumptions > div {
+  min-width: 0;
+  padding: 18px 24px 20px;
+  border-right: 1px solid var(--line);
+}
+
+.video-cut[data-task="01"] .method-assumptions > div:last-child {
+  border-right: 0;
+}
+
+.video-cut[data-task="01"] .method-assumptions span {
+  display: block;
+  margin: 0 0 7px;
+  color: var(--accent-dark);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.video-cut[data-task="01"] .method-assumptions p {
+  margin: 0;
+  color: #5e5e58;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.video-cut[data-task="01"] .validation-section {
+  display: block !important;
+}
+
+.video-cut[data-task="01"] .validation-introduction > p:last-child {
+  max-width: 720px;
+}
+
+.video-cut[data-task="01"] .validation-laboratory {
+  min-height: 220px;
+}
+
+.video-cut[data-task="01"] .validation-figure canvas {
+  background: #f6f2ea;
+}
+
+.video-cut[data-task="01"] .validation-lock[data-locked="true"] {
+  border-left: 3px solid #1b6d5f;
+}
+
+@media (max-width: 1000px) {
+  .video-cut[data-task="01"] .walk-legend {
+    max-width: 68%;
+  }
+}
+
+@media (max-width: 760px) {
+  .video-cut[data-task="01"] .walk-legend {
+    right: 10px;
+    bottom: 21px;
+    max-width: calc(100% - 20px);
+    justify-content: flex-start;
+    font-size: 9px;
+  }
+
+  .video-cut[data-task="01"] .method-assumptions {
+    grid-template-columns: 1fr;
+  }
+
+  .video-cut[data-task="01"] .method-assumptions > div {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .video-cut[data-task="01"] .method-assumptions > div:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .video-cut[data-task="01"] .advanced-controls .dimension-picker span {
+    font-size: 9px;
+  }
+}

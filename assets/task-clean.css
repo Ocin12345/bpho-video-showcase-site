@@ -1,0 +1,162 @@
+/* Shared task-page finish: quiet, direct, and secondary to the physics. */
+
+:root {
+  --task-clean-paper: #ffffff;
+  --task-clean-warm: #fbfaf7;
+  --task-clean-ink: #25231f;
+  --task-clean-muted: #6d6961;
+  --task-clean-line: #d9d5cd;
+}
+
+html,
+body {
+  background: var(--task-clean-paper) !important;
+}
+
+body {
+  color: var(--task-clean-ink);
+}
+
+.task-header,
+.lab-header {
+  background: rgba(255, 255, 255, 0.98) !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.task-identity span,
+.lab-identity span,
+.hero-copy > p:first-child,
+.observatory .hero-copy > span:first-child,
+.control-introduction > span:first-child,
+.section-kicker,
+.model-status,
+.region-badge,
+.screen-badge,
+.hero-claim > span:first-child {
+  display: none !important;
+}
+
+.hero-readouts::before,
+.hero-claim::before {
+  display: none !important;
+  content: none !important;
+}
+
+.section-nav a {
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+.section-nav a[aria-current="page"]::after {
+  bottom: 6px !important;
+  height: 1px !important;
+  box-shadow: none !important;
+}
+
+.hero-copy h1,
+.control-introduction h1,
+.section-introduction h2,
+.ensemble-introduction h2,
+.dimensions-introduction h2,
+.extension-heading h2,
+.debye-heading h2,
+.einstein-heading h2 {
+  letter-spacing: -0.025em !important;
+}
+
+.radiation-hero,
+.spectrum-hero,
+.threshold-hero,
+.diffraction-hero,
+.box-hero,
+.mismatch-hero,
+.collision-hero,
+.orbital-hero,
+.observatory,
+.simulation-workspace {
+  border-radius: 3px !important;
+  box-shadow: none !important;
+}
+
+.radiation-hero,
+.spectrum-hero,
+.threshold-hero,
+.diffraction-hero,
+.box-hero,
+.mismatch-hero,
+.collision-hero,
+.orbital-hero {
+  background: var(--task-clean-warm) !important;
+}
+
+.equation-card,
+.result-card,
+.difference-card,
+.sample-card,
+.metric-card,
+.einstein-chart-card,
+.debye-chart-card,
+.precision-chart-card,
+.transition-instrument,
+.screen-instrument,
+.state-laboratory,
+.detector-laboratory,
+.collision-laboratory,
+.orbital-laboratory,
+.state-control-rail,
+.hero-controls,
+.display-controls,
+.kinematics-laboratory,
+.sweep-laboratory,
+.extension-laboratory,
+.mass-lab,
+.superposition-lab,
+.comparison-laboratory,
+.ensemble-laboratory,
+.dimensions-laboratory,
+.theory-panel,
+.competition-result,
+.reference-derivation,
+.normalization-boundary,
+.sampling-boundary,
+.endpoint-truth {
+  box-shadow: none !important;
+}
+
+button,
+.button,
+select,
+input[type="number"],
+input[type="text"] {
+  border-radius: 2px !important;
+  box-shadow: none !important;
+}
+
+button:hover,
+.button:hover {
+  transform: none !important;
+}
+
+.page-footer,
+.task-footer {
+  box-shadow: none !important;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-copy,
+  .task-header,
+  .lab-header,
+  .section-introduction,
+  .ensemble-introduction,
+  .dimensions-introduction {
+    animation: none !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .task-identity,
+  .lab-identity {
+    display: none !important;
+  }
+}

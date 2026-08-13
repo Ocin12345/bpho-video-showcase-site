@@ -1,0 +1,115 @@
+/*
+ * Competition filming view.
+ *
+ * Ten tasks share three minutes, so the default task pages show only the
+ * required model, its principal result, and any extension explicitly retained
+ * for the final explanation. Supporting research remains in the source files
+ * but is not part of the visible filming path.
+ */
+
+.video-cut .page-footer,
+.video-cut .task-footer,
+.video-cut .section-introduction > p:first-child,
+.video-cut .section-introduction > span,
+.video-cut .einstein-heading p,
+.video-cut .ensemble-actions,
+.video-cut .extension-actions {
+  display: none !important;
+}
+
+.video-cut .section-introduction,
+.video-cut .einstein-heading,
+.video-cut .ensemble-introduction {
+  margin-bottom: clamp(1.25rem, 2.5vw, 2.25rem) !important;
+}
+
+.video-cut .section-introduction h2,
+.video-cut .einstein-heading h2,
+.video-cut .ensemble-introduction h2 {
+  max-width: 22ch;
+}
+
+/* Task 1: required 2D walk and ensemble behaviour. */
+.video-cut[data-task="01"] #dimensions,
+.video-cut[data-task="01"] .dimension-picker,
+.video-cut[data-task="01"] .simulation-controls .control:has(#walk-speed),
+.video-cut[data-task="01"] .seed-control,
+.video-cut[data-task="01"] [data-new-seed] {
+  display: none !important;
+}
+
+/* Task 2: tracer animation and the collision mechanism only. */
+.video-cut[data-task="02"] #extension,
+.video-cut[data-task="02"] .collision-phase,
+.video-cut[data-task="02"] .collision-derivation,
+.video-cut[data-task="02"] .model-ledger {
+  display: none !important;
+}
+
+.video-cut[data-task="02"] .collision-storyboard {
+  display: block !important;
+}
+
+.video-cut[data-task="02"] .collision-playback {
+  width: 100%;
+  max-width: none;
+}
+
+/* Task 3: the two graphs named by the brief. */
+.video-cut[data-task="03"] #model,
+.video-cut[data-task="03"] #extension {
+  display: none !important;
+}
+
+/* Task 5: one transition and the required energy-wavelength graph. */
+.video-cut[data-task="05"] #model,
+.video-cut[data-task="05"] #balmer,
+.video-cut[data-task="05"] #convergence,
+.video-cut[data-task="05"] #extension {
+  display: none !important;
+}
+
+/* Task 6: voltage-controlled rings and the spacing-recovery graph. */
+.video-cut[data-task="06"] #model,
+.video-cut[data-task="06"] #orders,
+.video-cut[data-task="06"] #extension {
+  display: none !important;
+}
+
+/* Task 7: required energy/density plots and the official uncertainty proof. */
+.video-cut[data-task="07"] #model,
+.video-cut[data-task="07"] #superposition {
+  display: none !important;
+}
+
+/* Task 8: the brief asks for the comparison calculator itself. */
+.video-cut[data-task="08"] #model,
+.video-cut[data-task="08"] #sweep,
+.video-cut[data-task="08"] #landscape,
+.video-cut[data-task="08"] #finite-sample {
+  display: none !important;
+}
+
+/* Task 9: interactive collision and all three required five-energy curves. */
+.video-cut[data-task="09"] #model,
+.video-cut[data-task="09"] #cross-section {
+  display: none !important;
+}
+
+/* Task 10: required 3D density, radial/angular structure and S-G gallery. */
+.video-cut[data-task="10"] #model,
+.video-cut[data-task="10"] #ion-scaling,
+.video-cut[data-task="10"] #motion {
+  display: none !important;
+}
+
+@media (max-width: 760px) {
+  .video-cut .section-nav {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .video-cut .section-nav::-webkit-scrollbar {
+    display: none;
+  }
+}

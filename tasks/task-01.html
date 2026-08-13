@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="An interactive two-dimensional random-walk laboratory for BPhO Computational Challenge Task 1."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Task 01 — Random Walk | BPhO Computational Challenge 2026</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='27' fill='%23f3eee4'/%3E%3Cpath d='M15 36c8-20 14 17 23-6 5-13 10 5 12-10' fill='none' stroke='%23a4432f' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="../assets/task-01.css?v=20260805a" />
+    <link rel="stylesheet" href="../assets/task-01-minimal.css?v=20260808a" />
+    <link rel="stylesheet" href="../assets/task-clean.css?v=20260809" />
+    <link rel="stylesheet" href="../assets/task-video.css?v=20260809" />
+    <link rel="stylesheet" href="../assets/task-01-gold.css?v=20260813" />
+  </head>
+  <body class="video-cut" data-task="01">
+    <a class="skip-link" href="#walk-canvas">Skip to simulation</a>
+    <header class="lab-header">
+      <a class="back-link" href="../tasks.html" aria-label="Return to all tasks">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M19 12H5M11 18l-6-6 6-6" />
+        </svg>
+        All tasks
+      </a>
+
+      <div class="lab-identity">
+        <span>Task 01</span>
+        <strong>Random Walk</strong>
+      </div>
+
+      <nav class="section-nav" aria-label="Task 1 sections">
+        <a href="#simulation" aria-current="page">Walk</a>
+        <a href="#ensemble">Ensemble</a>
+      </nav>
+    </header>
+
+    <main class="lab-main" id="simulation">
+      <section class="simulation-shell" aria-labelledby="simulation-title">
+        <div class="simulation-workspace">
+          <div class="simulation-stage">
+            <canvas
+              id="walk-canvas"
+              tabindex="0"
+              role="img"
+              aria-label="Animated two-dimensional random-walk trajectory"
+            ></canvas>
+
+            <p class="stage-dimension" data-stage-dimension aria-hidden="true">2D</p>
+
+            <div class="stage-progress" aria-hidden="true">
+              <span data-progress-bar></span>
+            </div>
+            <div class="walk-legend" aria-label="Walk plot legend">
+              <span><i class="legend-swatch legend-swatch--path"></i>Path</span>
+              <span><i class="legend-swatch legend-swatch--rms"></i>RMS guide</span>
+              <span><i class="legend-swatch legend-swatch--origin"></i>Origin</span>
+              <span><i class="legend-swatch legend-swatch--endpoint"></i>Endpoint</span>
+            </div>
+          </div>
+
+          <aside class="simulation-controls" aria-label="Simulation controls">
+            <header class="control-introduction">
+              <span>Task 01</span>
+              <h1 id="simulation-title" data-simulation-title>Two-dimensional random walk</h1>
+              <p>
+                Run the walk and compare its final displacement
+                with <i>r</i><sub>RMS</sub> = <i>s</i>√<i>N</i>.
+              </p>
+            </header>
+
+            <p class="mode-warning" data-mode-warning hidden>
+              Large-N Gaussian approximation
+            </p>
+
+            <div class="control">
+              <label for="step-count-number">Number of steps</label>
+              <input
+                class="number-entry"
+                id="step-count-number"
+                type="number"
+                min="1000"
+                max="1000000000"
+                step="1000"
+                value="1000000"
+              />
+              <input
+                id="step-count"
+                type="range"
+                min="3"
+                max="9"
+                step="0.01"
+                value="6"
+                aria-label="Number of steps logarithmic slider"
+                aria-valuetext="1,000,000 steps"
+              />
+            </div>
+
+            <div class="control">
+              <label for="step-size-number">Step length</label>
+              <input
+                class="number-entry"
+                id="step-size-number"
+                type="number"
+                min="0.01"
+                max="100"
+                step="0.01"
+                value="1"
+              />
+              <input
+                id="step-size"
+                type="range"
+                min="0.01"
+                max="10"
+                step="0.01"
+                value="1"
+                aria-label="Step length slider"
+              />
+            </div>
+
+            <div class="control-actions">
+              <button class="button button--primary" type="button" data-play>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path class="play-icon" d="M8 5l11 7-11 7z" />
+                </svg>
+                <span>Run walk</span>
+              </button>
+              <button class="button" type="button" data-reset>Reset</button>
+            </div>
+
+            <details class="advanced-controls">
+              <summary>Reproducibility controls</summary>
+              <p>
+                Keep the model fixed in two dimensions while changing the
+                animation speed or seed for a repeatable run.
+              </p>
+              <div class="control">
+                <label for="walk-speed-number">Animation speed</label>
+                <input
+                  class="number-entry"
+                  id="walk-speed-number"
+                  type="number"
+                  min="1000"
+                  max="1000000000"
+                  step="1000"
+                  value="1000000"
+                />
+                <input
+                  id="walk-speed"
+                  type="range"
+                  min="3"
+                  max="9"
+                  step="0.01"
+                  value="6"
+                  aria-label="Animation speed logarithmic slider"
+                  aria-valuetext="1,000,000 steps per second"
+                />
+              </div>
+
+              <label class="seed-control">
+                <span>Random seed</span>
+                <input
+                  id="walk-seed"
+                  type="number"
+                  min="0"
+                  max="4294967295"
+                  value="2026"
+                  inputmode="numeric"
+                />
+              </label>
+              <button class="button" type="button" data-new-seed>New seed</button>
+            </details>
+
+            <p class="units-note">
+              Coordinates use dimensionless simulation units; <i>s</i> sets the
+              unit scale.
+            </p>
+
+            <dl class="live-results" aria-live="polite">
+              <div>
+                <dt>Current step</dt>
+                <dd data-current-step>0 / 1,000,000</dd>
+              </div>
+              <div>
+                <dt>Displacement, r</dt>
+                <dd data-displacement>0.00</dd>
+              </div>
+              <div>
+                <dt>Expected RMS</dt>
+                <dd data-rms>0.00</dd>
+              </div>
+              <div>
+                <dt>r / RMS</dt>
+                <dd data-ratio>—</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section
+        class="ensemble-section"
+        id="ensemble"
+        aria-labelledby="ensemble-title"
+      >
+        <header class="ensemble-introduction">
+          <div>
+            <h2 id="ensemble-title">Ensemble statistics</h2>
+            <p>
+              One path is unpredictable. Many independent walks reveal whether
+              the model is unbiased and follows the expected square-root law.
+            </p>
+          </div>
+        </header>
+
+        <div class="ensemble-laboratory is-loading" data-ensemble-laboratory>
+          <form class="ensemble-toolbar" data-ensemble-form>
+            <label>
+              <span>Independent walks</span>
+              <input
+                id="ensemble-walk-count"
+                type="number"
+                min="10"
+                max="100000"
+                step="1"
+                value="200"
+              />
+            </label>
+            <label>
+              <span>Steps per walk</span>
+              <input
+                id="ensemble-step-count"
+                type="number"
+                min="10"
+                max="1000000000"
+                step="1"
+                value="1000"
+              />
+            </label>
+            <label>
+              <span>Step length</span>
+              <input
+                id="ensemble-step-size"
+                type="number"
+                min="0.000001"
+                max="1000000"
+                step="any"
+                value="1"
+              />
+            </label>
+            <label>
+              <span>Master seed</span>
+              <input
+                id="ensemble-seed"
+                type="number"
+                min="0"
+                max="4294967295"
+                value="2026"
+              />
+            </label>
+            <button
+              class="button button--primary ensemble-run"
+              type="submit"
+              data-run-ensemble
+            >
+              Run ensemble
+            </button>
+          </form>
+
+          <div class="ensemble-status" aria-live="polite">
+            <span data-ensemble-status>Preparing simulation</span>
+            <div class="ensemble-progress" aria-hidden="true">
+              <span data-ensemble-progress></span>
+            </div>
+          </div>
+          <p
+            class="laboratory-message laboratory-message--error"
+            data-ensemble-error-message
+            hidden
+          >
+            The ensemble could not be completed. Check the parameters and try
+            again.
+          </p>
+          <p class="laboratory-message" data-ensemble-empty hidden>
+            Run an ensemble to reveal its trajectory and endpoint statistics.
+          </p>
+
+          <div class="ensemble-plots">
+            <figure class="ensemble-figure">
+              <figcaption>
+                <span>Trajectory sample</span>
+                <strong data-ensemble-path-caption>First 50 walks</strong>
+              </figcaption>
+              <canvas
+                id="ensemble-paths-canvas"
+                role="img"
+                aria-label="A sample of independent random-walk trajectories"
+              ></canvas>
+            </figure>
+
+            <figure class="ensemble-figure">
+              <figcaption>
+                <span>Endpoint distribution</span>
+                <strong data-ensemble-endpoint-caption>200 endpoints</strong>
+              </figcaption>
+              <canvas
+                id="ensemble-endpoints-canvas"
+                role="img"
+                aria-label="Endpoint cloud with theoretical root-mean-square circle"
+              ></canvas>
+              <div class="ensemble-key" aria-hidden="true">
+                <span><i class="key-rms"></i>Theoretical RMS</span>
+                <span><i class="key-mean"></i>Mean endpoint</span>
+              </div>
+            </figure>
+          </div>
+
+          <p class="result-kicker">Current simulation</p>
+          <dl class="ensemble-results" aria-live="polite">
+            <div>
+              <dt>Mean endpoint</dt>
+              <dd data-ensemble-mean>—</dd>
+            </div>
+            <div>
+              <dt>Measured RMS</dt>
+              <dd data-ensemble-rms>—</dd>
+            </div>
+            <div>
+              <dt>Predicted RMS</dt>
+              <dd data-ensemble-rms-theory>—</dd>
+            </div>
+            <div>
+              <dt>MSD difference</dt>
+              <dd data-ensemble-error>—</dd>
+            </div>
+          </dl>
+
+          <footer class="ensemble-actions">
+            <p data-ensemble-method>
+              Fixed-length steps with a reproducible seed.
+            </p>
+            <div>
+              <button class="button" type="button" data-download-ensemble disabled>
+                Download CSV
+              </button>
+              <button class="button" type="button" data-export-ensemble disabled>
+                Export figure
+              </button>
+            </div>
+          </footer>
+        </div>
+
+        <section class="competition-result" aria-labelledby="competition-result-title">
+          <div>
+            <span>Reference validation</span>
+            <h3 id="competition-result-title">
+              Mean squared displacement grows in direct proportion to N.
+            </h3>
+            <p>
+              A committed reference run used 50,000 independent walks per N
+              across eight step counts. Its measured gradient agrees with the
+              theoretical value within its 95% confidence interval.
+            </p>
+          </div>
+          <dl>
+            <div>
+              <dt>Measured slope</dt>
+              <dd>0.9992 ± 0.0031</dd>
+            </div>
+            <div>
+              <dt>Theory</dt>
+              <dd>1.0000</dd>
+            </div>
+          </dl>
+        </section>
+
+      </section>
+
+    </main>
+
+    <script type="module" src="../assets/task-01.js?v=20260808a"></script>
+    <script type="module" src="../assets/task-01-ensemble.js?v=20260805a"></script>
+    <script type="module" src="../assets/task-01-navigation.js?v=20260805a"></script>
+  </body>
+</html>
