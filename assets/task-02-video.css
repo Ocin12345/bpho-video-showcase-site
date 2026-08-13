@@ -15,6 +15,13 @@
   padding-bottom: 0;
 }
 
+.video-cut .key-path {
+  width: 19px;
+  height: 3px;
+  background: #075b73;
+  box-shadow: 0 0 0 1px rgba(7, 91, 115, 0.12);
+}
+
 .video-cut .observatory {
   scroll-margin-top: 58px;
 }

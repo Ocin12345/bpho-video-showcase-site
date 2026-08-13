@@ -60,10 +60,10 @@ const displayOptions = {
 };
 
 const TRACE_PALETTE = [
-  [177, 132, 91],
-  [169, 102, 75],
-  [159, 76, 55],
-  [130, 68, 52],
+  [9, 126, 128],
+  [0, 104, 123],
+  [10, 76, 105],
+  [13, 48, 70],
 ];
 
 function traceColour(progress, alpha = 1) {
@@ -589,8 +589,8 @@ function drawTracerPath() {
   context.lineCap = "round";
   context.lineJoin = "round";
 
-  context.strokeStyle = "rgba(159, 76, 55, 0.12)";
-  context.lineWidth = 6.5;
+  context.strokeStyle = "rgba(6, 83, 101, 0.2)";
+  context.lineWidth = 7.5;
   context.beginPath();
   context.moveTo(worldX(state.path[0].x), worldY(state.path[0].y));
   for (let index = 1; index < state.path.length; index += 1) {
@@ -605,7 +605,7 @@ function drawTracerPath() {
     const progress = index / (state.path.length - 1);
     const previous = state.path[index - 1];
     const current = state.path[index];
-    context.strokeStyle = traceColour(progress, 0.46 + progress * 0.4);
+    context.strokeStyle = traceColour(progress, 0.58 + progress * 0.32);
     context.lineWidth = 1 + progress * 1.15;
     context.beginPath();
     context.moveTo(worldX(previous.x), worldY(previous.y));
