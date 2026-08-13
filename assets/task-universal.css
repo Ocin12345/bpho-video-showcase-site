@@ -1,0 +1,481 @@
+/*
+ * Universal task shell
+ *
+ * Task 01 is the visual reference for the competition pages: paper white,
+ * thin rules, serif headings, compact controls, and one quiet blue accent.
+ * Individual task styles still own their scientific canvases and plots; this
+ * layer makes the page chrome and presentation language consistent.
+ */
+
+:root {
+  color-scheme: light;
+  --task-universal-paper: #ffffff;
+  --task-universal-warm: #fbfaf7;
+  --task-universal-ink: #20201d;
+  --task-universal-muted: #696964;
+  --task-universal-line: #deded8;
+  --task-universal-line-strong: #c9c9c2;
+  --task-universal-soft: #f7f7f4;
+  --task-universal-accent: #1769b0;
+  --task-universal-accent-dark: #0f4f87;
+  --task-universal-serif: "Times New Roman", Times, Georgia, serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  color-scheme: light !important;
+  background: var(--task-universal-paper) !important;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  overflow-x: hidden;
+  color: var(--task-universal-ink) !important;
+  background: var(--task-universal-paper) !important;
+  font-family: var(--task-universal-serif) !important;
+  font-feature-settings: "kern" 1, "liga" 1, "tnum" 1;
+}
+
+body::before,
+#probability-background {
+  display: none !important;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: var(--task-universal-serif) !important;
+}
+
+button,
+a,
+input,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+canvas:focus-visible {
+  outline: 2px solid rgba(23, 105, 176, 0.48) !important;
+  outline-offset: 2px;
+}
+
+.skip-link {
+  z-index: 1000;
+  color: var(--task-universal-paper) !important;
+  background: var(--task-universal-ink) !important;
+}
+
+/* One fixed task header across the complete set. */
+.task-header,
+.lab-header {
+  position: fixed !important;
+  z-index: 100 !important;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: grid !important;
+  grid-template-columns: minmax(150px, 1fr) auto minmax(150px, 1fr) !important;
+  align-items: center;
+  min-height: 48px !important;
+  padding: 0 clamp(20px, 3vw, 46px) !important;
+  border-bottom: 1px solid var(--task-universal-line) !important;
+  background: rgba(255, 255, 255, 0.98) !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.task-header .back-link,
+.lab-header .back-link {
+  grid-column: 1;
+  grid-row: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-self: start;
+  gap: 7px;
+  width: max-content;
+  color: var(--task-universal-muted) !important;
+  font: 11px var(--task-universal-serif) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  text-decoration: none;
+  text-transform: none !important;
+}
+
+.task-header .back-link:hover,
+.task-header .back-link:focus-visible,
+.lab-header .back-link:hover,
+.lab-header .back-link:focus-visible {
+  color: var(--task-universal-ink) !important;
+  transform: none !important;
+}
+
+.task-header .back-link svg,
+.lab-header .back-link svg {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
+.task-header .task-identity,
+.lab-header .lab-identity {
+  grid-column: 3;
+  grid-row: 1;
+  display: flex;
+  align-items: baseline;
+  justify-self: end;
+  gap: 8px;
+  color: var(--task-universal-muted) !important;
+  font-family: var(--task-universal-serif) !important;
+}
+
+.task-header .task-identity span,
+.lab-header .lab-identity span {
+  color: var(--task-universal-muted) !important;
+  font: 10px var(--task-universal-serif) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+}
+
+.task-header .task-identity strong,
+.lab-header .lab-identity strong {
+  color: var(--task-universal-ink) !important;
+  font: 700 13px var(--task-universal-serif) !important;
+  letter-spacing: 0 !important;
+}
+
+.task-header .section-nav,
+.lab-header .section-nav {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  align-self: stretch;
+  justify-self: center;
+}
+
+.task-header .section-nav a,
+.lab-header .section-nav a {
+  position: relative;
+  display: grid;
+  min-width: 88px;
+  padding: 0 15px;
+  place-items: center;
+  color: var(--task-universal-muted) !important;
+  font: 600 11px var(--task-universal-serif) !important;
+  letter-spacing: 0 !important;
+  text-decoration: none;
+  text-transform: none !important;
+}
+
+.task-header .section-nav a:hover,
+.task-header .section-nav a:focus-visible,
+.task-header .section-nav a[aria-current="page"],
+.lab-header .section-nav a:hover,
+.lab-header .section-nav a:focus-visible,
+.lab-header .section-nav a[aria-current="page"] {
+  color: var(--task-universal-ink) !important;
+}
+
+.task-header .section-nav a[aria-current="page"]::after,
+.lab-header .section-nav a[aria-current="page"]::after {
+  right: 15px !important;
+  bottom: 6px !important;
+  left: 15px !important;
+  height: 1px !important;
+  background: var(--task-universal-accent) !important;
+  box-shadow: none !important;
+}
+
+main {
+  padding-top: 48px !important;
+  color: var(--task-universal-ink);
+}
+
+.lab-main,
+.task-main {
+  padding-top: 64px !important;
+}
+
+.task-main {
+  width: min(1380px, calc(100% - 40px)) !important;
+  margin: 0 auto;
+  padding-bottom: 80px !important;
+}
+
+/* Shared paper surfaces. */
+.simulation-workspace,
+.observatory,
+.radiation-hero,
+.video-hero,
+.spectrum-hero,
+.diffraction-hero {
+  border: 1px solid var(--task-universal-line-strong) !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+  background: var(--task-universal-warm) !important;
+  color: var(--task-universal-ink) !important;
+}
+
+.simulation-workspace,
+.radiation-hero,
+.video-hero,
+.spectrum-hero,
+.diffraction-hero {
+  backdrop-filter: none !important;
+}
+
+.diffraction-hero {
+  background: var(--task-universal-warm) !important;
+  color: var(--task-universal-ink) !important;
+}
+
+.simulation-stage,
+.simulation-controls,
+.control-rail,
+.story-stage,
+.energy-stage,
+.spectrum-panel,
+.spectrum-instrument,
+.chart-card,
+.graph-panel,
+.ensemble-laboratory,
+.validation-laboratory,
+.energy-layout,
+.storyboard,
+.explanation-card,
+.equation-card,
+.result-layout {
+  border-color: var(--task-universal-line) !important;
+  border-radius: 3px !important;
+  box-shadow: none !important;
+}
+
+.simulation-stage,
+.simulation-controls,
+.control-rail,
+.story-stage,
+.energy-stage,
+.spectrum-panel,
+.spectrum-instrument,
+.chart-card,
+.graph-panel,
+.ensemble-laboratory,
+.validation-laboratory,
+.energy-layout,
+.storyboard,
+.explanation-card,
+.equation-card,
+.result-layout,
+.hero-facts {
+  background: var(--task-universal-paper) !important;
+}
+
+.radiation-hero::before,
+.radiation-hero::after,
+.spectrum-hero::before,
+.spectrum-hero::after {
+  display: none !important;
+}
+
+/* Task 01's restrained serif hierarchy becomes the common page hierarchy. */
+.hero-copy h1,
+.control-introduction h1,
+.section-heading h2,
+.section-introduction h2,
+.ensemble-introduction h2,
+.dimensions-introduction h2,
+.extension-heading h2,
+.debye-heading h2,
+.einstein-heading h2,
+.hero-copy h1 em {
+  font-family: var(--task-universal-serif) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.035em !important;
+}
+
+.hero-copy h1,
+.control-introduction h1,
+.section-heading h2,
+.section-introduction h2,
+.ensemble-introduction h2,
+.dimensions-introduction h2,
+.extension-heading h2,
+.debye-heading h2,
+.einstein-heading h2 {
+  color: var(--task-universal-ink) !important;
+}
+
+.hero-copy h1 em {
+  color: var(--task-universal-accent-dark) !important;
+}
+
+.hero-lede,
+.hero-copy > span:last-child,
+.section-heading > p,
+.section-introduction > span,
+.ensemble-introduction p,
+.control-introduction p,
+.hero-facts strong {
+  color: var(--task-universal-muted) !important;
+}
+
+.eyebrow,
+.section-number,
+.section-kicker,
+.result-kicker,
+.hero-copy > p:first-child,
+.hero-copy > span:first-child,
+.control-introduction > span:first-child,
+.hero-facts span,
+.stage-topline,
+.caption-kicker,
+.rail-heading > span {
+  color: var(--task-universal-accent-dark) !important;
+}
+
+/* Buttons and form controls share the compact Task 01 treatment. */
+button,
+.button,
+select,
+input[type="number"],
+input[type="text"],
+input[type="search"] {
+  border-radius: 2px !important;
+  box-shadow: none !important;
+}
+
+button:hover,
+.button:hover,
+button:focus-visible,
+.button:focus-visible {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.button--primary,
+.dock-button--play,
+.sweep-button,
+.ensemble-run,
+.dimensions-run,
+.button.button--primary {
+  border-color: var(--task-universal-accent-dark) !important;
+  color: var(--task-universal-paper) !important;
+  background: var(--task-universal-accent) !important;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="search"],
+select {
+  border-color: var(--task-universal-line-strong) !important;
+  color: var(--task-universal-ink) !important;
+  background: var(--task-universal-paper) !important;
+}
+
+input[type="range"] {
+  accent-color: var(--task-universal-accent) !important;
+}
+
+.stage-progress,
+.ensemble-progress,
+.dimensions-progress {
+  border-radius: 0 !important;
+}
+
+.stage-progress span,
+.ensemble-progress span,
+.dimensions-progress span {
+  background: var(--task-universal-accent) !important;
+}
+
+.live-results,
+.ensemble-results,
+.validation-metrics,
+.dock-metrics,
+.hero-facts,
+.readout-panel,
+.live-readings {
+  border-color: var(--task-universal-line) !important;
+  box-shadow: none !important;
+}
+
+@media (max-width: 760px) {
+  .task-header,
+  .lab-header {
+    grid-template-columns: auto 1fr auto !important;
+    padding: 0 14px !important;
+  }
+
+  .task-header .task-identity,
+  .lab-header .lab-identity {
+    display: none !important;
+  }
+
+  .task-header .section-nav,
+  .lab-header .section-nav {
+    grid-column: 2;
+    justify-self: end;
+    max-width: calc(100vw - 100px);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .task-header .section-nav::-webkit-scrollbar,
+  .lab-header .section-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .task-header .section-nav a,
+  .lab-header .section-nav a {
+    min-width: 72px;
+    padding: 0 10px;
+    font-size: 10px !important;
+  }
+
+  .task-header .section-nav a[aria-current="page"]::after,
+  .lab-header .section-nav a[aria-current="page"]::after {
+    right: 10px !important;
+    left: 10px !important;
+  }
+
+  .task-main {
+    width: calc(100% - 28px) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
