@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../assets/proof-math.css?v=20260808" />
     <link rel="stylesheet" href="../assets/task-clean.css?v=20260809" />
     <link rel="stylesheet" href="../assets/task-universal.css?v=20260813a" />
-    <link rel="stylesheet" href="../assets/task-06-showcase.css?v=20260814a" />
+    <link rel="stylesheet" href="../assets/task-06-showcase.css?v=20260815a" />
   </head>
   <body class="task06-gold" data-task="06">
     <a class="skip-link" href="#diffraction-screen">Skip to diffraction screen</a>
@@ -32,16 +32,14 @@
         All tasks
       </a>
       <nav class="section-nav" aria-label="Task 6 sections">
-        <a href="#experiment" aria-current="page">Experiment</a>
-        <a href="#method">Method</a>
-        <a href="#plot">Plot</a>
+        <a href="#simulation" aria-current="page">Simulation</a>
         <a href="#validation">Validation</a>
       </nav>
       <div class="lab-identity"><span>Task 06</span><strong>Electron Diffraction</strong></div>
     </header>
 
     <main class="lab-main">
-      <section class="diffraction-hero" id="experiment" aria-labelledby="page-title">
+      <section class="diffraction-hero" id="simulation" aria-labelledby="page-title">
         <section
           class="screen-instrument is-loading"
           aria-labelledby="screen-title"
@@ -84,25 +82,6 @@
               Colour separates families; glow and brightness are schematic.
             </small>
           </div>
-
-          <dl class="screen-readouts" aria-live="polite">
-            <div>
-              <dt>Electron wavelength</dt>
-              <dd data-wavelength>—</dd>
-            </div>
-            <div>
-              <dt>d<sub>1</sub> first-order radius</dt>
-              <dd data-d1-radius>—</dd>
-            </div>
-            <div>
-              <dt>d<sub>2</sub> first-order radius</dt>
-              <dd data-d2-radius>—</dd>
-            </div>
-            <div>
-              <dt>Forward orders</dt>
-              <dd data-forward-orders>—</dd>
-            </div>
-          </dl>
         </section>
 
         <form class="hero-controls" data-diffraction-controls>
@@ -110,9 +89,13 @@
             <span>Task 06</span>
             <h1 id="page-title">Electron diffraction</h1>
             <p>
-              Model the “electron wave” rings as the accelerating voltage varies
-              from 1–5 kV, using graphite layer spacings of 0.123 nm and 0.213 nm.
+              Change the accelerating voltage and watch the electron-wave rings
+              contract as their de Broglie wavelength falls.
             </p>
+            <div class="graphite-families" aria-label="Graphite layer spacings">
+              <span><i class="family-dot family-dot--d1" aria-hidden="true"></i>d<sub>1</sub> = 0.123 nm</span>
+              <span><i class="family-dot family-dot--d2" aria-hidden="true"></i>d<sub>2</sub> = 0.213 nm</span>
+            </div>
           </header>
 
           <label class="voltage-control">
@@ -145,60 +128,180 @@
             <button type="button" data-voltage-preset="5000" disabled>5 kV</button>
           </div>
 
-          <fieldset class="screen-mode-control">
-            <legend>Screen rendering</legend>
-            <div class="screen-mode-options">
-              <label>
-                <input
-                  type="radio"
-                  name="screen-mode"
-                  value="phosphor"
-                  data-screen-mode
-                  checked
-                  disabled
-                />
-                <span>Phosphor view</span>
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  name="screen-mode"
-                  value="orders"
-                  data-screen-mode
-                  disabled
-                />
-                <span>Exact orders</span>
-              </label>
-            </div>
-            <small data-screen-mode-copy>
-              Softened ring bands echo the tube photograph; their brightness is not a predicted intensity.
-            </small>
-          </fieldset>
-
-          <fieldset class="family-controls">
-            <legend>Displayed families</legend>
-            <label>
-              <input type="checkbox" data-family="d1" checked disabled />
-              <span>d<sub>1</sub> · 0.123 nm</span>
-            </label>
-            <label>
-              <input type="checkbox" data-family="d2" checked disabled />
-              <span>d<sub>2</sub> · 0.213 nm</span>
-            </label>
-          </fieldset>
-
           <div class="run-controls" role="group" aria-label="Experiment playback">
             <button type="button" data-sweep-toggle disabled>Sweep 1 → 5 kV</button>
-            <button type="button" data-reset-model disabled>Reset to 3 kV</button>
+            <button type="button" data-reset-model disabled>Reset</button>
           </div>
 
-          <div class="hero-claim">
-            <span>Required geometry · spherical tube</span>
-            <strong>x = r sin(2φ)</strong>
-            <small>r = 65 mm · higher voltage draws each fixed-order ring inward.</small>
-          </div>
+          <dl class="screen-readouts hero-readouts" aria-live="polite">
+            <div>
+              <dt>Electron wavelength</dt>
+              <dd data-wavelength>—</dd>
+            </div>
+            <div>
+              <dt>d<sub>1</sub> first-order radius</dt>
+              <dd data-d1-radius>—</dd>
+            </div>
+            <div>
+              <dt>d<sub>2</sub> first-order radius</dt>
+              <dd data-d2-radius>—</dd>
+            </div>
+          </dl>
+
+          <section class="hero-method" aria-labelledby="hero-method-title">
+            <header>
+              <span id="hero-method-title">Physics chain</span>
+              <strong>V → λ → θ → x</strong>
+            </header>
+            <ol>
+              <li>
+                <span>de Broglie wavelength</span>
+                <strong data-proof-latex="\lambda=\dfrac{h}{\sqrt{2m_e eV}}">λ = h / √(2m<sub>e</sub>eV)</strong>
+              </li>
+              <li>
+                <span>Bragg diffraction</span>
+                <strong data-proof-latex="2d\sin\theta=n\lambda">2d sin θ = nλ</strong>
+              </li>
+              <li>
+                <span>Spherical screen</span>
+                <strong data-proof-latex="x=r\sin(2\phi)">x = r sin(2φ)</strong>
+              </li>
+            </ol>
+            <p>r = 65 mm · higher V gives smaller λ and smaller rings.</p>
+          </section>
+
+          <details class="view-options">
+            <summary>View options</summary>
+            <div class="view-options__body">
+              <fieldset class="screen-mode-control">
+                <legend>Screen rendering</legend>
+                <div class="screen-mode-options">
+                  <label>
+                    <input
+                      type="radio"
+                      name="screen-mode"
+                      value="phosphor"
+                      data-screen-mode
+                      checked
+                      disabled
+                    />
+                    <span>Phosphor view</span>
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="screen-mode"
+                      value="orders"
+                      data-screen-mode
+                      disabled
+                    />
+                    <span>Exact orders</span>
+                  </label>
+                </div>
+                <small data-screen-mode-copy>
+                  Softened ring bands echo the tube photograph; brightness is schematic.
+                </small>
+              </fieldset>
+
+              <fieldset class="family-controls">
+                <legend>Displayed families</legend>
+                <label>
+                  <input type="checkbox" data-family="d1" checked disabled />
+                  <span>d<sub>1</sub> · 0.123 nm</span>
+                </label>
+                <label>
+                  <input type="checkbox" data-family="d2" checked disabled />
+                  <span>d<sub>2</sub> · 0.213 nm</span>
+                </label>
+              </fieldset>
+
+              <p class="forward-orders-readout">
+                <span>Forward-screen orders</span>
+                <strong data-forward-orders>—</strong>
+              </p>
+            </div>
+          </details>
         </form>
       </section>
+
+      <section
+        class="validation-section validation-section--primary"
+        id="validation"
+        aria-labelledby="validation-title"
+      >
+        <header class="section-introduction validation-introduction">
+          <p>Required result</p>
+          <h2 id="validation-title">Validation — recovering the graphite spacings</h2>
+          <span>
+            The simulated geometry gives two straight lines. Their fitted gradients
+            recover the same graphite spacings used to generate the rings.
+          </span>
+        </header>
+
+        <div class="validation-laboratory is-loading" data-validation-laboratory>
+          <header class="validation-toolbar">
+            <div>
+              <span>Selected voltage</span>
+              <strong data-selected-voltage>3.00 kV</strong>
+            </div>
+            <p>
+              Required plot: Y = 1/√V against X = sin(φ/2). Markers are shown every
+              0.5 kV; each fit uses all 401 voltages.
+            </p>
+            <span data-validation-status>Preparing spacing fits</span>
+          </header>
+
+          <div class="validation-result-layout">
+            <div class="validation-chart-wrap">
+              <canvas
+                id="spacing-recovery-chart"
+                tabindex="0"
+                role="img"
+                aria-label="Straight-line graph of inverse square-root voltage against sine of half the scattering angle for both graphite layer spacings"
+              ></canvas>
+              <div class="validation-tooltip" data-validation-tooltip hidden></div>
+              <p class="validation-error" data-validation-error hidden>
+                The spacing-fit data could not be loaded.
+              </p>
+            </div>
+
+            <aside class="fit-readouts" aria-label="Recovered graphite spacings" aria-live="polite">
+              <header>
+                <span>Recovered from the fit</span>
+                <strong>Input spacings recovered</strong>
+                <p>The straight-line gradients return both graphite layer spacings.</p>
+              </header>
+              <article class="fit-result fit-result--d1">
+                <span>d<sub>1</sub> recovered</span>
+                <strong data-d1-recovered>—</strong>
+                <small data-d1-gradient>Gradient —</small>
+              </article>
+              <article class="fit-result fit-result--d2">
+                <span>d<sub>2</sub> recovered</span>
+                <strong data-d2-recovered>—</strong>
+                <small data-d2-gradient>Gradient —</small>
+              </article>
+              <article class="fit-quality">
+                <span>Fit quality</span>
+                <strong>R² = 1.000000</strong>
+                <small>Both constrained first-order lines</small>
+              </article>
+              <p class="fit-axis-note">
+                Y uses V<sup>−1/2</sup>; X is dimensionless. No small-angle
+                approximation is used.
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <details class="advanced-evidence-disclosure" id="advanced-evidence">
+        <summary>
+          <span>Gold-level evidence</span>
+          <strong>Advanced numerical evidence</strong>
+          <small>Exact geometry, order domains, detailed fit data and reproducibility.</small>
+        </summary>
+        <div class="advanced-evidence-content">
 
       <details class="live-diagnostics diagnostics-section" id="diagnostics" data-live-diagnostics aria-labelledby="diagnostics-title">
         <summary
@@ -339,72 +442,7 @@
         </details>
       </section>
 
-      <section
-        class="validation-section"
-        id="plot"
-        aria-labelledby="plot-title"
-      >
-        <header class="section-introduction">
-          <p>Required graph</p>
-          <h2 id="plot-title">Recovering the graphite layer spacings</h2>
-          <span>
-            For each graphite layer spacing, plotting 1/√V vertically against
-            sin(φ/2) horizontally gives the required straight line through the
-            origin. Its gradient returns the layer spacing.
-          </span>
-        </header>
-
-        <div class="validation-laboratory is-loading" data-validation-laboratory>
-          <header class="validation-toolbar">
-            <div>
-              <span>Voltage</span>
-              <strong data-selected-voltage>3.00 kV</strong>
-            </div>
-            <p>
-              Markers show every 0.5 kV for clarity; the fits use all 401
-              voltages.
-            </p>
-            <span data-validation-status>Preparing spacing fits</span>
-          </header>
-
-          <div class="validation-chart-wrap">
-            <canvas
-              id="spacing-recovery-chart"
-              tabindex="0"
-              role="img"
-              aria-label="Straight-line graph of inverse square-root voltage against sine of half the scattering angle for both graphite layer spacings"
-            ></canvas>
-            <div class="validation-tooltip" data-validation-tooltip hidden></div>
-            <p class="validation-error" data-validation-error hidden>
-              The spacing-fit data could not be loaded.
-            </p>
-          </div>
-
-          <div class="fit-readouts" aria-live="polite">
-            <article>
-              <span>d<sub>1</sub> fit</span>
-              <strong data-d1-recovered>—</strong>
-              <small data-d1-gradient>Gradient —</small>
-            </article>
-            <article>
-              <span>d<sub>2</sub> fit</span>
-              <strong data-d2-recovered>—</strong>
-              <small data-d2-gradient>Gradient —</small>
-            </article>
-            <article>
-              <span>Goodness of fit</span>
-              <strong>R² = 1.000000</strong>
-              <small>Both constrained first-order lines</small>
-            </article>
-            <p>
-              Axis contract: Y = 1/√V in V<sup>−1/2</sup>; X = sin(φ/2),
-              dimensionless. No small-angle approximation is used.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="evidence-section task06-validation-evidence" id="validation" aria-labelledby="evidence-title">
+      <section class="evidence-section task06-validation-evidence" id="advanced-validation" aria-labelledby="evidence-title">
         <header class="section-introduction section-introduction--paper">
           <p>Validation</p>
           <h2 id="evidence-title">Evidence for every step</h2>
@@ -500,12 +538,14 @@
           <a href="../data/task06/validation_report.json" download>Validation report</a>
         </div>
       </section>
+        </div>
+      </details>
 
 
       <details class="advanced-disclosure" id="extension" data-advanced-disclosure>
         <summary>
           <span>Optional extension</span>
-          <strong>Relativistic correction</strong>
+          <strong>Relativistic extension</strong>
           <small>Compare the precision result with the official baseline.</small>
         </summary>
         <section
