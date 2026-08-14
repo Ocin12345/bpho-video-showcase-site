@@ -44,6 +44,83 @@
   width: 100%;
 }
 
+.video-cut .video-collision .collision-method {
+  display: grid;
+  grid-template-columns: minmax(170px, 0.48fr) minmax(0, 1.52fr);
+  gap: 12px clamp(18px, 2.8vw, 42px);
+  align-items: start;
+  padding: clamp(14px, 1.6vw, 20px) clamp(16px, 2vw, 26px);
+  border: 1px solid rgba(123, 111, 96, 0.32);
+  border-radius: 6px 18px 6px 18px;
+  background: rgba(250, 248, 243, 0.88);
+  color: #272622;
+}
+
+.video-cut .video-collision .collision-method__heading span {
+  display: block;
+  margin-bottom: 5px;
+  color: #a24f39;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.video-cut .video-collision .collision-method__heading h3 {
+  margin: 0;
+  color: #282622;
+  font-family: var(--collision-serif);
+  font-size: clamp(20px, 1.8vw, 27px);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1;
+}
+
+.video-cut .video-collision .collision-method__equations {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  min-width: 0;
+}
+
+.video-cut .video-collision .collision-method__equation {
+  min-width: 0;
+  margin: 0;
+  padding-left: 12px;
+  border-left: 1px solid rgba(162, 79, 57, 0.32);
+  color: #272622;
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(17px, 1.45vw, 22px);
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.video-cut .video-collision .collision-method__equation span {
+  font-style: italic;
+}
+
+.video-cut .video-collision .collision-method__equation sub {
+  font-size: 0.62em;
+  line-height: 0;
+}
+
+.video-cut .video-collision .collision-method__reference {
+  grid-column: 1 / -1;
+  max-width: 1040px;
+  margin: 0;
+  padding-top: 10px;
+  border-top: 1px solid rgba(123, 111, 96, 0.22);
+  color: #655f57;
+  font-family: var(--collision-serif);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.video-cut .video-collision .collision-method__reference strong {
+  color: #3f3b35;
+  font-weight: 700;
+}
+
 /* The collision is the explanatory beat of the video cut. Keep a little more
    room around it and use a deliberate dark-field treatment so the impulse
    moment survives both a screen recording and a narrow phone viewport. */
@@ -551,6 +628,10 @@
 }
 
 @media (max-width: 900px) {
+  .video-cut .video-collision .collision-method {
+    grid-template-columns: 1fr;
+  }
+
   .video-cut .video-collision .collision-playback {
     padding: 14px;
   }
@@ -632,5 +713,21 @@
 @media (max-width: 900px) {
   .video-cut .video-collision .section-introduction > span {
     display: block !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .video-cut .video-collision .collision-method__equations {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .video-cut .video-collision .collision-method__equation {
+    padding-left: 10px;
+    font-size: 18px;
+  }
+
+  .video-cut .video-collision .collision-method__reference {
+    font-size: 11px;
   }
 }
