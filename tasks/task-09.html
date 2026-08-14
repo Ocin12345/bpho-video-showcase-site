@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="An interactive Compton-scattering model showing wavelength shift, relativistic electron recoil speed, and recoil angle for BPhO Computational Challenge Task 9."
+    />
+    <meta name="theme-color" content="#f7f3eb" />
+    <title>Task 09 — Compton Scattering | BPhO Computational Challenge 2026</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f7f3eb'/%3E%3Cpath d='M10 33h44M32 10v44M33 33l17-14M33 33l14 14' fill='none' stroke='%23b54d42' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='33' cy='33' r='5' fill='%23b54d42'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="../assets/local-shell-fonts.css" />
+    <link rel="stylesheet" href="../assets/task-universal.css?v=20260813a" />
+    <link rel="stylesheet" href="../assets/task-09.css?v=20260814a" />
+  </head>
+  <body class="task09-page" data-task="09">
+    <a class="skip-link" href="#plots">Skip to the Compton plots</a>
+
+    <header class="lab-header">
+      <a class="back-link" href="../tasks.html" aria-label="Return to all tasks">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M19 12H5M11 18l-6-6 6-6" />
+        </svg>
+        All tasks
+      </a>
+
+      <nav class="section-nav" aria-label="Task 9 sections">
+        <a href="#experiment" aria-current="page">Experiment</a>
+        <a href="#plots">Plots</a>
+        <a href="#method">Method</a>
+        <a href="#validation">Checks</a>
+      </nav>
+
+      <div class="lab-identity"><span>Task 09</span><strong>Compton Scattering</strong></div>
+    </header>
+
+    <main class="task09-main">
+      <section class="compton-hero" id="experiment" aria-labelledby="page-title">
+        <div class="compton-hero__copy">
+          <p class="task09-kicker">Task 09 / photon–electron collision</p>
+          <h1 id="page-title">A photon leaves<br /><em>with less.</em></h1>
+          <p class="compton-hero__lede">
+            Change the incoming X-ray wavelength and scattering angle. The
+            three traces below follow the same relativistic collision from
+            different experimental viewpoints.
+          </p>
+          <div class="compton-hero__facts" aria-label="Model summary">
+            <div><span>Interaction</span><strong>Photon + free electron</strong></div>
+            <div><span>Conservation</span><strong>Energy and momentum</strong></div>
+            <div><span>Observable</span><strong>Δλ, v and φ</strong></div>
+          </div>
+        </div>
+
+        <section class="compton-instrument" aria-labelledby="instrument-title">
+          <header class="compton-instrument__header">
+            <div>
+              <span>Live collision geometry</span>
+              <h2 id="instrument-title">Scattering chamber</h2>
+            </div>
+            <p class="compton-status"><i aria-hidden="true"></i><span data-status>Model ready</span></p>
+          </header>
+
+          <div class="compton-stage" data-stage>
+            <svg id="compton-geometry" viewBox="0 0 760 430" role="img" aria-labelledby="geometry-title geometry-description">
+              <title id="geometry-title">Compton scattering geometry</title>
+              <desc id="geometry-description">An incoming photon strikes a stationary electron. A scattered photon leaves at angle theta and the recoil electron leaves at angle phi below the incoming direction.</desc>
+              <defs>
+                <marker id="task09-photon-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+                  <path d="M0 0L10 5L0 10Z" fill="#b54d42" />
+                </marker>
+                <marker id="task09-electron-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+                  <path d="M0 0L10 5L0 10Z" fill="#1769b0" />
+                </marker>
+                <marker id="task09-axis-arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+                  <path d="M0 0L8 4L0 8Z" fill="#7c8179" />
+                </marker>
+                <filter id="task09-soft-shadow" x="-30%" y="-30%" width="160%" height="160%">
+                  <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#20201d" flood-opacity="0.15" />
+                </filter>
+              </defs>
+              <g class="geometry-grid" aria-hidden="true">
+                <path d="M44 88H716M44 172H716M44 256H716M44 340H716" />
+                <path d="M128 44V380M254 44V380M380 44V380M506 44V380M632 44V380" />
+              </g>
+              <g class="geometry-axis" aria-hidden="true">
+                <path d="M380 212H700" marker-end="url(#task09-axis-arrow)" />
+                <path d="M380 212V54" marker-end="url(#task09-axis-arrow)" />
+                <text x="704" y="220">x</text>
+                <text x="387" y="48">y</text>
+              </g>
+              <path class="geometry-reference" d="M88 212H690" />
+              <g class="geometry-photon geometry-photon--incoming">
+                <path data-incoming-photon d="M78 212H347" marker-end="url(#task09-photon-arrow)" />
+                <text x="132" y="183">incident photon</text>
+                <text x="205" y="250" class="geometry-symbol">λ</text>
+              </g>
+              <g class="geometry-photon geometry-photon--scattered">
+                <path data-scattered-photon marker-end="url(#task09-photon-arrow)" />
+                <text data-scattered-label>λ′</text>
+              </g>
+              <g class="geometry-electron">
+                <path data-electron-recoil marker-end="url(#task09-electron-arrow)" />
+                <text data-electron-label>v</text>
+              </g>
+              <g class="geometry-angle geometry-angle--theta">
+                <path data-theta-arc />
+                <text data-theta-label>θ</text>
+              </g>
+              <g class="geometry-angle geometry-angle--phi">
+                <path data-phi-arc />
+                <text data-phi-label>φ</text>
+              </g>
+              <g class="geometry-electron-node" filter="url(#task09-soft-shadow)">
+                <circle cx="380" cy="212" r="29" />
+                <text x="380" y="219" text-anchor="middle">e⁻</text>
+              </g>
+              <text class="geometry-caption" x="380" y="405" text-anchor="middle" data-geometry-caption>momentum balance at the collision point</text>
+            </svg>
+            <div class="stage-chip stage-chip--top"><span>Selected θ</span><strong data-angle-chip>90.0°</strong></div>
+            <div class="stage-chip stage-chip--bottom"><span>Electron initially at rest</span><strong>pₑ,ᵢ = 0</strong></div>
+          </div>
+
+          <div class="compton-controls">
+            <label class="task09-control task09-control--wavelength" for="incident-wavelength">
+              <span><b>Incident wavelength</b><output for="incident-wavelength" data-wavelength-output>10.0 pm</output></span>
+              <input id="incident-wavelength" data-wavelength-control type="range" min="1" max="100" step="0.1" value="10" />
+              <small><span>1 pm</span><span>X-ray band</span><span>100 pm</span></small>
+            </label>
+            <label class="task09-control" for="scattering-angle">
+              <span><b>Photon scattering angle θ</b><output for="scattering-angle" data-angle-output>90.0°</output></span>
+              <input id="scattering-angle" data-angle-control type="range" min="0.5" max="180" step="0.5" value="90" />
+              <small><span>0.5°</span><span>Backscatter</span><span>180°</span></small>
+            </label>
+          </div>
+
+          <div class="wavelength-presets" role="group" aria-label="Incident wavelength presets">
+            <span>Energy</span>
+            <button type="button" data-wavelength-preset="1">1 pm · hard X-ray</button>
+            <button type="button" data-wavelength-preset="10">10 pm · selected</button>
+            <button type="button" data-wavelength-preset="50">50 pm · soft X-ray</button>
+          </div>
+
+          <div class="angle-presets" role="group" aria-label="Scattering angle presets">
+            <span>Probe</span>
+            <button type="button" data-angle-preset="30">30°</button>
+            <button type="button" data-angle-preset="90">90°</button>
+            <button type="button" data-angle-preset="135">135°</button>
+            <button type="button" data-angle-preset="180">180°</button>
+          </div>
+
+          <dl class="compton-readouts" aria-live="polite">
+            <div><dt>Wavelength after</dt><dd data-scattered-wavelength>12.43 pm</dd></div>
+            <div><dt>Fractional shift</dt><dd data-fractional-shift>0.2426</dd></div>
+            <div><dt>Recoil speed</dt><dd data-recoil-speed>0.391 c</dd></div>
+            <div><dt>Recoil angle φ</dt><dd data-recoil-angle>38.8°</dd></div>
+          </dl>
+          <div class="energy-ledger" aria-live="polite">
+            <div class="energy-ledger__heading"><span>Energy ledger</span><strong data-energy-status>conserved</strong></div>
+            <div class="energy-ledger__bars">
+              <div class="energy-ledger__row"><span>Incoming photon</span><i><b data-incoming-energy-bar></b></i><strong data-incoming-energy>124.0 keV</strong></div>
+              <div class="energy-ledger__row"><span>Scattered photon</span><i><b data-scattered-energy-bar></b></i><strong data-scattered-energy>99.9 keV</strong></div>
+              <div class="energy-ledger__row"><span>Electron recoil</span><i><b data-recoil-energy-bar></b></i><strong data-recoil-energy>24.1 keV</strong></div>
+            </div>
+            <p><span data-incoming-energy-note>124.0</span> = <span data-scattered-energy-note>99.9</span> + <span data-recoil-energy-note>24.1</span> keV</p>
+          </div>
+        </section>
+      </section>
+
+      <section class="plots-section" id="plots" aria-labelledby="plots-title">
+        <header class="task09-section-heading">
+          <div>
+            <p>Three views of one event</p>
+            <h2 id="plots-title">Follow the recoil</h2>
+          </div>
+          <p>Drag any curve—or focus it and use ←/→—to scrub θ. Change λ to see which curves depend on photon energy.</p>
+        </header>
+
+        <div class="plot-grid">
+          <article class="compton-chart-card" data-chart-card="shift">
+            <header>
+              <div><span class="chart-index">01</span><h3>Wavelength shift</h3></div>
+              <p>Δλ / λ</p>
+            </header>
+            <div class="chart-wrap">
+              <svg data-chart="shift" viewBox="0 0 700 390" tabindex="0" role="img" aria-label="Interactive fractional wavelength shift against photon scattering angle. Use the left and right arrow keys to move the selected angle.">
+                <title id="shift-chart-title">Fractional wavelength shift against photon scattering angle</title>
+                <desc id="shift-chart-description">The fractional shift follows one minus cosine theta and grows to a maximum at backscatter.</desc>
+              </svg>
+            </div>
+            <footer><span>Compton relation</span><strong>Δλ / λ = (λ<sub>C</sub> / λ)(1 − cos θ)</strong></footer>
+          </article>
+
+          <article class="compton-chart-card" data-chart-card="speed">
+            <header>
+              <div><span class="chart-index">02</span><h3>Electron recoil speed</h3></div>
+              <p>v / c</p>
+            </header>
+            <div class="chart-wrap">
+              <svg data-chart="speed" viewBox="0 0 700 390" tabindex="0" role="img" aria-label="Interactive electron recoil speed against photon scattering angle. Use the left and right arrow keys to move the selected angle.">
+                <title id="speed-chart-title">Electron recoil speed against photon scattering angle</title>
+                <desc id="speed-chart-description">The recoil speed rises with scattering angle and is calculated from the relativistic kinetic energy of the electron.</desc>
+              </svg>
+            </div>
+            <footer><span>Relativistic readout</span><strong data-chart-speed-summary>v = 0.391 c at 90.0°</strong></footer>
+          </article>
+
+          <article class="compton-chart-card" data-chart-card="angle">
+            <header>
+              <div><span class="chart-index">03</span><h3>Electron recoil angle</h3></div>
+              <p>φ / °</p>
+            </header>
+            <div class="chart-wrap">
+              <svg data-chart="angle" viewBox="0 0 700 390" tabindex="0" role="img" aria-label="Interactive electron recoil angle against photon scattering angle. Use the left and right arrow keys to move the selected angle.">
+                <title id="angle-chart-title">Electron recoil angle against photon scattering angle</title>
+                <desc id="angle-chart-description">The electron starts almost perpendicular to the incoming photon for a small photon deflection, then approaches the x axis in backscatter.</desc>
+              </svg>
+            </div>
+            <footer><span>Momentum geometry</span><strong data-chart-angle-summary>φ = 38.8° at θ = 90.0°</strong></footer>
+          </article>
+        </div>
+
+        <p class="plot-note"><i aria-hidden="true"></i><span><strong>Read the first curve carefully.</strong> The angular shape is universal, but its scale is set by λ<sub>C</sub>/λ. The recoil-angle curve also shifts when the photon energy changes. The energy ledger above stays balanced at every selected point.</span></p>
+      </section>
+
+      <section class="method-section" id="method" aria-labelledby="method-title">
+        <header class="task09-section-heading task09-section-heading--wide">
+          <div>
+            <p>Method</p>
+            <h2 id="method-title">Conservation writes the curve.</h2>
+          </div>
+          <p>Start with the photon momentum h/λ, keep the electron initially at rest, and do not replace the electron’s relativistic speed with a non-relativistic estimate.</p>
+        </header>
+
+        <div class="method-grid">
+          <article class="method-card method-card--primary">
+            <span>01 / wavelength</span>
+            <h3>Compton’s relation</h3>
+            <p class="method-equation">λ′ − λ = <span>h</span>/<span>m<sub>e</sub>c</span> (1 − cos θ)</p>
+            <p>The constant h/(m<sub>e</sub>c) is the electron Compton wavelength, λ<sub>C</sub> = 2.426 pm. A larger angle means a larger loss of photon momentum and a longer outgoing wavelength.</p>
+          </article>
+          <article class="method-card">
+            <span>02 / energy</span>
+            <h3>Give the difference to the electron</h3>
+            <p class="method-equation">K<sub>e</sub> = hc (1/λ − 1/λ′)</p>
+            <p>The photon’s energy loss becomes the electron’s kinetic energy. The plotted speed follows γ = 1 + K<sub>e</sub>/(m<sub>e</sub>c²) and v/c = √(1 − γ<sup>−2</sup>).</p>
+          </article>
+          <article class="method-card">
+            <span>03 / momentum</span>
+            <h3>Resolve the recoil</h3>
+            <p class="method-equation">tan φ = <span>sin θ</span>/<span>(1 + λ<sub>C</sub>/λ)(1 − cos θ)</span></p>
+            <p>φ is measured below the incoming x direction, as in the task diagram. At θ → 0 the recoil energy vanishes, while the direction approaches a right angle as a limiting direction.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="validation-section" id="validation" aria-labelledby="validation-title">
+        <header class="task09-section-heading">
+          <div>
+            <p>Validation / selected λ</p>
+            <h2 id="validation-title">A backscatter check</h2>
+          </div>
+          <p>At θ = 180°, the photon reverses direction. The model should return the largest wavelength shift and the largest electron kinetic energy.</p>
+        </header>
+
+        <div class="validation-layout">
+          <div class="validation-metrics" aria-live="polite">
+            <div><span>Compton wavelength</span><strong>2.426 pm</strong><small>fixed by m<sub>e</sub></small></div>
+            <div><span>Maximum shift</span><strong data-max-shift>4.853 pm</strong><small>2λ<sub>C</sub> at 180°</small></div>
+            <div><span>Backscatter speed</span><strong data-backscatter-speed>0.557 c</strong><small data-backscatter-energy>89.3 keV to the electron</small></div>
+          </div>
+          <div class="validation-table-wrap" tabindex="0" role="region" aria-label="Compton scattering validation checkpoints">
+            <table class="validation-table">
+              <caption>Numerical checkpoints for the selected incident wavelength</caption>
+              <thead><tr><th>θ</th><th>λ′ / pm</th><th>Δλ / λ</th><th>v / c</th><th>φ</th></tr></thead>
+              <tbody data-checkpoint-table></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <footer class="task09-footer">
+        <p>Task 09 / Compton scattering</p>
+        <strong>When the photon turns, the electron must move.</strong>
+        <a href="../tasks.html">Return to all tasks <span aria-hidden="true">↗</span></a>
+      </footer>
+    </main>
+
+    <script type="module" src="../assets/task-09-compton.js?v=20260814a"></script>
+  </body>
+</html>
