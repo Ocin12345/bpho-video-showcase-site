@@ -1,0 +1,40 @@
+name: Task 6 Geometry Verification
+
+on:
+  push:
+    branches:
+      - fix/task6-screen-geometry
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check JavaScript syntax
+        run: |
+          node --check assets/task-06-evidence.js
+          node --check assets/task-06-diffraction.js
+          node --check assets/task-06-relativity.js
+          node --check scripts/validate-task-06-geometry.mjs
+      - name: Run geometry regression
+        run: node scripts/validate-task-06-geometry.mjs
+      - name: Verify Task 6a fit remains exact
+        run: |
+          python - <<'PY'
+          import csv
+          with open('data/task06/validation_fits.csv', newline='') as f:
+              rows = list(csv.DictReader(f))
+          first = {r['spacing_id']: r for r in rows if r['fit_kind'] == 'first_order'}
+          assert abs(float(first['d1']['recovered_spacing_nm']) - 0.123) < 1e-12
+          assert abs(float(first['d2']['recovered_spacing_nm']) - 0.213) < 1e-12
+          assert abs(float(first['d1']['r_squared']) - 1.0) < 1e-12
+          assert abs(float(first['d2']['r_squared']) - 1.0) < 1e-12
+          print('Task 6a spacing recovery preserved.')
+          PY
+      - name: Reject stale screen-radius formula
+        run: |
+          ! grep -F 'x = r sin(2φ)' tasks/task-06.html
+          ! grep -F 'x=r\\sin(2\\phi)' tasks/task-06.html
+          ! grep -F '65 * Math.sin(2 * phi)' assets/task-06-diffraction.js
+          ! grep -F 'tubeRadiusM * Math.sin(2 * phi)' assets/task-06-evidence.js
+          ! grep -F 'CONSTANTS.r * Math.sin(2 * phi)' assets/task-06-relativity.js
