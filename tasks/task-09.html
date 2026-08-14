@@ -13,9 +13,10 @@
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f7f3eb'/%3E%3Cpath d='M10 33h44M32 10v44M33 33l17-14M33 33l14 14' fill='none' stroke='%23b54d42' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='33' cy='33' r='5' fill='%23b54d42'/%3E%3C/svg%3E"
     />
-    <link rel="stylesheet" href="../assets/local-shell-fonts.css" />
+    <link rel="stylesheet" href="../vendor/packages/katex/katex.min.css" />
+    <link rel="stylesheet" href="../assets/proof-math.css?v=20260814" />
     <link rel="stylesheet" href="../assets/task-universal.css?v=20260813a" />
-    <link rel="stylesheet" href="../assets/task-09.css?v=20260814a" />
+    <link rel="stylesheet" href="../assets/task-09.css?v=20260814b" />
   </head>
   <body class="task09-page" data-task="09">
     <a class="skip-link" href="#plots">Skip to the Compton plots</a>
@@ -191,7 +192,7 @@
                 <desc id="shift-chart-description">The fractional shift follows one minus cosine theta and grows to a maximum at backscatter.</desc>
               </svg>
             </div>
-            <footer><span>Compton relation</span><strong>Δλ / λ = (λ<sub>C</sub> / λ)(1 − cos θ)</strong></footer>
+            <footer><span>Compton relation</span><strong data-proof-latex="\frac{\Delta\lambda}{\lambda}=\frac{\lambda_C}{\lambda}(1-\cos\theta)">Δλ / λ = (λ<sub>C</sub> / λ)(1 − cos θ)</strong></footer>
           </article>
 
           <article class="compton-chart-card" data-chart-card="speed">
@@ -239,19 +240,19 @@
           <article class="method-card method-card--primary">
             <span>01 / wavelength</span>
             <h3>Compton’s relation</h3>
-            <p class="method-equation">λ′ − λ = <span>h</span>/<span>m<sub>e</sub>c</span> (1 − cos θ)</p>
+            <p class="method-equation" data-proof-latex="\lambda' - \lambda = \frac{h}{m_e c}(1-\cos\theta)">λ′ − λ = <span>h</span>/<span>m<sub>e</sub>c</span> (1 − cos θ)</p>
             <p>The constant h/(m<sub>e</sub>c) is the electron Compton wavelength, λ<sub>C</sub> = 2.426 pm. A larger angle means a larger loss of photon momentum and a longer outgoing wavelength.</p>
           </article>
           <article class="method-card">
             <span>02 / energy</span>
             <h3>Give the difference to the electron</h3>
-            <p class="method-equation">K<sub>e</sub> = hc (1/λ − 1/λ′)</p>
+            <p class="method-equation" data-proof-latex="K_e=hc\left(\frac{1}{\lambda}-\frac{1}{\lambda'}\right)">K<sub>e</sub> = hc (1/λ − 1/λ′)</p>
             <p>The photon’s energy loss becomes the electron’s kinetic energy. The plotted speed follows γ = 1 + K<sub>e</sub>/(m<sub>e</sub>c²) and v/c = √(1 − γ<sup>−2</sup>).</p>
           </article>
           <article class="method-card">
             <span>03 / momentum</span>
             <h3>Resolve the recoil</h3>
-            <p class="method-equation">tan φ = <span>sin θ</span>/<span>(1 + λ<sub>C</sub>/λ)(1 − cos θ)</span></p>
+            <p class="method-equation" data-proof-latex="\tan\phi=\frac{\sin\theta}{\left(1+\lambda_C/\lambda\right)\left(1-\cos\theta\right)}">tan φ = <span>sin θ</span>/<span>(1 + λ<sub>C</sub>/λ)(1 − cos θ)</span></p>
             <p>φ is measured below the incoming x direction, as in the task diagram. At θ → 0 the recoil energy vanishes, while the direction approaches a right angle as a limiting direction.</p>
           </article>
         </div>
@@ -289,6 +290,8 @@
       </footer>
     </main>
 
-    <script type="module" src="../assets/task-09-compton.js?v=20260814a"></script>
+    <script src="../vendor/packages/katex/katex.min.js"></script>
+    <script src="../assets/proof-math.js?v=20260814"></script>
+    <script type="module" src="../assets/task-09-compton.js?v=20260814b"></script>
   </body>
 </html>
