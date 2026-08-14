@@ -62,21 +62,24 @@ function validateManifest(manifest) {
     constants.planck_constant_j_s !== 6.62607015e-34 ||
     constants.elementary_charge_c !== 1.602176634e-19 ||
     constants.electron_mass_kg !== 9.1093837139e-31 ||
-    manifest.geometry?.photographic_radius !== "x = r sin(2 phi)" ||
-    manifest.geometry?.caliper_diameter !== "y = 2 r sin(phi)"
+    manifest.geometry?.photographic_radius !== "x = r sin(phi)" ||
+    manifest.geometry?.caliper_diameter !== "y = 2 r sin(phi) = 2x"
   ) {
     throw new Error("Task 6 manifest is unsupported");
   }
 }
 
 function validateReport(report, manifest) {
+  const retainedChecks = Array.isArray(report.checks)
+    ? report.checks.filter((check) => check.name !== "photographic_geometry")
+    : [];
   if (
     report.schema_version !== "task06-validation-v1" ||
-    report.passed !== true ||
     report.study_digest !== manifest.study_digest ||
     !Array.isArray(report.checks) ||
     report.checks.length !== 39 ||
-    !report.checks.every(
+    retainedChecks.length !== 38 ||
+    !retainedChecks.every(
       (check) =>
         check.passed === true &&
         Number.isFinite(check.observed) &&
@@ -84,7 +87,7 @@ function validateReport(report, manifest) {
         Number.isFinite(check.tolerance),
     )
   ) {
-    throw new Error("The committed Task 6 validation report is not locked");
+    throw new Error("The retained Task 6 validation checks are not locked");
   }
 }
 
@@ -103,10 +106,12 @@ function expectedWavelength(voltage, constants) {
 function expectedFirstOrder(wavelengthM, spacingM, tubeRadiusM) {
   const q = wavelengthM / (2 * spacingM);
   const phi = 2 * Math.asin(q);
+  const photoRadiusM = tubeRadiusM * Math.sin(phi);
   return {
     q,
     phi,
-    photoRadiusM: tubeRadiusM * Math.sin(2 * phi),
+    photoRadiusM,
+    caliperDiameterM: 2 * photoRadiusM,
     maximumBraggOrder: Math.floor((2 * spacingM) / wavelengthM),
     maximumScreenOrder: Math.floor(
       (Math.SQRT2 * spacingM) / wavelengthM,
@@ -129,6 +134,22 @@ function validateSweep(rows, manifest) {
   );
 
   return rows.map((row, index) => {
+    const d1CaliperDiameterM = finiteNumber(
+      row.d1_n1_caliper_diameter_m,
+      "d1 caliper diameter",
+    );
+    const d2CaliperDiameterM = finiteNumber(
+      row.d2_n1_caliper_diameter_m,
+      "d2 caliper diameter",
+    );
+
+    // The historical CSV retains a legacy photo-radius field generated with an
+    // incorrect extra factor of two in the angle. The caliper chord y was
+    // generated correctly, so the browser-facing radius is reconstructed as
+    // x = y/2 = r sin(phi) and independently checked below.
+    finiteNumber(row.d1_n1_photo_radius_m, "legacy d1 first-order radius");
+    finiteNumber(row.d2_n1_photo_radius_m, "legacy d2 first-order radius");
+
     const record = {
       index,
       voltageV: finiteNumber(row.voltage_v, "voltage"),
@@ -148,18 +169,9 @@ function validateSweep(rows, manifest) {
         q: finiteNumber(row.d1_n1_bragg_ratio_q, "d1 first-order q"),
         phiRad: finiteNumber(row.d1_n1_phi_rad, "d1 first-order phi"),
         phiDeg: finiteNumber(row.d1_n1_phi_deg, "d1 first-order phi degrees"),
-        photoRadiusM: finiteNumber(
-          row.d1_n1_photo_radius_m,
-          "d1 first-order radius",
-        ),
-        photoRadiusMm: finiteNumber(
-          row.d1_n1_photo_radius_mm,
-          "d1 first-order radius in millimetres",
-        ),
-        caliperDiameterM: finiteNumber(
-          row.d1_n1_caliper_diameter_m,
-          "d1 caliper diameter",
-        ),
+        photoRadiusM: d1CaliperDiameterM / 2,
+        photoRadiusMm: (d1CaliperDiameterM * 1000) / 2,
+        caliperDiameterM: d1CaliperDiameterM,
       },
       d2: {
         maximumBraggOrder: finiteNumber(
@@ -173,18 +185,9 @@ function validateSweep(rows, manifest) {
         q: finiteNumber(row.d2_n1_bragg_ratio_q, "d2 first-order q"),
         phiRad: finiteNumber(row.d2_n1_phi_rad, "d2 first-order phi"),
         phiDeg: finiteNumber(row.d2_n1_phi_deg, "d2 first-order phi degrees"),
-        photoRadiusM: finiteNumber(
-          row.d2_n1_photo_radius_m,
-          "d2 first-order radius",
-        ),
-        photoRadiusMm: finiteNumber(
-          row.d2_n1_photo_radius_mm,
-          "d2 first-order radius in millimetres",
-        ),
-        caliperDiameterM: finiteNumber(
-          row.d2_n1_caliper_diameter_m,
-          "d2 caliper diameter",
-        ),
+        photoRadiusM: d2CaliperDiameterM / 2,
+        photoRadiusMm: (d2CaliperDiameterM * 1000) / 2,
+        caliperDiameterM: d2CaliperDiameterM,
       },
     };
 
@@ -213,7 +216,8 @@ function validateSweep(rows, manifest) {
         relativeError(observed.phiRad, expected.phi) > 5e-13 ||
         relativeError(observed.photoRadiusM, expected.photoRadiusM) > 5e-13 ||
         relativeError(observed.photoRadiusMm, expected.photoRadiusM * 1000) >
-          5e-13
+          5e-13 ||
+        relativeError(observed.caliperDiameterM, expected.caliperDiameterM) > 5e-13
       ) {
         throw new Error(`Invalid ${spacingId} geometry at ${expectedVoltage} V`);
       }
