@@ -15,7 +15,7 @@
     />
     <link rel="stylesheet" href="../vendor/packages/katex/katex.min.css" />
     <link rel="stylesheet" href="../assets/task-03.css?v=20260803b" />
-    <link rel="stylesheet" href="../assets/task-03-minimal.css?v=20260808b" />
+    <link rel="stylesheet" href="../assets/task-03-minimal.css?v=20260814a" />
     <link rel="stylesheet" href="../assets/proof-math.css?v=20260808" />
     <link rel="stylesheet" href="../assets/task-clean.css?v=20260809" />
     <link rel="stylesheet" href="../assets/task-video.css?v=20260809" />
@@ -67,6 +67,24 @@
             Change the temperature to see the peak wavelength and emitted
             power update together.
           </span>
+          <div
+            class="task03-equation-strip task03-equation-strip--planck"
+            role="group"
+            aria-label="Planck spectrum equations"
+          >
+            <div
+              class="task03-equation-primary"
+              data-proof-latex="B_{\lambda}(\lambda,T)=\frac{2hc^2}{\lambda^5\left(e^{hc/(\lambda k_{\mathrm B}T)}-1\right)}"
+            >
+              B<sub>λ</sub>(λ,T) = 2hc² / [λ⁵(e<sup>hc/(λk<sub>B</sub>T)</sup> − 1)]
+            </div>
+            <div
+              class="task03-equation-secondary"
+              data-proof-latex="\lambda_{\max}T=b,\qquad M=\sigma T^4"
+            >
+              λ<sub>max</sub>T = b,&nbsp;&nbsp; M = σT<sup>4</sup>
+            </div>
+          </div>
           <div
             class="hero-principle"
             role="group"
@@ -233,6 +251,24 @@
           </header>
 
           <div class="einstein-scroll-content">
+            <div
+              class="task03-equation-strip task03-equation-strip--einstein"
+              role="group"
+              aria-label="Einstein heat-capacity equations"
+            >
+              <div
+                class="task03-equation-primary"
+                data-proof-latex="x=\frac{hf}{k_{\mathrm B}T}=\frac{T_E}{T}"
+              >
+                x = hf/(k<sub>B</sub>T) = T<sub>E</sub>/T
+              </div>
+              <div
+                class="task03-equation-secondary"
+                data-proof-latex="C_V=3R\frac{x^2e^x}{(e^x-1)^2}"
+              >
+                C<sub>V</sub> = 3R x²eˣ/(eˣ − 1)²
+              </div>
+            </div>
             <div class="einstein-workbench">
               <div class="material-console">
                 <div class="material-selector" role="group" aria-label="Select material">
