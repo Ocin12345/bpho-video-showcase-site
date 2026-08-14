@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Record-ready source-code evidence for the 2026 BPhO Computational Challenge quantum-mechanics laboratories."
+    />
+    <title>BPhO 2026 · Computational code shots</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./code-shots.css" />
+  </head>
+  <body>
+    <main class="code-shot-app" id="code-shot-app">
+      <section class="code-shot-stage" aria-label="Animated computational code evidence">
+        <header class="scene-heading">
+          <p class="scene-kicker" data-scene-label>TASK 01 · RANDOM WALK</p>
+          <p class="scene-description" data-scene-description>
+            Exact source extracted from the current Task 1 implementation.
+          </p>
+        </header>
+
+        <section class="editor-shell" aria-label="Source code">
+          <div class="editor-chrome" aria-hidden="true">
+            <span class="window-dots"><i></i><i></i><i></i></span>
+            <span class="editor-file" data-source-file>assets/task-01-ensemble.js</span>
+            <span class="editor-state" data-editor-state>LIVE SOURCE · READ ONLY</span>
+          </div>
+          <div class="code-frame" data-code-frame>
+            <div class="code-lines" data-code-lines role="list" aria-label="Extracted source lines"></div>
+          </div>
+        </section>
+
+        <p class="scene-caption" data-scene-caption aria-live="polite">
+          Exact source lines from the current simulation.
+        </p>
+      </section>
+
+      <nav class="control-deck" data-control-deck aria-label="Code-shot controls">
+        <div class="control-group">
+          <button class="control-button" type="button" data-control="previous" aria-label="Previous task">
+            <span aria-hidden="true">←</span> Previous
+          </button>
+          <button class="control-button control-button--primary" type="button" data-control="replay">
+            <span aria-hidden="true">↻</span> Replay
+          </button>
+          <button class="control-button" type="button" data-control="next" aria-label="Next task">
+            Next <span aria-hidden="true">→</span>
+          </button>
+        </div>
+        <div class="sequence-status" aria-live="polite">
+          <span class="sequence-count" data-scene-progress>Task 01 / 10</span>
+          <span class="sequence-mode" data-sequence-mode>MASTER SEQUENCE</span>
+        </div>
+        <button class="control-button control-button--pause" type="button" data-control="pause">
+          <span aria-hidden="true">Ⅱ</span> Pause
+        </button>
+      </nav>
+    </main>
+
+    <noscript>This recording utility needs JavaScript enabled to animate the verified source excerpts.</noscript>
+    <script src="./code-shot-data.js"></script>
+    <script src="./code-shots.js"></script>
+  </body>
+</html>
