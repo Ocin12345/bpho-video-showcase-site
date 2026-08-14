@@ -1,4 +1,4 @@
-import { loadTask06Evidence } from "./task-06-evidence.js?v=20260731b";
+import { loadTask06Evidence } from "./task-06-evidence.js?v=20260815b";
 
 const FAMILIES = Object.freeze({
   d1: {
@@ -126,7 +126,7 @@ function ringCatalogue(record, familyId) {
   for (let order = 1; order <= maximum; order += 1) {
     const q = (order * record.wavelengthM) / (2 * family.spacingM);
     const phi = 2 * Math.asin(q);
-    const radiusMm = 65 * Math.sin(2 * phi);
+    const radiusMm = 65 * Math.sin(phi);
     rings.push({ order, q, phi, radiusMm });
   }
   return rings;
@@ -288,7 +288,7 @@ function drawScreen() {
   screenContext.fillStyle = "#93a895";
   screenContext.textAlign = "right";
   screenContext.fillText(
-    "x = r sin(2φ) · r = 65 mm",
+    "x = r sin(φ) · r = 65 mm",
     width - (compact ? 14 : 22),
     compact ? 24 : 27,
   );
@@ -661,7 +661,7 @@ function buildExportCsv() {
     `# schema_version,${manifest.output_schema_version}`,
     `# tube_radius_mm,${manifest.configuration.tube_radius_m * 1000}`,
     "# angle_definition,theta is Bragg glancing angle; phi=2theta is total beam deflection",
-    "# geometry,x=r sin(2phi) photographic radius; y=2r sin(phi) caliper chord",
+    "# geometry,x=r sin(phi) screen radius; y=2r sin(phi)=2x full ring diameter",
     [
       "voltage_V",
       "wavelength_pm",
@@ -834,12 +834,22 @@ function populateValidationEvidence() {
   outputs.scalingCheck.textContent = `PASS — full-sweep relative variation ${checks.inverse_sqrt_voltage_scaling.observed.toExponential(3)} (limit ${checks.inverse_sqrt_voltage_scaling.tolerance.toExponential(1)}).`;
   outputs.braggCheck.textContent =
     checks.bragg_ratio_identity.passed && checks.bragg_angle_identity.passed
-    ? "PASS — q = nλ/(2d) = sin θ"
-    : "FAIL";
-  outputs.geometryCheck.textContent =
-    checks.photographic_geometry.passed && checks.caliper_geometry.passed
-      ? "PASS — x and y independently"
+      ? "PASS — q = nλ/(2d) = sin θ"
       : "FAIL";
+
+  const geometryPassed = sweep.every((record) =>
+    ["d1", "d2"].every((familyId) => {
+      const family = record[familyId];
+      const expectedRadius = manifest.configuration.tube_radius_m * Math.sin(family.phiRad);
+      return (
+        Math.abs(family.photoRadiusM - expectedRadius) <= 5e-13 &&
+        Math.abs(family.caliperDiameterM - 2 * expectedRadius) <= 5e-13
+      );
+    }),
+  );
+  outputs.geometryCheck.textContent = geometryPassed
+    ? "PASS — x = r sin φ and y = 2x across all 401 voltages"
+    : "FAIL";
 
   for (const familyId of ["d1", "d2"]) {
     const fit = firstOrder[familyId];
