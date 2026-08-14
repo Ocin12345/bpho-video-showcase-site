@@ -78,7 +78,7 @@
 
 .video-cut .video-collision .collision-method__equations {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 10px;
   min-width: 0;
 }
@@ -630,6 +630,10 @@
 @media (max-width: 900px) {
   .video-cut .video-collision .collision-method {
     grid-template-columns: 1fr;
+  }
+
+  .video-cut .video-collision .collision-method__equations {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .video-cut .video-collision .collision-playback {
