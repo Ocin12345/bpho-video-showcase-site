@@ -329,6 +329,32 @@
               </div>
             </div>
           </div>
+
+          <aside class="collision-method" aria-labelledby="collision-method-title">
+            <div class="collision-method__heading">
+              <span>Method / Collision equations</span>
+              <h3 id="collision-method-title">Normal impulse model</h3>
+            </div>
+
+            <div class="collision-method__equations" aria-label="Collision equations">
+              <p class="collision-method__equation">
+                <span>g<sub>n</sub></span> = (<span>V</span> − <span>v</span>) · <span>n̂</span>
+              </p>
+              <p class="collision-method__equation">
+                <span>J</span> = −(1 + <span>C</span>)<span>g<sub>n</sub></span> /
+                (1/<span>m</span> + 1/<span>M</span>)
+              </p>
+              <p class="collision-method__equation collision-method__equation--updates">
+                <span>v′</span> = <span>v</span> − <span>J</span>/<span>m</span> <span>n̂</span>,
+                <span>V′</span> = <span>V</span> + <span>J</span>/<span>M</span> <span>n̂</span>
+              </p>
+            </div>
+
+            <p class="collision-method__reference">
+              <strong>Reference run:</strong> (N = 1000, M/m = 10, C = 1). C is the coefficient of restitution.
+              Small-particle directions are randomized after a Knudsen-scale travel interval.
+            </p>
+          </aside>
         </div>
       </section>
     </main>
