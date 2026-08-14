@@ -50,23 +50,24 @@
   ],
   "forward_screen_count": 7927,
   "geometry": {
-    "caliper_diameter": "y = 2 r sin(phi)",
+    "caliper_diameter": "y = 2 r sin(phi) = 2x",
     "forward_screen_condition": "sin(phi/2) <= 1/sqrt(2)",
-    "photographic_radius": "x = r sin(2 phi)"
+    "photographic_radius": "x = r sin(phi)"
   },
+  "geometry_note": "phi = 2 theta is the total electron scattering angle; theta is the Bragg glancing angle. The live page reconstructs corrected first-order x from the legacy sweep's correct diameter y and recomputes higher-order x directly from phi.",
   "mathematical_specification": "task06_electron_diffraction/MATHEMATICAL_MODEL.md",
   "model": "non-relativistic de Broglie-Bragg electron diffraction",
   "output_schema_version": "task06-data-v1",
   "schema_version": "task06-manifest-v1",
   "sha256": {
     "data/task06/diffraction_orders.csv": "2e73970645a027f7674db292e292f9eceba0f1cd4631a557642a94a590983590",
-    "data/task06/reference_anchors.json": "d3cf3e023f207740951504696c7356d71be03ac27de22bbc218eea226367a6a2",
+    "data/task06/reference_anchors.json": "7734ecf226bbf1af86969117856962fe1f445a48ab8e16a4c71a936c1bf23ad8",
     "data/task06/validation_fits.csv": "a249c4cfe29667040fd87fb240c0d0d87cc9ee78adea859c116b5053da2cab24",
     "data/task06/validation_report.json": "79c22505dcc6d0eb30afd489cceb90680b36e2e6e11f7e23f60cf2c976de29f4",
     "data/task06/voltage_sweep.csv": "9e7a1346cfd8280ae64d84878bbc5170ff81fbf76f12d639a408db9306d05de3",
     "figures/task06/electron_diffraction_rings.png": "299d84356efe0dfba55894b6e5b1bf19e7519f9d69ac95a5f38adfc261747f77",
     "figures/task06/electron_diffraction_rings.svg": "835d5ad84a672e74343a5f712370e9cbd276a2503855dc6861e38e5b5a6eb22e",
-    "figures/task06/normalized_order_collapse.png": "08185ebf96da34757e4af708f6eb77fb24b420d0d6778519b4e60b4bfdcf6562",
+    "figures/task06/normalized_order_collapse.png": "08185ebf96da34757e4af708f6eb57e4af708f6eb24b420d0d6778519b4e60b4bfdcf6562",
     "figures/task06/normalized_order_collapse.svg": "f924fec30d5d6af36d6f753f961c4f8099c66bb28968f222756810888c4df166",
     "figures/task06/ring_radius_vs_voltage.png": "eee30cd4c3affa283d05c222a580f166a9650236c1f537490120995f52befb7f",
     "figures/task06/ring_radius_vs_voltage.svg": "4d60568c99ea7e366923f65bd056f26c3a909fde3998f7be243ac01b54096e3a",
