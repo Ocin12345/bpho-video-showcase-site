@@ -70,15 +70,12 @@ function validateManifest(manifest) {
 }
 
 function validateReport(report, manifest) {
-  const retainedChecks = Array.isArray(report.checks)
-    ? report.checks.filter((check) => check.name !== "photographic_geometry")
-    : [];
+  const retainedChecks = Array.isArray(report.checks) ? report.checks.filter((check) => check.name !== "photographic_geometry") : [];
   if (
     report.schema_version !== "task06-validation-v1" ||
     report.study_digest !== manifest.study_digest ||
     !Array.isArray(report.checks) ||
-    report.checks.length !== 39 ||
-    retainedChecks.length !== 38 ||
+    report.checks.length !== 39 || retainedChecks.length !== 38 ||
     !retainedChecks.every(
       (check) =>
         check.passed === true &&
@@ -107,10 +104,7 @@ function expectedFirstOrder(wavelengthM, spacingM, tubeRadiusM) {
   const q = wavelengthM / (2 * spacingM);
   const phi = 2 * Math.asin(q);
   const photoRadiusM = tubeRadiusM * Math.sin(phi);
-  return {
-    q,
-    phi,
-    photoRadiusM,
+  return { q, phi, photoRadiusM,
     caliperDiameterM: 2 * photoRadiusM,
     maximumBraggOrder: Math.floor((2 * spacingM) / wavelengthM),
     maximumScreenOrder: Math.floor(
