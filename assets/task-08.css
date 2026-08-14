@@ -15,16 +15,13 @@
   --t8-teal: #007770;
   --t8-teal-soft: #dff3ef;
   --t8-gold: #9a711d;
-  --t8-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-  --t8-sans: "Inter", Arial, sans-serif;
+  --t8-serif: "Times New Roman", Times, Georgia, serif;
+  --t8-sans: "Times New Roman", Times, Georgia, serif;
 }
 
 body[data-task="08"] {
   color: var(--t8-ink) !important;
-  background:
-    radial-gradient(circle at 8% 4%, rgba(20, 121, 166, 0.07), transparent 24rem),
-    radial-gradient(circle at 94% 17%, rgba(143, 74, 172, 0.055), transparent 24rem),
-    #f5f8f8 !important;
+  background: #f7f6f1 !important;
 }
 
 body[data-task="08"] .lab-header {
@@ -1207,175 +1204,337 @@ body[data-task="08"] .skip-link:focus {
  * sample, and derivation in the source, but make the default filming surface
  * one compact calculator that fits a 16:9 frame without scrolling.
  */
-body[data-task="08"].task08-recording {
+body[data-task="08"].task08-page {
   background: #f5f7f7 !important;
 }
 
-.task08-recording .task08-main {
+.task08-page .task08-main {
   min-height: 100dvh;
   padding: 64px 20px 20px !important;
 }
 
-.task08-recording .task08-main > section:not(#calculator) {
-  display: none;
+.task08-page .task08-main > section:not(#calculator) {
+  display: block;
 }
 
-.task08-recording .task08-main > #calculator {
+.task08-page .task08-main > #calculator {
   width: min(1600px, 100%);
   margin: 0 auto;
   border-radius: 4px;
   box-shadow: none;
 }
 
-.task08-recording .hero-introduction {
+.task08-page .hero-introduction {
   align-items: center;
   gap: 48px;
   min-height: 128px;
   padding: 22px 32px 24px;
 }
 
-.task08-recording .hero-introduction h1 {
+.task08-page .hero-introduction h1 {
   max-width: none;
   margin-top: 9px;
   font-size: clamp(40px, 4vw, 61px);
   line-height: 0.95;
 }
 
-.task08-recording .hero-summary {
+.task08-page .hero-summary {
   padding: 0;
 }
 
-.task08-recording .hero-summary > p {
+.task08-page .hero-summary > p {
   max-width: 420px;
   font-size: clamp(16px, 1.5vw, 20px);
   line-height: 1.35;
 }
 
-.task08-recording .detector-stage {
+.task08-page .detector-stage {
   padding: 20px 28px 15px;
   background: #f7faf9;
 }
 
-.task08-recording .stage-heading h2 {
+.task08-page .stage-heading h2 {
   margin-top: 5px;
   font-size: clamp(27px, 2.3vw, 35px);
 }
 
-.task08-recording #detector-canvas {
+.task08-page #detector-canvas {
   height: 395px;
   margin-top: 2px;
 }
 
-.task08-recording .control-panel {
+.task08-page .control-panel {
   padding: 28px 32px 22px;
 }
 
-.task08-recording .angle-control + .angle-control {
+.task08-page .angle-control + .angle-control {
   margin-top: 26px;
 }
 
-.task08-recording .preset-panel {
+.task08-page .preset-panel {
   margin-top: 27px;
   padding-top: 20px;
 }
 
-.task08-recording .preset-panel button {
+.task08-page .preset-panel button {
   min-height: 34px;
 }
 
-.task08-recording .result-strip {
+.task08-page .result-strip {
   grid-template-columns: repeat(2, minmax(0, 1fr)) minmax(210px, 0.72fr) minmax(190px, 0.62fr);
 }
 
-.task08-recording .result-card,
-.task08-recording .contrast-card,
-.task08-recording .official-card {
+.task08-page .result-card,
+.task08-page .contrast-card,
+.task08-page .official-card {
   min-height: 152px;
   padding: 19px 24px;
 }
 
-.task08-recording .result-card header small,
-.task08-recording .result-card b,
-.task08-recording .contrast-card p,
-.task08-recording .official-card p {
+.task08-page .result-card header small,
+.task08-page .result-card b,
+.task08-page .contrast-card p,
+.task08-page .official-card p {
   display: none;
 }
 
-.task08-recording .result-card > div:nth-child(2) {
+.task08-page .result-card > div:nth-child(2) {
   margin-top: 16px;
 }
 
-.task08-recording .result-card output {
+.task08-page .result-card output {
   font-size: clamp(39px, 3.6vw, 55px);
 }
 
-.task08-recording .probability-track {
+.task08-page .probability-track {
   height: 6px;
   margin-top: 14px;
 }
 
-.task08-recording .contrast-card output {
+.task08-page .contrast-card output {
   margin-top: 17px;
   font-size: clamp(32px, 3vw, 45px);
 }
 
-.task08-recording .official-card strong {
+.task08-page .official-card strong {
   margin-top: 17px;
   font-size: clamp(22px, 2.1vw, 30px);
 }
 
 @media (min-width: 1121px) {
-  .task08-recording .hero-introduction {
+  .task08-page .hero-introduction {
     grid-template-columns: minmax(0, 1.25fr) minmax(330px, 0.75fr);
   }
 
-  .task08-recording .calculator-workspace {
+  .task08-page .calculator-workspace {
     grid-template-columns: minmax(0, 1.45fr) minmax(340px, 0.55fr);
   }
 }
 
 @media (max-width: 1120px) {
-  .task08-recording .hero-introduction {
+  .task08-page .hero-introduction {
     grid-template-columns: 1fr;
     gap: 15px;
   }
 
-  .task08-recording .calculator-workspace {
+  .task08-page .calculator-workspace {
     grid-template-columns: 1fr;
   }
 
-  .task08-recording #detector-canvas {
+  .task08-page #detector-canvas {
     height: 340px;
   }
 
-  .task08-recording .result-strip {
+  .task08-page .result-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 760px) {
-  .task08-recording .task08-main {
+  .task08-page .task08-main {
     padding: 57px 8px 12px !important;
   }
 
-  .task08-recording .hero-introduction {
+  .task08-page .hero-introduction {
     min-height: auto;
     padding: 27px 20px 24px;
   }
 
-  .task08-recording .hero-introduction h1 {
+  .task08-page .hero-introduction h1 {
     font-size: clamp(42px, 13vw, 58px);
   }
 
-  .task08-recording #detector-canvas {
+  .task08-page #detector-canvas {
     height: 300px;
   }
 
-  .task08-recording .control-panel {
+  .task08-page .control-panel {
     padding: 25px 20px 22px;
   }
 
-  .task08-recording .result-strip {
+  .task08-page .result-strip {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Final Task 1–3 typography and hierarchy pass. */
+body[data-task="08"].task08-page {
+  background: #f7f6f1 !important;
+  font-family: "Times New Roman", Times, Georgia, serif !important;
+}
+
+.task08-page .task08-main > section {
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+.task08-page .hero-introduction h1,
+.task08-page .stage-heading h2,
+.task08-page .section-heading h2,
+.task08-page .sample-heading h3,
+.task08-page .equation-card h3,
+.task08-page .result-card output,
+.task08-page .contrast-card output,
+.task08-page .official-card strong,
+.task08-page .sample-card output,
+.task08-page .official-derivation strong {
+  font-family: "Times New Roman", Times, Georgia, serif !important;
+}
+
+.task08-page .hero-introduction h1 {
+  font-size: clamp(42px, 3.5vw, 58px);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+}
+
+.task08-page .hero-summary > p,
+.task08-page .angle-label label,
+.task08-page .keyboard-hint,
+.task08-page .section-heading > p,
+.task08-page .sweep-reading > p,
+.task08-page .sweep-reading dt,
+.task08-page .sweep-reading dd,
+.task08-page .sweep-figure figcaption,
+.task08-page .landscape-figure figcaption,
+.task08-page .contrast-card p,
+.task08-page .official-card p,
+.task08-page .equation-card > p:last-child,
+.task08-page .official-derivation p,
+.task08-page .model-boundary p {
+  font-family: "Times New Roman", Times, Georgia, serif !important;
+}
+
+.task08-page .angle-label label {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.task08-page .angle-label output,
+.task08-page .result-card output,
+.task08-page .contrast-card output,
+.task08-page .official-card strong,
+.task08-page .sample-card output {
+  font-variant-numeric: tabular-nums;
+}
+
+.task08-page .stage-heading h2 {
+  font-size: clamp(28px, 2.2vw, 38px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+
+.task08-page .section-heading h2 {
+  font-size: clamp(38px, 4vw, 60px);
+  font-weight: 700;
+  line-height: 0.96;
+  letter-spacing: -0.035em;
+}
+
+.task08-page .hero-summary > p {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.task08-page .detector-stage {
+  background: #faf9f5;
+}
+
+.task08-page .calculator-workspace,
+.task08-page .result-strip,
+.task08-page .sweep-layout,
+.task08-page .equation-grid {
+  border-color: #c9c9c2;
+}
+
+.task08-page .result-strip {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(190px, 0.58fr) minmax(175px, 0.52fr);
+}
+
+.task08-page .result-card output {
+  font-weight: 700;
+}
+
+.task08-page .contrast-card p,
+.task08-page .official-card p {
+  display: block;
+  margin-top: 10px;
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+.task08-page .method-compact {
+  margin-top: 18px;
+  padding-top: 15px;
+  border-top: 1px solid var(--t8-line);
+}
+
+.task08-page .method-compact h3 {
+  margin: 0 0 9px;
+  color: var(--t8-muted);
+  font: 700 10px/1.2 "Times New Roman", Times, Georgia, serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.task08-page .method-compact p {
+  margin: 6px 0 0;
+  color: var(--t8-ink);
+  font: 14px/1.2 "Times New Roman", Times, Georgia, serif;
+  white-space: nowrap;
+}
+
+.task08-page .method-compact p span {
+  display: inline-block;
+  width: 60px;
+  color: var(--t8-muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1120px) {
+  .task08-page .result-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .task08-page .method-compact p {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 760px) {
+  .task08-page .hero-introduction h1 {
+    font-size: clamp(40px, 12vw, 56px);
+  }
+
+  .task08-page .section-heading h2 {
+    font-size: 44px;
+  }
+
+  .task08-page .result-strip {
     grid-template-columns: 1fr;
   }
 }

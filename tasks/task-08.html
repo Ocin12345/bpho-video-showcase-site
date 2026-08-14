@@ -13,11 +13,10 @@
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23f4f7f6'/%3E%3Ccircle cx='19' cy='32' r='12' fill='none' stroke='%23c85522' stroke-width='3'/%3E%3Ccircle cx='45' cy='32' r='12' fill='none' stroke='%23007770' stroke-width='3'/%3E%3Cpath d='M15 38l8-12M39 26l12 12' stroke='%231b2e3b' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E"
     />
-    <link rel="stylesheet" href="../assets/local-shell-fonts.css" />
     <link rel="stylesheet" href="../assets/task-universal.css?v=20260813a" />
-    <link rel="stylesheet" href="../assets/task-08.css?v=20260814c" />
+    <link rel="stylesheet" href="../assets/task-08.css?v=20260814d" />
   </head>
-  <body class="task08-page task08-recording" data-task="08">
+  <body class="task08-page" data-task="08">
     <a class="skip-link" href="#calculator">Skip to calculator</a>
 
     <header class="lab-header">
@@ -27,20 +26,22 @@
       </a>
       <nav class="section-nav" aria-label="Task 8 sections">
         <a href="#calculator" aria-current="page">Calculator</a>
+        <a href="#sweep">Results</a>
+        <a href="#evidence">Evidence</a>
       </nav>
-      <div class="lab-identity"><span>Task 08</span><strong>Quantum cryptography</strong></div>
+      <div class="lab-identity"><span>Task 08</span><strong>Quantum Cryptography</strong></div>
     </header>
 
     <main class="task08-main">
       <section class="calculator-section" id="calculator" aria-labelledby="page-title">
         <header class="hero-introduction">
           <div>
-            <p class="eyebrow">Quantum cryptography · polarized entangled photons</p>
-            <h1 id="page-title">Classical vs quantum mismatch</h1>
+            <p class="eyebrow">Task 08 — Quantum Cryptography</p>
+            <h1 id="page-title">Classical vs Quantum Mismatch</h1>
           </div>
           <div class="hero-summary">
             <p>
-              Rotate detectors A and B, then compare the two predictions.
+              Rotate the two detector angles and compare the classical and entangled-photon mismatch predictions.
             </p>
           </div>
         </header>
@@ -82,6 +83,12 @@
               <button type="button" data-preset="contrast">Maximum contrast</button>
               <button type="button" data-preset="perpendicular">Perpendicular</button>
             </div>
+
+            <section class="method-compact" aria-labelledby="compact-method-title">
+              <h3 id="compact-method-title">Method</h3>
+              <p><span>Classical</span> <i>P</i><sub>C</sub> = 1 − cos²θ cos²φ − sin²θ sin²φ</p>
+              <p><span>Quantum</span> <i>P</i><sub>Q</sub> = sin²(φ − θ)</p>
+            </section>
           </aside>
         </div>
 
@@ -111,8 +118,8 @@
 
       <section class="sweep-section" id="sweep" aria-labelledby="sweep-title">
         <header class="section-heading">
-          <div><span>01 / Full-angle behaviour</span><h2 id="sweep-title">Hold θ. Rotate φ.</h2></div>
-          <p>The classical curve remembers both absolute angles; the quantum curve depends only on their difference.</p>
+          <div><span>Results</span><h2 id="sweep-title">Classical and quantum predictions</h2></div>
+          <p>Hold θ fixed and vary φ to see where the two mismatch models agree and separate.</p>
         </header>
         <div class="sweep-layout">
           <figure class="sweep-figure">
@@ -141,7 +148,7 @@
 
       <section class="evidence-section" id="evidence" aria-labelledby="evidence-title">
         <header class="section-heading section-heading--evidence">
-          <div><span>02 / Complete evidence</span><h2 id="evidence-title">Every angle pair, then one finite run.</h2></div>
+          <div><span>Advanced numerical evidence</span><h2 id="evidence-title">Every angle pair, then one finite run.</h2></div>
           <p>The surface shows where the models separate. The sample makes clear that measured counts fluctuate around exact probabilities.</p>
         </header>
 
@@ -188,7 +195,7 @@
 
       <section class="method-section" id="method" aria-labelledby="method-title">
         <header class="section-heading">
-          <div><span>03 / The model</span><h2 id="method-title">The comparison in three equations.</h2></div>
+          <div><span>Model reference</span><h2 id="method-title">The comparison in three equations.</h2></div>
           <p>Mismatch means different outcomes at the two detectors. Each output remains on the same 0–1 probability scale.</p>
         </header>
         <div class="equation-grid">
