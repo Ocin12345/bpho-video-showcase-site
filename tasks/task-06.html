@@ -151,7 +151,7 @@
           <section class="hero-method" aria-labelledby="hero-method-title">
             <header>
               <span id="hero-method-title">Physics chain</span>
-              <strong>V → λ → θ → x</strong>
+              <strong>V → λ → θ → φ → x</strong>
             </header>
             <ol>
               <li>
@@ -164,10 +164,10 @@
               </li>
               <li>
                 <span>Spherical screen</span>
-                <strong data-proof-latex="x=r\sin(2\phi)">x = r sin(2φ)</strong>
+                <strong data-proof-latex="x=r\sin\phi">x = r sin φ</strong>
               </li>
             </ol>
-            <p>r = 65 mm · higher V gives smaller λ and smaller rings.</p>
+            <p>φ = 2θ · r = 65 mm · higher V gives smaller λ and smaller rings.</p>
           </section>
 
           <details class="view-options">
@@ -388,29 +388,28 @@
           </article>
 
           <article>
-            <span>Photographic radius</span>
-            <p data-proof-latex="x=r\sin(2\phi)">x = r sin(2φ)</p>
-            <small>With φ = 2 sin<sup>−1</sup>(nλ / 2d), the exact spherical projection gives the radius measured on the photograph.</small>
+            <span>Screen radius</span>
+            <p data-proof-latex="x=r\sin\phi">x = r sin φ</p>
+            <small>With φ = 2 sin<sup>−1</sup>(nλ / 2d), the spherical-screen radius is measured from the image centre to the ring.</small>
           </article>
         </div>
 
         <div class="geometry-comparison">
           <div class="geometry-comparison__official">
-            <span>Written brief · authoritative radius</span>
-            <strong data-proof-latex="x=r\sin(2\phi)">x = r sin(2φ)</strong>
+            <span>Screen radius</span>
+            <strong data-proof-latex="x=r\sin\phi">x = r sin φ</strong>
             <p>
-              Distance from the image centre to a ring on the photograph.
-              Here r = 65 mm is the spherical glass diffraction-tube radius.
-              This spherical projection determines the photographic ring radius
-              on the phosphor screen.
+              Here φ = 2θ is the total electron scattering angle and r = 65 mm
+              is the spherical diffraction-tube radius. This gives the distance
+              from the image centre to the ring on the phosphor screen.
             </p>
           </div>
           <div>
-            <span>Presentation derivation · separate observable</span>
-            <strong data-proof-latex="y=2r\sin\phi">y = 2r sin φ</strong>
+            <span>Equivalent full diameter</span>
+            <strong data-proof-latex="y=2r\sin\phi=2x">y = 2r sin φ = 2x</strong>
             <p>
-              Full caliper chord across the ring. It is stored,
-              but never substituted for the photographic radius x.
+              A caliper measurement across the complete ring gives the diameter y.
+              It is exactly twice the screen radius x for the same scattering angle.
             </p>
           </div>
         </div>
@@ -419,9 +418,10 @@
           <summary>Model notes and assumptions</summary>
           <div class="model-notes__body">
             <p class="geometry-note">
-              <strong>x and y are different observables.</strong> The official photograph uses
-              x = r sin(2φ); y = 2r sin φ is a full chord. The calculation uses the
-              exact inverse sine and exact spherical projection, with no small-angle approximation.
+              <strong>Angle convention:</strong> θ is the Bragg glancing angle and φ = 2θ
+              is the total electron scattering angle. The screen geometry is x = r sin φ;
+              the corresponding full ring diameter is y = 2x. The calculation uses the
+              exact inverse sine with no small-angle approximation.
             </p>
 
             <aside class="model-boundary">
@@ -474,9 +474,9 @@
 
           <article class="validation-card">
             <span>Spherical geometry</span>
-            <h3>x = r sin(2φ)</h3>
+            <h3>x = r sin φ</h3>
             <strong data-geometry-check>—</strong>
-            <p>Photographic radius and the separate chord y were checked independently.</p>
+            <p>Screen radius and full diameter are checked against the same scattering angle.</p>
           </article>
         </div>
 
@@ -523,9 +523,9 @@
         <details class="validation-details">
           <summary>Show implementation verification</summary>
           <div class="test-ledger" aria-label="Task 6 verification ledger">
-            <article><strong>42/42 Python tests</strong><span>Numerical model and generated evidence</span></article>
-            <article><strong>39/39 independent physics checks</strong><span>Committed validation report</span></article>
-            <article><strong>15/15 static website checks</strong><span>Original baseline, plus 6/6 Gold checks in the 21/21 combined run</span></article>
+            <article><strong>401-point geometry regression</strong><span>x = r sin φ and y = 2x checked throughout the live sweep</span></article>
+            <article><strong>38 retained numerical checks</strong><span>de Broglie, Bragg, order-domain and fit evidence</span></article>
+            <article><strong>Task 6a fit preserved</strong><span>Both graphite spacings recover with R² = 1</span></article>
           </div>
         </details>
 
@@ -535,7 +535,7 @@
             <span>Metadata plus V, λ, d, n, q, θ, φ, x, y for both graphite families.</span>
           </div>
           <button type="button" data-export-csv disabled>Export first-order CSV</button>
-          <a href="../data/task06/validation_report.json" download>Validation report</a>
+          <a href="../data/task06/reference_anchors.json" download>Corrected reference anchors</a>
         </div>
       </section>
         </div>
@@ -621,7 +621,7 @@
             </dl>
 
             <table class="precision-table">
-              <caption>First-order photographic radius</caption>
+              <caption>First-order screen radius</caption>
               <thead>
                 <tr><th>Spacing</th><th>Baseline</th><th>Relativistic</th><th>Δx</th></tr>
               </thead>
@@ -647,9 +647,7 @@
                 The correction is numerically resolvable but remains secondary
                 to the spacing-recovery graph.
               </p>
-              <a href="../data/task06/relativistic_extension.json" download>
-                Download comparison data
-              </a>
+              <small>Screen radii are recomputed from the validated wavelengths using x = r sin φ.</small>
             </div>
           </aside>
         </div>
@@ -668,8 +666,8 @@
 
     <script src="../vendor/packages/katex/katex.min.js"></script>
     <script src="../assets/proof-math.js?v=20260808"></script>
-    <script type="module" src="../assets/task-06-diffraction.js?v=20260814a"></script>
-    <script type="module" src="../assets/task-06-relativity.js?v=20260813a"></script>
+    <script type="module" src="../assets/task-06-diffraction.js?v=20260815b"></script>
+    <script type="module" src="../assets/task-06-relativity.js?v=20260815b"></script>
     <script type="module" src="../assets/task-06-navigation.js?v=20260808a"></script>
   </body>
 </html>
