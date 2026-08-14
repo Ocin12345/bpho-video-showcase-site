@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="An interactive particle-in-a-box laboratory showing quantised states, probability density and the uncertainty principle for BPhO Computational Challenge Task 7."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Task 07 — Particle in a Box | BPhO Computational Challenge 2026</title>
+    <link rel="stylesheet" href="../assets/local-shell-fonts.css" />
+    <link rel="stylesheet" href="../assets/task-universal.css?v=20260813a" />
+    <link rel="stylesheet" href="../assets/task-clean.css?v=20260809" />
+    <link rel="stylesheet" href="../assets/task-video.css?v=20260809" />
+    <link rel="stylesheet" href="../assets/task-07.css?v=20260814b" />
+  </head>
+  <body class="task07-page video-cut" data-task="07">
+    <a class="skip-link" href="#box-lab">Skip to the particle-in-a-box laboratory</a>
+
+    <header class="lab-header">
+      <a class="back-link" href="../tasks.html" aria-label="Return to all tasks">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6" /></svg>
+        All tasks
+      </a>
+      <nav class="section-nav" aria-label="Task 7 sections">
+        <a href="#box-lab" aria-current="page">Laboratory</a>
+        <a href="#evidence">Evidence</a>
+        <a class="video-support-link" href="#method">Method</a>
+        <a class="video-support-link" href="#validation">Checks</a>
+      </nav>
+      <div class="lab-identity"><span>Task 07</span><strong>Particle in a box</strong></div>
+    </header>
+
+    <main class="task07-main lab-main">
+      <section class="box-hero" id="box-lab" aria-labelledby="page-title">
+        <div class="box-workspace">
+          <section class="box-stage" aria-labelledby="stage-title">
+            <header class="box-stage-header">
+              <div><span>Infinite-well eigenstate</span><h1 id="stage-title" data-stage-title>n = 1 · ground state</h1></div>
+              <span class="state-chip" data-state-chip>normalised</span>
+            </header>
+            <div class="box-canvas-wrap">
+              <canvas id="box-canvas" tabindex="0" role="img" aria-label="Interactive particle-in-a-box wavefunction and probability density. Use the arrow keys to change the quantum number."></canvas>
+              <div class="box-wall-label box-wall-label--left">x = 0</div>
+              <div class="box-wall-label box-wall-label--right">x = a</div>
+            </div>
+            <footer class="box-stage-footer"><span><i class="legend-line legend-line--wave"></i>ψₙ(x)</span><span><i class="legend-line legend-line--density"></i>|ψₙ(x)|²</span><span><i class="legend-line legend-line--wall"></i>infinite wall</span></footer>
+          </section>
+
+          <aside class="box-controls" aria-label="Particle in a box controls">
+            <header class="control-introduction">
+              <div class="control-introduction__topline"><span>Task 07 · stationary states</span><button type="button" class="control-reset" data-reset>Reset</button></div>
+              <h2 id="page-title">A box makes energy discrete.</h2>
+              <p>Choose a state and watch the nodes, energy, wavelength and uncertainty product update from the same analytic model.</p>
+            </header>
+
+            <label class="box-range" for="quantum-number">
+              <span><b>Quantum number, n</b><output for="quantum-number" data-n-output>1</output></span>
+              <input id="quantum-number" data-n type="range" min="1" max="8" step="1" value="1" />
+              <small><span>n = 1</span><span>higher energy</span><span>n = 8</span></small>
+            </label>
+
+            <label class="box-range" for="box-width">
+              <span><b>Box width, a</b><output for="box-width" data-width-output>1.00 nm</output></span>
+              <input id="box-width" data-width type="range" min="0.50" max="5.00" step="0.05" value="1" />
+              <small><span>0.50 nm</span><span>confinement</span><span>5.00 nm</span></small>
+            </label>
+
+            <div class="particle-picker" role="group" aria-label="Particle mass">
+              <span>Particle in the well</span>
+              <button type="button" data-particle="electron" aria-pressed="true">Electron</button>
+              <button type="button" data-particle="proton" aria-pressed="false">Proton</button>
+            </div>
+
+            <dl class="box-ledger" aria-live="polite">
+              <div><dt>Energy Eₙ</dt><dd data-energy>—</dd></div>
+              <div><dt>Wavelength λₙ</dt><dd data-wavelength>—</dd></div>
+              <div><dt>Position uncertainty Δx</dt><dd data-delta-x>—</dd></div>
+              <div><dt>Momentum uncertainty Δp</dt><dd data-delta-p>—</dd></div>
+              <div class="box-ledger--emphasis"><dt>Δx Δp / (ℏ/2)</dt><dd data-ratio>—</dd></div>
+            </dl>
+            <p class="box-boundary" data-note>The displayed standing wave is a stationary energy eigenstate. Its complex time phase changes, but |ψ|² remains fixed.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="evidence-section" id="evidence" aria-labelledby="evidence-title">
+        <header class="task07-section-heading"><div><span>01 / Numerical evidence</span><h2 id="evidence-title">The uncertainty trade-off is visible.</h2></div><p>Changing the width rescales Δx and Δp in opposite directions, while changing n raises the energy and the uncertainty product.</p></header>
+        <div class="evidence-grid">
+          <figure class="evidence-figure"><header><div><span>Probability density</span><h3 data-density-title>|ψ₁(x)|² across the well</h3></div><strong data-density-integral>∫|ψ|² dx = 1.000</strong></header><canvas id="density-canvas" role="img" aria-label="Probability density across the selected infinite potential well"></canvas><figcaption data-density-caption>The area under the density is one. Nodes mark positions where the particle cannot be found.</figcaption></figure>
+          <figure class="evidence-figure"><header><div><span>Uncertainty product</span><h3>Δx Δp against n</h3></div><strong>bound = ℏ/2</strong></header><canvas id="uncertainty-canvas" role="img" aria-label="Uncertainty product ratio for the first eight particle-in-a-box states"></canvas><figcaption>Every allowed state lies above the Heisenberg lower bound. The box width cancels from the ratio.</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="method-section" id="method" aria-labelledby="method-title">
+        <header class="task07-section-heading"><div><span>02 / The model</span><h2 id="method-title">Boundary conditions choose the states.</h2></div><p>The infinite walls force the wavefunction to vanish at x = 0 and x = a, so only an integer number of half-wavelengths fits inside.</p></header>
+        <div class="method-grid">
+          <article><span>01 / wavefunction</span><h3>Normalised standing wave</h3><p class="method-equation">ψₙ(x) = √(2/a) sin(nπx/a)</p><p>The probability density is |ψₙ|². The state has n − 1 interior nodes and n − 1 excited-state energy gaps above the ground state.</p></article>
+          <article><span>02 / energy</span><h3>Quantised kinetic energy</h3><p class="method-equation">Eₙ = n²π²ℏ² / (2ma²)</p><p>Higher n means shorter de Broglie wavelength and larger momentum. A narrower well raises every energy as 1/a².</p></article>
+          <article><span>03 / uncertainty</span><h3>Position and momentum</h3><p class="method-equation">Δx Δp = (ℏ/2)√(n²π²/3 − 2)</p><p>For a stationary state ⟨x⟩ = a/2 and ⟨p⟩ = 0, but Δp is non-zero because the standing wave contains equal opposite momentum components.</p></article>
+        </div>
+      </section>
+
+      <section class="validation-section" id="validation" aria-labelledby="validation-title">
+        <header class="task07-section-heading"><div><span>03 / Validation</span><h2 id="validation-title">The browser checks its own model.</h2></div><p>These checks compare the displayed formulas with normalisation, boundary, node and uncertainty invariants.</p></header>
+        <div class="validation-layout"><div class="validation-table-wrap"><table class="validation-table"><caption>Deterministic particle-in-a-box checks</caption><thead><tr><th scope="col">Check</th><th scope="col">Result</th><th scope="col">Target</th><th scope="col">Status</th></tr></thead><tbody><tr><th scope="row">Ground-state energy scaling</th><td data-check-energy>1.000000</td><td>E₂ / E₁ = 4</td><td><span data-check="energy">pass</span></td></tr><tr><th scope="row">Probability normalisation</th><td data-check-normalisation>1.000000</td><td>∫|ψ|² dx = 1</td><td><span data-check="normalisation">pass</span></td></tr><tr><th scope="row">Wall boundary</th><td data-check-boundary>0.000000</td><td>ψ(0) = ψ(a) = 0</td><td><span data-check="boundary">pass</span></td></tr><tr><th scope="row">Uncertainty bound</th><td data-check-bound>1.1357 × ℏ/2</td><td>≥ 1 × ℏ/2</td><td><span data-check="bound">pass</span></td></tr><tr><th scope="row">Node count for n = 4</th><td data-check-nodes>3</td><td>n − 1 = 3</td><td><span data-check="nodes">pass</span></td></tr></tbody></table><p class="validation-runtime"><i aria-hidden="true"></i><span data-validation-summary>5/5 checks pass · analytic local calculation</span></p></div><aside class="model-boundary"><span>Model boundary</span><h3>Infinite well, non-relativistic particle.</h3><p>The model is exact for the stated idealisation. Finite barriers, relativistic corrections, spin and interactions between particles are outside this task view.</p><dl><div><dt>Domain</dt><dd>0 ≤ x ≤ a</dd></div><div><dt>Allowed states</dt><dd>n = 1, 2, 3 …</dd></div><div><dt>Normalisation</dt><dd>analytic + numerical</dd></div></dl></aside></div>
+      </section>
+    </main>
+
+    <script type="module" src="../assets/task-07.js?v=20260814b"></script>
+  </body>
+</html>
