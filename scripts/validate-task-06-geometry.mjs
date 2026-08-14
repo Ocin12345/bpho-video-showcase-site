@@ -26,12 +26,12 @@ function expectedRadius(voltage, spacing) {
 }
 
 const expected = new Map([
-  ["1000:d1", 0.02023877385303319],
+  ["1000:d1", 0.020238773853033198],
   ["1000:d2", 0.011786037447139755],
-  ["3000:d1", 0.011783719531140165],
-  ["3000:d2", 0.006823602492298959],
-  ["5000:d1", 0.009142868036576044],
-  ["5000:d2", 0.005288467319761983],
+  ["3000:d1", 0.01178371963558512],
+  ["3000:d2", 0.0068236023140144314],
+  ["5000:d1", 0.009142868051168885],
+  ["5000:d2", 0.005288467433998002],
 ]);
 
 for (const voltage of [1000, 3000, 5000]) {
@@ -58,6 +58,7 @@ assert(!diffraction.includes("65 * Math.sin(2 * phi)"), "Renderer still uses r s
 assert(!evidence.includes("tubeRadiusM * Math.sin(2 * phi)"), "Evidence validator still uses r sin(2 phi)");
 assert(!relativity.includes("CONSTANTS.r * Math.sin(2 * phi)"), "Relativity extension still uses r sin(2 phi)");
 assert(manifest.geometry.photographic_radius === "x = r sin(phi)", "Manifest geometry is not x = r sin(phi)");
+assert(manifest.geometry.caliper_diameter === "y = 2 r sin(phi) = 2x", "Manifest diameter geometry is inconsistent");
 
 for (const anchor of anchors.voltage_anchors) {
   for (const spacing of anchor.spacings) {
