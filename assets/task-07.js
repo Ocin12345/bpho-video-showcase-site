@@ -1,5 +1,6 @@
 import {
   HBAR,
+  energySweep,
   probabilityDensity,
   sampleState,
   stateFor,
@@ -24,6 +25,7 @@ const COLORS = Object.freeze({
 const elements = {
   boxCanvas: document.querySelector("#box-canvas"),
   densityCanvas: document.querySelector("#density-canvas"),
+  energyCanvas: document.querySelector("#energy-canvas"),
   uncertaintyCanvas: document.querySelector("#uncertainty-canvas"),
   n: document.querySelector("[data-n]"),
   nOutput: document.querySelector("[data-n-output]"),
@@ -38,10 +40,13 @@ const elements = {
   deltaX: document.querySelector("[data-delta-x]"),
   deltaP: document.querySelector("[data-delta-p]"),
   ratio: document.querySelector("[data-ratio]"),
+  nodeReadout: document.querySelector("[data-node-readout]"),
   note: document.querySelector("[data-note]"),
   densityTitle: document.querySelector("[data-density-title]"),
   densityIntegral: document.querySelector("[data-density-integral]"),
   densityCaption: document.querySelector("[data-density-caption]"),
+  energySelection: document.querySelector("[data-energy-selection]"),
+  energyCaption: document.querySelector("[data-energy-caption]"),
   checkEnergy: document.querySelector("[data-check-energy]"),
   checkNormalisation: document.querySelector("[data-check-normalisation]"),
   checkBoundary: document.querySelector("[data-check-boundary]"),
@@ -192,7 +197,64 @@ function drawDensity() {
   const y1 = height - 38;
   const plotWidth = x1 - x0;
   const plotHeight = y1 - y0;
-  const samples = sampleState(state.n, Math.max(220, Math.round(plotWidth / 2)));
+  const densityStates = [1, 2, 3];
+  const densityColors = [COLORS.blue, COLORS.coral, COLORS.gold];
+
+  context.fillStyle = COLORS.paper;
+  context.fillRect(0, 0, width, height);
+  drawGrid(context, x0, x1, y0, y1, 4);
+
+  context.strokeStyle = COLORS.lineStrong;
+  context.lineWidth = 1;
+  context.beginPath();
+  context.moveTo(x0, y1 + 0.5);
+  context.lineTo(x1, y1 + 0.5);
+  context.stroke();
+
+  densityStates.forEach((n, stateIndex) => {
+    const samples = sampleState(n, Math.max(220, Math.round(plotWidth / 2)));
+    context.beginPath();
+    samples.forEach((sample, index) => {
+      const x = x0 + sample.x * plotWidth;
+      const y = y1 - (sample.density / 2) * plotHeight;
+      if (index === 0) context.moveTo(x, y);
+      else context.lineTo(x, y);
+    });
+    context.strokeStyle = densityColors[stateIndex];
+    context.lineWidth = state.n === n ? 3 : 1.8;
+    context.stroke();
+  });
+
+  context.fillStyle = COLORS.muted;
+  context.font = '11px "Times New Roman", Times, serif';
+  context.fillText("2", 21, y0 + 4);
+  context.fillText("0", 21, y1 + 4);
+  context.fillText("0", x0 - 2, height - 14);
+  context.textAlign = "right";
+  context.fillText("a", x1, height - 14);
+  context.textAlign = "left";
+  context.fillText("x", x1 + 8, y1 + 4);
+}
+
+function formatAxisEnergy(value) {
+  if (value >= 10) return value.toFixed(0);
+  if (value >= 1) return value.toFixed(1);
+  if (value >= 0.01) return value.toFixed(2);
+  return value.toExponential(1);
+}
+
+function drawEnergy() {
+  const { context, width, height } = setupCanvas(elements.energyCanvas, 300);
+  const x0 = 52;
+  const x1 = width - 26;
+  const y0 = 24;
+  const y1 = height - 42;
+  const plotWidth = x1 - x0;
+  const plotHeight = y1 - y0;
+  const sweep = energySweep(MAX_N, state.widthNm, state.particle);
+  const maxEnergy = Math.max(sweep[sweep.length - 1].energyEV, 1e-12);
+  const yMax = maxEnergy * 1.12;
+  const yFor = (energy) => y1 - (energy / yMax) * plotHeight;
 
   context.fillStyle = COLORS.paper;
   context.fillRect(0, 0, width, height);
@@ -206,38 +268,43 @@ function drawDensity() {
   context.stroke();
 
   context.beginPath();
-  samples.forEach((sample, index) => {
-    const x = x0 + sample.x * plotWidth;
-    const y = y1 - (sample.density / 2) * plotHeight;
+  sweep.forEach((item, index) => {
+    const x = x0 + (index / (MAX_N - 1)) * plotWidth;
+    const y = yFor(item.energyEV);
     if (index === 0) context.moveTo(x, y);
     else context.lineTo(x, y);
   });
-  context.lineTo(x1, y1);
-  context.lineTo(x0, y1);
-  context.closePath();
-  context.fillStyle = "rgba(200, 88, 98, 0.12)";
-  context.fill();
-
-  context.beginPath();
-  samples.forEach((sample, index) => {
-    const x = x0 + sample.x * plotWidth;
-    const y = y1 - (sample.density / 2) * plotHeight;
-    if (index === 0) context.moveTo(x, y);
-    else context.lineTo(x, y);
-  });
-  context.strokeStyle = COLORS.coral;
-  context.lineWidth = 2;
+  context.strokeStyle = COLORS.blue;
+  context.lineWidth = 2.4;
   context.stroke();
+
+  sweep.forEach((item, index) => {
+    const x = x0 + (index / (MAX_N - 1)) * plotWidth;
+    const y = yFor(item.energyEV);
+    context.beginPath();
+    context.arc(x, y, item.n === state.n ? 5.5 : 3.5, 0, Math.PI * 2);
+    context.fillStyle = item.n === state.n ? COLORS.coral : COLORS.blue;
+    context.fill();
+    context.strokeStyle = COLORS.paper;
+    context.lineWidth = 1;
+    context.stroke();
+  });
 
   context.fillStyle = COLORS.muted;
   context.font = '11px "Times New Roman", Times, serif';
-  context.fillText("2", 21, y0 + 4);
-  context.fillText("0", 21, y1 + 4);
-  context.fillText("0", x0 - 2, height - 14);
-  context.textAlign = "right";
-  context.fillText("a", x1, height - 14);
   context.textAlign = "left";
-  context.fillText("x", x1 + 8, y1 + 4);
+  context.fillText(`E / eV · ${formatAxisEnergy(yMax)}`, 12, y0 + 4);
+  context.fillText("0", x0 - 12, y1 + 4);
+  context.textAlign = "right";
+  context.fillText("n", x1 + 18, y1 + 4);
+  for (let n = 1; n <= MAX_N; n += 1) {
+    const x = x0 + ((n - 1) / (MAX_N - 1)) * plotWidth;
+    context.textAlign = "center";
+    context.fillText(String(n), x, height - 17);
+  }
+  context.textAlign = "left";
+  context.fillStyle = COLORS.blueDark;
+  context.fillText("E ∝ n²", x1 - 34, y0 + 4);
 }
 
 function drawUncertainty() {
@@ -313,10 +380,10 @@ function integrateDensity(n, intervals = 10_000) {
 }
 
 function setCheck(name, ok) {
-  const element = document.querySelector(`[data-check="${name}"]`);
-  if (!element) return;
-  element.dataset.state = ok ? "pass" : "fail";
-  element.textContent = ok ? "pass" : "review";
+  document.querySelectorAll(`[data-check="${name}"], [data-summary-check="${name}"]`).forEach((element) => {
+    element.dataset.state = ok ? "pass" : "fail";
+    element.textContent = ok ? "pass" : "review";
+  });
 }
 
 function updateValidation() {
@@ -357,14 +424,16 @@ function updateReadouts() {
   elements.deltaX.textContent = `${result.deltaXNm.toFixed(3)} nm`;
   elements.deltaP.textContent = `${result.deltaPMomentum.toExponential(3)} kg m/s`;
   elements.ratio.textContent = `${result.boundRatio.toFixed(3)} × ℏ/2`;
+  elements.nodeReadout.textContent = String(result.n - 1);
   elements.note.textContent = `A ${particleLabel} in a ${state.widthNm.toFixed(2)} nm infinite well. The stationary probability density is fixed in time, while the energy phase evolves as exp(−iEₙt/ℏ).`;
-  elements.densityTitle.textContent = `|ψ${state.n}(x)|² across the well`;
-  elements.densityIntegral.textContent = `∫|ψ|² dx = ${integrateDensity(state.n).toFixed(3)}`;
-  elements.densityCaption.textContent = state.n === 1
-    ? "The ground state has no interior node: the particle is most likely near the centre."
-    : `State n = ${state.n} has ${state.n - 1} interior node${state.n - 1 === 1 ? "" : "s"}; each lobe carries an equal share of the probability.`;
+  elements.densityTitle.textContent = "|ψₙ(x)|² · n = 1, 2, 3";
+  elements.densityIntegral.textContent = "∫|ψₙ|² dx = 1 for each state";
+  elements.densityCaption.textContent = "All three states vanish at x = 0 and x = a; each increase in n adds an interior node.";
+  elements.energySelection.textContent = `selected n = ${state.n}`;
+  elements.energyCaption.textContent = `${particleLabel}, a = ${state.widthNm.toFixed(2)} nm. Changing either rescales the spectrum while Eₙ ∝ n² remains.`;
   elements.boxCanvas.setAttribute("aria-label", `Interactive particle-in-a-box state n equals ${state.n}, with ${state.n - 1} interior nodes. Use the arrow keys to change the quantum number.`);
-  elements.densityCanvas.setAttribute("aria-label", `Probability density for particle-in-a-box state n equals ${state.n} across a ${state.widthNm.toFixed(2)} nanometre well.`);
+  elements.densityCanvas.setAttribute("aria-label", "Comparison of probability densities for particle-in-a-box states n equals 1, 2 and 3; all vanish at both walls.");
+  elements.energyCanvas.setAttribute("aria-label", `Energy versus quantum number from n equals 1 to 8 for a ${state.widthNm.toFixed(2)} nanometre well and the selected ${particleLabel}; state n equals ${state.n} is highlighted.`);
   elements.uncertaintyCanvas.setAttribute("aria-label", `Uncertainty product ratios from n equals 1 to 8; the selected state n equals ${state.n} is highlighted.`);
 
   elements.particleButtons.forEach((button) => {
@@ -376,6 +445,7 @@ function render() {
   updateReadouts();
   drawBox();
   drawDensity();
+  drawEnergy();
   drawUncertainty();
   updateValidation();
 }
@@ -431,15 +501,18 @@ elements.boxCanvas.addEventListener("keydown", (event) => {
 const resizeObserver = new ResizeObserver(() => {
   drawBox();
   drawDensity();
+  drawEnergy();
   drawUncertainty();
 });
 resizeObserver.observe(elements.boxCanvas.parentElement);
 resizeObserver.observe(elements.densityCanvas.parentElement);
+resizeObserver.observe(elements.energyCanvas.parentElement);
 resizeObserver.observe(elements.uncertaintyCanvas.parentElement);
 
 window.addEventListener("resize", () => {
   drawBox();
   drawDensity();
+  drawEnergy();
   drawUncertainty();
 });
 

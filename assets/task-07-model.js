@@ -58,3 +58,7 @@ export function sampleState(n, count = 240) {
 export function uncertaintySweep(maxN = 8, widthNm = 1, particle = "electron") {
   return Array.from({ length: maxN }, (_, index) => stateFor(index + 1, widthNm, particle));
 }
+
+export function energySweep(maxN = 8, widthNm = 1, particle = "electron") {
+  return Array.from({ length: maxN }, (_, index) => stateFor(index + 1, widthNm, particle));
+}
