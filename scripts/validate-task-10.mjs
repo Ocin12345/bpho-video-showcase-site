@@ -1,10 +1,12 @@
 import assert from "node:assert/strict";
 import {
   angularCombination,
+  complexAbsSquared,
   coefficientNorm,
   h2MolecularOrbital,
   h3MolecularOrbital,
   hydrogenicEnergyEv,
+  hydrogenicOrbital,
   mMorphCoefficients,
   neonElectronCount,
   neonElectronDensity,
@@ -46,6 +48,32 @@ function angularInnerProduct(l, leftCoefficients, rightCoefficients = leftCoeffi
   return { re, im };
 }
 
+function cartesianDensityGrid(n, l, m, nuclearCharge, extent, size) {
+  const step = (2 * extent) / size;
+  const values = [];
+  let integral = 0;
+  let minimum = Infinity;
+  let maximum = 0;
+  let invalid = 0;
+  for (let zIndex = 0; zIndex < size; zIndex += 1) {
+    for (let yIndex = 0; yIndex < size; yIndex += 1) {
+      for (let xIndex = 0; xIndex < size; xIndex += 1) {
+        const x = -extent + (xIndex + 0.5) * step;
+        const y = -extent + (yIndex + 0.5) * step;
+        const z = -extent + (zIndex + 0.5) * step;
+        const density = complexAbsSquared(hydrogenicOrbital(n, l, m, x, y, z, nuclearCharge));
+        if (!Number.isFinite(density) || density < 0) invalid += 1;
+        const safeDensity = Number.isFinite(density) && density >= 0 ? density : 0;
+        values.push(safeDensity);
+        minimum = Math.min(minimum, safeDensity);
+        maximum = Math.max(maximum, safeDensity);
+        integral += safeDensity;
+      }
+    }
+  }
+  return { values, integral: integral * step ** 3, minimum, maximum, invalid };
+}
+
 const results = [];
 function check(name, computed, target, tolerance) {
   assert.ok(Number.isFinite(computed), `${name}: computed value is not finite`);
@@ -61,6 +89,66 @@ for (const [n, l] of [[1, 0], [2, 0], [2, 1], [3, 0], [3, 1], [3, 2], [4, 0], [4
   check(`radial norm n=${n}, l=${l}`, norm, 1, 2e-7);
   assert.deepEqual(orbitalNodeCounts(n, l), { radial: n - l - 1, angular: l, total: n - 1 });
 }
+
+for (const nuclearCharge of [1, 2, 5, 10]) {
+  const norm = simpsonIntegrate((r) => {
+    const radial = radialWavefunction(3, 2, r, nuclearCharge);
+    return r * r * radial * radial;
+  }, 0, 180 / nuclearCharge);
+  check(`hydrogenic 3d radial norm Z=${nuclearCharge}`, norm, 1, 2e-7);
+  check(`hydrogenic 3d energy Z=${nuclearCharge}`, hydrogenicEnergyEv(3, nuclearCharge), -13.605693122994 * nuclearCharge ** 2 / 9, 1e-12);
+}
+
+const cartesianCases = [
+  { n: 1, l: 0, m: 0, nuclearCharge: 1, extent: 16, size: 48, tolerance: 1.2e-2 },
+  { n: 2, l: 1, m: 0, nuclearCharge: 1, extent: 24, size: 56, tolerance: 2e-3 },
+  { n: 3, l: 2, m: 0, nuclearCharge: 1, extent: 32, size: 64, tolerance: 2e-3 },
+  { n: 3, l: 2, m: 2, nuclearCharge: 1, extent: 32, size: 64, tolerance: 2e-3 },
+  { n: 4, l: 3, m: 0, nuclearCharge: 1, extent: 44, size: 72, tolerance: 3e-3 },
+];
+
+for (const densityCase of cartesianCases) {
+  const grid = cartesianDensityGrid(
+    densityCase.n,
+    densityCase.l,
+    densityCase.m,
+    densityCase.nuclearCharge,
+    densityCase.extent,
+    densityCase.size,
+  );
+  check(
+    `3D Cartesian normalization n=${densityCase.n}, l=${densityCase.l}, m=${densityCase.m}`,
+    grid.integral,
+    1,
+    densityCase.tolerance,
+  );
+  assert.equal(grid.invalid, 0, `3D density grid n=${densityCase.n}, l=${densityCase.l}, m=${densityCase.m} contains invalid values`);
+  assert.ok(grid.minimum >= 0 && grid.maximum > 0, `3D density grid n=${densityCase.n}, l=${densityCase.l}, m=${densityCase.m} must be finite and non-negative`);
+  const displayed = grid.values.map((value) => value / grid.maximum);
+  assert.ok(displayed.every((value) => value >= 0 && value <= 1 + 1e-12), `3D display normalization n=${densityCase.n}, l=${densityCase.l}, m=${densityCase.m} must stay within 0 to 1`);
+  results.push({
+    name: `3D density integrity n=${densityCase.n}, l=${densityCase.l}, m=${densityCase.m}`,
+    computed: 1,
+    target: 1,
+    tolerance: 0,
+  });
+}
+
+const baseDensityGrid = cartesianDensityGrid(3, 2, 0, 1, 16, 24);
+const mTwoDensityGrid = cartesianDensityGrid(3, 2, 2, 1, 16, 24);
+const pDensityGrid = cartesianDensityGrid(2, 1, 0, 1, 16, 24);
+function relativeGridDifference(left, right) {
+  let difference = 0;
+  let scale = 0;
+  for (let index = 0; index < left.length; index += 1) {
+    difference += Math.abs(left[index] - right[index]);
+    scale += Math.abs(left[index]) + Math.abs(right[index]);
+  }
+  return difference / Math.max(scale, Number.EPSILON);
+}
+assert.ok(relativeGridDifference(baseDensityGrid.values, mTwoDensityGrid.values) > 1e-5, "changing integer m must change the sampled 3D field");
+assert.ok(relativeGridDifference(baseDensityGrid.values, pDensityGrid.values) > 1e-5, "changing n and l must change the sampled 3D field");
+results.push({ name: "3D sampled field responds to n, l, and m", computed: 1, target: 1, tolerance: 0 });
 
 for (let l = 0; l <= 3; l += 1) {
   for (let m = -l; m <= l; m += 1) {

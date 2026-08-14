@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="An interactive, validated first investigation of hydrogenic-orbital superpositions, an effective-charge neon atom, and two- and three-centre molecular orbitals for BPhO Computational Challenge Task 10."
+      content="An interactive, validated hydrogenic atom laboratory with integer quantum-number controls, probability-density maps, and clearly labeled Task 10 extensions."
     />
     <meta name="theme-color" content="#ffffff" />
-    <title>Task 10 — Orbital Combinations | BPhO Computational Challenge 2026</title>
+    <title>Task 10 — Hydrogenic Orbitals | BPhO Computational Challenge 2026</title>
     <link
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%23f6f3ec'/%3E%3Cellipse cx='32' cy='32' rx='24' ry='10' fill='none' stroke='%232b6987' stroke-width='4'/%3E%3Cellipse cx='32' cy='32' rx='10' ry='24' fill='none' stroke='%23c8624b' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%2323211d'/%3E%3C/svg%3E"
@@ -18,32 +18,52 @@
     <link rel="stylesheet" href="../assets/task-10.css?v=20260814b" />
   </head>
   <body class="task10-page" data-task="10">
-    <a class="skip-link" href="#orbital-lab">Skip to the orbital laboratory</a>
+    <a class="skip-link" href="#orbital-lab">Skip to the simulation</a>
 
     <header class="lab-header">
       <a class="back-link" href="../tasks.html" aria-label="Return to all tasks">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6" /></svg>
         All tasks
       </a>
-      <div class="lab-identity"><span>Task 10</span><strong>Orbital combinations</strong></div>
+      <div class="lab-identity"><span>Task 10</span><strong>Hydrogenic orbitals</strong></div>
       <nav class="section-nav" aria-label="Task 10 sections">
-        <a href="#orbital-lab" aria-current="page">Orbital</a>
+        <a href="#orbital-lab" aria-current="page">Simulation</a>
         <a href="#structure">Structure</a>
-        <a href="#combinations">Models</a>
-        <a href="#validation">Checks</a>
+        <a href="#extensions">Extensions</a>
+        <a href="#validation">Validation</a>
       </nav>
     </header>
 
     <main class="task10-main lab-main">
       <section class="orbital-hero simulation-shell" id="orbital-lab" aria-labelledby="page-title">
         <div class="orbital-workspace simulation-workspace">
-          <section class="orbital-stage-panel simulation-stage" aria-label="Interactive orbital probability density">
+          <figure class="official-probability-panel" aria-labelledby="official-probability-title">
+            <header class="official-panel-heading">
+              <div><span>Official Task 10 · 2D slice</span><h2 id="official-probability-title" data-probability-title>Hydrogenic probability density</h2></div>
+              <strong data-probability-scale>display 0 → 1</strong>
+            </header>
+            <div class="probability-plot" aria-label="Scientific probability-density heatmap">
+              <canvas id="probability-canvas" role="img" aria-label="Two-dimensional probability-density map for the selected hydrogenic state"></canvas>
+            </div>
+            <div class="probability-plane-controls">
+              <div class="slice-plane-picker" role="group" aria-label="Probability-density slice plane">
+                <span>Slice at coordinate 0</span>
+                <button type="button" data-slice-plane="xy" aria-pressed="false">x–y</button>
+                <button type="button" data-slice-plane="xz" aria-pressed="true">x–z</button>
+                <button type="button" data-slice-plane="yz" aria-pressed="false">y–z</button>
+              </div>
+              <p>Relative normalized display intensity: 0 = zero density, 1 = maximum in this plotted domain.</p>
+            </div>
+            <figcaption data-probability-caption>Brightness represents |ψ|² for one electron. Dark nodal regions correspond to zero probability density.</figcaption>
+          </figure>
+
+          <section class="orbital-stage-panel simulation-stage" aria-label="Interactive hydrogenic probability density">
             <div class="orbital-viewport" data-orbital-viewport>
               <canvas
                 id="orbital-canvas"
                 tabindex="0"
                 role="img"
-                aria-label="Interactive three-dimensional probability-density sample of a 3d hydrogenic orbital. Drag to rotate; use arrow keys when focused."
+                aria-label="Interactive three-dimensional probability-density sample of a 3d hydrogenic orbital with Z equals 1, n equals 3, l equals 2, and m equals 0. Drag to rotate; use arrow keys when focused."
               ></canvas>
               <canvas id="orbital-fallback" role="img" aria-label="Two-dimensional fallback projection of the selected orbital" hidden></canvas>
               <div class="stage-loading" data-stage-loading role="status">
@@ -51,22 +71,28 @@
                 Building density sample
               </div>
               <div class="stage-overlay stage-overlay--top">
-                <span data-scene-symbol>ψ<sub>3,2</sub></span>
-                <strong data-scene-detail>m path = −2.00</strong>
+                <span data-scene-symbol>ψ<sub>3,2,0</sub></span>
+                <strong data-scene-detail>Z = 1 · n = 3 · ℓ = 2 · m = 0</strong>
               </div>
               <p class="renderer-status"><i aria-hidden="true"></i><span data-renderer-status>Preparing local WebGL…</span></p>
               <p class="stage-dimension" aria-hidden="true">3D</p>
               <div class="stage-overlay stage-overlay--bottom">
-                <span><i class="phase-key phase-key--positive"></i><b data-positive-key>phase 0</b></span>
-                <span><i class="phase-key phase-key--negative"></i><b data-negative-key>phase π</b></span>
-                <span class="density-key"><i></i><b>point density ∝ probability</b></span>
+                <span><i class="phase-key phase-key--positive"></i><b data-positive-key>high |ψ|²</b></span>
+                <span><i class="phase-key phase-key--negative"></i><b data-negative-key>node / zero</b></span>
+                <span class="density-key"><i></i><b data-density-sample-legend>density from |ψ|²</b></span>
+                <span class="surface-key"><i></i><b data-density-legend>iso-surfaces 0.08 · 0.20 · 0.45</b></span>
               </div>
+              <div class="stage-axis-legend" aria-hidden="true"><span><i class="axis-key axis-key--x"></i>x / a₀</span><span><i class="axis-key axis-key--y"></i>y / a₀</span><span><i class="axis-key axis-key--z"></i>z / a₀</span></div>
               <div class="nucleus-labels" data-nucleus-labels aria-hidden="true"></div>
             </div>
 
             <footer class="stage-toolbar">
-              <p><span data-stage-hint>Drag to rotate · arrow keys rotate · no scroll capture</span></p>
+              <p><span data-stage-hint>Drag to rotate · arrow keys rotate · one electron around one nucleus</span></p>
               <div>
+                <div class="stage-mode-picker" role="group" aria-label="3D density rendering mode">
+                  <button type="button" data-mode3d="surface" aria-pressed="true">Surfaces</button>
+                  <button type="button" data-mode3d="points" aria-pressed="false">Points</button>
+                </div>
                 <button type="button" data-camera="zoom-out" aria-label="Zoom out">−</button>
                 <button type="button" data-camera="reset">Reset view</button>
                 <button type="button" data-camera="zoom-in" aria-label="Zoom in">+</button>
@@ -77,27 +103,55 @@
           <aside class="orbital-controls simulation-controls" aria-label="Orbital model controls">
             <header class="control-introduction">
               <div class="control-introduction__topline">
-                <span>Task 10 · hydrogenic basis</span>
+                <span>Task 10 · hydrogenic atom</span>
                 <button class="control-reset" type="button" data-reset-state>Reset lab</button>
               </div>
-              <h1 id="page-title" data-stage-title>3d magnetic-state morph</h1>
-              <p>Morph between magnetic substates, or combine the same normalized basis into an atom and simple molecules.</p>
+              <h1 id="page-title" data-stage-title>Hydrogenic probability density</h1>
+              <p>Start with one electron bound to a nucleus of charge <i>Z</i>. Choose integer <i>n</i>, <i>ℓ</i>, and <i>m</i>; the cloud shows the normalized <i>|ψ|²</i>.</p>
             </header>
 
             <div class="model-picker" role="group" aria-label="Orbital model">
-              <button type="button" data-model="morph" aria-pressed="true"><span>01</span><strong>m morph</strong><small>one centre</small></button>
-              <button type="button" data-model="neon" aria-pressed="false"><span>02</span><strong>Ne atom</strong><small>10 electrons</small></button>
-              <button type="button" data-model="h2" aria-pressed="false"><span>03</span><strong>H₂</strong><small>two centres</small></button>
-              <button type="button" data-model="h3" aria-pressed="false"><span>04</span><strong>H₃⁺</strong><small>three centres</small></button>
+              <button type="button" data-model="hydrogenic" aria-pressed="true"><span>01</span><strong>Hydrogenic</strong><small>one electron</small></button>
+              <button type="button" data-model="morph" aria-pressed="false"><span>02</span><strong>m morph</strong><small>superposition</small></button>
+              <button type="button" data-model="neon" aria-pressed="false"><span>03</span><strong>Ne atom</strong><small>10 electrons</small></button>
+              <button type="button" data-model="h2" aria-pressed="false"><span>04</span><strong>H₂</strong><small>two centres</small></button>
+              <button type="button" data-model="h3" aria-pressed="false"><span>05</span><strong>H₃⁺</strong><small>three centres</small></button>
             </div>
 
             <section class="model-explainer" aria-live="polite">
               <div class="model-explainer__topline">
                 <span>Read the current view</span>
-                <strong data-model-label>m morph</strong>
+                <strong data-model-label>one-electron basis</strong>
               </div>
-              <p data-model-insight>Change <i>m</i> to change the angular pattern; the radial envelope stays fixed within a subshell.</p>
-              <p class="model-explainer__formula" data-model-formula>ψ = R<sub>nℓ</sub>(r)Y<sub>ℓm</sub>(θ,φ)</p>
+              <p data-model-insight>Change <i>n</i>, <i>ℓ</i>, or the integer <i>m</i> to inspect a single hydrogenic basis state.</p>
+              <p class="model-explainer__formula" data-model-formula>ψ<sub>nℓm</sub> = R<sub>nℓ</sub>(r;Z)Y<sub>ℓ</sub><sup>m</sup>(θ,φ)</p>
+            </section>
+
+            <section class="control-set control-set--hydrogenic" data-control-set="hydrogenic">
+              <label class="range-control z-control" for="nuclear-charge">
+                <span><b>Nuclear charge, Z</b><output for="nuclear-charge" data-z-output>1</output></span>
+                <input id="nuclear-charge" data-z-control type="range" min="1" max="10" step="1" value="1" />
+                <small><span>Z = 1 · H</span><span>integer charge</span><span>Z = 10</span></small>
+              </label>
+              <div class="orbital-presets orbital-presets--hydrogenic" role="group" aria-label="Hydrogenic orbital presets">
+                <span>Quick state</span>
+                <button type="button" data-orbital-preset="1,0">1s</button>
+                <button type="button" data-orbital-preset="2,1">2p</button>
+                <button type="button" data-orbital-preset="3,2" aria-pressed="true">3d</button>
+                <button type="button" data-orbital-preset="3,2,2">3d · m=2</button>
+                <button type="button" data-orbital-preset="4,3">4f</button>
+              </div>
+              <div class="paired-selects paired-selects--quantum">
+                <label for="principal-number"><span>Principal number, n</span><select id="principal-number" data-n-control><option value="1">1</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option></select></label>
+                <label for="angular-number"><span>Angular number, ℓ</span><select id="angular-number" data-l-control><option value="0">0 · s</option><option value="1">1 · p</option><option value="2" selected>2 · d</option></select></label>
+                <label for="magnetic-number"><span>Magnetic number, m <em>integer</em></span><select id="magnetic-number" data-m-select aria-describedby="magnetic-number-note"><option value="-2">−2</option><option value="-1">−1</option><option value="0" selected>0</option><option value="1">+1</option><option value="2">+2</option></select></label>
+              </div>
+              <p class="control-boundary magnetic-number-note" id="magnetic-number-note"><strong>Allowed values:</strong> <i>m</i> = −ℓ, …, 0, …, +ℓ. The selector is discrete; fractional <i>m</i> is not a quantum number.</p>
+              <section class="equation-stack" aria-label="Hydrogenic equations">
+                <p>ψ<sub>nℓm</sub> = R<sub>nℓ</sub>(r;Z)Y<sub>ℓ</sub><sup>m</sup>(θ,φ)</p>
+                <p>P = |ψ<sub>nℓm</sub>|²</p>
+                <p>E<sub>n</sub> = −13.6057 Z²/n² eV</p>
+              </section>
             </section>
 
             <section class="control-set" data-control-set="morph">
@@ -107,10 +161,7 @@
                 <button type="button" data-orbital-preset="3,2" aria-pressed="true">3d</button>
                 <button type="button" data-orbital-preset="4,3">4f</button>
               </div>
-              <div class="paired-selects">
-                <label for="principal-number"><span>Principal number, n</span><select id="principal-number" data-n-control><option value="1">1</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option></select></label>
-                <label for="angular-number"><span>Angular number, ℓ</span><select id="angular-number" data-l-control><option value="0">0 · s</option><option value="1">1 · p</option><option value="2" selected>2 · d</option></select></label>
-              </div>
+              <p class="control-boundary morph-basis-note"><strong>Basis held:</strong> use the hydrogenic quick states to choose <i>n</i> and <i>ℓ</i>, then return here to morph neighboring integer <i>m</i> states.</p>
               <label class="range-control" for="m-path">
                 <span><b>Coherent path through m</b><output for="m-path" data-m-output>−2.00</output></span>
                 <input id="m-path" data-m-control type="range" min="-2" max="2" step="0.01" value="-2" />
@@ -122,6 +173,7 @@
                 <small><span>0°</span><span>interference</span><span>360°</span></small>
               </label>
               <button class="morph-play" type="button" data-morph-play aria-pressed="false"><span data-play-icon aria-hidden="true">▶</span><strong data-play-label>Animate m path</strong><small>parameter sweep—not time evolution</small></button>
+              <p class="control-boundary magnetic-morph-note"><strong>Important:</strong> intermediate path values are coherent superpositions of neighboring integer-<i>m</i> states, not fractional quantum numbers.</p>
             </section>
 
             <section class="control-set" data-control-set="neon" hidden>
@@ -172,10 +224,10 @@
             </section>
 
             <dl class="live-ledger" aria-live="polite">
-              <div><dt data-ledger-label-1>State</dt><dd data-ledger-value-1>3d · m = −2</dd></div>
-              <div><dt data-ledger-label-2>Coefficient norm</dt><dd data-ledger-value-2>1.000000</dd></div>
+              <div><dt data-ledger-label-1>State</dt><dd data-ledger-value-1>Z = 1 · 3d · m = 0</dd></div>
+              <div><dt data-ledger-label-2>Energy</dt><dd data-ledger-value-2>−1.512 eV</dd></div>
               <div><dt data-ledger-label-3>Nodes</dt><dd data-ledger-value-3>0 radial · 2 angular</dd></div>
-              <div><dt data-ledger-label-4>Energy</dt><dd data-ledger-value-4>−1.512 eV</dd></div>
+              <div><dt data-ledger-label-4>Normalization</dt><dd data-ledger-value-4>1.000000</dd></div>
             </dl>
           </aside>
         </div>
@@ -183,17 +235,19 @@
 
       <section class="structure-section" id="structure" aria-labelledby="structure-title">
         <header class="task10-section-heading">
-          <div><span>01 / basis anatomy</span><h2 id="structure-title">Separate radius from angle.</h2></div>
-          <p data-structure-summary>The m sweep changes only Y<sub>ℓm</sub>; every state in the selected subshell shares the same normalized R<sub>nℓ</sub>.</p>
+          <div><span>02 / structure</span><h2 id="structure-title">Separate radius from angle.</h2></div>
+          <p data-structure-summary>The 2D map shows <i>|ψ|²</i> in the x–z plane; the radial plot shows the shared envelope <i>r²|R<sub>nℓ</sub>|²</i>.</p>
         </header>
-        <div class="structure-grid">
+        <div class="structure-grid structure-grid--supporting">
           <figure class="structure-figure radial-figure">
             <header><div><span data-radial-kicker>Hydrogenic radial probability</span><h3 data-radial-title>P<sub>3d</sub>(r) = r²|R<sub>32</sub>|²</h3></div><strong data-radial-integral>∫P dr = 1.00000</strong></header>
             <canvas id="radial-canvas" role="img" aria-label="Normalized radial probability for the selected orbital"></canvas>
             <figcaption data-radial-caption>Area under the curve is one. The 3d radial function has no radial nodes.</figcaption>
           </figure>
+        </div>
+        <div class="signed-evidence">
           <figure class="structure-figure slice-figure">
-            <header><div><span>Wavefunction section</span><h3 data-slice-title>x–z plane · signed ψ</h3></div><strong data-slice-scale>±18 a₀</strong></header>
+            <header><div><span>Optional signed-wavefunction evidence</span><h3 data-slice-title>x–z plane · signed ψ</h3></div><strong data-slice-scale>±18 a₀</strong></header>
             <canvas id="slice-canvas" role="img" aria-label="Signed wavefunction cross-section through the selected state"></canvas>
             <div class="slice-key"><span><i class="phase-key phase-key--positive"></i>positive / phase 0</span><span><i class="phase-key phase-key--negative"></i>negative / phase π</span><span><i class="slice-node-key"></i>node</span></div>
             <figcaption data-slice-caption>Colour carries phase; brightness carries |ψ|². Low-amplitude boundaries reveal nodes.</figcaption>
@@ -201,39 +255,46 @@
         </div>
       </section>
 
-      <section class="combinations-section" id="combinations" aria-labelledby="combinations-title">
+      <section class="combinations-section" id="extensions" aria-labelledby="combinations-title">
         <header class="task10-section-heading task10-section-heading--wide">
-          <div><span>02 / extensions</span><h2 id="combinations-title">Three meanings of “combine”.</h2></div>
-          <p>The algebra changes with the physical question. Amplitudes interfere inside one orbital; occupied independent orbitals contribute probabilities to an electron density.</p>
+          <div><span>03 / extensions</span><h2 id="combinations-title">Four deliberate extensions.</h2></div>
+          <p>The base atom stays visible as the reference. Each extension names what is being combined, what the control changes, and where the approximation begins.</p>
         </header>
         <div class="combination-grid">
           <article class="combination-card combination-card--morph">
-            <span>Magnetic-state superposition</span>
-            <h3>Coherent amplitudes</h3>
+            <span>Extension 01 · magnetic state</span>
+            <h3>Coherent m morph</h3>
             <p class="combination-equation">ψ = cos α Y<sub>ℓm</sub> + e<sup>iδ</sup> sin α Y<sub>ℓ,m+1</sub></p>
-            <p>At integer endpoints this is an L̂<sub>z</sub> eigenstate. Between them it is a normalized superposition, so “fractional m” is only a path label.</p>
+            <p>Animate between neighboring integer states. Intermediate values are superpositions—not fractional quantum numbers.</p>
             <button type="button" data-jump-model="morph">Open the m morph</button>
           </article>
           <article class="combination-card combination-card--atom">
-            <span>Multi-electron atom</span>
-            <h3>Occupied-orbital density</h3>
+            <span>Extension 02 · neon approximation</span>
+            <h3>Core + valence</h3>
             <p class="combination-equation">ρ<sub>Ne</sub>(r) ≈ Σ<sub>i</sub> N<sub>i</sub>|ψ<sub>i</sub>(Z<sub>eff</sub>)|²</p>
             <p>Effective charge mimics screening. Occupations enforce the shell count, but a product of hydrogenic orbitals omits dynamical electron correlation.</p>
             <button type="button" data-jump-model="neon">Inspect neon</button>
           </article>
           <article class="combination-card combination-card--molecule">
-            <span>Multi-centre molecule</span>
-            <h3>Linear combination of AOs</h3>
+            <span>Extension 03 · two centres</span>
+            <h3>H₂ bonding / antibonding</h3>
             <p class="combination-equation">ψ = Σ<sub>A</sub> c<sub>A</sub>φ<sub>A</sub> · cᵀSc = 1</p>
-            <p>Atomic amplitudes interfere across nuclei. The overlap matrix S—not Σc² alone—sets the molecular-orbital normalization.</p>
-            <div><button type="button" data-jump-model="h2">Build H₂</button><button type="button" data-jump-model="h3">Build H₃⁺</button></div>
+            <p>Switch between σ<sub>g</sub> bonding and σ<sub>u</sub>* antibonding, then change the internuclear distance.</p>
+            <button type="button" data-jump-model="h2">Build H₂</button>
+          </article>
+          <article class="combination-card combination-card--molecule">
+            <span>Extension 04 · three centres</span>
+            <h3>H₃⁺ symmetric MO</h3>
+            <p class="combination-equation">ψ = N(1s<sub>A</sub> + 1s<sub>B</sub> + 1s<sub>C</sub>)</p>
+            <p>Explore the equilateral three-centre model with a side-length control and overlap-matrix normalization.</p>
+            <button type="button" data-jump-model="h3">Build H₃⁺</button>
           </article>
         </div>
       </section>
 
       <section class="validation-section" id="validation" aria-labelledby="validation-title">
         <header class="task10-section-heading">
-          <div><span>03 / numerical evidence</span><h2 id="validation-title">The pictures have checks.</h2></div>
+          <div><span>04 / validation</span><h2 id="validation-title">The pictures have checks.</h2></div>
           <p>Quadrature and analytic overlap tests run from the same functions used by the browser visualisation. Display tolerances are tighter than the plotted resolution.</p>
         </header>
         <div class="validation-layout">
@@ -263,7 +324,7 @@
           </aside>
         </div>
         <div class="method-strip">
-          <article><span>Hydrogenic basis</span><p>ψ<sub>nℓm</sub>(r,θ,φ) = R<sub>nℓ</sub>(r)Y<sub>ℓm</sub>(θ,φ)</p></article>
+          <article><span>Hydrogenic basis</span><p>ψ<sub>nℓm</sub> = R<sub>nℓ</sub>(r;Z)Y<sub>ℓ</sub><sup>m</sup>(θ,φ)</p></article>
           <article><span>Node count</span><p>n − ℓ − 1 radial · ℓ angular · n − 1 total</p></article>
           <article><span>Energy model</span><p>E<sub>n</sub> = −13.6057 Z²/n² eV</p></article>
         </div>

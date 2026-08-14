@@ -27,6 +27,7 @@ const TAU = Math.PI * 2;
 const SUBSHELLS = ["s", "p", "d", "f", "g"];
 const PHASE_BLUE = [23, 105, 176];
 const PHASE_RED = [200, 88, 98];
+const PROBABILITY_BLUE = [33, 101, 137];
 const CORE_GOLD = [174, 133, 54];
 const VALENCE_BLUE = [23, 105, 176];
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -50,10 +51,17 @@ const elements = {
   sceneDetail: document.querySelector("[data-scene-detail]"),
   positiveKey: document.querySelector("[data-positive-key]"),
   negativeKey: document.querySelector("[data-negative-key]"),
+  densityLegend: document.querySelector("[data-density-legend]"),
+  densitySampleLegend: document.querySelector("[data-density-sample-legend]"),
+  probabilityPlaneButtons: document.querySelectorAll("[data-slice-plane]"),
+  densityModeButtons: document.querySelectorAll("[data-mode3d]"),
   n: document.querySelector("[data-n-control]"),
   l: document.querySelector("[data-l-control]"),
   m: document.querySelector("[data-m-control]"),
   phase: document.querySelector("[data-phase-control]"),
+  z: document.querySelector("[data-z-control]"),
+  zOutput: document.querySelector("[data-z-output]"),
+  mSelect: document.querySelector("[data-m-select]"),
   mOutput: document.querySelector("[data-m-output]"),
   phaseOutput: document.querySelector("[data-phase-output]"),
   mMin: document.querySelector("[data-m-min]"),
@@ -68,8 +76,12 @@ const elements = {
   h3Distance: document.querySelector("[data-h3-distance]"),
   h3DistanceOutput: document.querySelector("[data-h3-distance-output]"),
   h3Normalization: document.querySelector("[data-h3-normalization]"),
+  probability: document.querySelector("#probability-canvas"),
   radial: document.querySelector("#radial-canvas"),
   slice: document.querySelector("#slice-canvas"),
+  probabilityTitle: document.querySelector("[data-probability-title]"),
+  probabilityScale: document.querySelector("[data-probability-scale]"),
+  probabilityCaption: document.querySelector("[data-probability-caption]"),
   radialKicker: document.querySelector("[data-radial-kicker]"),
   radialTitle: document.querySelector("[data-radial-title]"),
   radialIntegral: document.querySelector("[data-radial-integral]"),
@@ -87,9 +99,13 @@ const ledger = Array.from({ length: 4 }, (_, index) => ({
 }));
 
 const state = {
-  model: "morph",
+  model: "hydrogenic",
+  z: 1,
   n: 3,
   l: 2,
+  m: 0,
+  slicePlane: "xz",
+  renderMode: "surface",
   mPath: -2,
   relativePhase: 0,
   neonComponent: "total",
@@ -108,9 +124,13 @@ const state = {
 };
 
 const DEFAULT_LAB_STATE = Object.freeze({
-  model: "morph",
+  model: "hydrogenic",
+  z: 1,
   n: 3,
   l: 2,
+  m: 0,
+  slicePlane: "xz",
+  renderMode: "surface",
   mPath: -2,
   relativePhase: 0,
   neonComponent: "total",
@@ -131,6 +151,8 @@ let orbitalGroup;
 let points;
 let pointMaterial;
 let nucleusGroup;
+let surfaceGroup;
+let axisGroup;
 let resizeObserver;
 let graphTimer = 0;
 let sceneTimer = 0;
@@ -202,6 +224,20 @@ function updateLChoices() {
     return option;
   }));
   state.l = current;
+  updateMChoices();
+}
+
+function updateMChoices() {
+  const current = clamp(Math.round(state.m), -state.l, state.l);
+  state.m = current;
+  elements.mSelect.replaceChildren(...Array.from({ length: 2 * state.l + 1 }, (_, index) => {
+    const value = index - state.l;
+    const option = document.createElement("option");
+    option.value = String(value);
+    option.textContent = value > 0 ? `+${value}` : String(value).replace("-", "−");
+    option.selected = value === current;
+    return option;
+  }));
 }
 
 function updateMorphRange(reset = false) {
@@ -223,8 +259,11 @@ function setPressed(selector, predicate) {
 }
 
 function updateControlsAndText() {
+  elements.z.value = String(state.z);
+  elements.zOutput.textContent = String(state.z);
   elements.n.value = String(state.n);
   elements.l.value = String(state.l);
+  elements.mSelect.value = String(state.m);
   elements.m.value = String(state.mPath);
   elements.phase.value = String(Math.round((state.relativePhase * 180) / Math.PI));
   elements.mOutput.textContent = signed(state.mPath);
@@ -236,9 +275,26 @@ function updateControlsAndText() {
   elements.morphPlay.setAttribute("aria-pressed", String(state.playing));
   elements.playIcon.textContent = state.playing ? "Ⅱ" : "▶";
   elements.playLabel.textContent = state.playing ? "Pause m path" : "Animate m path";
+  elements.densityLegend.textContent = state.renderMode === "surface"
+    ? "iso-surfaces 0.08 · 0.20 · 0.45 of max |ψ|²"
+    : "weighted points sampled from |ψ|²";
+  elements.densitySampleLegend.textContent = state.renderMode === "surface" ? "surface opacity from |ψ|²" : "point density ∝ |ψ|²";
+  if (webglAvailable) {
+    elements.rendererStatus.textContent = state.renderMode === "surface"
+      ? "Local WebGL · sampled |ψ|²"
+      : "Local WebGL · weighted density sample";
+  }
 
   setPressed("[data-model]", (button) => button.dataset.model === state.model);
-  setPressed("[data-orbital-preset]", (button) => button.dataset.orbitalPreset === `${state.n},${state.l}`);
+  setPressed("[data-slice-plane]", (button) => button.dataset.slicePlane === state.slicePlane);
+  setPressed("[data-mode3d]", (button) => button.dataset.mode3d === state.renderMode);
+  setPressed("[data-orbital-preset]", (button) => {
+    const [nText, lText, mText] = button.dataset.orbitalPreset.split(",");
+    const n = Number(nText);
+    const l = Number(lText);
+    const m = mText === undefined ? null : Number(mText);
+    return state.n === n && state.l === l && (m === null || state.m === m);
+  });
   setPressed("[data-neon-component]", (button) => button.dataset.neonComponent === state.neonComponent);
   setPressed("[data-h2-parity]", (button) => Number(button.dataset.h2Parity) === state.h2Parity);
 
@@ -246,7 +302,25 @@ function updateControlsAndText() {
     controlSet.hidden = controlSet.dataset.controlSet !== state.model;
   });
 
-  if (state.model === "morph") {
+  if (state.model === "hydrogenic") {
+    const nodes = orbitalNodeCounts(state.n, state.l);
+    elements.stageTitle.textContent = "Hydrogenic probability density";
+    elements.sceneSymbol.innerHTML = `ψ<sub>${state.n},${state.l},${state.m}</sub>`;
+    elements.sceneDetail.textContent = `Z = ${state.z} · n = ${state.n} · ℓ = ${state.l} · m = ${state.m > 0 ? "+" : ""}${state.m}`;
+    elements.positiveKey.textContent = "high |ψ|²";
+    elements.negativeKey.textContent = "node / zero";
+    elements.modelLabel.textContent = "one-electron basis";
+    elements.modelInsight.innerHTML = "One electron moves in a central Coulomb field. <i>Z</i> contracts the radial scale; integer <i>m</i> changes the angular pattern.";
+    elements.modelFormula.innerHTML = "ψ<sub>nℓm</sub> = R<sub>nℓ</sub>(r;Z)Y<sub>ℓ</sub><sup>m</sup>(θ,φ)";
+    elements.stageHint.textContent = "Drag to rotate · arrow keys rotate · one electron around one nucleus";
+    setLedger([
+      ["State", `Z = ${state.z} · ${orbitalName()} · m = ${state.m > 0 ? "+" : ""}${state.m}`],
+      ["Energy", `${minus(hydrogenicEnergyEv(state.n, state.z))} eV`],
+      ["Nodes", `${nodes.radial} radial · ${nodes.angular} angular`],
+      ["Normalization", "1.000000"],
+    ]);
+    elements.structureSummary.innerHTML = `The 2D map is <i>|ψ<sub>${state.n}${state.l}${state.m}</sub>|²</i> in the x–z plane. <i>Z</i> changes the radial scale; <i>m</i> changes only the angular factor.`;
+  } else if (state.model === "morph") {
     const coefficients = mMorphCoefficients(state.l, state.mPath, state.relativePhase);
     const nodes = orbitalNodeCounts(state.n, state.l);
     elements.stageTitle.textContent = `${orbitalName()} magnetic-state morph`;
@@ -334,6 +408,17 @@ function updateControlsAndText() {
 }
 
 function modelSettings() {
+  if (state.model === "hydrogenic") {
+    const scale = Math.max(0.22, (state.n * state.n) / (3.1 * state.z));
+    return {
+      proposalScale: scale,
+      centres: [{ x: 0, y: 0, z: 0, label: `Z = ${state.z}` }],
+      evaluator: (x, y, z) => {
+        const psi = hydrogenicOrbital(state.n, state.l, state.m, x, y, z, state.z);
+        return { density: complexAbsSquared(psi), phase: Math.atan2(psi.im, psi.re) };
+      },
+    };
+  }
   if (state.model === "morph") {
     const scale = Math.max(0.55, (state.n * state.n) / 3.1);
     return {
@@ -393,11 +478,12 @@ function modelSettings() {
 }
 
 function seedFromState() {
-  const modelCode = { morph: 11, neon: 29, h2: 47, h3: 71 }[state.model];
+  const modelCode = { hydrogenic: 7, morph: 11, neon: 29, h2: 47, h3: 71 }[state.model];
   return (
-    0x9e3779b9 ^ modelCode * 100003 ^ state.n * 1009 ^ state.l * 9176 ^
+    0x9e3779b9 ^ modelCode * 100003 ^ state.z * 101 ^ state.n * 1009 ^ state.l * 9176 ^ state.m * 181 ^
     Math.round(state.mPath * 100) * 37 ^ Math.round(state.relativePhase * 100) * 13 ^
     Math.round(state.h2Distance * 100) * 53 ^ Math.round(state.h3Distance * 100) * 67 ^
+    (state.renderMode === "surface" ? 1 : 0) * 97 ^
     (state.h2Parity > 0 ? 1 : 0) ^ state.neonComponent.length * 79
   ) >>> 0;
 }
@@ -424,6 +510,10 @@ function phaseColour(phase) {
 
 function blendColour(left, right, amount) {
   return left.map((value, index) => value + amount * (right[index] - value));
+}
+
+function probabilityColour(brightness) {
+  return blendColour([247, 248, 245], PROBABILITY_BLUE, clamp(brightness, 0, 1));
 }
 
 function proposalDensity(x, y, z, centres, scale) {
@@ -485,6 +575,213 @@ function quantile(values, fraction) {
   return values[Math.min(values.length - 1, Math.max(0, Math.floor(fraction * (values.length - 1))))];
 }
 
+function densityCentroid(settings) {
+  return settings.centres.reduce((sum, centre) => ({
+    x: sum.x + centre.x / settings.centres.length,
+    y: sum.y + centre.y / settings.centres.length,
+    z: sum.z + centre.z / settings.centres.length,
+  }), { x: 0, y: 0, z: 0 });
+}
+
+function surfaceExtent() {
+  if (state.model === "hydrogenic") return Math.max(3.6, state.n * state.n * 1.85 / state.z);
+  if (state.model === "morph") return Math.max(4.2, state.n * state.n * 1.85);
+  if (state.model === "neon") return state.neonComponent === "core" ? 1.5 : 3.8;
+  if (state.model === "h2") return Math.max(3.8, state.h2Distance / 2 + 2.8);
+  return Math.max(3.8, state.h3Distance / Math.sqrt(3) + 2.8);
+}
+
+function disposeSurfaces() {
+  if (!surfaceGroup) return;
+  orbitalGroup.remove(surfaceGroup);
+  surfaceGroup.traverse((object) => {
+    if (object.geometry) object.geometry.dispose();
+    if (object.material) object.material.dispose();
+  });
+  surfaceGroup = null;
+}
+
+function ensureAxes() {
+  if (axisGroup || !orbitalGroup) return;
+  axisGroup = new THREE.AxesHelper(3.75);
+  axisGroup.renderOrder = 3;
+  orbitalGroup.add(axisGroup);
+}
+
+function disposeAxes() {
+  if (!axisGroup) return;
+  orbitalGroup.remove(axisGroup);
+  axisGroup.geometry.dispose();
+  axisGroup.material.dispose();
+  axisGroup = null;
+}
+
+function gridIndex(x, y, z, size) {
+  return (z * size + y) * size + x;
+}
+
+function surfaceIntersection(left, right, leftValue, rightValue, level) {
+  const denominator = rightValue - leftValue;
+  const amount = Math.abs(denominator) < 1e-20 ? 0.5 : clamp((level - leftValue) / denominator, 0, 1);
+  return [
+    left[0] + (right[0] - left[0]) * amount,
+    left[1] + (right[1] - left[1]) * amount,
+    left[2] + (right[2] - left[2]) * amount,
+  ];
+}
+
+function marchingTetrahedra(field, size, extent, centroid, level) {
+  const vertices = [];
+  const cubeCorners = [
+    [0, 0, 0], [1, 0, 0], [1, 1, 0], [0, 1, 0],
+    [0, 0, 1], [1, 0, 1], [1, 1, 1], [0, 1, 1],
+  ];
+  const tetrahedra = [
+    [0, 5, 1, 6], [0, 1, 2, 6], [0, 2, 3, 6],
+    [0, 3, 7, 6], [0, 7, 4, 6], [0, 4, 5, 6],
+  ];
+  const worldVertex = (index, x, y, z) => {
+    const corner = cubeCorners[index];
+    const coordinate = (axis, offset) => centroid[axis] + ((((axis === "x" ? x : axis === "y" ? y : z) + offset) / (size - 1)) * 2 - 1) * extent;
+    return [coordinate("x", corner[0]), coordinate("y", corner[1]), coordinate("z", corner[2])];
+  };
+  const addTriangle = (one, two, three) => vertices.push(...one, ...two, ...three);
+
+  for (let z = 0; z < size - 1; z += 1) {
+    for (let y = 0; y < size - 1; y += 1) {
+      for (let x = 0; x < size - 1; x += 1) {
+        const cubeValues = cubeCorners.map((corner) => field[gridIndex(x + corner[0], y + corner[1], z + corner[2], size)]);
+        for (const tetrahedron of tetrahedra) {
+          const inside = tetrahedron.filter((index) => cubeValues[index] >= level);
+          if (inside.length === 0 || inside.length === 4) continue;
+          const outside = tetrahedron.filter((index) => !inside.includes(index));
+          const edge = (from, to) => surfaceIntersection(
+            worldVertex(from, x, y, z),
+            worldVertex(to, x, y, z),
+            cubeValues[from],
+            cubeValues[to],
+            level,
+          );
+          if (inside.length === 1) {
+            addTriangle(edge(inside[0], outside[0]), edge(inside[0], outside[1]), edge(inside[0], outside[2]));
+          } else if (inside.length === 3) {
+            addTriangle(edge(outside[0], inside[0]), edge(outside[0], inside[2]), edge(outside[0], inside[1]));
+          } else {
+            const [a, b] = inside;
+            const [c, d] = outside;
+            const ac = edge(a, c);
+            const ad = edge(a, d);
+            const bc = edge(b, c);
+            const bd = edge(b, d);
+            addTriangle(ac, bc, ad);
+            addTriangle(ad, bc, bd);
+          }
+        }
+      }
+    }
+  }
+  return vertices;
+}
+
+function generateDensitySurfaces(settings, token) {
+  const extent = surfaceExtent();
+  const centroid = densityCentroid(settings);
+  const mobile = coarsePointer.matches || window.innerWidth < 760;
+  const size = mobile ? 25 : 35;
+  const field = new Float32Array(size ** 3);
+  let maximum = 0;
+  for (let z = 0; z < size; z += 1) {
+    for (let y = 0; y < size; y += 1) {
+      for (let x = 0; x < size; x += 1) {
+        const world = {
+          x: centroid.x + ((x / (size - 1)) * 2 - 1) * extent,
+          y: centroid.y + ((y / (size - 1)) * 2 - 1) * extent,
+          z: centroid.z + ((z / (size - 1)) * 2 - 1) * extent,
+        };
+        const density = settings.evaluator(world.x, world.y, world.z).density;
+        const safeDensity = Number.isFinite(density) && density >= 0 ? density : 0;
+        field[gridIndex(x, y, z, size)] = safeDensity;
+        maximum = Math.max(maximum, safeDensity);
+      }
+    }
+    if (token !== state.renderToken) return null;
+  }
+  if (!(maximum > 0)) return null;
+  const thresholds = [0.08, 0.20, 0.45];
+  return {
+    extent,
+    centroid,
+    surfaces: thresholds.map((threshold) => ({ threshold, vertices: marchingTetrahedra(field, size, extent, centroid, maximum * threshold) })),
+  };
+}
+
+function createNuclei(settings, centroid, scale) {
+  state.sceneCentres = settings.centres.map((centre) => ({
+    ...centre,
+    scene: new THREE.Vector3(
+      (centre.x - centroid.x) * scale,
+      (centre.y - centroid.y) * scale,
+      (centre.z - centroid.z) * scale,
+    ),
+  }));
+  nucleusGroup = new THREE.Group();
+  for (const centre of state.sceneCentres) {
+    const geometrySphere = new THREE.SphereGeometry(state.model === "neon" ? 0.09 : 0.075, 18, 12);
+    const materialSphere = new THREE.MeshBasicMaterial({ color: 0xf4eee0 });
+    const sphere = new THREE.Mesh(geometrySphere, materialSphere);
+    sphere.position.copy(centre.scene);
+    nucleusGroup.add(sphere);
+    const label = document.createElement("span");
+    label.className = "nucleus-label";
+    label.textContent = centre.label;
+    elements.nucleusLabels.append(label);
+    centre.element = label;
+  }
+  orbitalGroup.add(nucleusGroup);
+}
+
+function updateSurfaceScene(result, settings) {
+  if (!webglAvailable || !orbitalGroup || !result) return;
+  disposePoints();
+  disposeSurfaces();
+  disposeNuclei();
+  ensureAxes();
+  state.sceneScale = 3.35 / result.extent;
+  createNuclei(settings, result.centroid, state.sceneScale);
+  surfaceGroup = new THREE.Group();
+  const palette = [
+    { color: 0xa9c8d0, opacity: 0.17 },
+    { color: 0x4f91aa, opacity: 0.24 },
+    { color: 0x174f6a, opacity: 0.34 },
+  ];
+  result.surfaces.forEach((surface, index) => {
+    if (!surface.vertices.length) return;
+    const positionArray = new Float32Array(surface.vertices.length);
+    surface.vertices.forEach((value, vertexIndex) => {
+      const axis = vertexIndex % 3;
+      const centreValue = axis === 0 ? result.centroid.x : axis === 1 ? result.centroid.y : result.centroid.z;
+      positionArray[vertexIndex] = (value - centreValue) * state.sceneScale;
+    });
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute("position", new THREE.BufferAttribute(positionArray, 3));
+    geometry.computeVertexNormals();
+    const material = new THREE.MeshBasicMaterial({
+      color: palette[index].color,
+      transparent: true,
+      opacity: palette[index].opacity,
+      side: THREE.DoubleSide,
+      depthWrite: false,
+      depthTest: true,
+    });
+    const mesh = new THREE.Mesh(geometry, material);
+    mesh.renderOrder = index + 1;
+    surfaceGroup.add(mesh);
+  });
+  orbitalGroup.add(surfaceGroup);
+  state.pointCount = 0;
+  renderThree();
+}
+
 function disposePoints() {
   if (!points) return;
   orbitalGroup.remove(points);
@@ -506,25 +803,14 @@ function disposeNuclei() {
 function updatePointScene(samples, settings) {
   if (!webglAvailable || !orbitalGroup) return;
   disposePoints();
+  disposeSurfaces();
   disposeNuclei();
+  ensureAxes();
 
-  const centroid = settings.centres.reduce((sum, centre) => ({
-    x: sum.x + centre.x / settings.centres.length,
-    y: sum.y + centre.y / settings.centres.length,
-    z: sum.z + centre.z / settings.centres.length,
-  }), { x: 0, y: 0, z: 0 });
+  const centroid = densityCentroid(settings);
   const radii = samples.map((sample) => Math.hypot(sample.x - centroid.x, sample.y - centroid.y, sample.z - centroid.z));
   const extent = Math.max(0.3, quantile(radii, 0.988));
   state.sceneScale = 3.75 / extent;
-  state.sceneCentres = settings.centres.map((centre) => ({
-    ...centre,
-    scene: new THREE.Vector3(
-      (centre.x - centroid.x) * state.sceneScale,
-      (centre.y - centroid.y) * state.sceneScale,
-      (centre.z - centroid.z) * state.sceneScale,
-    ),
-  }));
-
   const positionArray = new Float32Array(samples.length * 3);
   const colourArray = new Float32Array(samples.length * 3);
   const sizeArray = new Float32Array(samples.length);
@@ -538,6 +824,8 @@ function updatePointScene(samples, settings) {
     if (state.model === "neon") {
       const coreFraction = state.neonComponent === "core" ? 1 : state.neonComponent === "valence" ? 0 : clamp(sample.result.mixture ?? 0, 0, 1);
       colour = blendColour(VALENCE_BLUE, CORE_GOLD, coreFraction);
+    } else if (state.model === "hydrogenic") {
+      colour = probabilityColour(0.82);
     } else {
       colour = phaseColour(sample.result.phase ?? 0);
     }
@@ -558,20 +846,7 @@ function updatePointScene(samples, settings) {
   points.frustumCulled = false;
   orbitalGroup.add(points);
 
-  nucleusGroup = new THREE.Group();
-  for (const centre of state.sceneCentres) {
-    const geometrySphere = new THREE.SphereGeometry(state.model === "neon" ? 0.09 : 0.075, 18, 12);
-    const materialSphere = new THREE.MeshBasicMaterial({ color: 0xf4eee0 });
-    const sphere = new THREE.Mesh(geometrySphere, materialSphere);
-    sphere.position.copy(centre.scene);
-    nucleusGroup.add(sphere);
-    const label = document.createElement("span");
-    label.className = "nucleus-label";
-    label.textContent = centre.label;
-    elements.nucleusLabels.append(label);
-    centre.element = label;
-  }
-  orbitalGroup.add(nucleusGroup);
+  createNuclei(settings, centroid, state.sceneScale);
   state.pointCount = samples.length;
   renderThree();
 }
@@ -734,9 +1009,14 @@ function drawFallbackProjection() {
     const column = index % resolution;
     const row = Math.floor(index / resolution);
     const brightness = Math.pow(clamp(value.density / Math.max(1e-30, maximum), 0, 1), 0.24);
-    let colour = state.model === "neon"
-      ? blendColour(VALENCE_BLUE, CORE_GOLD, state.neonComponent === "core" ? 1 : state.neonComponent === "valence" ? 0 : clamp(value.mixture ?? 0, 0, 1))
-      : phaseColour(value.phase ?? 0);
+    let colour;
+    if (state.model === "neon") {
+      colour = blendColour(VALENCE_BLUE, CORE_GOLD, state.neonComponent === "core" ? 1 : state.neonComponent === "valence" ? 0 : clamp(value.mixture ?? 0, 0, 1));
+    } else if (state.model === "hydrogenic") {
+      colour = probabilityColour(brightness);
+    } else {
+      colour = phaseColour(value.phase ?? 0);
+    }
     colour = colour.map((channel) => channel * brightness);
     context.fillStyle = `rgb(${colour[0]},${colour[1]},${colour[2]})`;
     context.fillRect(column * cellWidth, row * cellHeight, cellWidth + 0.5, cellHeight + 0.5);
@@ -752,6 +1032,7 @@ function drawFallbackProjection() {
 }
 
 function modelPlotExtent() {
+  if (state.model === "hydrogenic") return Math.max(1.8, state.n * state.n * 3.2 / state.z);
   if (state.model === "morph") return Math.max(4, state.n * state.n * 2.15);
   if (state.model === "neon") return state.neonComponent === "core" ? 1.2 : 3.2;
   if (state.model === "h2") return Math.max(4, state.h2Distance / 2 + 3.2);
@@ -765,8 +1046,13 @@ function scheduleSceneRebuild(delay = 55) {
   sceneTimer = window.setTimeout(() => {
     const settings = modelSettings();
     if (webglAvailable) {
-      const samples = generateDensitySample(settings, token);
-      if (samples && token === state.renderToken) updatePointScene(samples, settings);
+      if (state.renderMode === "surface") {
+        const surfaces = generateDensitySurfaces(settings, token);
+        if (surfaces && token === state.renderToken) updateSurfaceScene(surfaces, settings);
+      } else {
+        const samples = generateDensitySample(settings, token);
+        if (samples && token === state.renderToken) updatePointScene(samples, settings);
+      }
     } else {
       drawFallbackProjection();
     }
@@ -780,6 +1066,7 @@ function scheduleSceneRebuild(delay = 55) {
 }
 
 function stageAriaDescription() {
+  if (state.model === "hydrogenic") return `Interactive three-dimensional ${state.renderMode === "surface" ? "density-isosurface" : "weighted point-cloud"} view for a hydrogenic ${orbitalName()} state with nuclear charge Z = ${state.z} and integer m = ${state.m}. The x, y, and z axes are shown. Drag to rotate or use arrow keys.`;
   if (state.model === "morph") return `Interactive three-dimensional probability-density sample for ${orbitalName()}, at m path ${signed(state.mPath)} and relative phase ${Math.round(state.relativePhase * 180 / Math.PI)} degrees. Drag to rotate or use arrow keys.`;
   if (state.model === "neon") return `Interactive three-dimensional ${state.neonComponent} electron-density sample for an effective-charge neon configuration with ${state.neonComponent === "total" ? 10 : state.neonComponent === "core" ? 2 : 8} electrons.`;
   if (state.model === "h2") return `Interactive three-dimensional ${state.h2Parity > 0 ? "bonding" : "antibonding"} H2 molecular orbital at separation ${state.h2Distance.toFixed(2)} Bohr radii.`;
@@ -797,15 +1084,16 @@ function simpsonIntegrate(fn, start, end, intervals = 4000) {
 }
 
 function radialData() {
-  if (state.model === "morph") {
-    const maxR = Math.max(18, state.n * state.n * 4.5);
+  if (state.model === "hydrogenic" || state.model === "morph") {
+    const nuclearCharge = state.model === "hydrogenic" ? state.z : 1;
+    const maxR = Math.max(10 / nuclearCharge, state.n * state.n * 5.5 / nuclearCharge);
     const pointsData = Array.from({ length: 720 }, (_, index) => {
       const r = (index / 719) * maxR;
-      const radial = radialWavefunction(state.n, state.l, r);
+      const radial = radialWavefunction(state.n, state.l, r, nuclearCharge);
       return { x: r, y: r * r * radial * radial };
     });
     const integral = simpsonIntegrate((r) => {
-      const radial = radialWavefunction(state.n, state.l, r);
+      const radial = radialWavefunction(state.n, state.l, r, nuclearCharge);
       return r * r * radial * radial;
     }, 0, maxR, 8000);
     const nodes = orbitalNodeCounts(state.n, state.l).radial;
@@ -814,8 +1102,10 @@ function radialData() {
       xMax: maxR,
       integral,
       target: 1,
-      title: `P${orbitalName()}(r) = r²|R${state.n}${state.l}|²`,
-      kicker: "Hydrogenic radial probability",
+      title: state.model === "hydrogenic"
+        ? `P${orbitalName()}(r; Z = ${state.z}) = r²|R${state.n}${state.l}|²`
+        : `P${orbitalName()}(r) = r²|R${state.n}${state.l}|²`,
+      kicker: state.model === "hydrogenic" ? "Hydrogenic radial probability" : "Morph basis radial probability",
       caption: `Area under the curve is ${integral.toFixed(5)} on the displayed domain. ${orbitalName()} has ${nodes || "no"} radial node${nodes === 1 ? "" : "s"}.`,
       integralText: `∫P dr = ${integral.toFixed(5)}`,
       xLabel: "r / a₀",
@@ -950,6 +1240,148 @@ function drawRadialGraph() {
   return result;
 }
 
+function sliceDefinition() {
+  const definitions = {
+    xy: { label: "x–y", horizontal: "x", vertical: "y", fixed: "z", toWorld: (u, v) => ({ x: u, y: v, z: 0 }), fromWorld: (point) => [point.x, point.y] },
+    xz: { label: "x–z", horizontal: "x", vertical: "z", fixed: "y", toWorld: (u, v) => ({ x: u, y: 0, z: v }), fromWorld: (point) => [point.x, point.z] },
+    yz: { label: "y–z", horizontal: "y", vertical: "z", fixed: "x", toWorld: (u, v) => ({ x: 0, y: u, z: v }), fromWorld: (point) => [point.y, point.z] },
+  };
+  return definitions[state.slicePlane] ?? definitions.xz;
+}
+
+function drawProbabilityMap() {
+  const { context, width, height } = resizeCanvas(elements.probability, 1.5);
+  const settings = modelSettings();
+  const extent = modelPlotExtent();
+  const definition = sliceDefinition();
+  const margin = { top: 18, right: 92, bottom: 48, left: 48 };
+  const plotSize = Math.max(100, Math.min(width - margin.left - margin.right, height - margin.top - margin.bottom));
+  const plotLeft = margin.left + Math.max(0, (width - margin.left - margin.right - plotSize) / 2);
+  const plotTop = margin.top + Math.max(0, (height - margin.top - margin.bottom - plotSize) / 2);
+  const resolution = Math.min(220, Math.max(120, Math.round(plotSize / 2)));
+  const values = new Array(resolution * resolution);
+  let maximum = 0;
+
+  for (let row = 0; row < resolution; row += 1) {
+    const vertical = (1 - ((row + 0.5) / resolution) * 2) * extent;
+    for (let column = 0; column < resolution; column += 1) {
+      const horizontal = (((column + 0.5) / resolution) * 2 - 1) * extent;
+      const world = definition.toWorld(horizontal, vertical);
+      const value = settings.evaluator(world.x, world.y, world.z);
+      const density = Number.isFinite(value.density) && value.density >= 0 ? value.density : 0;
+      values[row * resolution + column] = { ...value, density };
+      maximum = Math.max(maximum, density);
+    }
+  }
+
+  const offscreen = document.createElement("canvas");
+  offscreen.width = resolution;
+  offscreen.height = resolution;
+  const offscreenContext = offscreen.getContext("2d");
+  const image = offscreenContext.createImageData(resolution, resolution);
+  values.forEach((value, index) => {
+    const brightness = Math.pow(clamp(value.density / Math.max(1e-30, maximum), 0, 1), state.model === "neon" ? 0.18 : 0.28);
+    const baseColour = state.model === "neon"
+      ? blendColour(VALENCE_BLUE, CORE_GOLD, state.neonComponent === "core" ? 1 : state.neonComponent === "valence" ? 0 : clamp(value.mixture ?? 0, 0, 1))
+      : PROBABILITY_BLUE;
+    const colour = blendColour([247, 248, 245], baseColour, brightness);
+    image.data[index * 4] = Math.round(colour[0]);
+    image.data[index * 4 + 1] = Math.round(colour[1]);
+    image.data[index * 4 + 2] = Math.round(colour[2]);
+    image.data[index * 4 + 3] = 255;
+  });
+  offscreenContext.putImageData(image, 0, 0);
+  context.clearRect(0, 0, width, height);
+  context.fillStyle = "#fbfaf7";
+  context.fillRect(0, 0, width, height);
+  context.imageSmoothingEnabled = true;
+  context.drawImage(offscreen, plotLeft, plotTop, plotSize, plotSize);
+
+  const tickValues = [-1, -0.5, 0, 0.5, 1];
+  context.save();
+  context.font = "9px Times New Roman, serif";
+  context.textBaseline = "middle";
+  context.strokeStyle = "rgba(32,32,29,.16)";
+  context.lineWidth = 1;
+  tickValues.forEach((fraction) => {
+    const x = plotLeft + (fraction + 1) * plotSize / 2;
+    const y = plotTop + (1 - (fraction + 1) / 2) * plotSize;
+    context.beginPath(); context.moveTo(x, plotTop); context.lineTo(x, plotTop + plotSize); context.stroke();
+    context.beginPath(); context.moveTo(plotLeft, y); context.lineTo(plotLeft + plotSize, y); context.stroke();
+  });
+  context.strokeStyle = "rgba(32,32,29,.75)";
+  context.strokeRect(plotLeft, plotTop, plotSize, plotSize);
+  context.fillStyle = "#5f5e58";
+  context.textAlign = "center";
+  tickValues.forEach((fraction) => {
+    const value = fraction * extent;
+    const label = Math.abs(value) >= 10 ? value.toFixed(0) : value.toFixed(1);
+    const x = plotLeft + (fraction + 1) * plotSize / 2;
+    context.fillText(label, x, plotTop + plotSize + 16);
+  });
+  context.textAlign = "right";
+  tickValues.forEach((fraction) => {
+    const value = fraction * extent;
+    const label = Math.abs(value) >= 10 ? value.toFixed(0) : value.toFixed(1);
+    const y = plotTop + (1 - (fraction + 1) / 2) * plotSize;
+    context.fillText(label, plotLeft - 8, y);
+  });
+  context.textAlign = "center";
+  context.textBaseline = "alphabetic";
+  context.fillStyle = "#20201d";
+  context.fillText(`${definition.horizontal} / a₀`, plotLeft + plotSize / 2, height - 10);
+  context.save();
+  context.translate(13, plotTop + plotSize / 2);
+  context.rotate(-Math.PI / 2);
+  context.fillText(`${definition.vertical} / a₀`, 0, 0);
+  context.restore();
+
+  const barX = plotLeft + plotSize + 22;
+  const barWidth = 13;
+  const barTop = plotTop;
+  const barHeight = plotSize;
+  const barGradient = context.createLinearGradient(0, barTop, 0, barTop + barHeight);
+  barGradient.addColorStop(0, `rgb(${PROBABILITY_BLUE.join(",")})`);
+  barGradient.addColorStop(1, "rgb(247,248,245)");
+  context.fillStyle = barGradient;
+  context.fillRect(barX, barTop, barWidth, barHeight);
+  context.strokeStyle = "rgba(32,32,29,.75)";
+  context.strokeRect(barX, barTop, barWidth, barHeight);
+  context.textAlign = "left";
+  context.textBaseline = "middle";
+  context.fillStyle = "#5f5e58";
+  [1, 0.5, 0].forEach((value) => context.fillText(value.toFixed(1), barX + barWidth + 6, barTop + (1 - value) * barHeight));
+  context.save();
+  context.translate(barX + 47, barTop + barHeight / 2);
+  context.rotate(-Math.PI / 2);
+  context.textAlign = "center";
+  context.fillStyle = "#20201d";
+  context.fillText("Relative probability density |ψ|²", 0, 0);
+  context.restore();
+
+  context.fillStyle = "rgba(32,32,29,.92)";
+  for (const centre of settings.centres) {
+    const [horizontal, vertical] = definition.fromWorld(centre);
+    const x = plotLeft + (horizontal / extent + 1) * plotSize / 2;
+    const y = plotTop + (1 - (vertical / extent + 1) / 2) * plotSize;
+    context.beginPath(); context.arc(x, y, 3.5, 0, TAU); context.fill();
+  }
+  context.restore();
+
+  if (state.model === "hydrogenic") {
+    elements.probabilityTitle.innerHTML = `${definition.label} plane · |ψ<sub>${state.n},${state.l},${state.m}</sub>|²`;
+    elements.probabilityCaption.textContent = `Brightness/colour represents |ψ|². The display is normalized to the maximum density in the plotted domain. Dark nodal regions correspond to zero probability density.`;
+  } else if (state.model === "neon") {
+    elements.probabilityTitle.innerHTML = `${definition.label} plane · ρ<sub>Ne</sub> · ${state.neonComponent}`;
+    elements.probabilityCaption.textContent = "This is an occupied-orbital electron density; the relative display scale is normalized within the plotted domain.";
+  } else {
+    elements.probabilityTitle.innerHTML = `${definition.label} plane · ${state.model === "h2" ? "ρH₂" : "ρH₃⁺"}`;
+    elements.probabilityCaption.textContent = "Brightness represents molecular-orbital probability density; marked centres show nuclei in this section.";
+  }
+  elements.probabilityScale.textContent = `relative display 0 → 1 · ±${extent.toFixed(extent < 10 ? 1 : 0)} a₀`;
+  elements.probability.setAttribute("aria-label", `Two-dimensional probability-density map: ${elements.probabilityTitle.textContent}. ${elements.probabilityCaption.textContent}`);
+}
+
 function drawWavefunctionSlice() {
   const { context, width, height } = resizeCanvas(elements.slice, 1.5);
   const settings = modelSettings();
@@ -1019,6 +1451,7 @@ function scheduleGraphs(delay = 40) {
   window.clearTimeout(graphTimer);
   graphTimer = window.setTimeout(() => {
     const radial = drawRadialGraph();
+    drawProbabilityMap();
     drawWavefunctionSlice();
     runValidation(radial);
   }, delay);
@@ -1053,7 +1486,9 @@ function setCheck(key, value, passes, digits = 6) {
 }
 
 function runValidation(radialResult = radialData()) {
-  const coefficients = mMorphCoefficients(state.l, state.mPath, state.relativePhase);
+  const coefficients = state.model === "morph"
+    ? mMorphCoefficients(state.l, state.mPath, state.relativePhase)
+    : [{ m: state.m, re: 1, im: 0 }];
   const angularNorm = angularQuadrature(state.l, coefficients).re;
   const adjacentM = state.l > 0 ? Math.min(state.l, -state.l + 1) : 0;
   const orthogonal = state.l > 0
@@ -1069,10 +1504,10 @@ function runValidation(radialResult = radialData()) {
       4 * Math.PI * r * r * neonElectronDensity(r, 0, 0).density
     ), 0, 6, 12_000);
   }
-  const radialNorm = state.model === "morph" ? radialResult.integral : (() => {
+  const radialNorm = state.model === "hydrogenic" || state.model === "morph" ? radialResult.integral : (() => {
     const maxR = Math.max(24, state.n * state.n * 5.5);
     return simpsonIntegrate((r) => {
-      const value = radialWavefunction(state.n, state.l, r);
+      const value = radialWavefunction(state.n, state.l, r, state.z);
       return r * r * value * value;
     }, 0, maxR, 10000);
   })();
@@ -1097,7 +1532,7 @@ function refresh({ sceneDelay = 55, graphDelay = 45 } = {}) {
 }
 
 function setModel(model, scroll = false) {
-  if (!["morph", "neon", "h2", "h3"].includes(model)) return;
+  if (!["hydrogenic", "morph", "neon", "h2", "h3"].includes(model)) return;
   state.model = model;
   if (model !== "morph") setPlaying(false);
   refresh({ sceneDelay: 20, graphDelay: 20 });
@@ -1162,29 +1597,50 @@ function attachControls() {
   document.querySelectorAll("[data-model]").forEach((button) => button.addEventListener("click", () => setModel(button.dataset.model)));
   document.querySelectorAll("[data-jump-model]").forEach((button) => button.addEventListener("click", () => setModel(button.dataset.jumpModel, true)));
   elements.resetStateButtons.forEach((button) => button.addEventListener("click", resetLab));
+  elements.probabilityPlaneButtons.forEach((button) => button.addEventListener("click", () => {
+    state.slicePlane = button.dataset.slicePlane;
+    scheduleGraphs(0);
+    updateControlsAndText();
+  }));
+  elements.densityModeButtons.forEach((button) => button.addEventListener("click", () => {
+    state.renderMode = button.dataset.mode3d;
+    updateControlsAndText();
+    scheduleSceneRebuild(0);
+  }));
 
   document.querySelectorAll("[data-orbital-preset]").forEach((button) => button.addEventListener("click", () => {
-    const [n, l] = button.dataset.orbitalPreset.split(",").map(Number);
+    const [n, l, presetM] = button.dataset.orbitalPreset.split(",").map(Number);
     state.n = n;
     state.l = l;
+    state.m = Number.isFinite(presetM) ? presetM : 0;
+    state.mPath = state.model === "morph" ? -l : 0;
     updateLChoices();
-    updateMorphRange(true);
+    updateMorphRange(state.model === "morph");
     setPlaying(false);
     refresh({ sceneDelay: 15, graphDelay: 15 });
   }));
 
+  elements.z.addEventListener("input", () => {
+    state.z = Number(elements.z.value);
+    refresh({ sceneDelay: 35, graphDelay: 45 });
+  });
   elements.n.addEventListener("change", () => {
     state.n = Number(elements.n.value);
     updateLChoices();
-    updateMorphRange(true);
+    updateMorphRange(state.model === "morph");
     setPlaying(false);
     refresh();
   });
   elements.l.addEventListener("change", () => {
     state.l = Number(elements.l.value);
-    updateMorphRange(true);
+    updateMChoices();
+    updateMorphRange(state.model === "morph");
     setPlaying(false);
     refresh();
+  });
+  elements.mSelect.addEventListener("change", () => {
+    state.m = Number(elements.mSelect.value);
+    refresh({ sceneDelay: 35, graphDelay: 55 });
   });
   elements.m.addEventListener("input", () => {
     state.mPath = Number(elements.m.value);
@@ -1287,15 +1743,18 @@ function initialize() {
   resizeObserver = new ResizeObserver(() => {
     resizeThree();
     drawRadialGraph();
+    drawProbabilityMap();
     drawWavefunctionSlice();
     if (!webglAvailable) drawFallbackProjection();
   });
-  [elements.viewport, elements.radial, elements.slice].forEach((element) => resizeObserver.observe(element));
+  [elements.viewport, elements.probability, elements.radial, elements.slice].forEach((element) => resizeObserver.observe(element));
   window.addEventListener("pagehide", () => {
     resizeObserver.disconnect();
     setPlaying(false);
     disposePoints();
+    disposeSurfaces();
     disposeNuclei();
+    disposeAxes();
     pointMaterial?.dispose();
     renderer?.dispose();
   }, { once: true });
