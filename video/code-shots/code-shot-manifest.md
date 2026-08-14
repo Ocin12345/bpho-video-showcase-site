@@ -169,7 +169,7 @@ Every displayed line below is extracted verbatim from the named source range. Th
 
 ## Recommended final screencast usage
 
-The complete master sequence is approximately **33.90 seconds**. For the final ≤3-minute BPhO screencast, use only the highest-signal code evidence below: **24.25 seconds total**.
+The complete master sequence is approximately **35.16 seconds**. For the final ≤3-minute BPhO screencast, use only the highest-signal code evidence below: **24.25 seconds total**.
 
 - Task 1: SHOW CODE — 3.85 seconds
 - Task 2: SHOW CODE — 3.30 seconds

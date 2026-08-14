@@ -10,6 +10,7 @@ const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 const showcaseRoot = resolve(scriptDirectory, "../..");
 const dataPath = resolve(scriptDirectory, "code-shot-data.js");
 const manifestPath = resolve(scriptDirectory, "code-shot-manifest.md");
+const MASTER_HANDOFF_MS = 140;
 
 function formatRange(start, end) {
   return start === end ? String(start) : `${start}–${end}`;
@@ -104,7 +105,8 @@ function renderDataFile(payload) {
 function renderManifest(payload) {
   const showCodeShots = payload.shots.filter((shot) => shot.recommendation === "SHOW CODE");
   const showCodeDuration = showCodeShots.reduce((total, shot) => total + shot.durationMs, 0);
-  const masterDuration = payload.shots.reduce((total, shot) => total + shot.durationMs, 0);
+  const masterDuration = payload.shots.reduce((total, shot) => total + shot.durationMs, 0)
+    + Math.max(0, payload.shots.length - 1) * MASTER_HANDOFF_MS;
   const lines = [
     "# BPhO 2026 code-shot manifest",
     "",
@@ -160,7 +162,9 @@ await writeFile(manifestPath, renderManifest(payload));
 const relativeDataPath = relative(process.cwd(), dataPath);
 const relativeManifestPath = relative(process.cwd(), manifestPath);
 console.log(`Generated ${relativeDataPath} and ${relativeManifestPath}`);
-console.log(`Master sequence: ${(payload.shots.reduce((total, shot) => total + shot.durationMs, 0) / 1000).toFixed(2)} seconds`);
+const masterDuration = payload.shots.reduce((total, shot) => total + shot.durationMs, 0)
+  + Math.max(0, payload.shots.length - 1) * MASTER_HANDOFF_MS;
+console.log(`Master sequence: ${(masterDuration / 1000).toFixed(2)} seconds including ${MASTER_HANDOFF_MS} ms task handoffs`);
 console.log(`Recommended code inserts: ${(payload.shots.filter((shot) => shot.recommendation === "SHOW CODE").reduce((total, shot) => total + shot.durationMs, 0) / 1000).toFixed(2)} seconds`);
 for (const shot of payload.shots) {
   console.log(`Task ${String(shot.task).padStart(2, "0")}: ${formatDuration(shot.durationMs)} · ${formatRanges(shot.segments)}`);
