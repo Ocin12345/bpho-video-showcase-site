@@ -1,0 +1,77 @@
+{
+  "configuration": {
+    "energy_wavelength_relative_tolerance": 5e-13,
+    "evidence_size_budget_bytes": 10485760,
+    "figure_size_budget_bytes": 15728640,
+    "frequency_wavelength_relative_tolerance": 5e-13,
+    "generation_runtime_budget_s": 15.0,
+    "highlighted_series_final_max": 5,
+    "level_energy_tolerance_ev": 5e-12,
+    "maximum_level": 10,
+    "named_line_relative_tolerance": 5e-12,
+    "rydberg_wavelength_relative_tolerance": 5e-13,
+    "schema_version": "task05-v1",
+    "series_limit_relative_tolerance": 5e-12,
+    "study_runtime_budget_s": 2.0,
+    "transition_energy_tolerance_ev": 5e-12,
+    "visible_max_nm": 750.0,
+    "visible_min_nm": 380.0
+  },
+  "constant_source": "NIST 2022 CODATA central values",
+  "constants": {
+    "elementary_charge_c": 1.602176634e-19,
+    "hc_ev_nm": 1239.8419843320025,
+    "planck_constant_j_s": 6.62607015e-34,
+    "rydberg_constant_per_m": 10973731.568157,
+    "rydberg_energy_ev": 13.605693122990514,
+    "speed_of_light_m_s": 299792458.0
+  },
+  "expected_data_filenames": [
+    "energy_levels.csv",
+    "emission_transitions.csv",
+    "series_limits.csv",
+    "validation_report.json",
+    "reproducibility_manifest.json"
+  ],
+  "expected_figure_filenames": [
+    "photon_energy_vs_wavelength.png",
+    "photon_energy_vs_wavelength.svg",
+    "bohr_energy_level_diagram.png",
+    "bohr_energy_level_diagram.svg",
+    "balmer_visible_spectrum.png",
+    "balmer_visible_spectrum.svg",
+    "hydrogen_series_convergence.png",
+    "hydrogen_series_convergence.svg",
+    "hydrogen_validation.png",
+    "hydrogen_validation.svg",
+    "task05_summary.png",
+    "task05_summary.svg"
+  ],
+  "mathematical_specification": "task05_hydrogen_spectrum/MATHEMATICAL_MODEL.md",
+  "model": "ideal stationary-nucleus Bohr hydrogen",
+  "output_schema_version": "task05-data-v1",
+  "schema_version": "task05-v1",
+  "series_names": {
+    "1": "Lyman",
+    "2": "Balmer",
+    "3": "Paschen",
+    "4": "Brackett",
+    "5": "Pfund",
+    "6": "Humphreys"
+  },
+  "transition_scope": {
+    "highlighted_series_final_max": 5,
+    "maximum_level": 10,
+    "minimum_level": 1,
+    "ordering": "final_n ascending, then initial_n ascending",
+    "transition_count": 45
+  },
+  "units": {
+    "energy_ev": "eV",
+    "energy_j": "J",
+    "frequency_hz": "Hz",
+    "quantum_numbers": "dimensionless integer",
+    "wavelength_m": "m",
+    "wavelength_nm": "nm"
+  }
+}

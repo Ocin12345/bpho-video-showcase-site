@@ -1,0 +1,306 @@
+{
+  "checks": [
+    {
+      "comparison": "exact_equal",
+      "expected": 0.0,
+      "explanation": "Frozen source constants equal the declared decimal values.",
+      "name": "source_constants",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 0.0,
+      "unit": "count"
+    },
+    {
+      "comparison": "exact_equal",
+      "expected": 0.0,
+      "explanation": "Stored levels are the exact consecutive integers 1 through 10.",
+      "name": "level_enumeration",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 0.0,
+      "unit": "count"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "Every level agrees with the independent Decimal Bohr reference.",
+      "name": "level_energy_reference",
+      "observed": 2.220446049250313e-16,
+      "passed": true,
+      "tolerance": 5e-12,
+      "unit": "eV"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "Level-energy joule values equal the eV values times one eV in joules.",
+      "name": "level_joule_conversion",
+      "observed": 1.2037062152420224e-35,
+      "passed": true,
+      "tolerance": 8.01088317e-31,
+      "unit": "J"
+    },
+    {
+      "comparison": "exact_equal",
+      "expected": 0.0,
+      "explanation": "Bound levels are negative and strictly approach zero as n increases.",
+      "name": "level_ordering",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 0.0,
+      "unit": "count"
+    },
+    {
+      "comparison": "exact_equal",
+      "expected": 0.0,
+      "explanation": "The finite study contains exactly 45 downward transitions.",
+      "name": "transition_count",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 0.0,
+      "unit": "count"
+    },
+    {
+      "comparison": "exact_equal",
+      "expected": 0.0,
+      "explanation": "Transition pairs follow the frozen final-level-first order.",
+      "name": "transition_pair_order",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 0.0,
+      "unit": "count"
+    },
+    {
+      "comparison": "exact_equal",
+      "expected": 0.0,
+      "explanation": "No initial/final pair is duplicated.",
+      "name": "transition_uniqueness",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 0.0,
+      "unit": "count"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "Positive photon energy equals initial minus final atomic energy.",
+      "name": "transition_energy_difference",
+      "observed": 1.7763568394002505e-15,
+      "passed": true,
+      "tolerance": 5e-12,
+      "unit": "eV"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "Every photon energy agrees with the independent Decimal reference.",
+      "name": "transition_energy_reference",
+      "observed": 1.7763568394002505e-15,
+      "passed": true,
+      "tolerance": 5e-12,
+      "unit": "eV"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "Photon joule values equal their eV values times one eV in joules.",
+      "name": "photon_joule_conversion",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 8.01088317e-31,
+      "unit": "J"
+    },
+    {
+      "comparison": "exact_equal",
+      "expected": 0.0,
+      "explanation": "Every photon energy, frequency, and wavelength is positive and finite.",
+      "name": "positive_finite_emissions",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 0.0,
+      "unit": "count"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "All transitions satisfy E_gamma times lambda equals hc.",
+      "name": "energy_wavelength_identity",
+      "observed": 2.220446049250313e-16,
+      "passed": true,
+      "tolerance": 5e-13,
+      "unit": "dimensionless"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "All transitions satisfy frequency times wavelength equals c.",
+      "name": "frequency_wavelength_identity",
+      "observed": 2.220446049250313e-16,
+      "passed": true,
+      "tolerance": 5e-13,
+      "unit": "dimensionless"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "Energy-derived wavelengths agree with the independent Rydberg form.",
+      "name": "rydberg_wavelength_reference",
+      "observed": 3.8190882856825714e-16,
+      "passed": true,
+      "tolerance": 5e-13,
+      "unit": "dimensionless"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "Energy-derived frequencies agree with the independent Rydberg form.",
+      "name": "frequency_reference",
+      "observed": 5.061933286622193e-16,
+      "passed": true,
+      "tolerance": 5e-13,
+      "unit": "dimensionless"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "The frozen ideal-model lyman-alpha anchor agrees.",
+      "name": "named_line_lyman_alpha",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 5e-12,
+      "unit": "dimensionless"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "The frozen ideal-model lyman-beta anchor agrees.",
+      "name": "named_line_lyman_beta",
+      "observed": 1.3861875999884888e-16,
+      "passed": true,
+      "tolerance": 5e-12,
+      "unit": "dimensionless"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "The frozen ideal-model h-alpha anchor agrees.",
+      "name": "named_line_h_alpha",
+      "observed": 1.1750383762211657e-16,
+      "passed": true,
+      "tolerance": 5e-12,
+      "unit": "dimensionless"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "The frozen ideal-model h-beta anchor agrees.",
+      "name": "named_line_h_beta",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 5e-12,
+      "unit": "dimensionless"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "The frozen ideal-model h-gamma anchor agrees.",
+      "name": "named_line_h_gamma",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 5e-12,
+      "unit": "dimensionless"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "The frozen ideal-model h-delta anchor agrees.",
+      "name": "named_line_h_delta",
+      "observed": 1.3861875999884888e-16,
+      "passed": true,
+      "tolerance": 5e-12,
+      "unit": "dimensionless"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "The n_f=1 analytical series limit agrees with both anchors.",
+      "name": "series_limit_n1",
+      "observed": 1.5594610499870497e-16,
+      "passed": true,
+      "tolerance": 5e-12,
+      "unit": "dimensionless"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "The n_f=2 analytical series limit agrees with both anchors.",
+      "name": "series_limit_n2",
+      "observed": 1.5594610499870497e-16,
+      "passed": true,
+      "tolerance": 5e-12,
+      "unit": "dimensionless"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "The n_f=3 analytical series limit agrees with both anchors.",
+      "name": "series_limit_n3",
+      "observed": 1.4687979702764571e-16,
+      "passed": true,
+      "tolerance": 5e-12,
+      "unit": "dimensionless"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "The n_f=4 analytical series limit agrees with both anchors.",
+      "name": "series_limit_n4",
+      "observed": 1.5594610499870497e-16,
+      "passed": true,
+      "tolerance": 5e-12,
+      "unit": "dimensionless"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "The n_f=5 analytical series limit agrees with both anchors.",
+      "name": "series_limit_n5",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 5e-12,
+      "unit": "dimensionless"
+    },
+    {
+      "comparison": "exact_equal",
+      "expected": 0.0,
+      "explanation": "Each named series approaches but never crosses its analytical limit.",
+      "name": "series_convergence",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 0.0,
+      "unit": "count"
+    },
+    {
+      "comparison": "exact_equal",
+      "expected": 0.0,
+      "explanation": "Every final level and alpha--delta line has its declared label.",
+      "name": "series_and_line_labels",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 0.0,
+      "unit": "count"
+    },
+    {
+      "comparison": "exact_equal",
+      "expected": 0.0,
+      "explanation": "Every wavelength follows the exact 380--750 nm region convention.",
+      "name": "spectral_classification",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 0.0,
+      "unit": "count"
+    }
+  ],
+  "passed": true,
+  "schema_version": "task05-validation-v1"
+}

@@ -1,0 +1,397 @@
+{
+  "checks": [
+    {
+      "comparison": "exact_equal",
+      "expected": 0.0,
+      "explanation": "The evidence grid is exactly 1000 to 5000 V in 10 V steps.",
+      "name": "voltage_enumeration",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 0.0,
+      "unit": "count"
+    },
+    {
+      "comparison": "exact_equal",
+      "expected": 0.0,
+      "explanation": "Both nominal graphite spacings are present in frozen order.",
+      "name": "spacing_catalogue",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 0.0,
+      "unit": "count"
+    },
+    {
+      "comparison": "relative_error_lte",
+      "expected": 0.0,
+      "explanation": "All wavelengths agree with an independent 60-digit Decimal path.",
+      "name": "wavelength_decimal_reference",
+      "observed": 2.702258644701965e-16,
+      "passed": true,
+      "tolerance": 5e-12,
+      "unit": "relative error"
+    },
+    {
+      "comparison": "exact_equal",
+      "expected": 0.0,
+      "explanation": "Electron wavelength decreases strictly as voltage increases.",
+      "name": "wavelength_monotonicity",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 0.0,
+      "unit": "count"
+    },
+    {
+      "comparison": "relative_error_lte",
+      "expected": 0.0,
+      "explanation": "lambda times sqrt(V) is constant over the full sweep.",
+      "name": "inverse_sqrt_voltage_scaling",
+      "observed": 1.6861609178644758e-16,
+      "passed": true,
+      "tolerance": 5e-12,
+      "unit": "relative error"
+    },
+    {
+      "comparison": "relative_error_lte",
+      "expected": 0.0,
+      "explanation": "p squared over 2m equals the positive accelerating energy eV.",
+      "name": "kinetic_energy_identity",
+      "observed": 4.3342275514298207e-16,
+      "passed": true,
+      "tolerance": 5e-12,
+      "unit": "relative error"
+    },
+    {
+      "comparison": "relative_error_lte",
+      "expected": 0.0,
+      "explanation": "Every stored momentum and wavelength satisfy p lambda = h.",
+      "name": "de_broglie_identity",
+      "observed": 1.2907872809488782e-16,
+      "passed": true,
+      "tolerance": 5e-12,
+      "unit": "relative error"
+    },
+    {
+      "comparison": "exact_equal",
+      "expected": 0.0,
+      "explanation": "Every official maximum Bragg order matches Decimal flooring.",
+      "name": "maximum_bragg_orders",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 0.0,
+      "unit": "count"
+    },
+    {
+      "comparison": "exact_equal",
+      "expected": 0.0,
+      "explanation": "Every forward-screen maximum matches Decimal flooring.",
+      "name": "maximum_screen_orders",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 0.0,
+      "unit": "count"
+    },
+    {
+      "comparison": "exact_equal",
+      "expected": 0.0,
+      "explanation": "Maximum orders never decrease as accelerating voltage rises.",
+      "name": "maximum_order_monotonicity",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 0.0,
+      "unit": "count"
+    },
+    {
+      "comparison": "exact_equal",
+      "expected": 0.0,
+      "explanation": "The flattened catalogue contains every Bragg order exactly once.",
+      "name": "catalogue_size",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 0.0,
+      "unit": "count"
+    },
+    {
+      "comparison": "exact_equal",
+      "expected": 0.0,
+      "explanation": "Rows use voltage, spacing, then increasing-order sequence.",
+      "name": "catalogue_ordering",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 0.0,
+      "unit": "count"
+    },
+    {
+      "comparison": "relative_error_lte",
+      "expected": 0.0,
+      "explanation": "Every q equals n lambda divided by 2d.",
+      "name": "bragg_ratio_identity",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 5e-12,
+      "unit": "relative error"
+    },
+    {
+      "comparison": "exact_equal",
+      "expected": 0.0,
+      "explanation": "All and only stored orders have 0 < q <= 1.",
+      "name": "bragg_domain",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 0.0,
+      "unit": "count"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "Every Bragg angle satisfies sin(theta) = q.",
+      "name": "bragg_angle_identity",
+      "observed": 1.1102230246251565e-16,
+      "passed": true,
+      "tolerance": 5e-12,
+      "unit": "absolute"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "Every scattering angle satisfies phi = 2 theta.",
+      "name": "scattering_angle_identity",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 5e-12,
+      "unit": "rad"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "Every photographic radius uses x = r sin(2 phi).",
+      "name": "photographic_geometry",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 3.25e-13,
+      "unit": "m"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "Every caliper diameter uses y = 2r sin(phi).",
+      "name": "caliper_geometry",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 3.25e-13,
+      "unit": "m"
+    },
+    {
+      "comparison": "exact_equal",
+      "expected": 0.0,
+      "explanation": "Forward-screen records are exactly those with q <= 1/sqrt(2).",
+      "name": "screen_visibility_classification",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 0.0,
+      "unit": "count"
+    },
+    {
+      "comparison": "exact_equal",
+      "expected": 0.0,
+      "explanation": "Controlled status labels agree with geometric visibility.",
+      "name": "order_status_labels",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 0.0,
+      "unit": "count"
+    },
+    {
+      "comparison": "exact_equal",
+      "expected": 0.0,
+      "explanation": "Displayed rings have 0 <= phi <= 90 degrees and 0 <= x <= r.",
+      "name": "forward_screen_bounds",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 0.0,
+      "unit": "count"
+    },
+    {
+      "comparison": "exact_equal",
+      "expected": 0.0,
+      "explanation": "There is one primary and one normalized fit per spacing.",
+      "name": "fit_record_counts",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 0.0,
+      "unit": "count"
+    },
+    {
+      "comparison": "relative_error_lte",
+      "expected": 0.0,
+      "explanation": "d1 first-order gradient matches the independent formula.",
+      "name": "d1_first_order_gradient",
+      "observed": 1.3837462852644288e-16,
+      "passed": true,
+      "tolerance": 1e-10,
+      "unit": "relative error"
+    },
+    {
+      "comparison": "relative_error_lte",
+      "expected": 0.0,
+      "explanation": "d1 primary fit recovers its nominal atomic spacing.",
+      "name": "d1_first_order_spacing_recovery",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 1e-10,
+      "unit": "relative error"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "d1 unconstrained diagnostic intercept is zero numerically.",
+      "name": "d1_first_order_intercept",
+      "observed": 6.930236515752563e-18,
+      "passed": true,
+      "tolerance": 1e-12,
+      "unit": "V^-1/2"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "d1 primary validation is a straight line.",
+      "name": "d1_first_order_r_squared",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 1e-12,
+      "unit": "absolute"
+    },
+    {
+      "comparison": "relative_error_lte",
+      "expected": 0.0,
+      "explanation": "d1 all-order normalized gradient matches first order.",
+      "name": "d1_normalized_gradient",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 1e-10,
+      "unit": "relative error"
+    },
+    {
+      "comparison": "relative_error_lte",
+      "expected": 0.0,
+      "explanation": "d1 normalized fit recovers its nominal spacing.",
+      "name": "d1_normalized_spacing_recovery",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 1e-10,
+      "unit": "relative error"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "All d1 orders collapse onto one normalized line.",
+      "name": "d1_all_order_collapse",
+      "observed": 2.767836941429234e-16,
+      "passed": true,
+      "tolerance": 1e-10,
+      "unit": "relative residual"
+    },
+    {
+      "comparison": "relative_error_lte",
+      "expected": 0.0,
+      "explanation": "d2 first-order gradient matches the independent formula.",
+      "name": "d2_first_order_gradient",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 1e-10,
+      "unit": "relative error"
+    },
+    {
+      "comparison": "relative_error_lte",
+      "expected": 0.0,
+      "explanation": "d2 primary fit recovers its nominal atomic spacing.",
+      "name": "d2_first_order_spacing_recovery",
+      "observed": 1.2135865794498644e-16,
+      "passed": true,
+      "tolerance": 1e-10,
+      "unit": "relative error"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "d2 unconstrained diagnostic intercept is zero numerically.",
+      "name": "d2_first_order_intercept",
+      "observed": 1.3860473031505121e-18,
+      "passed": true,
+      "tolerance": 1e-12,
+      "unit": "V^-1/2"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "d2 primary validation is a straight line.",
+      "name": "d2_first_order_r_squared",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 1e-12,
+      "unit": "absolute"
+    },
+    {
+      "comparison": "relative_error_lte",
+      "expected": 0.0,
+      "explanation": "d2 all-order normalized gradient matches first order.",
+      "name": "d2_normalized_gradient",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 1e-10,
+      "unit": "relative error"
+    },
+    {
+      "comparison": "relative_error_lte",
+      "expected": 0.0,
+      "explanation": "d2 normalized fit recovers its nominal spacing.",
+      "name": "d2_normalized_spacing_recovery",
+      "observed": 1.2135865794498644e-16,
+      "passed": true,
+      "tolerance": 1e-10,
+      "unit": "relative error"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "All d2 orders collapse onto one normalized line.",
+      "name": "d2_all_order_collapse",
+      "observed": 3.198253887179167e-16,
+      "passed": true,
+      "tolerance": 1e-10,
+      "unit": "relative residual"
+    },
+    {
+      "comparison": "exact_equal",
+      "expected": 0.0,
+      "explanation": "Each endpoint and spacing has exactly one first-order record.",
+      "name": "first_order_anchor_presence",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 0.0,
+      "unit": "count"
+    },
+    {
+      "comparison": "absolute_error_lte",
+      "expected": 0.0,
+      "explanation": "Endpoint wavelength, angle, and photographic radii match independent anchors.",
+      "name": "first_order_anchor_values",
+      "observed": 2.220446049250313e-16,
+      "passed": true,
+      "tolerance": 5e-10,
+      "unit": "relative error"
+    },
+    {
+      "comparison": "exact_equal",
+      "expected": 0.0,
+      "explanation": "Both first-order rings contract strictly over the voltage sweep.",
+      "name": "first_order_ring_contraction",
+      "observed": 0.0,
+      "passed": true,
+      "tolerance": 0.0,
+      "unit": "count"
+    }
+  ],
+  "passed": true,
+  "schema_version": "task06-validation-v1",
+  "study_digest": "1587b3567cee4947531b34605cb0e43ca26b3951c6cf4effbba07b880dc39306"
+}

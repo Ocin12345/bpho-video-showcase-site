@@ -1,0 +1,156 @@
+/* Current showcase integration for the older validated Task 5 implementation. */
+
+.task05-display-toggle {
+  min-height: 28px;
+  padding: 0 10px;
+  border: 1px solid var(--task05-line-strong, #c8c3b9);
+  border-radius: 3px;
+  color: var(--task05-muted, #6d6961);
+  background: var(--task05-warm, #fbfaf6);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease;
+}
+
+.task05-display-toggle:hover,
+.task05-display-toggle:focus-visible,
+.task05-display-toggle[aria-pressed="true"] {
+  border-color: var(--task05-accent, #a24f39);
+  color: var(--task05-ink, #25231f);
+  background: var(--task05-accent-pale, #f3e9e4);
+}
+
+html.task05-presentation-requested body,
+body.is-task05-presentation {
+  --task05-presentation-gap: 0;
+  overflow: hidden;
+}
+
+html.task05-presentation-requested body .model-section,
+html.task05-presentation-requested body .balmer-section,
+html.task05-presentation-requested body .validation-section,
+html.task05-presentation-requested body .convergence-section,
+html.task05-presentation-requested body .extension-section,
+html.task05-presentation-requested body .task-footer,
+body.is-task05-presentation .model-section,
+body.is-task05-presentation .balmer-section,
+body.is-task05-presentation .validation-section,
+body.is-task05-presentation .convergence-section,
+body.is-task05-presentation .extension-section,
+body.is-task05-presentation .task-footer {
+  display: none !important;
+}
+
+html.task05-presentation-requested body .spectrum-hero,
+body.is-task05-presentation .spectrum-hero {
+  display: none !important;
+}
+
+html.task05-presentation-requested body .atlas-section,
+body.is-task05-presentation .atlas-section {
+  width: calc(100% - 40px);
+  max-width: none;
+  height: calc(100svh - 80px);
+  min-height: 0;
+  margin: 16px 20px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--task-universal-line-strong, #c9c9c2);
+  border-radius: 6px;
+  background: var(--task-universal-warm, #fbfaf7);
+  box-shadow: none;
+}
+
+html.task05-presentation-requested body .atlas-section > .section-introduction,
+body.is-task05-presentation .atlas-section > .section-introduction,
+html.task05-presentation-requested body .section-nav a:not([href="#atlas"]),
+body.is-task05-presentation .section-nav a:not([href="#atlas"]),
+html.task05-presentation-requested body .task-identity > span,
+body.is-task05-presentation .task-identity > span,
+html.task05-presentation-requested body .atlas-toolbar,
+body.is-task05-presentation .atlas-toolbar,
+html.task05-presentation-requested body .atlas-caption,
+body.is-task05-presentation .atlas-caption,
+html.task05-presentation-requested body .series-ledger,
+body.is-task05-presentation .series-ledger,
+html.task05-presentation-requested body .task05-display-toggle,
+body.is-task05-presentation .task05-display-toggle,
+html.task05-presentation-requested body .atlas-tooltip,
+body.is-task05-presentation .atlas-tooltip {
+  display: none !important;
+}
+
+html.task05-presentation-requested body .task-header,
+body.is-task05-presentation .task-header {
+  min-height: 48px;
+}
+
+html.task05-presentation-requested body .task-identity,
+body.is-task05-presentation .task-identity {
+  display: flex;
+}
+
+html.task05-presentation-requested body main,
+body.is-task05-presentation main {
+  padding-top: 48px !important;
+}
+
+html.task05-presentation-requested body .atlas-chart-wrap,
+body.is-task05-presentation .atlas-chart-wrap {
+  height: 100%;
+  min-height: 0;
+  padding: 0;
+  background: var(--task-universal-warm, #fbfaf7);
+}
+
+html.task05-presentation-requested body .emission-atlas,
+body.is-task05-presentation .emission-atlas {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: var(--task-universal-warm, #fbfaf7);
+  box-shadow: none;
+}
+
+html.task05-presentation-requested body #emission-energy-chart,
+body.is-task05-presentation #emission-energy-chart {
+  height: 100%;
+  min-height: 0;
+  background: var(--task-universal-warm, #fbfaf7);
+  cursor: default;
+}
+
+@media (max-width: 1050px) {
+  .task05-display-toggle {
+    order: -1;
+  }
+}
+
+@media (max-width: 760px) {
+  .task05-display-toggle {
+    min-height: 26px;
+    padding: 0 8px;
+  }
+
+  html.task05-presentation-requested body .spectrum-hero,
+  body.is-task05-presentation .spectrum-hero {
+    display: none !important;
+  }
+
+  html.task05-presentation-requested body .atlas-section,
+  body.is-task05-presentation .atlas-section {
+    width: calc(100% - 20px);
+    height: calc(100svh - 68px);
+    margin: 10px;
+  }
+
+  html.task05-presentation-requested body #emission-energy-chart,
+  body.is-task05-presentation #emission-energy-chart {
+    height: 100%;
+    min-height: 0;
+  }
+}
