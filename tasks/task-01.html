@@ -75,6 +75,19 @@
               </p>
             </header>
 
+            <section class="method-note" aria-labelledby="method-note-title">
+              <h2 id="method-note-title">Method</h2>
+              <div class="method-note-equations" aria-label="Random-walk equations">
+                <p><i>&theta;</i><sub>i</sub> &sim; U(0, 2&pi;)</p>
+                <p>&Delta;<i>x</i><sub>i</sub> = <i>s</i> cos <i>&theta;</i><sub>i</sub>, &Delta;<i>y</i><sub>i</sub> = <i>s</i> sin <i>&theta;</i><sub>i</sub></p>
+                <p>(<i>x</i><sub>i</sub>, <i>y</i><sub>i</sub>) = (<i>x</i><sub>i&minus;1</sub>, <i>y</i><sub>i&minus;1</sub>) + (&Delta;<i>x</i><sub>i</sub>, &Delta;<i>y</i><sub>i</sub>)</p>
+                <p class="method-note-prediction">&#x27E8;<i>r</i><sup>2</sup>&#x27E9; = <i>N</i><i>s</i><sup>2</sup> &#x21D2; <i>r</i><sub>RMS</sub> = <i>s</i>&radic;<i>N</i></p>
+              </div>
+              <p class="method-note-caption">
+                Each step has fixed length (<i>s</i>), while its direction is sampled uniformly from 0 to 2&pi;.
+              </p>
+            </section>
+
             <p class="mode-warning" data-mode-warning hidden>
               Large-N Gaussian approximation
             </p>
