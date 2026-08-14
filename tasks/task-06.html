@@ -151,7 +151,7 @@
           <section class="hero-method" aria-labelledby="hero-method-title">
             <header>
               <span id="hero-method-title">Physics chain</span>
-              <strong>V → λ → θ → x</strong>
+              <strong>V → λ → θ → φ → x</strong>
             </header>
             <ol>
               <li>
@@ -163,8 +163,12 @@
                 <strong data-proof-latex="2d\sin\theta=n\lambda">2d sin θ = nλ</strong>
               </li>
               <li>
+                <span>Total scattering angle</span>
+                <strong data-proof-latex="\phi=2\theta">φ = 2θ</strong>
+              </li>
+              <li>
                 <span>Spherical screen</span>
-                <strong data-proof-latex="x=r\sin(2\phi)">x = r sin(2φ)</strong>
+                <strong data-proof-latex="x=r\sin\phi">x = r sin φ</strong>
               </li>
             </ol>
             <p>r = 65 mm · higher V gives smaller λ and smaller rings.</p>
@@ -384,20 +388,20 @@
           <article>
             <span>Bragg condition</span>
             <p data-proof-latex="2d\sin\theta=n\lambda">2d sin θ = nλ</p>
-            <small>d is graphite plane spacing; n is the positive integer diffraction order; θ is the Bragg glancing angle. Here q ≡ nλ/(2d) = sin θ = sin(φ/2).</small>
+            <small>d is graphite plane spacing; n is the positive integer diffraction order; θ is the Bragg glancing angle and φ = 2θ is the total electron scattering angle. Here q ≡ nλ/(2d) = sin θ = sin(φ/2).</small>
           </article>
 
           <article>
             <span>Photographic radius</span>
-            <p data-proof-latex="x=r\sin(2\phi)">x = r sin(2φ)</p>
-            <small>With φ = 2 sin<sup>−1</sup>(nλ / 2d), the exact spherical projection gives the radius measured on the photograph.</small>
+            <p data-proof-latex="x=r\sin\phi">x = r sin φ</p>
+            <small>With θ = sin<sup>−1</sup>(nλ / 2d) and φ = 2θ, the exact spherical projection gives the radius measured on the photograph.</small>
           </article>
         </div>
 
         <div class="geometry-comparison">
           <div class="geometry-comparison__official">
             <span>Written brief · authoritative radius</span>
-            <strong data-proof-latex="x=r\sin(2\phi)">x = r sin(2φ)</strong>
+            <strong data-proof-latex="x=r\sin\phi">x = r sin φ</strong>
             <p>
               Distance from the image centre to a ring on the photograph.
               Here r = 65 mm is the spherical glass diffraction-tube radius.
@@ -420,7 +424,7 @@
           <div class="model-notes__body">
             <p class="geometry-note">
               <strong>x and y are different observables.</strong> The official photograph uses
-              x = r sin(2φ); y = 2r sin φ is a full chord. The calculation uses the
+              θ is the Bragg glancing angle; φ = 2θ is the total electron scattering angle. x = r sin φ; y = 2r sin φ is a full chord. The calculation uses the
               exact inverse sine and exact spherical projection, with no small-angle approximation.
             </p>
 
@@ -474,7 +478,7 @@
 
           <article class="validation-card">
             <span>Spherical geometry</span>
-            <h3>x = r sin(2φ)</h3>
+            <h3>x = r sin φ</h3>
             <strong data-geometry-check>—</strong>
             <p>Photographic radius and the separate chord y were checked independently.</p>
           </article>
@@ -668,8 +672,8 @@
 
     <script src="../vendor/packages/katex/katex.min.js"></script>
     <script src="../assets/proof-math.js?v=20260808"></script>
-    <script type="module" src="../assets/task-06-diffraction.js?v=20260814a"></script>
-    <script type="module" src="../assets/task-06-relativity.js?v=20260813a"></script>
+    <script type="module" src="../assets/task-06-diffraction.js?v=20260815c"></script>
+    <script type="module" src="../assets/task-06-relativity.js?v=20260815c"></script>
     <script type="module" src="../assets/task-06-navigation.js?v=20260808a"></script>
   </body>
 </html>

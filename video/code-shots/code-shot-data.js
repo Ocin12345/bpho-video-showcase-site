@@ -961,7 +961,7 @@ window.CODE_SHOTS = {
         },
         {
           "source": "assets/task-06-evidence.js",
-          "sourceContent": "function expectedFirstOrder(wavelengthM, spacingM, tubeRadiusM) {\n  const q = wavelengthM / (2 * spacingM);\n  const phi = 2 * Math.asin(q);\n  return {\n    q,\n    phi,\n    photoRadiusM: tubeRadiusM * Math.sin(2 * phi),\n    maximumBraggOrder: Math.floor((2 * spacingM) / wavelengthM),\n    maximumScreenOrder: Math.floor(\n      (Math.SQRT2 * spacingM) / wavelengthM,\n    ),\n  };",
+          "sourceContent": "function expectedFirstOrder(wavelengthM, spacingM, tubeRadiusM) {\n  const q = wavelengthM / (2 * spacingM);\n  const theta = Math.asin(q);\n  const phi = 2 * theta;\n  return {\n    q,\n    theta,\n    phi,\n    photoRadiusM: tubeRadiusM * Math.sin(phi),\n    maximumBraggOrder: Math.floor((2 * spacingM) / wavelengthM),\n    maximumScreenOrder: Math.floor(\n      (Math.SQRT2 * spacingM) / wavelengthM,",
           "start": 103,
           "end": 114,
           "lineCount": 12,
@@ -976,43 +976,43 @@ window.CODE_SHOTS = {
             },
             {
               "number": 105,
-              "text": "  const phi = 2 * Math.asin(q);"
+              "text": "  const theta = Math.asin(q);"
             },
             {
               "number": 106,
-              "text": "  return {"
+              "text": "  const phi = 2 * theta;"
             },
             {
               "number": 107,
-              "text": "    q,"
+              "text": "  return {"
             },
             {
               "number": 108,
-              "text": "    phi,"
+              "text": "    q,"
             },
             {
               "number": 109,
-              "text": "    photoRadiusM: tubeRadiusM * Math.sin(2 * phi),"
+              "text": "    theta,"
             },
             {
               "number": 110,
-              "text": "    maximumBraggOrder: Math.floor((2 * spacingM) / wavelengthM),"
+              "text": "    phi,"
             },
             {
               "number": 111,
-              "text": "    maximumScreenOrder: Math.floor("
+              "text": "    photoRadiusM: tubeRadiusM * Math.sin(phi),"
             },
             {
               "number": 112,
-              "text": "      (Math.SQRT2 * spacingM) / wavelengthM,"
+              "text": "    maximumBraggOrder: Math.floor((2 * spacingM) / wavelengthM),"
             },
             {
               "number": 113,
-              "text": "    ),"
+              "text": "    maximumScreenOrder: Math.floor("
             },
             {
               "number": 114,
-              "text": "  };"
+              "text": "      (Math.SQRT2 * spacingM) / wavelengthM,"
             }
           ],
           "phases": [

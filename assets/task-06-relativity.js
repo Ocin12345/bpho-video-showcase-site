@@ -64,8 +64,9 @@ function wavelengthRelM(voltageV) {
 
 function firstOrderRadiusM(wavelengthM, spacingM) {
   const q = wavelengthM / (2 * spacingM);
-  const phi = 2 * Math.asin(q);
-  return CONSTANTS.r * Math.sin(2 * phi);
+  const theta = Math.asin(q);
+  const phi = 2 * theta;
+  return CONSTANTS.r * Math.sin(phi);
 }
 
 function validateEvidence(evidence) {

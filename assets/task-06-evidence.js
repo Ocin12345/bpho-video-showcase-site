@@ -62,7 +62,7 @@ function validateManifest(manifest) {
     constants.planck_constant_j_s !== 6.62607015e-34 ||
     constants.elementary_charge_c !== 1.602176634e-19 ||
     constants.electron_mass_kg !== 9.1093837139e-31 ||
-    manifest.geometry?.photographic_radius !== "x = r sin(2 phi)" ||
+    manifest.geometry?.photographic_radius !== "x = r sin(phi)" ||
     manifest.geometry?.caliper_diameter !== "y = 2 r sin(phi)"
   ) {
     throw new Error("Task 6 manifest is unsupported");
@@ -102,11 +102,13 @@ function expectedWavelength(voltage, constants) {
 
 function expectedFirstOrder(wavelengthM, spacingM, tubeRadiusM) {
   const q = wavelengthM / (2 * spacingM);
-  const phi = 2 * Math.asin(q);
+  const theta = Math.asin(q);
+  const phi = 2 * theta;
   return {
     q,
+    theta,
     phi,
-    photoRadiusM: tubeRadiusM * Math.sin(2 * phi),
+    photoRadiusM: tubeRadiusM * Math.sin(phi),
     maximumBraggOrder: Math.floor((2 * spacingM) / wavelengthM),
     maximumScreenOrder: Math.floor(
       (Math.SQRT2 * spacingM) / wavelengthM,

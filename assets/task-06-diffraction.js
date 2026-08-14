@@ -1,4 +1,4 @@
-import { loadTask06Evidence } from "./task-06-evidence.js?v=20260731b";
+import { loadTask06Evidence } from "./task-06-evidence.js?v=20260815c";
 
 const FAMILIES = Object.freeze({
   d1: {
@@ -125,9 +125,10 @@ function ringCatalogue(record, familyId) {
   const rings = [];
   for (let order = 1; order <= maximum; order += 1) {
     const q = (order * record.wavelengthM) / (2 * family.spacingM);
-    const phi = 2 * Math.asin(q);
-    const radiusMm = 65 * Math.sin(2 * phi);
-    rings.push({ order, q, phi, radiusMm });
+    const theta = Math.asin(q);
+    const phi = 2 * theta;
+    const radiusMm = 65 * Math.sin(phi);
+    rings.push({ order, q, theta, phi, radiusMm });
   }
   return rings;
 }
@@ -288,7 +289,7 @@ function drawScreen() {
   screenContext.fillStyle = "#93a895";
   screenContext.textAlign = "right";
   screenContext.fillText(
-    "x = r sin(2φ) · r = 65 mm",
+    "x = r sin φ · r = 65 mm",
     width - (compact ? 14 : 22),
     compact ? 24 : 27,
   );
@@ -661,7 +662,7 @@ function buildExportCsv() {
     `# schema_version,${manifest.output_schema_version}`,
     `# tube_radius_mm,${manifest.configuration.tube_radius_m * 1000}`,
     "# angle_definition,theta is Bragg glancing angle; phi=2theta is total beam deflection",
-    "# geometry,x=r sin(2phi) photographic radius; y=2r sin(phi) caliper chord",
+    "# geometry,x=r sin(phi) photographic radius; y=2r sin(phi)=2x caliper chord",
     [
       "voltage_V",
       "wavelength_pm",

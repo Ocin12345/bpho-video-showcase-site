@@ -5,20 +5,20 @@
     "spacings": [
       {
         "identifier": "d1",
-        "label": "d\u2081 = 0.123 nm",
+        "label": "d₁ = 0.123 nm",
         "spacing_m": 1.2300000000000001e-10
       },
       {
         "identifier": "d2",
-        "label": "d\u2082 = 0.213 nm",
+        "label": "d₂ = 0.213 nm",
         "spacing_m": 2.1300000000000001e-10
       }
     ],
     "tube_radius_m": 0.065,
     "voltage_count": 401,
-    "voltage_max_v": 5000.0,
-    "voltage_min_v": 1000.0,
-    "voltage_step_v": 10.0
+    "voltage_max_v": 5000,
+    "voltage_min_v": 1000,
+    "voltage_step_v": 10
   },
   "constant_source": "NIST 2022 CODATA central values",
   "constants": {
@@ -32,7 +32,8 @@
     "validation_fits.csv",
     "reference_anchors.json",
     "validation_report.json",
-    "manifest.json"
+    "manifest.json",
+    "relativistic_extension.json"
   ],
   "expected_figure_filenames": [
     "electron_diffraction_rings.png",
@@ -52,32 +53,34 @@
   "geometry": {
     "caliper_diameter": "y = 2 r sin(phi)",
     "forward_screen_condition": "sin(phi/2) <= 1/sqrt(2)",
-    "photographic_radius": "x = r sin(2 phi)"
+    "photographic_radius": "x = r sin(phi)"
   },
   "mathematical_specification": "task06_electron_diffraction/MATHEMATICAL_MODEL.md",
   "model": "non-relativistic de Broglie-Bragg electron diffraction",
   "output_schema_version": "task06-data-v1",
   "schema_version": "task06-manifest-v1",
   "sha256": {
-    "data/task06/diffraction_orders.csv": "2e73970645a027f7674db292e292f9eceba0f1cd4631a557642a94a590983590",
-    "data/task06/reference_anchors.json": "d3cf3e023f207740951504696c7356d71be03ac27de22bbc218eea226367a6a2",
+    "data/task06/voltage_sweep.csv": "d082502c5852482ed4802a115a95894e6c04e97fe8bbc0354447b7379b534744",
+    "data/task06/diffraction_orders.csv": "8514cdddcc591d3c4165086b7619e4ae248d3dd6ec4874b735e62f6accca9f99",
     "data/task06/validation_fits.csv": "a249c4cfe29667040fd87fb240c0d0d87cc9ee78adea859c116b5053da2cab24",
-    "data/task06/validation_report.json": "79c22505dcc6d0eb30afd489cceb90680b36e2e6e11f7e23f60cf2c976de29f4",
-    "data/task06/voltage_sweep.csv": "9e7a1346cfd8280ae64d84878bbc5170ff81fbf76f12d639a408db9306d05de3",
-    "figures/task06/electron_diffraction_rings.png": "299d84356efe0dfba55894b6e5b1bf19e7519f9d69ac95a5f38adfc261747f77",
-    "figures/task06/electron_diffraction_rings.svg": "835d5ad84a672e74343a5f712370e9cbd276a2503855dc6861e38e5b5a6eb22e",
-    "figures/task06/normalized_order_collapse.png": "08185ebf96da34757e4af708f6eb77fb24b420d0d6778519b4e60b4bfdcf6562",
-    "figures/task06/normalized_order_collapse.svg": "f924fec30d5d6af36d6f753f961c4f8099c66bb28968f222756810888c4df166",
-    "figures/task06/ring_radius_vs_voltage.png": "eee30cd4c3affa283d05c222a580f166a9650236c1f537490120995f52befb7f",
-    "figures/task06/ring_radius_vs_voltage.svg": "4d60568c99ea7e366923f65bd056f26c3a909fde3998f7be243ac01b54096e3a",
+    "data/task06/reference_anchors.json": "bc3c04a7bc72aafa7841b27bec44bbaeb55d2b035637ec6c7734f25f58361326",
+    "data/task06/validation_report.json": "338b85f83a9128cbf7016991b8c6a2766535d96555aa0e17ff39f3297189f3ae",
+    "data/task06/relativistic_extension.json": "9f766a635622b1eea37bf6b6af11f7636a28ec0a7cbf6920940dbf0a408feb30",
+    "figures/task06/electron_diffraction_rings.png": "e0738a320c9f5cf8cf276132e7551b801d75c3a50be510fb4a7d13c34529fb5a",
+    "figures/task06/electron_diffraction_rings.svg": "6c35d36f63518018e59d6334b5358118d342b461a4ae7dd279cee269c8685b87",
+    "figures/task06/ring_radius_vs_voltage.png": "4c97c8a79e18c7ae87fddfecc83658e556dc0c9c01db7d8e37ed0decf62a2b2b",
+    "figures/task06/ring_radius_vs_voltage.svg": "0c314bd0f47ef6b75cfd60c664d54f486d7936e874573e296435e56eb5b976eb",
     "figures/task06/straight_line_validation.png": "d49d473cfd7a8749b94bda8d789add52727d6dd2bed8d00787e22e391905658c",
     "figures/task06/straight_line_validation.svg": "a20ba97a9d5d17dbcc0eec25ca2485f77a3c5984d199fc68a11fd65ba579c1b0",
-    "figures/task06/task06_summary.png": "395dc1cb37ea21d230266a0382321d10fb90876e951d51157cf925646e211fe3",
-    "figures/task06/task06_summary.svg": "e478aee81225e8e98f17cc39f75fe6479da8b22f792a9bc9865a2e3ed4f208c2",
+    "figures/task06/normalized_order_collapse.png": "08185ebf96da34757e4af708f6eb77fb24b420d0d6778519b4e60b4bfdcf6562",
+    "figures/task06/normalized_order_collapse.svg": "f924fec30d5d6af36d6f753f961c4f8099c66bb28968f222756810888c4df166",
     "figures/task06/wavelength_and_orders.png": "2f1bab2138f61424b2afc67d5e3d54ab01de9c3c735ca358a944ec801efaae63",
-    "figures/task06/wavelength_and_orders.svg": "7c7ee351398dcc16a484c7f39fb1a394299a8a837fe756d4763c96eba6f17b5f"
+    "figures/task06/wavelength_and_orders.svg": "7c7ee351398dcc16a484c7f39fb1a394299a8a837fe756d4763c96eba6f17b5f",
+    "figures/task06/task06_summary.png": "ad90cc499bcdc6b9c534308de3b468bd4ffc21b11e37f2220bc1aefc838ff99c",
+    "figures/task06/task06_summary.svg": "3bdaa64bee0c77440c8a861f583cd8e56f833ba483c347c102bbbf37caacb06d"
   },
-  "study_digest": "1587b3567cee4947531b34605cb0e43ca26b3951c6cf4effbba07b880dc39306",
+  "study_digest": "f002fef2931e00498c56f77cf92072055de640e487d4a79608ce9b26ba238e12",
   "validation_check_count": 39,
-  "validation_passed": true
+  "validation_passed": true,
+  "geometry_note": "phi = 2 theta is the total electron scattering angle; theta is the Bragg glancing angle. The photographic screen radius is x = r sin(phi), while y = 2r sin(phi) is the full caliper chord."
 }
