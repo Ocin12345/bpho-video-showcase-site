@@ -304,6 +304,7 @@ function updateControlsAndText() {
 
   if (state.model === "hydrogenic") {
     const nodes = orbitalNodeCounts(state.n, state.l);
+    const sliceLabel = sliceDefinition().label;
     elements.stageTitle.textContent = "Hydrogenic probability density";
     elements.sceneSymbol.innerHTML = `ψ<sub>${state.n},${state.l},${state.m}</sub>`;
     elements.sceneDetail.textContent = `Z = ${state.z} · n = ${state.n} · ℓ = ${state.l} · m = ${state.m > 0 ? "+" : ""}${state.m}`;
@@ -319,7 +320,7 @@ function updateControlsAndText() {
       ["Nodes", `${nodes.radial} radial · ${nodes.angular} angular`],
       ["Normalization", "1.000000"],
     ]);
-    elements.structureSummary.innerHTML = `The 2D map is <i>|ψ<sub>${state.n}${state.l}${state.m}</sub>|²</i> in the x–z plane. <i>Z</i> changes the radial scale; <i>m</i> changes only the angular factor.`;
+    elements.structureSummary.innerHTML = `The 2D map is <i>|ψ<sub>${state.n}${state.l}${state.m}</sub>|²</i> in the ${sliceLabel} plane. <i>Z</i> changes the radial scale; <i>m</i> changes only the angular factor.`;
   } else if (state.model === "morph") {
     const coefficients = mMorphCoefficients(state.l, state.mPath, state.relativePhase);
     const nodes = orbitalNodeCounts(state.n, state.l);
@@ -1371,11 +1372,20 @@ function drawProbabilityMap() {
   if (state.model === "hydrogenic") {
     elements.probabilityTitle.innerHTML = `${definition.label} plane · |ψ<sub>${state.n},${state.l},${state.m}</sub>|²`;
     elements.probabilityCaption.textContent = `Brightness/colour represents |ψ|². The display is normalized to the maximum density in the plotted domain. Dark nodal regions correspond to zero probability density.`;
+  } else if (state.model === "morph") {
+    elements.probabilityTitle.textContent = `${definition.label} plane · coherent m-state superposition |ψ|²`;
+    elements.probabilityCaption.textContent = "Brightness represents |ψ|² for a coherent superposition of neighboring integer-m eigenstates. Intermediate path values are not fractional quantum numbers; the display is normalized to the maximum density in the plotted domain.";
   } else if (state.model === "neon") {
     elements.probabilityTitle.innerHTML = `${definition.label} plane · ρ<sub>Ne</sub> · ${state.neonComponent}`;
-    elements.probabilityCaption.textContent = "This is an occupied-orbital electron density; the relative display scale is normalized within the plotted domain.";
+    elements.probabilityCaption.textContent = "This is an occupied-orbital electron density ρNe = ΣNᵢ|ψᵢ|², not a single-wavefunction probability; the relative display scale is normalized within the plotted domain.";
+  } else if (state.model === "h2") {
+    elements.probabilityTitle.textContent = `${definition.label} plane · H₂ molecular-orbital probability density |ψ|²`;
+    elements.probabilityCaption.textContent = "Brightness represents molecular-orbital probability density |ψ|²; marked centres show the two nuclei in this section.";
+  } else if (state.model === "h3") {
+    elements.probabilityTitle.textContent = `${definition.label} plane · H₃⁺ molecular-orbital probability density |ψ|²`;
+    elements.probabilityCaption.textContent = "Brightness represents molecular-orbital probability density |ψ|²; marked centres show the three nuclei in this section.";
   } else {
-    elements.probabilityTitle.innerHTML = `${definition.label} plane · ${state.model === "h2" ? "ρH₂" : "ρH₃⁺"}`;
+    elements.probabilityTitle.textContent = `${definition.label} plane · probability density`;
     elements.probabilityCaption.textContent = "Brightness represents molecular-orbital probability density; marked centres show nuclei in this section.";
   }
   elements.probabilityScale.textContent = `relative display 0 → 1 · ±${extent.toFixed(extent < 10 ? 1 : 0)} a₀`;
